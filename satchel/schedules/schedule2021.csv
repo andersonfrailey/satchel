@@ -1,0 +1,2431 @@
+START DATE,away,home,SUBJECT
+04/01/21,PIT,CHC,Pirates at Cubs
+04/03/21,PIT,CHC,Pirates at Cubs
+04/04/21,PIT,CHC,Pirates at Cubs
+04/05/21,PIT,CIN,Pirates at Reds
+04/06/21,PIT,CIN,Pirates at Reds
+04/07/21,PIT,CIN,Pirates at Reds
+04/08/21,CHC,PIT,Cubs at Pirates
+04/10/21,CHC,PIT,Cubs at Pirates
+04/11/21,CHC,PIT,Cubs at Pirates
+04/12/21,SDP,PIT,Padres at Pirates
+04/13/21,SDP,PIT,Padres at Pirates
+04/14/21,SDP,PIT,Padres at Pirates
+04/15/21,SDP,PIT,Padres at Pirates
+04/16/21,PIT,MIL,Pirates at Brewers
+04/17/21,PIT,MIL,Pirates at Brewers
+04/18/21,PIT,MIL,Pirates at Brewers
+04/20/21,PIT,DET,Pirates at Tigers
+04/21/21,PIT,DET,Pirates at Tigers
+04/22/21,PIT,DET,Pirates at Tigers
+04/23/21,PIT,MIN,Pirates at Twins
+04/24/21,PIT,MIN,Pirates at Twins
+04/25/21,PIT,MIN,Pirates at Twins
+04/27/21,KCR,PIT,Royals at Pirates
+04/28/21,KCR,PIT,Royals at Pirates
+04/30/21,STL,PIT,Cardinals at Pirates
+05/01/21,STL,PIT,Cardinals at Pirates
+05/02/21,STL,PIT,Cardinals at Pirates
+05/03/21,PIT,SDP,Pirates at Padres
+05/04/21,PIT,SDP,Pirates at Padres
+05/05/21,PIT,SDP,Pirates at Padres
+05/07/21,PIT,CHC,Pirates at Cubs
+05/08/21,PIT,CHC,Pirates at Cubs
+05/09/21,PIT,CHC,Pirates at Cubs
+05/10/21,CIN,PIT,Reds at Pirates
+05/11/21,CIN,PIT,Reds at Pirates
+05/12/21,CIN,PIT,Reds at Pirates
+05/13/21,SFG,PIT,Giants at Pirates
+05/14/21,SFG,PIT,Giants at Pirates
+05/15/21,SFG,PIT,Giants at Pirates
+05/16/21,SFG,PIT,Giants at Pirates
+05/18/21,PIT,STL,Pirates at Cardinals
+05/19/21,PIT,STL,Pirates at Cardinals
+05/20/21,PIT,ATL,Pirates at Braves
+05/21/21,PIT,ATL,Pirates at Braves
+05/22/21,PIT,ATL,Pirates at Braves
+05/23/21,PIT,ATL,Pirates at Braves
+05/25/21,CHC,PIT,Cubs at Pirates
+05/26/21,CHC,PIT,Cubs at Pirates
+05/27/21,CHC,PIT,Cubs at Pirates
+05/28/21,COL,PIT,Rockies at Pirates
+05/29/21,COL,PIT,Rockies at Pirates
+05/30/21,COL,PIT,Rockies at Pirates
+05/31/21,PIT,KCR,Pirates at Royals
+06/01/21,PIT,KCR,Pirates at Royals
+06/03/21,MIA,PIT,Marlins at Pirates
+06/04/21,MIA,PIT,Marlins at Pirates
+06/05/21,MIA,PIT,Marlins at Pirates
+06/06/21,MIA,PIT,Marlins at Pirates
+06/08/21,LAD,PIT,Dodgers at Pirates
+06/09/21,LAD,PIT,Dodgers at Pirates
+06/10/21,LAD,PIT,Dodgers at Pirates
+06/11/21,PIT,MIL,Pirates at Brewers
+06/12/21,PIT,MIL,Pirates at Brewers
+06/13/21,PIT,MIL,Pirates at Brewers
+06/14/21,PIT,WSN,Pirates at Nationals
+06/15/21,PIT,WSN,Pirates at Nationals
+06/16/21,PIT,WSN,Pirates at Nationals
+06/18/21,CLE,PIT,Indians at Pirates
+06/19/21,CLE,PIT,Indians at Pirates
+06/20/21,CLE,PIT,Indians at Pirates
+06/22/21,CHW,PIT,White Sox at Pirates
+06/23/21,CHW,PIT,White Sox at Pirates
+06/24/21,PIT,STL,Pirates at Cardinals
+06/25/21,PIT,STL,Pirates at Cardinals
+06/26/21,PIT,STL,Pirates at Cardinals
+06/27/21,PIT,STL,Pirates at Cardinals
+06/28/21,PIT,COL,Pirates at Rockies
+06/29/21,PIT,COL,Pirates at Rockies
+06/30/21,PIT,COL,Pirates at Rockies
+07/01/21,MIL,PIT,Brewers at Pirates
+07/02/21,MIL,PIT,Brewers at Pirates
+07/03/21,MIL,PIT,Brewers at Pirates
+07/04/21,MIL,PIT,Brewers at Pirates
+07/05/21,ATL,PIT,Braves at Pirates
+07/06/21,ATL,PIT,Braves at Pirates
+07/07/21,ATL,PIT,Braves at Pirates
+07/08/21,PIT,NYM,Pirates at Mets
+07/09/21,PIT,NYM,Pirates at Mets
+07/10/21,PIT,NYM,Pirates at Mets
+07/11/21,PIT,NYM,Pirates at Mets
+07/16/21,NYM,PIT,Mets at Pirates
+07/17/21,NYM,PIT,Mets at Pirates
+07/18/21,NYM,PIT,Mets at Pirates
+07/19/21,PIT,ARI,Pirates at Diamondbacks
+07/20/21,PIT,ARI,Pirates at Diamondbacks
+07/21/21,PIT,ARI,Pirates at Diamondbacks
+07/23/21,PIT,SFG,Pirates at Giants
+07/24/21,PIT,SFG,Pirates at Giants
+07/25/21,PIT,SFG,Pirates at Giants
+07/27/21,MIL,PIT,Brewers at Pirates
+07/28/21,MIL,PIT,Brewers at Pirates
+07/29/21,MIL,PIT,Brewers at Pirates
+07/30/21,PHI,PIT,Phillies at Pirates
+07/31/21,PHI,PIT,Phillies at Pirates
+08/01/21,PHI,PIT,Phillies at Pirates
+08/02/21,PIT,MIL,Pirates at Brewers
+08/03/21,PIT,MIL,Pirates at Brewers
+08/04/21,PIT,MIL,Pirates at Brewers
+08/05/21,PIT,CIN,Pirates at Reds
+08/06/21,PIT,CIN,Pirates at Reds
+08/07/21,PIT,CIN,Pirates at Reds
+08/08/21,PIT,CIN,Pirates at Reds
+08/10/21,STL,PIT,Cardinals at Pirates
+08/11/21,STL,PIT,Cardinals at Pirates
+08/12/21,STL,PIT,Cardinals at Pirates
+08/13/21,MIL,PIT,Brewers at Pirates
+08/14/21,MIL,PIT,Brewers at Pirates
+08/15/21,MIL,PIT,Brewers at Pirates
+08/16/21,PIT,LAD,Pirates at Dodgers
+08/17/21,PIT,LAD,Pirates at Dodgers
+08/18/21,PIT,LAD,Pirates at Dodgers
+08/20/21,PIT,STL,Pirates at Cardinals
+08/21/21,PIT,STL,Pirates at Cardinals
+08/22/21,PIT,STL,Pirates at Cardinals
+08/23/21,ARI,PIT,Diamondbacks at Pirates
+08/24/21,ARI,PIT,Diamondbacks at Pirates
+08/25/21,ARI,PIT,Diamondbacks at Pirates
+08/26/21,STL,PIT,Cardinals at Pirates
+08/27/21,STL,PIT,Cardinals at Pirates
+08/28/21,STL,PIT,Cardinals at Pirates
+08/29/21,STL,PIT,Cardinals at Pirates
+08/31/21,PIT,CHW,Pirates at White Sox
+09/01/21,PIT,CHW,Pirates at White Sox
+09/02/21,PIT,CHC,Pirates at Cubs
+09/03/21,PIT,CHC,Pirates at Cubs
+09/04/21,PIT,CHC,Pirates at Cubs
+09/05/21,PIT,CHC,Pirates at Cubs
+09/06/21,DET,PIT,Tigers at Pirates
+09/07/21,DET,PIT,Tigers at Pirates
+09/08/21,DET,PIT,Tigers at Pirates
+09/10/21,WSN,PIT,Nationals at Pirates
+09/11/21,WSN,PIT,Nationals at Pirates
+09/12/21,WSN,PIT,Nationals at Pirates
+09/14/21,CIN,PIT,Reds at Pirates
+09/15/21,CIN,PIT,Reds at Pirates
+09/16/21,CIN,PIT,Reds at Pirates
+09/17/21,PIT,MIA,Pirates at Marlins
+09/18/21,PIT,MIA,Pirates at Marlins
+09/19/21,PIT,MIA,Pirates at Marlins
+09/20/21,PIT,CIN,Pirates at Reds
+09/21/21,PIT,CIN,Pirates at Reds
+09/22/21,PIT,CIN,Pirates at Reds
+09/23/21,PIT,PHI,Pirates at Phillies
+09/24/21,PIT,PHI,Pirates at Phillies
+09/25/21,PIT,PHI,Pirates at Phillies
+09/26/21,PIT,PHI,Pirates at Phillies
+09/28/21,CHC,PIT,Cubs at Pirates
+09/29/21,CHC,PIT,Cubs at Pirates
+09/30/21,CHC,PIT,Cubs at Pirates
+10/01/21,CIN,PIT,Reds at Pirates
+10/02/21,CIN,PIT,Reds at Pirates
+10/03/21,CIN,PIT,Reds at Pirates
+04/01/21,STL,CIN,Cardinals at Reds
+04/03/21,STL,CIN,Cardinals at Reds
+04/04/21,STL,CIN,Cardinals at Reds
+04/05/21,STL,MIA,Cardinals at Marlins
+04/06/21,STL,MIA,Cardinals at Marlins
+04/07/21,STL,MIA,Cardinals at Marlins
+04/08/21,MIL,STL,Brewers at Cardinals
+04/10/21,MIL,STL,Brewers at Cardinals
+04/11/21,MIL,STL,Brewers at Cardinals
+04/12/21,WSN,STL,Nationals at Cardinals
+04/13/21,WSN,STL,Nationals at Cardinals
+04/14/21,WSN,STL,Nationals at Cardinals
+04/16/21,STL,PHI,Cardinals at Phillies
+04/17/21,STL,PHI,Cardinals at Phillies
+04/18/21,STL,PHI,Cardinals at Phillies
+04/19/21,STL,WSN,Cardinals at Nationals
+04/20/21,STL,WSN,Cardinals at Nationals
+04/21/21,STL,WSN,Cardinals at Nationals
+04/23/21,CIN,STL,Reds at Cardinals
+04/24/21,CIN,STL,Reds at Cardinals
+04/25/21,CIN,STL,Reds at Cardinals
+04/26/21,PHI,STL,Phillies at Cardinals
+04/27/21,PHI,STL,Phillies at Cardinals
+04/28/21,PHI,STL,Phillies at Cardinals
+04/29/21,PHI,STL,Phillies at Cardinals
+05/03/21,NYM,STL,Mets at Cardinals
+05/04/21,NYM,STL,Mets at Cardinals
+05/05/21,NYM,STL,Mets at Cardinals
+05/06/21,NYM,STL,Mets at Cardinals
+05/07/21,COL,STL,Rockies at Cardinals
+05/08/21,COL,STL,Rockies at Cardinals
+05/09/21,COL,STL,Rockies at Cardinals
+05/11/21,STL,MIL,Cardinals at Brewers
+05/12/21,STL,MIL,Cardinals at Brewers
+05/13/21,STL,MIL,Cardinals at Brewers
+05/14/21,STL,SDP,Cardinals at Padres
+05/15/21,STL,SDP,Cardinals at Padres
+05/16/21,STL,SDP,Cardinals at Padres
+05/21/21,CHC,STL,Cubs at Cardinals
+05/22/21,CHC,STL,Cubs at Cardinals
+05/23/21,CHC,STL,Cubs at Cardinals
+05/24/21,STL,CHW,Cardinals at White Sox
+05/25/21,STL,CHW,Cardinals at White Sox
+05/26/21,STL,CHW,Cardinals at White Sox
+05/27/21,STL,ARI,Cardinals at Diamondbacks
+05/28/21,STL,ARI,Cardinals at Diamondbacks
+05/29/21,STL,ARI,Cardinals at Diamondbacks
+05/30/21,STL,ARI,Cardinals at Diamondbacks
+05/31/21,STL,LAD,Cardinals at Dodgers
+06/01/21,STL,LAD,Cardinals at Dodgers
+06/02/21,STL,LAD,Cardinals at Dodgers
+06/03/21,CIN,STL,Reds at Cardinals
+06/04/21,CIN,STL,Reds at Cardinals
+06/05/21,CIN,STL,Reds at Cardinals
+06/06/21,CIN,STL,Reds at Cardinals
+06/08/21,CLE,STL,Indians at Cardinals
+06/09/21,CLE,STL,Indians at Cardinals
+06/11/21,STL,CHC,Cardinals at Cubs
+06/12/21,STL,CHC,Cardinals at Cubs
+06/13/21,STL,CHC,Cardinals at Cubs
+06/14/21,MIA,STL,Marlins at Cardinals
+06/15/21,MIA,STL,Marlins at Cardinals
+06/16/21,MIA,STL,Marlins at Cardinals
+06/17/21,STL,ATL,Cardinals at Braves
+06/18/21,STL,ATL,Cardinals at Braves
+06/19/21,STL,ATL,Cardinals at Braves
+06/20/21,STL,ATL,Cardinals at Braves
+06/22/21,STL,DET,Cardinals at Tigers
+06/23/21,STL,DET,Cardinals at Tigers
+06/28/21,ARI,STL,Diamondbacks at Cardinals
+06/29/21,ARI,STL,Diamondbacks at Cardinals
+06/30/21,ARI,STL,Diamondbacks at Cardinals
+07/01/21,STL,COL,Cardinals at Rockies
+07/02/21,STL,COL,Cardinals at Rockies
+07/03/21,STL,COL,Cardinals at Rockies
+07/04/21,STL,COL,Cardinals at Rockies
+07/05/21,STL,SFG,Cardinals at Giants
+07/06/21,STL,SFG,Cardinals at Giants
+07/07/21,STL,SFG,Cardinals at Giants
+07/09/21,STL,CHC,Cardinals at Cubs
+07/10/21,STL,CHC,Cardinals at Cubs
+07/11/21,STL,CHC,Cardinals at Cubs
+07/16/21,SFG,STL,Giants at Cardinals
+07/17/21,SFG,STL,Giants at Cardinals
+07/18/21,SFG,STL,Giants at Cardinals
+07/19/21,CHC,STL,Cubs at Cardinals
+07/20/21,CHC,STL,Cubs at Cardinals
+07/21/21,CHC,STL,Cubs at Cardinals
+07/22/21,CHC,STL,Cubs at Cardinals
+07/23/21,STL,CIN,Cardinals at Reds
+07/24/21,STL,CIN,Cardinals at Reds
+07/25/21,STL,CIN,Cardinals at Reds
+07/27/21,STL,CLE,Cardinals at Indians
+07/28/21,STL,CLE,Cardinals at Indians
+07/30/21,MIN,STL,Twins at Cardinals
+07/31/21,MIN,STL,Twins at Cardinals
+08/01/21,MIN,STL,Twins at Cardinals
+08/03/21,ATL,STL,Braves at Cardinals
+08/04/21,ATL,STL,Braves at Cardinals
+08/05/21,ATL,STL,Braves at Cardinals
+08/06/21,KCR,STL,Royals at Cardinals
+08/07/21,KCR,STL,Royals at Cardinals
+08/08/21,KCR,STL,Royals at Cardinals
+08/13/21,STL,KCR,Cardinals at Royals
+08/14/21,STL,KCR,Cardinals at Royals
+08/15/21,STL,KCR,Cardinals at Royals
+08/17/21,MIL,STL,Brewers at Cardinals
+08/18/21,MIL,STL,Brewers at Cardinals
+08/19/21,MIL,STL,Brewers at Cardinals
+08/24/21,DET,STL,Tigers at Cardinals
+08/25/21,DET,STL,Tigers at Cardinals
+08/30/21,STL,CIN,Cardinals at Reds
+08/31/21,STL,CIN,Cardinals at Reds
+09/01/21,STL,CIN,Cardinals at Reds
+09/03/21,STL,MIL,Cardinals at Brewers
+09/04/21,STL,MIL,Cardinals at Brewers
+09/05/21,STL,MIL,Cardinals at Brewers
+09/06/21,LAD,STL,Dodgers at Cardinals
+09/07/21,LAD,STL,Dodgers at Cardinals
+09/08/21,LAD,STL,Dodgers at Cardinals
+09/09/21,LAD,STL,Dodgers at Cardinals
+09/10/21,CIN,STL,Reds at Cardinals
+09/11/21,CIN,STL,Reds at Cardinals
+09/12/21,CIN,STL,Reds at Cardinals
+09/13/21,STL,NYM,Cardinals at Mets
+09/14/21,STL,NYM,Cardinals at Mets
+09/15/21,STL,NYM,Cardinals at Mets
+09/17/21,SDP,STL,Padres at Cardinals
+09/18/21,SDP,STL,Padres at Cardinals
+09/19/21,SDP,STL,Padres at Cardinals
+09/20/21,STL,MIL,Cardinals at Brewers
+09/21/21,STL,MIL,Cardinals at Brewers
+09/22/21,STL,MIL,Cardinals at Brewers
+09/23/21,STL,MIL,Cardinals at Brewers
+09/24/21,STL,CHC,Cardinals at Cubs
+09/25/21,STL,CHC,Cardinals at Cubs
+09/26/21,STL,CHC,Cardinals at Cubs
+09/28/21,MIL,STL,Brewers at Cardinals
+09/29/21,MIL,STL,Brewers at Cardinals
+09/30/21,MIL,STL,Brewers at Cardinals
+10/01/21,CHC,STL,Cubs at Cardinals
+10/02/21,CHC,STL,Cubs at Cardinals
+10/03/21,CHC,STL,Cubs at Cardinals
+04/01/21,NYM,WSN,Mets at Nationals
+04/03/21,NYM,WSN,Mets at Nationals
+04/04/21,NYM,WSN,Mets at Nationals
+04/05/21,NYM,PHI,Mets at Phillies
+04/06/21,NYM,PHI,Mets at Phillies
+04/07/21,NYM,PHI,Mets at Phillies
+04/08/21,MIA,NYM,Marlins at Mets
+04/10/21,MIA,NYM,Marlins at Mets
+04/11/21,MIA,NYM,Marlins at Mets
+04/12/21,PHI,NYM,Phillies at Mets
+04/13/21,PHI,NYM,Phillies at Mets
+04/14/21,PHI,NYM,Phillies at Mets
+04/15/21,PHI,NYM,Phillies at Mets
+04/16/21,NYM,COL,Mets at Rockies
+04/17/21,NYM,COL,Mets at Rockies
+04/18/21,NYM,COL,Mets at Rockies
+04/20/21,NYM,CHC,Mets at Cubs
+04/21/21,NYM,CHC,Mets at Cubs
+04/22/21,NYM,CHC,Mets at Cubs
+04/23/21,WSN,NYM,Nationals at Mets
+04/24/21,WSN,NYM,Nationals at Mets
+04/25/21,WSN,NYM,Nationals at Mets
+04/27/21,BOS,NYM,Red Sox at Mets
+04/28/21,BOS,NYM,Red Sox at Mets
+04/30/21,NYM,PHI,Mets at Phillies
+05/01/21,NYM,PHI,Mets at Phillies
+05/02/21,NYM,PHI,Mets at Phillies
+05/07/21,ARI,NYM,Diamondbacks at Mets
+05/08/21,ARI,NYM,Diamondbacks at Mets
+05/09/21,ARI,NYM,Diamondbacks at Mets
+05/11/21,BAL,NYM,Orioles at Mets
+05/12/21,BAL,NYM,Orioles at Mets
+05/14/21,NYM,TBR,Mets at Rays
+05/15/21,NYM,TBR,Mets at Rays
+05/16/21,NYM,TBR,Mets at Rays
+05/17/21,NYM,ATL,Mets at Braves
+05/18/21,NYM,ATL,Mets at Braves
+05/19/21,NYM,ATL,Mets at Braves
+05/21/21,NYM,MIA,Mets at Marlins
+05/22/21,NYM,MIA,Mets at Marlins
+05/23/21,NYM,MIA,Mets at Marlins
+05/24/21,COL,NYM,Rockies at Mets
+05/25/21,COL,NYM,Rockies at Mets
+05/26/21,COL,NYM,Rockies at Mets
+05/27/21,COL,NYM,Rockies at Mets
+05/28/21,ATL,NYM,Braves at Mets
+05/29/21,ATL,NYM,Braves at Mets
+05/30/21,ATL,NYM,Braves at Mets
+05/31/21,NYM,ARI,Mets at Diamondbacks
+06/01/21,NYM,ARI,Mets at Diamondbacks
+06/02/21,NYM,ARI,Mets at Diamondbacks
+06/03/21,NYM,SDP,Mets at Padres
+06/04/21,NYM,SDP,Mets at Padres
+06/05/21,NYM,SDP,Mets at Padres
+06/06/21,NYM,SDP,Mets at Padres
+06/08/21,NYM,BAL,Mets at Orioles
+06/09/21,NYM,BAL,Mets at Orioles
+06/11/21,SDP,NYM,Padres at Mets
+06/12/21,SDP,NYM,Padres at Mets
+06/13/21,SDP,NYM,Padres at Mets
+06/14/21,CHC,NYM,Cubs at Mets
+06/15/21,CHC,NYM,Cubs at Mets
+06/16/21,CHC,NYM,Cubs at Mets
+06/17/21,CHC,NYM,Cubs at Mets
+06/18/21,NYM,WSN,Mets at Nationals
+06/19/21,NYM,WSN,Mets at Nationals
+06/20/21,NYM,WSN,Mets at Nationals
+06/21/21,ATL,NYM,Braves at Mets
+06/22/21,ATL,NYM,Braves at Mets
+06/23/21,ATL,NYM,Braves at Mets
+06/25/21,PHI,NYM,Phillies at Mets
+06/26/21,PHI,NYM,Phillies at Mets
+06/27/21,PHI,NYM,Phillies at Mets
+06/29/21,NYM,ATL,Mets at Braves
+06/30/21,NYM,ATL,Mets at Braves
+07/01/21,NYM,ATL,Mets at Braves
+07/02/21,NYM,NYY,Mets at Yankees
+07/03/21,NYM,NYY,Mets at Yankees
+07/04/21,NYM,NYY,Mets at Yankees
+07/05/21,MIL,NYM,Brewers at Mets
+07/06/21,MIL,NYM,Brewers at Mets
+07/07/21,MIL,NYM,Brewers at Mets
+07/19/21,NYM,CIN,Mets at Reds
+07/20/21,NYM,CIN,Mets at Reds
+07/21/21,NYM,CIN,Mets at Reds
+07/23/21,TOR,NYM,Blue Jays at Mets
+07/24/21,TOR,NYM,Blue Jays at Mets
+07/25/21,TOR,NYM,Blue Jays at Mets
+07/26/21,ATL,NYM,Braves at Mets
+07/27/21,ATL,NYM,Braves at Mets
+07/28/21,ATL,NYM,Braves at Mets
+07/29/21,ATL,NYM,Braves at Mets
+07/30/21,CIN,NYM,Reds at Mets
+07/31/21,CIN,NYM,Reds at Mets
+08/01/21,CIN,NYM,Reds at Mets
+08/02/21,NYM,MIA,Mets at Marlins
+08/03/21,NYM,MIA,Mets at Marlins
+08/04/21,NYM,MIA,Mets at Marlins
+08/05/21,NYM,MIA,Mets at Marlins
+08/06/21,NYM,PHI,Mets at Phillies
+08/07/21,NYM,PHI,Mets at Phillies
+08/08/21,NYM,PHI,Mets at Phillies
+08/10/21,WSN,NYM,Nationals at Mets
+08/11/21,WSN,NYM,Nationals at Mets
+08/12/21,WSN,NYM,Nationals at Mets
+08/13/21,LAD,NYM,Dodgers at Mets
+08/14/21,LAD,NYM,Dodgers at Mets
+08/15/21,LAD,NYM,Dodgers at Mets
+08/16/21,NYM,SFG,Mets at Giants
+08/17/21,NYM,SFG,Mets at Giants
+08/18/21,NYM,SFG,Mets at Giants
+08/19/21,NYM,LAD,Mets at Dodgers
+08/20/21,NYM,LAD,Mets at Dodgers
+08/21/21,NYM,LAD,Mets at Dodgers
+08/22/21,NYM,LAD,Mets at Dodgers
+08/24/21,SFG,NYM,Giants at Mets
+08/25/21,SFG,NYM,Giants at Mets
+08/26/21,SFG,NYM,Giants at Mets
+08/27/21,WSN,NYM,Nationals at Mets
+08/28/21,WSN,NYM,Nationals at Mets
+08/29/21,WSN,NYM,Nationals at Mets
+08/31/21,MIA,NYM,Marlins at Mets
+09/01/21,MIA,NYM,Marlins at Mets
+09/02/21,MIA,NYM,Marlins at Mets
+09/03/21,NYM,WSN,Mets at Nationals
+09/04/21,NYM,WSN,Mets at Nationals
+09/05/21,NYM,WSN,Mets at Nationals
+09/06/21,NYM,WSN,Mets at Nationals
+09/07/21,NYM,MIA,Mets at Marlins
+09/08/21,NYM,MIA,Mets at Marlins
+09/09/21,NYM,MIA,Mets at Marlins
+09/10/21,NYY,NYM,Yankees at Mets
+09/11/21,NYY,NYM,Yankees at Mets
+09/12/21,NYY,NYM,Yankees at Mets
+09/17/21,PHI,NYM,Phillies at Mets
+09/18/21,PHI,NYM,Phillies at Mets
+09/19/21,PHI,NYM,Phillies at Mets
+09/21/21,NYM,BOS,Mets at Red Sox
+09/22/21,NYM,BOS,Mets at Red Sox
+09/24/21,NYM,MIL,Mets at Brewers
+09/25/21,NYM,MIL,Mets at Brewers
+09/26/21,NYM,MIL,Mets at Brewers
+09/28/21,MIA,NYM,Marlins at Mets
+09/29/21,MIA,NYM,Marlins at Mets
+09/30/21,MIA,NYM,Marlins at Mets
+10/01/21,NYM,ATL,Mets at Braves
+10/02/21,NYM,ATL,Mets at Braves
+10/03/21,NYM,ATL,Mets at Braves
+04/01/21,TBR,MIA,Rays at Marlins
+04/02/21,TBR,MIA,Rays at Marlins
+04/03/21,TBR,MIA,Rays at Marlins
+04/12/21,MIA,ATL,Marlins at Braves
+04/13/21,MIA,ATL,Marlins at Braves
+04/14/21,MIA,ATL,Marlins at Braves
+04/15/21,MIA,ATL,Marlins at Braves
+04/16/21,SFG,MIA,Giants at Marlins
+04/17/21,SFG,MIA,Giants at Marlins
+04/18/21,SFG,MIA,Giants at Marlins
+04/20/21,BAL,MIA,Orioles at Marlins
+04/21/21,BAL,MIA,Orioles at Marlins
+04/22/21,MIA,SFG,Marlins at Giants
+04/23/21,MIA,SFG,Marlins at Giants
+04/24/21,MIA,SFG,Marlins at Giants
+04/25/21,MIA,SFG,Marlins at Giants
+04/26/21,MIA,MIL,Marlins at Brewers
+04/27/21,MIA,MIL,Marlins at Brewers
+04/28/21,MIA,MIL,Marlins at Brewers
+04/30/21,MIA,WSN,Marlins at Nationals
+05/01/21,MIA,WSN,Marlins at Nationals
+05/02/21,MIA,WSN,Marlins at Nationals
+05/04/21,ARI,MIA,Diamondbacks at Marlins
+05/05/21,ARI,MIA,Diamondbacks at Marlins
+05/06/21,ARI,MIA,Diamondbacks at Marlins
+05/07/21,MIL,MIA,Brewers at Marlins
+05/08/21,MIL,MIA,Brewers at Marlins
+05/09/21,MIL,MIA,Brewers at Marlins
+05/10/21,MIA,ARI,Marlins at Diamondbacks
+05/11/21,MIA,ARI,Marlins at Diamondbacks
+05/12/21,MIA,ARI,Marlins at Diamondbacks
+05/13/21,MIA,ARI,Marlins at Diamondbacks
+05/14/21,MIA,LAD,Marlins at Dodgers
+05/15/21,MIA,LAD,Marlins at Dodgers
+05/16/21,MIA,LAD,Marlins at Dodgers
+05/18/21,MIA,PHI,Marlins at Phillies
+05/19/21,MIA,PHI,Marlins at Phillies
+05/20/21,MIA,PHI,Marlins at Phillies
+05/24/21,PHI,MIA,Phillies at Marlins
+05/25/21,PHI,MIA,Phillies at Marlins
+05/26/21,PHI,MIA,Phillies at Marlins
+05/27/21,PHI,MIA,Phillies at Marlins
+05/28/21,MIA,BOS,Marlins at Red Sox
+05/29/21,MIA,BOS,Marlins at Red Sox
+05/30/21,MIA,BOS,Marlins at Red Sox
+06/01/21,MIA,TOR,Marlins at Blue Jays
+06/02/21,MIA,TOR,Marlins at Blue Jays
+06/08/21,COL,MIA,Rockies at Marlins
+06/09/21,COL,MIA,Rockies at Marlins
+06/10/21,COL,MIA,Rockies at Marlins
+06/11/21,ATL,MIA,Braves at Marlins
+06/12/21,ATL,MIA,Braves at Marlins
+06/13/21,ATL,MIA,Braves at Marlins
+06/18/21,MIA,CHC,Marlins at Cubs
+06/19/21,MIA,CHC,Marlins at Cubs
+06/20/21,MIA,CHC,Marlins at Cubs
+06/22/21,TOR,MIA,Blue Jays at Marlins
+06/23/21,TOR,MIA,Blue Jays at Marlins
+06/24/21,WSN,MIA,Nationals at Marlins
+06/25/21,WSN,MIA,Nationals at Marlins
+06/26/21,WSN,MIA,Nationals at Marlins
+06/27/21,WSN,MIA,Nationals at Marlins
+06/29/21,MIA,PHI,Marlins at Phillies
+06/30/21,MIA,PHI,Marlins at Phillies
+07/01/21,MIA,PHI,Marlins at Phillies
+07/02/21,MIA,ATL,Marlins at Braves
+07/03/21,MIA,ATL,Marlins at Braves
+07/04/21,MIA,ATL,Marlins at Braves
+07/05/21,LAD,MIA,Dodgers at Marlins
+07/06/21,LAD,MIA,Dodgers at Marlins
+07/07/21,LAD,MIA,Dodgers at Marlins
+07/08/21,LAD,MIA,Dodgers at Marlins
+07/09/21,ATL,MIA,Braves at Marlins
+07/10/21,ATL,MIA,Braves at Marlins
+07/11/21,ATL,MIA,Braves at Marlins
+07/16/21,MIA,PHI,Marlins at Phillies
+07/17/21,MIA,PHI,Marlins at Phillies
+07/18/21,MIA,PHI,Marlins at Phillies
+07/19/21,MIA,WSN,Marlins at Nationals
+07/20/21,MIA,WSN,Marlins at Nationals
+07/21/21,MIA,WSN,Marlins at Nationals
+07/22/21,SDP,MIA,Padres at Marlins
+07/23/21,SDP,MIA,Padres at Marlins
+07/24/21,SDP,MIA,Padres at Marlins
+07/25/21,SDP,MIA,Padres at Marlins
+07/27/21,MIA,BAL,Marlins at Orioles
+07/28/21,MIA,BAL,Marlins at Orioles
+07/30/21,NYY,MIA,Yankees at Marlins
+07/31/21,NYY,MIA,Yankees at Marlins
+08/01/21,NYY,MIA,Yankees at Marlins
+08/06/21,MIA,COL,Marlins at Rockies
+08/07/21,MIA,COL,Marlins at Rockies
+08/08/21,MIA,COL,Marlins at Rockies
+08/09/21,MIA,SDP,Marlins at Padres
+08/10/21,MIA,SDP,Marlins at Padres
+08/11/21,MIA,SDP,Marlins at Padres
+08/13/21,CHC,MIA,Cubs at Marlins
+08/14/21,CHC,MIA,Cubs at Marlins
+08/15/21,CHC,MIA,Cubs at Marlins
+08/16/21,ATL,MIA,Braves at Marlins
+08/17/21,ATL,MIA,Braves at Marlins
+08/18/21,ATL,MIA,Braves at Marlins
+08/19/21,MIA,CIN,Marlins at Reds
+08/20/21,MIA,CIN,Marlins at Reds
+08/21/21,MIA,CIN,Marlins at Reds
+08/22/21,MIA,CIN,Marlins at Reds
+08/24/21,WSN,MIA,Nationals at Marlins
+08/25/21,WSN,MIA,Nationals at Marlins
+08/26/21,WSN,MIA,Nationals at Marlins
+08/27/21,CIN,MIA,Reds at Marlins
+08/28/21,CIN,MIA,Reds at Marlins
+08/29/21,CIN,MIA,Reds at Marlins
+09/03/21,PHI,MIA,Phillies at Marlins
+09/04/21,PHI,MIA,Phillies at Marlins
+09/05/21,PHI,MIA,Phillies at Marlins
+09/10/21,MIA,ATL,Marlins at Braves
+09/11/21,MIA,ATL,Marlins at Braves
+09/12/21,MIA,ATL,Marlins at Braves
+09/13/21,MIA,WSN,Marlins at Nationals
+09/14/21,MIA,WSN,Marlins at Nationals
+09/15/21,MIA,WSN,Marlins at Nationals
+09/20/21,WSN,MIA,Nationals at Marlins
+09/21/21,WSN,MIA,Nationals at Marlins
+09/22/21,WSN,MIA,Nationals at Marlins
+09/24/21,MIA,TBR,Marlins at Rays
+09/25/21,MIA,TBR,Marlins at Rays
+09/26/21,MIA,TBR,Marlins at Rays
+10/01/21,PHI,MIA,Phillies at Marlins
+10/02/21,PHI,MIA,Phillies at Marlins
+10/03/21,PHI,MIA,Phillies at Marlins
+04/09/21,CIN,ARI,Reds at Diamondbacks
+04/10/21,CIN,ARI,Reds at Diamondbacks
+04/11/21,CIN,ARI,Reds at Diamondbacks
+04/12/21,CIN,SFG,Reds at Giants
+04/13/21,CIN,SFG,Reds at Giants
+04/14/21,CIN,SFG,Reds at Giants
+04/16/21,CLE,CIN,Indians at Reds
+04/17/21,CLE,CIN,Indians at Reds
+04/18/21,CLE,CIN,Indians at Reds
+04/20/21,ARI,CIN,Diamondbacks at Reds
+04/21/21,ARI,CIN,Diamondbacks at Reds
+04/22/21,ARI,CIN,Diamondbacks at Reds
+04/26/21,CIN,LAD,Reds at Dodgers
+04/27/21,CIN,LAD,Reds at Dodgers
+04/28/21,CIN,LAD,Reds at Dodgers
+04/30/21,CHC,CIN,Cubs at Reds
+05/01/21,CHC,CIN,Cubs at Reds
+05/02/21,CHC,CIN,Cubs at Reds
+05/04/21,CHW,CIN,White Sox at Reds
+05/05/21,CHW,CIN,White Sox at Reds
+05/07/21,CIN,CLE,Reds at Indians
+05/08/21,CIN,CLE,Reds at Indians
+05/09/21,CIN,CLE,Reds at Indians
+05/13/21,CIN,COL,Reds at Rockies
+05/14/21,CIN,COL,Reds at Rockies
+05/15/21,CIN,COL,Reds at Rockies
+05/16/21,CIN,COL,Reds at Rockies
+05/17/21,SFG,CIN,Giants at Reds
+05/18/21,SFG,CIN,Giants at Reds
+05/19/21,SFG,CIN,Giants at Reds
+05/20/21,SFG,CIN,Giants at Reds
+05/21/21,MIL,CIN,Brewers at Reds
+05/22/21,MIL,CIN,Brewers at Reds
+05/23/21,MIL,CIN,Brewers at Reds
+05/25/21,CIN,WSN,Reds at Nationals
+05/26/21,CIN,WSN,Reds at Nationals
+05/27/21,CIN,WSN,Reds at Nationals
+05/28/21,CIN,CHC,Reds at Cubs
+05/29/21,CIN,CHC,Reds at Cubs
+05/30/21,CIN,CHC,Reds at Cubs
+05/31/21,PHI,CIN,Phillies at Reds
+06/01/21,PHI,CIN,Phillies at Reds
+06/02/21,PHI,CIN,Phillies at Reds
+06/08/21,MIL,CIN,Brewers at Reds
+06/09/21,MIL,CIN,Brewers at Reds
+06/10/21,MIL,CIN,Brewers at Reds
+06/11/21,COL,CIN,Rockies at Reds
+06/12/21,COL,CIN,Rockies at Reds
+06/13/21,COL,CIN,Rockies at Reds
+06/14/21,CIN,MIL,Reds at Brewers
+06/15/21,CIN,MIL,Reds at Brewers
+06/16/21,CIN,MIL,Reds at Brewers
+06/17/21,CIN,SDP,Reds at Padres
+06/18/21,CIN,SDP,Reds at Padres
+06/19/21,CIN,SDP,Reds at Padres
+06/20/21,CIN,SDP,Reds at Padres
+06/21/21,CIN,MIN,Reds at Twins
+06/22/21,CIN,MIN,Reds at Twins
+06/24/21,ATL,CIN,Braves at Reds
+06/25/21,ATL,CIN,Braves at Reds
+06/26/21,ATL,CIN,Braves at Reds
+06/27/21,ATL,CIN,Braves at Reds
+06/29/21,SDP,CIN,Padres at Reds
+06/30/21,SDP,CIN,Padres at Reds
+07/01/21,SDP,CIN,Padres at Reds
+07/02/21,CHC,CIN,Cubs at Reds
+07/03/21,CHC,CIN,Cubs at Reds
+07/04/21,CHC,CIN,Cubs at Reds
+07/05/21,CIN,KCR,Reds at Royals
+07/06/21,CIN,KCR,Reds at Royals
+07/07/21,CIN,KCR,Reds at Royals
+07/08/21,CIN,MIL,Reds at Brewers
+07/09/21,CIN,MIL,Reds at Brewers
+07/10/21,CIN,MIL,Reds at Brewers
+07/11/21,CIN,MIL,Reds at Brewers
+07/16/21,MIL,CIN,Brewers at Reds
+07/17/21,MIL,CIN,Brewers at Reds
+07/18/21,MIL,CIN,Brewers at Reds
+07/26/21,CIN,CHC,Reds at Cubs
+07/27/21,CIN,CHC,Reds at Cubs
+07/28/21,CIN,CHC,Reds at Cubs
+07/29/21,CIN,CHC,Reds at Cubs
+08/03/21,MIN,CIN,Twins at Reds
+08/04/21,MIN,CIN,Twins at Reds
+08/10/21,CIN,ATL,Reds at Braves
+08/11/21,CIN,ATL,Reds at Braves
+08/12/21,CIN,ATL,Reds at Braves
+08/13/21,CIN,PHI,Reds at Phillies
+08/14/21,CIN,PHI,Reds at Phillies
+08/15/21,CIN,PHI,Reds at Phillies
+08/16/21,CHC,CIN,Cubs at Reds
+08/17/21,CHC,CIN,Cubs at Reds
+08/18/21,CHC,CIN,Cubs at Reds
+08/24/21,CIN,MIL,Reds at Brewers
+08/25/21,CIN,MIL,Reds at Brewers
+08/26/21,CIN,MIL,Reds at Brewers
+09/03/21,DET,CIN,Tigers at Reds
+09/04/21,DET,CIN,Tigers at Reds
+09/05/21,DET,CIN,Tigers at Reds
+09/06/21,CIN,CHC,Reds at Cubs
+09/07/21,CIN,CHC,Reds at Cubs
+09/08/21,CIN,CHC,Reds at Cubs
+09/17/21,LAD,CIN,Dodgers at Reds
+09/18/21,LAD,CIN,Dodgers at Reds
+09/19/21,LAD,CIN,Dodgers at Reds
+09/23/21,WSN,CIN,Nationals at Reds
+09/24/21,WSN,CIN,Nationals at Reds
+09/25/21,WSN,CIN,Nationals at Reds
+09/26/21,WSN,CIN,Nationals at Reds
+09/28/21,CIN,CHW,Reds at White Sox
+09/29/21,CIN,CHW,Reds at White Sox
+04/01/21,TOR,NYY,Blue Jays at Yankees
+04/03/21,TOR,NYY,Blue Jays at Yankees
+04/04/21,TOR,NYY,Blue Jays at Yankees
+04/05/21,BAL,NYY,Orioles at Yankees
+04/06/21,BAL,NYY,Orioles at Yankees
+04/07/21,BAL,NYY,Orioles at Yankees
+04/09/21,NYY,TBR,Yankees at Rays
+04/10/21,NYY,TBR,Yankees at Rays
+04/11/21,NYY,TBR,Yankees at Rays
+04/12/21,NYY,TOR,Yankees at Blue Jays
+04/13/21,NYY,TOR,Yankees at Blue Jays
+04/14/21,NYY,TOR,Yankees at Blue Jays
+04/16/21,TBR,NYY,Rays at Yankees
+04/17/21,TBR,NYY,Rays at Yankees
+04/18/21,TBR,NYY,Rays at Yankees
+04/20/21,ATL,NYY,Braves at Yankees
+04/21/21,ATL,NYY,Braves at Yankees
+04/22/21,NYY,CLE,Yankees at Indians
+04/23/21,NYY,CLE,Yankees at Indians
+04/24/21,NYY,CLE,Yankees at Indians
+04/25/21,NYY,CLE,Yankees at Indians
+04/26/21,NYY,BAL,Yankees at Orioles
+04/27/21,NYY,BAL,Yankees at Orioles
+04/28/21,NYY,BAL,Yankees at Orioles
+04/29/21,NYY,BAL,Yankees at Orioles
+04/30/21,DET,NYY,Tigers at Yankees
+05/01/21,DET,NYY,Tigers at Yankees
+05/02/21,DET,NYY,Tigers at Yankees
+05/04/21,HOU,NYY,Astros at Yankees
+05/05/21,HOU,NYY,Astros at Yankees
+05/06/21,HOU,NYY,Astros at Yankees
+05/07/21,WSN,NYY,Nationals at Yankees
+05/08/21,WSN,NYY,Nationals at Yankees
+05/09/21,WSN,NYY,Nationals at Yankees
+05/11/21,NYY,TBR,Yankees at Rays
+05/12/21,NYY,TBR,Yankees at Rays
+05/13/21,NYY,TBR,Yankees at Rays
+05/14/21,NYY,BAL,Yankees at Orioles
+05/15/21,NYY,BAL,Yankees at Orioles
+05/16/21,NYY,BAL,Yankees at Orioles
+05/17/21,NYY,TEX,Yankees at Rangers
+05/18/21,NYY,TEX,Yankees at Rangers
+05/19/21,NYY,TEX,Yankees at Rangers
+05/20/21,NYY,TEX,Yankees at Rangers
+05/21/21,CHW,NYY,White Sox at Yankees
+05/22/21,CHW,NYY,White Sox at Yankees
+05/23/21,CHW,NYY,White Sox at Yankees
+05/25/21,TOR,NYY,Blue Jays at Yankees
+05/26/21,TOR,NYY,Blue Jays at Yankees
+05/27/21,TOR,NYY,Blue Jays at Yankees
+05/28/21,NYY,DET,Yankees at Tigers
+05/29/21,NYY,DET,Yankees at Tigers
+05/30/21,NYY,DET,Yankees at Tigers
+05/31/21,TBR,NYY,Rays at Yankees
+06/01/21,TBR,NYY,Rays at Yankees
+06/02/21,TBR,NYY,Rays at Yankees
+06/03/21,TBR,NYY,Rays at Yankees
+06/04/21,BOS,NYY,Red Sox at Yankees
+06/05/21,BOS,NYY,Red Sox at Yankees
+06/06/21,BOS,NYY,Red Sox at Yankees
+06/08/21,NYY,MIN,Yankees at Twins
+06/09/21,NYY,MIN,Yankees at Twins
+06/10/21,NYY,MIN,Yankees at Twins
+06/12/21,NYY,PHI,Yankees at Phillies
+06/13/21,NYY,PHI,Yankees at Phillies
+06/15/21,NYY,TOR,Yankees at Blue Jays
+06/16/21,NYY,TOR,Yankees at Blue Jays
+06/17/21,NYY,TOR,Yankees at Blue Jays
+06/18/21,OAK,NYY,Athletics at Yankees
+06/19/21,OAK,NYY,Athletics at Yankees
+06/20/21,OAK,NYY,Athletics at Yankees
+06/22/21,KCR,NYY,Royals at Yankees
+06/23/21,KCR,NYY,Royals at Yankees
+06/24/21,KCR,NYY,Royals at Yankees
+06/25/21,NYY,BOS,Yankees at Red Sox
+06/26/21,NYY,BOS,Yankees at Red Sox
+06/27/21,NYY,BOS,Yankees at Red Sox
+06/28/21,LAA,NYY,Angels at Yankees
+06/29/21,LAA,NYY,Angels at Yankees
+06/30/21,LAA,NYY,Angels at Yankees
+07/01/21,LAA,NYY,Angels at Yankees
+07/06/21,NYY,SEA,Yankees at Mariners
+07/07/21,NYY,SEA,Yankees at Mariners
+07/08/21,NYY,SEA,Yankees at Mariners
+07/09/21,NYY,HOU,Yankees at Astros
+07/10/21,NYY,HOU,Yankees at Astros
+07/11/21,NYY,HOU,Yankees at Astros
+07/15/21,BOS,NYY,Red Sox at Yankees
+07/16/21,BOS,NYY,Red Sox at Yankees
+07/17/21,BOS,NYY,Red Sox at Yankees
+07/18/21,BOS,NYY,Red Sox at Yankees
+07/20/21,PHI,NYY,Phillies at Yankees
+07/21/21,PHI,NYY,Phillies at Yankees
+07/22/21,NYY,BOS,Yankees at Red Sox
+07/23/21,NYY,BOS,Yankees at Red Sox
+07/24/21,NYY,BOS,Yankees at Red Sox
+07/25/21,NYY,BOS,Yankees at Red Sox
+07/27/21,NYY,TBR,Yankees at Rays
+07/28/21,NYY,TBR,Yankees at Rays
+07/29/21,NYY,TBR,Yankees at Rays
+08/02/21,BAL,NYY,Orioles at Yankees
+08/03/21,BAL,NYY,Orioles at Yankees
+08/04/21,BAL,NYY,Orioles at Yankees
+08/05/21,SEA,NYY,Mariners at Yankees
+08/06/21,SEA,NYY,Mariners at Yankees
+08/07/21,SEA,NYY,Mariners at Yankees
+08/08/21,SEA,NYY,Mariners at Yankees
+08/09/21,NYY,KCR,Yankees at Royals
+08/10/21,NYY,KCR,Yankees at Royals
+08/11/21,NYY,KCR,Yankees at Royals
+08/12/21,NYY,CHW,Yankees at White Sox
+08/14/21,NYY,CHW,Yankees at White Sox
+08/15/21,NYY,CHW,Yankees at White Sox
+08/17/21,BOS,NYY,Red Sox at Yankees
+08/18/21,BOS,NYY,Red Sox at Yankees
+08/19/21,MIN,NYY,Twins at Yankees
+08/20/21,MIN,NYY,Twins at Yankees
+08/21/21,MIN,NYY,Twins at Yankees
+08/22/21,MIN,NYY,Twins at Yankees
+08/23/21,NYY,ATL,Yankees at Braves
+08/24/21,NYY,ATL,Yankees at Braves
+08/26/21,NYY,OAK,Yankees at Athletics
+08/27/21,NYY,OAK,Yankees at Athletics
+08/28/21,NYY,OAK,Yankees at Athletics
+08/29/21,NYY,OAK,Yankees at Athletics
+08/30/21,NYY,LAA,Yankees at Angels
+08/31/21,NYY,LAA,Yankees at Angels
+09/01/21,NYY,LAA,Yankees at Angels
+09/03/21,BAL,NYY,Orioles at Yankees
+09/04/21,BAL,NYY,Orioles at Yankees
+09/05/21,BAL,NYY,Orioles at Yankees
+09/06/21,TOR,NYY,Blue Jays at Yankees
+09/07/21,TOR,NYY,Blue Jays at Yankees
+09/08/21,TOR,NYY,Blue Jays at Yankees
+09/09/21,TOR,NYY,Blue Jays at Yankees
+09/14/21,NYY,BAL,Yankees at Orioles
+09/15/21,NYY,BAL,Yankees at Orioles
+09/16/21,NYY,BAL,Yankees at Orioles
+09/17/21,CLE,NYY,Indians at Yankees
+09/18/21,CLE,NYY,Indians at Yankees
+09/19/21,CLE,NYY,Indians at Yankees
+09/20/21,TEX,NYY,Rangers at Yankees
+09/21/21,TEX,NYY,Rangers at Yankees
+09/22/21,TEX,NYY,Rangers at Yankees
+09/24/21,NYY,BOS,Yankees at Red Sox
+09/25/21,NYY,BOS,Yankees at Red Sox
+09/26/21,NYY,BOS,Yankees at Red Sox
+09/28/21,NYY,TOR,Yankees at Blue Jays
+09/29/21,NYY,TOR,Yankees at Blue Jays
+09/30/21,NYY,TOR,Yankees at Blue Jays
+10/01/21,TBR,NYY,Rays at Yankees
+10/02/21,TBR,NYY,Rays at Yankees
+10/03/21,TBR,NYY,Rays at Yankees
+04/01/21,CLE,DET,Indians at Tigers
+04/03/21,CLE,DET,Indians at Tigers
+04/04/21,CLE,DET,Indians at Tigers
+04/05/21,KCR,CLE,Royals at Indians
+04/07/21,KCR,CLE,Royals at Indians
+04/09/21,DET,CLE,Tigers at Indians
+04/10/21,DET,CLE,Tigers at Indians
+04/11/21,DET,CLE,Tigers at Indians
+04/12/21,CLE,CHW,Indians at White Sox
+04/13/21,CLE,CHW,Indians at White Sox
+04/14/21,CLE,CHW,Indians at White Sox
+04/15/21,CLE,CHW,Indians at White Sox
+04/20/21,CHW,CLE,White Sox at Indians
+04/21/21,CHW,CLE,White Sox at Indians
+04/26/21,MIN,CLE,Twins at Indians
+04/27/21,MIN,CLE,Twins at Indians
+04/28/21,MIN,CLE,Twins at Indians
+04/30/21,CLE,CHW,Indians at White Sox
+05/01/21,CLE,CHW,Indians at White Sox
+05/02/21,CLE,CHW,Indians at White Sox
+05/03/21,CLE,KCR,Indians at Royals
+05/04/21,CLE,KCR,Indians at Royals
+05/05/21,CLE,KCR,Indians at Royals
+05/06/21,CLE,KCR,Indians at Royals
+05/11/21,CHC,CLE,Cubs at Indians
+05/12/21,CHC,CLE,Cubs at Indians
+05/13/21,CLE,SEA,Indians at Mariners
+05/14/21,CLE,SEA,Indians at Mariners
+05/15/21,CLE,SEA,Indians at Mariners
+05/16/21,CLE,SEA,Indians at Mariners
+05/17/21,CLE,LAA,Indians at Angels
+05/18/21,CLE,LAA,Indians at Angels
+05/19/21,CLE,LAA,Indians at Angels
+05/21/21,MIN,CLE,Twins at Indians
+05/22/21,MIN,CLE,Twins at Indians
+05/23/21,MIN,CLE,Twins at Indians
+05/24/21,CLE,DET,Indians at Tigers
+05/25/21,CLE,DET,Indians at Tigers
+05/26/21,CLE,DET,Indians at Tigers
+05/27/21,CLE,DET,Indians at Tigers
+05/28/21,TOR,CLE,Blue Jays at Indians
+05/29/21,TOR,CLE,Blue Jays at Indians
+05/30/21,TOR,CLE,Blue Jays at Indians
+05/31/21,CHW,CLE,White Sox at Indians
+06/01/21,CHW,CLE,White Sox at Indians
+06/02/21,CHW,CLE,White Sox at Indians
+06/04/21,CLE,BAL,Indians at Orioles
+06/05/21,CLE,BAL,Indians at Orioles
+06/06/21,CLE,BAL,Indians at Orioles
+06/11/21,SEA,CLE,Mariners at Indians
+06/12/21,SEA,CLE,Mariners at Indians
+06/13/21,SEA,CLE,Mariners at Indians
+06/14/21,BAL,CLE,Orioles at Indians
+06/15/21,BAL,CLE,Orioles at Indians
+06/16/21,BAL,CLE,Orioles at Indians
+06/17/21,BAL,CLE,Orioles at Indians
+06/21/21,CLE,CHC,Indians at Cubs
+06/22/21,CLE,CHC,Indians at Cubs
+06/24/21,CLE,MIN,Indians at Twins
+06/25/21,CLE,MIN,Indians at Twins
+06/26/21,CLE,MIN,Indians at Twins
+06/27/21,CLE,MIN,Indians at Twins
+06/28/21,DET,CLE,Tigers at Indians
+06/29/21,DET,CLE,Tigers at Indians
+06/30/21,DET,CLE,Tigers at Indians
+07/01/21,HOU,CLE,Astros at Indians
+07/02/21,HOU,CLE,Astros at Indians
+07/03/21,HOU,CLE,Astros at Indians
+07/04/21,HOU,CLE,Astros at Indians
+07/05/21,CLE,TBR,Indians at Rays
+07/06/21,CLE,TBR,Indians at Rays
+07/07/21,CLE,TBR,Indians at Rays
+07/08/21,KCR,CLE,Royals at Indians
+07/09/21,KCR,CLE,Royals at Indians
+07/10/21,KCR,CLE,Royals at Indians
+07/11/21,KCR,CLE,Royals at Indians
+07/16/21,CLE,OAK,Indians at Athletics
+07/17/21,CLE,OAK,Indians at Athletics
+07/18/21,CLE,OAK,Indians at Athletics
+07/19/21,CLE,HOU,Indians at Astros
+07/20/21,CLE,HOU,Indians at Astros
+07/21/21,CLE,HOU,Indians at Astros
+07/22/21,TBR,CLE,Rays at Indians
+07/23/21,TBR,CLE,Rays at Indians
+07/24/21,TBR,CLE,Rays at Indians
+07/25/21,TBR,CLE,Rays at Indians
+07/30/21,CLE,CHW,Indians at White Sox
+07/31/21,CLE,CHW,Indians at White Sox
+08/01/21,CLE,CHW,Indians at White Sox
+08/02/21,CLE,TOR,Indians at Blue Jays
+08/03/21,CLE,TOR,Indians at Blue Jays
+08/04/21,CLE,TOR,Indians at Blue Jays
+08/05/21,CLE,TOR,Indians at Blue Jays
+08/06/21,DET,CLE,Tigers at Indians
+08/07/21,DET,CLE,Tigers at Indians
+08/08/21,DET,CLE,Tigers at Indians
+08/10/21,OAK,CLE,Athletics at Indians
+08/11/21,OAK,CLE,Athletics at Indians
+08/12/21,OAK,CLE,Athletics at Indians
+08/13/21,CLE,DET,Indians at Tigers
+08/14/21,CLE,DET,Indians at Tigers
+08/15/21,CLE,DET,Indians at Tigers
+08/16/21,CLE,MIN,Indians at Twins
+08/17/21,CLE,MIN,Indians at Twins
+08/18/21,CLE,MIN,Indians at Twins
+08/20/21,LAA,CLE,Angels at Indians
+08/21/21,LAA,CLE,Angels at Indians
+08/22/21,LAA,CLE,Angels at Indians
+08/24/21,TEX,CLE,Rangers at Indians
+08/25/21,TEX,CLE,Rangers at Indians
+08/26/21,TEX,CLE,Rangers at Indians
+08/27/21,BOS,CLE,Red Sox at Indians
+08/28/21,BOS,CLE,Red Sox at Indians
+08/29/21,BOS,CLE,Red Sox at Indians
+08/31/21,CLE,KCR,Indians at Royals
+09/01/21,CLE,KCR,Indians at Royals
+09/02/21,CLE,KCR,Indians at Royals
+09/03/21,CLE,BOS,Indians at Red Sox
+09/04/21,CLE,BOS,Indians at Red Sox
+09/05/21,CLE,BOS,Indians at Red Sox
+09/06/21,MIN,CLE,Twins at Indians
+09/07/21,MIN,CLE,Twins at Indians
+09/08/21,MIN,CLE,Twins at Indians
+09/09/21,MIN,CLE,Twins at Indians
+09/10/21,MIL,CLE,Brewers at Indians
+09/11/21,MIL,CLE,Brewers at Indians
+09/12/21,MIL,CLE,Brewers at Indians
+09/14/21,CLE,MIN,Indians at Twins
+09/15/21,CLE,MIN,Indians at Twins
+09/20/21,KCR,CLE,Royals at Indians
+09/21/21,KCR,CLE,Royals at Indians
+09/22/21,KCR,CLE,Royals at Indians
+09/23/21,CHW,CLE,White Sox at Indians
+09/24/21,CHW,CLE,White Sox at Indians
+09/25/21,CHW,CLE,White Sox at Indians
+09/26/21,CHW,CLE,White Sox at Indians
+09/28/21,CLE,KCR,Indians at Royals
+09/29/21,CLE,KCR,Indians at Royals
+09/30/21,CLE,KCR,Indians at Royals
+10/01/21,CLE,TEX,Indians at Rangers
+10/02/21,CLE,TEX,Indians at Rangers
+10/03/21,CLE,TEX,Indians at Rangers
+04/01/21,SFG,SEA,Giants at Mariners
+04/02/21,SFG,SEA,Giants at Mariners
+04/03/21,SFG,SEA,Giants at Mariners
+04/05/21,CHW,SEA,White Sox at Mariners
+04/06/21,CHW,SEA,White Sox at Mariners
+04/07/21,CHW,SEA,White Sox at Mariners
+04/08/21,SEA,MIN,Mariners at Twins
+04/10/21,SEA,MIN,Mariners at Twins
+04/11/21,SEA,MIN,Mariners at Twins
+04/12/21,SEA,BAL,Mariners at Orioles
+04/13/21,SEA,BAL,Mariners at Orioles
+04/14/21,SEA,BAL,Mariners at Orioles
+04/15/21,SEA,BAL,Mariners at Orioles
+04/16/21,HOU,SEA,Astros at Mariners
+04/17/21,HOU,SEA,Astros at Mariners
+04/18/21,HOU,SEA,Astros at Mariners
+04/19/21,LAD,SEA,Dodgers at Mariners
+04/20/21,LAD,SEA,Dodgers at Mariners
+04/22/21,SEA,BOS,Mariners at Red Sox
+04/23/21,SEA,BOS,Mariners at Red Sox
+04/24/21,SEA,BOS,Mariners at Red Sox
+04/25/21,SEA,BOS,Mariners at Red Sox
+04/26/21,SEA,HOU,Mariners at Astros
+04/27/21,SEA,HOU,Mariners at Astros
+04/28/21,SEA,HOU,Mariners at Astros
+04/29/21,SEA,HOU,Mariners at Astros
+04/30/21,LAA,SEA,Angels at Mariners
+05/01/21,LAA,SEA,Angels at Mariners
+05/02/21,LAA,SEA,Angels at Mariners
+05/03/21,BAL,SEA,Orioles at Mariners
+05/04/21,BAL,SEA,Orioles at Mariners
+05/05/21,BAL,SEA,Orioles at Mariners
+05/07/21,SEA,TEX,Mariners at Rangers
+05/08/21,SEA,TEX,Mariners at Rangers
+05/09/21,SEA,TEX,Mariners at Rangers
+05/11/21,SEA,LAD,Mariners at Dodgers
+05/12/21,SEA,LAD,Mariners at Dodgers
+05/17/21,DET,SEA,Tigers at Mariners
+05/18/21,DET,SEA,Tigers at Mariners
+05/19/21,DET,SEA,Tigers at Mariners
+05/21/21,SEA,SDP,Mariners at Padres
+05/22/21,SEA,SDP,Mariners at Padres
+05/23/21,SEA,SDP,Mariners at Padres
+05/24/21,SEA,OAK,Mariners at Athletics
+05/25/21,SEA,OAK,Mariners at Athletics
+05/26/21,SEA,OAK,Mariners at Athletics
+05/27/21,TEX,SEA,Rangers at Mariners
+05/28/21,TEX,SEA,Rangers at Mariners
+05/29/21,TEX,SEA,Rangers at Mariners
+05/30/21,TEX,SEA,Rangers at Mariners
+05/31/21,OAK,SEA,Athletics at Mariners
+06/01/21,OAK,SEA,Athletics at Mariners
+06/02/21,OAK,SEA,Athletics at Mariners
+06/03/21,SEA,LAA,Mariners at Angels
+06/04/21,SEA,LAA,Mariners at Angels
+06/05/21,SEA,LAA,Mariners at Angels
+06/06/21,SEA,LAA,Mariners at Angels
+06/08/21,SEA,DET,Mariners at Tigers
+06/09/21,SEA,DET,Mariners at Tigers
+06/10/21,SEA,DET,Mariners at Tigers
+06/14/21,MIN,SEA,Twins at Mariners
+06/15/21,MIN,SEA,Twins at Mariners
+06/16/21,MIN,SEA,Twins at Mariners
+06/17/21,TBR,SEA,Rays at Mariners
+06/18/21,TBR,SEA,Rays at Mariners
+06/19/21,TBR,SEA,Rays at Mariners
+06/20/21,TBR,SEA,Rays at Mariners
+06/22/21,COL,SEA,Rockies at Mariners
+06/23/21,COL,SEA,Rockies at Mariners
+06/25/21,SEA,CHW,Mariners at White Sox
+06/26/21,SEA,CHW,Mariners at White Sox
+06/27/21,SEA,CHW,Mariners at White Sox
+06/29/21,SEA,TOR,Mariners at Blue Jays
+06/30/21,SEA,TOR,Mariners at Blue Jays
+07/01/21,SEA,TOR,Mariners at Blue Jays
+07/02/21,TEX,SEA,Rangers at Mariners
+07/03/21,TEX,SEA,Rangers at Mariners
+07/04/21,TEX,SEA,Rangers at Mariners
+07/09/21,LAA,SEA,Angels at Mariners
+07/10/21,LAA,SEA,Angels at Mariners
+07/11/21,LAA,SEA,Angels at Mariners
+07/16/21,SEA,LAA,Mariners at Angels
+07/17/21,SEA,LAA,Mariners at Angels
+07/18/21,SEA,LAA,Mariners at Angels
+07/20/21,SEA,COL,Mariners at Rockies
+07/21/21,SEA,COL,Mariners at Rockies
+07/22/21,OAK,SEA,Athletics at Mariners
+07/23/21,OAK,SEA,Athletics at Mariners
+07/24/21,OAK,SEA,Athletics at Mariners
+07/25/21,OAK,SEA,Athletics at Mariners
+07/26/21,HOU,SEA,Astros at Mariners
+07/27/21,HOU,SEA,Astros at Mariners
+07/28/21,HOU,SEA,Astros at Mariners
+07/30/21,SEA,TEX,Mariners at Rangers
+07/31/21,SEA,TEX,Mariners at Rangers
+08/01/21,SEA,TEX,Mariners at Rangers
+08/02/21,SEA,TBR,Mariners at Rays
+08/03/21,SEA,TBR,Mariners at Rays
+08/04/21,SEA,TBR,Mariners at Rays
+08/10/21,TEX,SEA,Rangers at Mariners
+08/11/21,TEX,SEA,Rangers at Mariners
+08/12/21,TEX,SEA,Rangers at Mariners
+08/13/21,TOR,SEA,Blue Jays at Mariners
+08/14/21,TOR,SEA,Blue Jays at Mariners
+08/15/21,TOR,SEA,Blue Jays at Mariners
+08/17/21,SEA,TEX,Mariners at Rangers
+08/18/21,SEA,TEX,Mariners at Rangers
+08/19/21,SEA,TEX,Mariners at Rangers
+08/20/21,SEA,HOU,Mariners at Astros
+08/21/21,SEA,HOU,Mariners at Astros
+08/22/21,SEA,HOU,Mariners at Astros
+08/23/21,SEA,OAK,Mariners at Athletics
+08/24/21,SEA,OAK,Mariners at Athletics
+08/26/21,KCR,SEA,Royals at Mariners
+08/27/21,KCR,SEA,Royals at Mariners
+08/28/21,KCR,SEA,Royals at Mariners
+08/29/21,KCR,SEA,Royals at Mariners
+08/30/21,HOU,SEA,Astros at Mariners
+08/31/21,HOU,SEA,Astros at Mariners
+09/01/21,HOU,SEA,Astros at Mariners
+09/03/21,SEA,ARI,Mariners at Diamondbacks
+09/04/21,SEA,ARI,Mariners at Diamondbacks
+09/05/21,SEA,ARI,Mariners at Diamondbacks
+09/06/21,SEA,HOU,Mariners at Astros
+09/07/21,SEA,HOU,Mariners at Astros
+09/08/21,SEA,HOU,Mariners at Astros
+09/10/21,ARI,SEA,Diamondbacks at Mariners
+09/11/21,ARI,SEA,Diamondbacks at Mariners
+09/12/21,ARI,SEA,Diamondbacks at Mariners
+09/13/21,BOS,SEA,Red Sox at Mariners
+09/14/21,BOS,SEA,Red Sox at Mariners
+09/15/21,BOS,SEA,Red Sox at Mariners
+09/17/21,SEA,KCR,Mariners at Royals
+09/18/21,SEA,KCR,Mariners at Royals
+09/19/21,SEA,KCR,Mariners at Royals
+09/20/21,SEA,OAK,Mariners at Athletics
+09/21/21,SEA,OAK,Mariners at Athletics
+09/22/21,SEA,OAK,Mariners at Athletics
+09/23/21,SEA,OAK,Mariners at Athletics
+09/24/21,SEA,LAA,Mariners at Angels
+09/25/21,SEA,LAA,Mariners at Angels
+09/26/21,SEA,LAA,Mariners at Angels
+09/27/21,OAK,SEA,Athletics at Mariners
+09/28/21,OAK,SEA,Athletics at Mariners
+09/29/21,OAK,SEA,Athletics at Mariners
+10/01/21,LAA,SEA,Angels at Mariners
+10/02/21,LAA,SEA,Angels at Mariners
+10/03/21,LAA,SEA,Angels at Mariners
+04/05/21,TOR,TEX,Blue Jays at Rangers
+04/06/21,TOR,TEX,Blue Jays at Rangers
+04/07/21,TOR,TEX,Blue Jays at Rangers
+04/08/21,LAA,TOR,Angels at Blue Jays
+04/09/21,LAA,TOR,Angels at Blue Jays
+04/10/21,LAA,TOR,Angels at Blue Jays
+04/11/21,LAA,TOR,Angels at Blue Jays
+04/15/21,TOR,KCR,Blue Jays at Royals
+04/16/21,TOR,KCR,Blue Jays at Royals
+04/17/21,TOR,KCR,Blue Jays at Royals
+04/18/21,TOR,KCR,Blue Jays at Royals
+04/20/21,TOR,BOS,Blue Jays at Red Sox
+04/21/21,TOR,BOS,Blue Jays at Red Sox
+04/23/21,TOR,TBR,Blue Jays at Rays
+04/24/21,TOR,TBR,Blue Jays at Rays
+04/25/21,TOR,TBR,Blue Jays at Rays
+04/27/21,WSN,TOR,Nationals at Blue Jays
+04/28/21,WSN,TOR,Nationals at Blue Jays
+04/30/21,ATL,TOR,Braves at Blue Jays
+05/01/21,ATL,TOR,Braves at Blue Jays
+05/02/21,ATL,TOR,Braves at Blue Jays
+05/03/21,TOR,OAK,Blue Jays at Athletics
+05/04/21,TOR,OAK,Blue Jays at Athletics
+05/05/21,TOR,OAK,Blue Jays at Athletics
+05/06/21,TOR,OAK,Blue Jays at Athletics
+05/07/21,TOR,HOU,Blue Jays at Astros
+05/08/21,TOR,HOU,Blue Jays at Astros
+05/09/21,TOR,HOU,Blue Jays at Astros
+05/11/21,TOR,ATL,Blue Jays at Braves
+05/12/21,TOR,ATL,Blue Jays at Braves
+05/13/21,TOR,ATL,Blue Jays at Braves
+05/14/21,PHI,TOR,Phillies at Blue Jays
+05/15/21,PHI,TOR,Phillies at Blue Jays
+05/16/21,PHI,TOR,Phillies at Blue Jays
+05/18/21,BOS,TOR,Red Sox at Blue Jays
+05/19/21,BOS,TOR,Red Sox at Blue Jays
+05/20/21,BOS,TOR,Red Sox at Blue Jays
+05/21/21,TBR,TOR,Rays at Blue Jays
+05/22/21,TBR,TOR,Rays at Blue Jays
+05/23/21,TBR,TOR,Rays at Blue Jays
+05/24/21,TBR,TOR,Rays at Blue Jays
+06/04/21,HOU,TOR,Astros at Blue Jays
+06/05/21,HOU,TOR,Astros at Blue Jays
+06/06/21,HOU,TOR,Astros at Blue Jays
+06/08/21,TOR,CHW,Blue Jays at White Sox
+06/09/21,TOR,CHW,Blue Jays at White Sox
+06/10/21,TOR,CHW,Blue Jays at White Sox
+06/11/21,TOR,BOS,Blue Jays at Red Sox
+06/12/21,TOR,BOS,Blue Jays at Red Sox
+06/13/21,TOR,BOS,Blue Jays at Red Sox
+06/14/21,TOR,BOS,Blue Jays at Red Sox
+06/18/21,TOR,BAL,Blue Jays at Orioles
+06/19/21,TOR,BAL,Blue Jays at Orioles
+06/20/21,TOR,BAL,Blue Jays at Orioles
+06/24/21,BAL,TOR,Orioles at Blue Jays
+06/25/21,BAL,TOR,Orioles at Blue Jays
+06/26/21,BAL,TOR,Orioles at Blue Jays
+06/27/21,BAL,TOR,Orioles at Blue Jays
+07/02/21,TBR,TOR,Rays at Blue Jays
+07/03/21,TBR,TOR,Rays at Blue Jays
+07/04/21,TBR,TOR,Rays at Blue Jays
+07/06/21,TOR,BAL,Blue Jays at Orioles
+07/07/21,TOR,BAL,Blue Jays at Orioles
+07/08/21,TOR,BAL,Blue Jays at Orioles
+07/09/21,TOR,TBR,Blue Jays at Rays
+07/10/21,TOR,TBR,Blue Jays at Rays
+07/11/21,TOR,TBR,Blue Jays at Rays
+07/16/21,TEX,TOR,Rangers at Blue Jays
+07/17/21,TEX,TOR,Rangers at Blue Jays
+07/18/21,TEX,TOR,Rangers at Blue Jays
+07/19/21,BOS,TOR,Red Sox at Blue Jays
+07/20/21,BOS,TOR,Red Sox at Blue Jays
+07/21/21,BOS,TOR,Red Sox at Blue Jays
+07/26/21,TOR,BOS,Blue Jays at Red Sox
+07/27/21,TOR,BOS,Blue Jays at Red Sox
+07/28/21,TOR,BOS,Blue Jays at Red Sox
+07/29/21,TOR,BOS,Blue Jays at Red Sox
+07/30/21,KCR,TOR,Royals at Blue Jays
+07/31/21,KCR,TOR,Royals at Blue Jays
+08/01/21,KCR,TOR,Royals at Blue Jays
+08/06/21,BOS,TOR,Red Sox at Blue Jays
+08/07/21,BOS,TOR,Red Sox at Blue Jays
+08/08/21,BOS,TOR,Red Sox at Blue Jays
+08/10/21,TOR,LAA,Blue Jays at Angels
+08/11/21,TOR,LAA,Blue Jays at Angels
+08/12/21,TOR,LAA,Blue Jays at Angels
+08/17/21,TOR,WSN,Blue Jays at Nationals
+08/18/21,TOR,WSN,Blue Jays at Nationals
+08/20/21,DET,TOR,Tigers at Blue Jays
+08/21/21,DET,TOR,Tigers at Blue Jays
+08/22/21,DET,TOR,Tigers at Blue Jays
+08/23/21,CHW,TOR,White Sox at Blue Jays
+08/24/21,CHW,TOR,White Sox at Blue Jays
+08/25/21,CHW,TOR,White Sox at Blue Jays
+08/26/21,CHW,TOR,White Sox at Blue Jays
+08/27/21,TOR,DET,Blue Jays at Tigers
+08/28/21,TOR,DET,Blue Jays at Tigers
+08/29/21,TOR,DET,Blue Jays at Tigers
+08/30/21,BAL,TOR,Orioles at Blue Jays
+08/31/21,BAL,TOR,Orioles at Blue Jays
+09/01/21,BAL,TOR,Orioles at Blue Jays
+09/03/21,OAK,TOR,Athletics at Blue Jays
+09/04/21,OAK,TOR,Athletics at Blue Jays
+09/05/21,OAK,TOR,Athletics at Blue Jays
+09/10/21,TOR,BAL,Blue Jays at Orioles
+09/11/21,TOR,BAL,Blue Jays at Orioles
+09/12/21,TOR,BAL,Blue Jays at Orioles
+09/13/21,TBR,TOR,Rays at Blue Jays
+09/14/21,TBR,TOR,Rays at Blue Jays
+09/15/21,TBR,TOR,Rays at Blue Jays
+09/17/21,MIN,TOR,Twins at Blue Jays
+09/18/21,MIN,TOR,Twins at Blue Jays
+09/19/21,MIN,TOR,Twins at Blue Jays
+09/20/21,TOR,TBR,Blue Jays at Rays
+09/21/21,TOR,TBR,Blue Jays at Rays
+09/22/21,TOR,TBR,Blue Jays at Rays
+09/23/21,TOR,MIN,Blue Jays at Twins
+09/24/21,TOR,MIN,Blue Jays at Twins
+09/25/21,TOR,MIN,Blue Jays at Twins
+09/26/21,TOR,MIN,Blue Jays at Twins
+10/01/21,BAL,TOR,Orioles at Blue Jays
+10/02/21,BAL,TOR,Orioles at Blue Jays
+10/03/21,BAL,TOR,Orioles at Blue Jays
+04/01/21,ARI,SDP,Diamondbacks at Padres
+04/02/21,ARI,SDP,Diamondbacks at Padres
+04/03/21,ARI,SDP,Diamondbacks at Padres
+04/04/21,ARI,SDP,Diamondbacks at Padres
+04/05/21,SFG,SDP,Giants at Padres
+04/06/21,SFG,SDP,Giants at Padres
+04/07/21,SFG,SDP,Giants at Padres
+04/09/21,SDP,TEX,Padres at Rangers
+04/10/21,SDP,TEX,Padres at Rangers
+04/11/21,SDP,TEX,Padres at Rangers
+04/16/21,LAD,SDP,Dodgers at Padres
+04/17/21,LAD,SDP,Dodgers at Padres
+04/18/21,LAD,SDP,Dodgers at Padres
+04/19/21,MIL,SDP,Brewers at Padres
+04/20/21,MIL,SDP,Brewers at Padres
+04/21/21,MIL,SDP,Brewers at Padres
+04/22/21,SDP,LAD,Padres at Dodgers
+04/23/21,SDP,LAD,Padres at Dodgers
+04/24/21,SDP,LAD,Padres at Dodgers
+04/25/21,SDP,LAD,Padres at Dodgers
+04/27/21,SDP,ARI,Padres at Diamondbacks
+04/28/21,SDP,ARI,Padres at Diamondbacks
+04/30/21,SFG,SDP,Giants at Padres
+05/01/21,SFG,SDP,Giants at Padres
+05/02/21,SFG,SDP,Giants at Padres
+05/07/21,SDP,SFG,Padres at Giants
+05/08/21,SDP,SFG,Padres at Giants
+05/09/21,SDP,SFG,Padres at Giants
+05/10/21,SDP,COL,Padres at Rockies
+05/11/21,SDP,COL,Padres at Rockies
+05/12/21,SDP,COL,Padres at Rockies
+05/17/21,COL,SDP,Rockies at Padres
+05/18/21,COL,SDP,Rockies at Padres
+05/19/21,COL,SDP,Rockies at Padres
+05/24/21,SDP,MIL,Padres at Brewers
+05/25/21,SDP,MIL,Padres at Brewers
+05/26/21,SDP,MIL,Padres at Brewers
+05/27/21,SDP,MIL,Padres at Brewers
+05/28/21,SDP,HOU,Padres at Astros
+05/29/21,SDP,HOU,Padres at Astros
+05/30/21,SDP,HOU,Padres at Astros
+05/31/21,SDP,CHC,Padres at Cubs
+06/01/21,SDP,CHC,Padres at Cubs
+06/02/21,SDP,CHC,Padres at Cubs
+06/07/21,CHC,SDP,Cubs at Padres
+06/08/21,CHC,SDP,Cubs at Padres
+06/09/21,CHC,SDP,Cubs at Padres
+06/14/21,SDP,COL,Padres at Rockies
+06/15/21,SDP,COL,Padres at Rockies
+06/16/21,SDP,COL,Padres at Rockies
+06/21/21,LAD,SDP,Dodgers at Padres
+06/22/21,LAD,SDP,Dodgers at Padres
+06/23/21,LAD,SDP,Dodgers at Padres
+06/25/21,ARI,SDP,Diamondbacks at Padres
+06/26/21,ARI,SDP,Diamondbacks at Padres
+06/27/21,ARI,SDP,Diamondbacks at Padres
+07/02/21,SDP,PHI,Padres at Phillies
+07/03/21,SDP,PHI,Padres at Phillies
+07/04/21,SDP,PHI,Padres at Phillies
+07/05/21,WSN,SDP,Nationals at Padres
+07/06/21,WSN,SDP,Nationals at Padres
+07/07/21,WSN,SDP,Nationals at Padres
+07/08/21,WSN,SDP,Nationals at Padres
+07/09/21,COL,SDP,Rockies at Padres
+07/10/21,COL,SDP,Rockies at Padres
+07/11/21,COL,SDP,Rockies at Padres
+07/16/21,SDP,WSN,Padres at Nationals
+07/17/21,SDP,WSN,Padres at Nationals
+07/18/21,SDP,WSN,Padres at Nationals
+07/19/21,SDP,ATL,Padres at Braves
+07/20/21,SDP,ATL,Padres at Braves
+07/21/21,SDP,ATL,Padres at Braves
+07/27/21,OAK,SDP,Athletics at Padres
+07/28/21,OAK,SDP,Athletics at Padres
+07/29/21,COL,SDP,Rockies at Padres
+07/30/21,COL,SDP,Rockies at Padres
+07/31/21,COL,SDP,Rockies at Padres
+08/01/21,COL,SDP,Rockies at Padres
+08/03/21,SDP,OAK,Padres at Athletics
+08/04/21,SDP,OAK,Padres at Athletics
+08/06/21,ARI,SDP,Diamondbacks at Padres
+08/07/21,ARI,SDP,Diamondbacks at Padres
+08/08/21,ARI,SDP,Diamondbacks at Padres
+08/12/21,SDP,ARI,Padres at Diamondbacks
+08/13/21,SDP,ARI,Padres at Diamondbacks
+08/14/21,SDP,ARI,Padres at Diamondbacks
+08/15/21,SDP,ARI,Padres at Diamondbacks
+08/16/21,SDP,COL,Padres at Rockies
+08/17/21,SDP,COL,Padres at Rockies
+08/18/21,SDP,COL,Padres at Rockies
+08/20/21,PHI,SDP,Phillies at Padres
+08/21/21,PHI,SDP,Phillies at Padres
+08/22/21,PHI,SDP,Phillies at Padres
+08/24/21,LAD,SDP,Dodgers at Padres
+08/25/21,LAD,SDP,Dodgers at Padres
+08/26/21,LAD,SDP,Dodgers at Padres
+08/27/21,SDP,LAA,Padres at Angels
+08/28/21,SDP,LAA,Padres at Angels
+08/30/21,SDP,ARI,Padres at Diamondbacks
+08/31/21,SDP,ARI,Padres at Diamondbacks
+09/01/21,SDP,ARI,Padres at Diamondbacks
+09/03/21,HOU,SDP,Astros at Padres
+09/04/21,HOU,SDP,Astros at Padres
+09/05/21,HOU,SDP,Astros at Padres
+09/07/21,LAA,SDP,Angels at Padres
+09/08/21,LAA,SDP,Angels at Padres
+09/10/21,SDP,LAD,Padres at Dodgers
+09/11/21,SDP,LAD,Padres at Dodgers
+09/12/21,SDP,LAD,Padres at Dodgers
+09/13/21,SDP,SFG,Padres at Giants
+09/14/21,SDP,SFG,Padres at Giants
+09/15/21,SDP,SFG,Padres at Giants
+09/16/21,SDP,SFG,Padres at Giants
+09/21/21,SFG,SDP,Giants at Padres
+09/22/21,SFG,SDP,Giants at Padres
+09/23/21,SFG,SDP,Giants at Padres
+09/24/21,ATL,SDP,Braves at Padres
+09/25/21,ATL,SDP,Braves at Padres
+09/26/21,ATL,SDP,Braves at Padres
+09/28/21,SDP,LAD,Padres at Dodgers
+09/29/21,SDP,LAD,Padres at Dodgers
+09/30/21,SDP,LAD,Padres at Dodgers
+10/01/21,SDP,SFG,Padres at Giants
+10/02/21,SDP,SFG,Padres at Giants
+10/03/21,SDP,SFG,Padres at Giants
+04/01/21,TEX,KCR,Rangers at Royals
+04/03/21,TEX,KCR,Rangers at Royals
+04/04/21,TEX,KCR,Rangers at Royals
+04/08/21,KCR,CHW,Royals at White Sox
+04/10/21,KCR,CHW,Royals at White Sox
+04/11/21,KCR,CHW,Royals at White Sox
+04/12/21,LAA,KCR,Angels at Royals
+04/13/21,LAA,KCR,Angels at Royals
+04/14/21,LAA,KCR,Angels at Royals
+04/19/21,TBR,KCR,Rays at Royals
+04/20/21,TBR,KCR,Rays at Royals
+04/21/21,TBR,KCR,Rays at Royals
+04/23/21,KCR,DET,Royals at Tigers
+04/24/21,KCR,DET,Royals at Tigers
+04/25/21,KCR,DET,Royals at Tigers
+04/26/21,KCR,DET,Royals at Tigers
+04/30/21,KCR,MIN,Royals at Twins
+05/01/21,KCR,MIN,Royals at Twins
+05/02/21,KCR,MIN,Royals at Twins
+05/07/21,CHW,KCR,White Sox at Royals
+05/08/21,CHW,KCR,White Sox at Royals
+05/09/21,CHW,KCR,White Sox at Royals
+05/11/21,KCR,DET,Royals at Tigers
+05/12/21,KCR,DET,Royals at Tigers
+05/13/21,KCR,DET,Royals at Tigers
+05/14/21,KCR,CHW,Royals at White Sox
+05/15/21,KCR,CHW,Royals at White Sox
+05/16/21,KCR,CHW,Royals at White Sox
+05/18/21,MIL,KCR,Brewers at Royals
+05/19/21,MIL,KCR,Brewers at Royals
+05/21/21,DET,KCR,Tigers at Royals
+05/22/21,DET,KCR,Tigers at Royals
+05/23/21,DET,KCR,Tigers at Royals
+05/25/21,KCR,TBR,Royals at Rays
+05/26/21,KCR,TBR,Royals at Rays
+05/27/21,KCR,TBR,Royals at Rays
+05/28/21,KCR,MIN,Royals at Twins
+05/29/21,KCR,MIN,Royals at Twins
+05/30/21,KCR,MIN,Royals at Twins
+06/03/21,MIN,KCR,Twins at Royals
+06/04/21,MIN,KCR,Twins at Royals
+06/05/21,MIN,KCR,Twins at Royals
+06/06/21,MIN,KCR,Twins at Royals
+06/07/21,KCR,LAA,Royals at Angels
+06/08/21,KCR,LAA,Royals at Angels
+06/09/21,KCR,LAA,Royals at Angels
+06/10/21,KCR,OAK,Royals at Athletics
+06/11/21,KCR,OAK,Royals at Athletics
+06/12/21,KCR,OAK,Royals at Athletics
+06/13/21,KCR,OAK,Royals at Athletics
+06/14/21,DET,KCR,Tigers at Royals
+06/15/21,DET,KCR,Tigers at Royals
+06/16/21,DET,KCR,Tigers at Royals
+06/18/21,BOS,KCR,Red Sox at Royals
+06/19/21,BOS,KCR,Red Sox at Royals
+06/20/21,BOS,KCR,Red Sox at Royals
+06/25/21,KCR,TEX,Royals at Rangers
+06/26/21,KCR,TEX,Royals at Rangers
+06/27/21,KCR,TEX,Royals at Rangers
+06/28/21,KCR,BOS,Royals at Red Sox
+06/29/21,KCR,BOS,Royals at Red Sox
+06/30/21,KCR,BOS,Royals at Red Sox
+07/01/21,KCR,BOS,Royals at Red Sox
+07/02/21,MIN,KCR,Twins at Royals
+07/03/21,MIN,KCR,Twins at Royals
+07/04/21,MIN,KCR,Twins at Royals
+07/16/21,BAL,KCR,Orioles at Royals
+07/17/21,BAL,KCR,Orioles at Royals
+07/18/21,BAL,KCR,Orioles at Royals
+07/20/21,KCR,MIL,Royals at Brewers
+07/21/21,KCR,MIL,Royals at Brewers
+07/23/21,DET,KCR,Tigers at Royals
+07/24/21,DET,KCR,Tigers at Royals
+07/25/21,DET,KCR,Tigers at Royals
+07/26/21,CHW,KCR,White Sox at Royals
+07/27/21,CHW,KCR,White Sox at Royals
+07/28/21,CHW,KCR,White Sox at Royals
+07/29/21,CHW,KCR,White Sox at Royals
+08/03/21,KCR,CHW,Royals at White Sox
+08/04/21,KCR,CHW,Royals at White Sox
+08/05/21,KCR,CHW,Royals at White Sox
+08/16/21,HOU,KCR,Astros at Royals
+08/17/21,HOU,KCR,Astros at Royals
+08/18/21,HOU,KCR,Astros at Royals
+08/19/21,HOU,KCR,Astros at Royals
+08/20/21,KCR,CHC,Royals at Cubs
+08/21/21,KCR,CHC,Royals at Cubs
+08/22/21,KCR,CHC,Royals at Cubs
+08/23/21,KCR,HOU,Royals at Astros
+08/24/21,KCR,HOU,Royals at Astros
+08/25/21,KCR,HOU,Royals at Astros
+09/03/21,CHW,KCR,White Sox at Royals
+09/04/21,CHW,KCR,White Sox at Royals
+09/05/21,CHW,KCR,White Sox at Royals
+09/06/21,KCR,BAL,Royals at Orioles
+09/07/21,KCR,BAL,Royals at Orioles
+09/08/21,KCR,BAL,Royals at Orioles
+09/09/21,KCR,BAL,Royals at Orioles
+09/10/21,KCR,MIN,Royals at Twins
+09/11/21,KCR,MIN,Royals at Twins
+09/12/21,KCR,MIN,Royals at Twins
+09/14/21,OAK,KCR,Athletics at Royals
+09/15/21,OAK,KCR,Athletics at Royals
+09/16/21,OAK,KCR,Athletics at Royals
+09/24/21,KCR,DET,Royals at Tigers
+09/25/21,KCR,DET,Royals at Tigers
+09/26/21,KCR,DET,Royals at Tigers
+10/01/21,MIN,KCR,Twins at Royals
+10/02/21,MIN,KCR,Twins at Royals
+10/03/21,MIN,KCR,Twins at Royals
+04/05/21,ATL,WSN,Braves at Nationals
+04/06/21,ATL,WSN,Braves at Nationals
+04/07/21,ATL,WSN,Braves at Nationals
+04/09/21,WSN,LAD,Nationals at Dodgers
+04/10/21,WSN,LAD,Nationals at Dodgers
+04/11/21,WSN,LAD,Nationals at Dodgers
+04/15/21,ARI,WSN,Diamondbacks at Nationals
+04/16/21,ARI,WSN,Diamondbacks at Nationals
+04/17/21,ARI,WSN,Diamondbacks at Nationals
+04/18/21,ARI,WSN,Diamondbacks at Nationals
+05/04/21,ATL,WSN,Braves at Nationals
+05/05/21,ATL,WSN,Braves at Nationals
+05/06/21,ATL,WSN,Braves at Nationals
+05/11/21,PHI,WSN,Phillies at Nationals
+05/12/21,PHI,WSN,Phillies at Nationals
+05/13/21,PHI,WSN,Phillies at Nationals
+05/14/21,WSN,ARI,Nationals at Diamondbacks
+05/15/21,WSN,ARI,Nationals at Diamondbacks
+05/16/21,WSN,ARI,Nationals at Diamondbacks
+05/17/21,WSN,CHC,Nationals at Cubs
+05/18/21,WSN,CHC,Nationals at Cubs
+05/19/21,WSN,CHC,Nationals at Cubs
+05/20/21,WSN,CHC,Nationals at Cubs
+05/21/21,BAL,WSN,Orioles at Nationals
+05/22/21,BAL,WSN,Orioles at Nationals
+05/23/21,BAL,WSN,Orioles at Nationals
+05/28/21,MIL,WSN,Brewers at Nationals
+05/29/21,MIL,WSN,Brewers at Nationals
+05/30/21,MIL,WSN,Brewers at Nationals
+05/31/21,WSN,ATL,Nationals at Braves
+06/01/21,WSN,ATL,Nationals at Braves
+06/02/21,WSN,ATL,Nationals at Braves
+06/03/21,WSN,ATL,Nationals at Braves
+06/04/21,WSN,PHI,Nationals at Phillies
+06/05/21,WSN,PHI,Nationals at Phillies
+06/06/21,WSN,PHI,Nationals at Phillies
+06/08/21,WSN,TBR,Nationals at Rays
+06/09/21,WSN,TBR,Nationals at Rays
+06/10/21,SFG,WSN,Giants at Nationals
+06/11/21,SFG,WSN,Giants at Nationals
+06/12/21,SFG,WSN,Giants at Nationals
+06/13/21,SFG,WSN,Giants at Nationals
+06/22/21,WSN,PHI,Nationals at Phillies
+06/23/21,WSN,PHI,Nationals at Phillies
+06/29/21,TBR,WSN,Rays at Nationals
+06/30/21,TBR,WSN,Rays at Nationals
+07/01/21,LAD,WSN,Dodgers at Nationals
+07/02/21,LAD,WSN,Dodgers at Nationals
+07/03/21,LAD,WSN,Dodgers at Nationals
+07/04/21,LAD,WSN,Dodgers at Nationals
+07/09/21,WSN,SFG,Nationals at Giants
+07/10/21,WSN,SFG,Nationals at Giants
+07/11/21,WSN,SFG,Nationals at Giants
+07/23/21,WSN,BAL,Nationals at Orioles
+07/24/21,WSN,BAL,Nationals at Orioles
+07/25/21,WSN,BAL,Nationals at Orioles
+07/26/21,WSN,PHI,Nationals at Phillies
+07/27/21,WSN,PHI,Nationals at Phillies
+07/28/21,WSN,PHI,Nationals at Phillies
+07/29/21,WSN,PHI,Nationals at Phillies
+07/30/21,CHC,WSN,Cubs at Nationals
+07/31/21,CHC,WSN,Cubs at Nationals
+08/01/21,CHC,WSN,Cubs at Nationals
+08/02/21,PHI,WSN,Phillies at Nationals
+08/03/21,PHI,WSN,Phillies at Nationals
+08/04/21,PHI,WSN,Phillies at Nationals
+08/05/21,PHI,WSN,Phillies at Nationals
+08/06/21,WSN,ATL,Nationals at Braves
+08/07/21,WSN,ATL,Nationals at Braves
+08/08/21,WSN,ATL,Nationals at Braves
+08/13/21,ATL,WSN,Braves at Nationals
+08/14/21,ATL,WSN,Braves at Nationals
+08/15/21,ATL,WSN,Braves at Nationals
+08/20/21,WSN,MIL,Nationals at Brewers
+08/21/21,WSN,MIL,Nationals at Brewers
+08/22/21,WSN,MIL,Nationals at Brewers
+08/30/21,PHI,WSN,Phillies at Nationals
+08/31/21,PHI,WSN,Phillies at Nationals
+09/01/21,PHI,WSN,Phillies at Nationals
+09/07/21,WSN,ATL,Nationals at Braves
+09/08/21,WSN,ATL,Nationals at Braves
+09/09/21,WSN,ATL,Nationals at Braves
+09/17/21,COL,WSN,Rockies at Nationals
+09/18/21,COL,WSN,Rockies at Nationals
+09/19/21,COL,WSN,Rockies at Nationals
+09/27/21,WSN,COL,Nationals at Rockies
+09/28/21,WSN,COL,Nationals at Rockies
+09/29/21,WSN,COL,Nationals at Rockies
+10/01/21,BOS,WSN,Red Sox at Nationals
+10/02/21,BOS,WSN,Red Sox at Nationals
+10/03/21,BOS,WSN,Red Sox at Nationals
+04/05/21,TBR,BOS,Rays at Red Sox
+04/06/21,TBR,BOS,Rays at Red Sox
+04/07/21,TBR,BOS,Rays at Red Sox
+04/12/21,TEX,TBR,Rangers at Rays
+04/13/21,TEX,TBR,Rangers at Rays
+04/14/21,TEX,TBR,Rangers at Rays
+04/15/21,TEX,TBR,Rangers at Rays
+04/26/21,OAK,TBR,Athletics at Rays
+04/27/21,OAK,TBR,Athletics at Rays
+04/28/21,OAK,TBR,Athletics at Rays
+04/29/21,OAK,TBR,Athletics at Rays
+04/30/21,HOU,TBR,Astros at Rays
+05/01/21,HOU,TBR,Astros at Rays
+05/02/21,HOU,TBR,Astros at Rays
+05/03/21,TBR,LAA,Rays at Angels
+05/04/21,TBR,LAA,Rays at Angels
+05/05/21,TBR,LAA,Rays at Angels
+05/06/21,TBR,LAA,Rays at Angels
+05/07/21,TBR,OAK,Rays at Athletics
+05/08/21,TBR,OAK,Rays at Athletics
+05/09/21,TBR,OAK,Rays at Athletics
+05/18/21,TBR,BAL,Rays at Orioles
+05/19/21,TBR,BAL,Rays at Orioles
+05/20/21,TBR,BAL,Rays at Orioles
+05/29/21,PHI,TBR,Phillies at Rays
+05/30/21,PHI,TBR,Phillies at Rays
+06/04/21,TBR,TEX,Rays at Rangers
+06/05/21,TBR,TEX,Rays at Rangers
+06/06/21,TBR,TEX,Rays at Rangers
+06/11/21,BAL,TBR,Orioles at Rays
+06/12/21,BAL,TBR,Orioles at Rays
+06/13/21,BAL,TBR,Orioles at Rays
+06/14/21,TBR,CHW,Rays at White Sox
+08/15/21,TBR,CHW,Rays at White Sox
+06/16/21,TBR,CHW,Rays at White Sox
+06/22/21,BOS,TBR,Red Sox at Rays
+06/23/21,BOS,TBR,Red Sox at Rays
+06/24/21,BOS,TBR,Red Sox at Rays
+06/25/21,LAA,TBR,Angels at Rays
+06/26/21,LAA,TBR,Angels at Rays
+06/27/21,LAA,TBR,Angels at Rays
+07/16/21,TBR,ATL,Rays at Braves
+07/17/21,TBR,ATL,Rays at Braves
+07/18/21,TBR,ATL,Rays at Braves
+07/19/21,BAL,TBR,Orioles at Rays
+07/20/21,BAL,TBR,Orioles at Rays
+07/21/21,BAL,TBR,Orioles at Rays
+07/30/21,BOS,TBR,Red Sox at Rays
+07/31/21,BOS,TBR,Red Sox at Rays
+08/01/21,BOS,TBR,Red Sox at Rays
+08/06/21,TBR,BAL,Rays at Orioles
+08/07/21,TBR,BAL,Rays at Orioles
+08/08/21,TBR,BAL,Rays at Orioles
+08/10/21,TBR,BOS,Rays at Red Sox
+08/11/21,TBR,BOS,Rays at Red Sox
+08/12/21,TBR,BOS,Rays at Red Sox
+08/13/21,TBR,MIN,Rays at Twins
+08/14/21,TBR,MIN,Rays at Twins
+08/15/21,TBR,MIN,Rays at Twins
+08/16/21,BAL,TBR,Orioles at Rays
+08/17/21,BAL,TBR,Orioles at Rays
+08/18/21,BAL,TBR,Orioles at Rays
+08/19/21,BAL,TBR,Orioles at Rays
+08/20/21,CHW,TBR,White Sox at Rays
+08/21/21,CHW,TBR,White Sox at Rays
+08/22/21,CHW,TBR,White Sox at Rays
+08/24/21,TBR,PHI,Rays at Phillies
+08/25/21,TBR,PHI,Rays at Phillies
+08/27/21,TBR,BAL,Rays at Orioles
+08/28/21,TBR,BAL,Rays at Orioles
+08/29/21,TBR,BAL,Rays at Orioles
+08/30/21,BOS,TBR,Red Sox at Rays
+08/31/21,BOS,TBR,Red Sox at Rays
+09/01/21,BOS,TBR,Red Sox at Rays
+09/02/21,BOS,TBR,Red Sox at Rays
+09/03/21,MIN,TBR,Twins at Rays
+09/04/21,MIN,TBR,Twins at Rays
+09/05/21,MIN,TBR,Twins at Rays
+09/06/21,TBR,BOS,Rays at Red Sox
+09/07/21,TBR,BOS,Rays at Red Sox
+09/08/21,TBR,BOS,Rays at Red Sox
+09/10/21,TBR,DET,Rays at Tigers
+09/11/21,TBR,DET,Rays at Tigers
+09/12/21,TBR,DET,Rays at Tigers
+09/16/21,DET,TBR,Tigers at Rays
+09/17/21,DET,TBR,Tigers at Rays
+09/18/21,DET,TBR,Tigers at Rays
+09/19/21,DET,TBR,Tigers at Rays
+09/28/21,TBR,HOU,Rays at Astros
+09/29/21,TBR,HOU,Rays at Astros
+09/30/21,TBR,HOU,Rays at Astros
+04/01/21,LAD,COL,Dodgers at Rockies
+04/02/21,LAD,COL,Dodgers at Rockies
+04/03/21,LAD,COL,Dodgers at Rockies
+04/04/21,LAD,COL,Dodgers at Rockies
+04/06/21,ARI,COL,Diamondbacks at Rockies
+04/07/21,ARI,COL,Diamondbacks at Rockies
+04/08/21,ARI,COL,Diamondbacks at Rockies
+04/09/21,COL,SFG,Rockies at Giants
+04/10/21,COL,SFG,Rockies at Giants
+04/11/21,COL,SFG,Rockies at Giants
+04/13/21,COL,LAD,Rockies at Dodgers
+04/14/21,COL,LAD,Rockies at Dodgers
+04/15/21,COL,LAD,Rockies at Dodgers
+04/20/21,HOU,COL,Astros at Rockies
+04/21/21,HOU,COL,Astros at Rockies
+04/23/21,PHI,COL,Phillies at Rockies
+04/24/21,PHI,COL,Phillies at Rockies
+04/25/21,PHI,COL,Phillies at Rockies
+04/26/21,COL,SFG,Rockies at Giants
+04/27/21,COL,SFG,Rockies at Giants
+04/28/21,COL,SFG,Rockies at Giants
+04/29/21,COL,ARI,Rockies at Diamondbacks
+04/30/21,COL,ARI,Rockies at Diamondbacks
+05/01/21,COL,ARI,Rockies at Diamondbacks
+05/02/21,COL,ARI,Rockies at Diamondbacks
+05/03/21,SFG,COL,Giants at Rockies
+05/04/21,SFG,COL,Giants at Rockies
+05/05/21,SFG,COL,Giants at Rockies
+05/21/21,ARI,COL,Diamondbacks at Rockies
+05/22/21,ARI,COL,Diamondbacks at Rockies
+05/23/21,ARI,COL,Diamondbacks at Rockies
+06/01/21,TEX,COL,Rangers at Rockies
+06/02/21,TEX,COL,Rangers at Rockies
+06/03/21,TEX,COL,Rangers at Rockies
+06/04/21,OAK,COL,Athletics at Rockies
+06/05/21,OAK,COL,Athletics at Rockies
+06/06/21,OAK,COL,Athletics at Rockies
+06/17/21,MIL,COL,Brewers at Rockies
+06/18/21,MIL,COL,Brewers at Rockies
+06/19/21,MIL,COL,Brewers at Rockies
+06/20/21,MIL,COL,Brewers at Rockies
+06/25/21,COL,MIL,Rockies at Brewers
+06/26/21,COL,MIL,Rockies at Brewers
+06/27/21,COL,MIL,Rockies at Brewers
+07/06/21,COL,ARI,Rockies at Diamondbacks
+07/07/21,COL,ARI,Rockies at Diamondbacks
+07/08/21,COL,ARI,Rockies at Diamondbacks
+07/16/21,LAD,COL,Dodgers at Rockies
+07/17/21,LAD,COL,Dodgers at Rockies
+07/18/21,LAD,COL,Dodgers at Rockies
+07/23/21,COL,LAD,Rockies at Dodgers
+07/24/21,COL,LAD,Rockies at Dodgers
+07/25/21,COL,LAD,Rockies at Dodgers
+07/26/21,COL,LAA,Rockies at Angels
+07/27/21,COL,LAA,Rockies at Angels
+07/28/21,COL,LAA,Rockies at Angels
+08/03/21,CHC,COL,Cubs at Rockies
+08/04/21,CHC,COL,Cubs at Rockies
+08/05/21,CHC,COL,Cubs at Rockies
+08/10/21,COL,HOU,Rockies at Astros
+08/11/21,COL,HOU,Rockies at Astros
+08/12/21,COL,SFG,Rockies at Giants
+08/13/21,COL,SFG,Rockies at Giants
+08/14/21,COL,SFG,Rockies at Giants
+08/15/21,COL,SFG,Rockies at Giants
+08/20/21,ARI,COL,Diamondbacks at Rockies
+08/21/21,ARI,COL,Diamondbacks at Rockies
+08/22/21,ARI,COL,Diamondbacks at Rockies
+08/23/21,COL,CHC,Rockies at Cubs
+08/24/21,COL,CHC,Rockies at Cubs
+08/25/21,COL,CHC,Rockies at Cubs
+08/27/21,COL,LAD,Rockies at Dodgers
+08/28/21,COL,LAD,Rockies at Dodgers
+08/29/21,COL,LAD,Rockies at Dodgers
+08/30/21,COL,TEX,Rockies at Rangers
+08/31/21,COL,TEX,Rockies at Rangers
+09/01/21,COL,TEX,Rockies at Rangers
+09/02/21,ATL,COL,Braves at Rockies
+09/03/21,ATL,COL,Braves at Rockies
+09/04/21,ATL,COL,Braves at Rockies
+09/05/21,ATL,COL,Braves at Rockies
+09/06/21,SFG,COL,Giants at Rockies
+09/07/21,SFG,COL,Giants at Rockies
+09/08/21,SFG,COL,Giants at Rockies
+09/09/21,COL,PHI,Rockies at Phillies
+09/10/21,COL,PHI,Rockies at Phillies
+09/11/21,COL,PHI,Rockies at Phillies
+09/12/21,COL,PHI,Rockies at Phillies
+09/14/21,COL,ATL,Rockies at Braves
+09/15/21,COL,ATL,Rockies at Braves
+09/16/21,COL,ATL,Rockies at Braves
+09/21/21,LAD,COL,Dodgers at Rockies
+09/22/21,LAD,COL,Dodgers at Rockies
+09/23/21,LAD,COL,Dodgers at Rockies
+09/24/21,SFG,COL,Giants at Rockies
+09/25/21,SFG,COL,Giants at Rockies
+09/26/21,SFG,COL,Giants at Rockies
+10/01/21,COL,ARI,Rockies at Diamondbacks
+10/02/21,COL,ARI,Rockies at Diamondbacks
+10/03/21,COL,ARI,Rockies at Diamondbacks
+04/01/21,HOU,OAK,Astros at Athletics
+04/02/21,HOU,OAK,Astros at Athletics
+04/03/21,HOU,OAK,Astros at Athletics
+04/04/21,HOU,OAK,Astros at Athletics
+04/05/21,LAD,OAK,Dodgers at Athletics
+04/06/21,LAD,OAK,Dodgers at Athletics
+04/07/21,LAD,OAK,Dodgers at Athletics
+04/08/21,OAK,HOU,Athletics at Astros
+04/09/21,OAK,HOU,Athletics at Astros
+04/10/21,OAK,HOU,Athletics at Astros
+04/12/21,OAK,ARI,Athletics at Diamondbacks
+04/13/21,OAK,ARI,Athletics at Diamondbacks
+04/15/21,DET,OAK,Tigers at Athletics
+04/16/21,DET,OAK,Tigers at Athletics
+04/17/21,DET,OAK,Tigers at Athletics
+04/18/21,DET,OAK,Tigers at Athletics
+04/19/21,MIN,OAK,Twins at Athletics
+04/20/21,MIN,OAK,Twins at Athletics
+04/21/21,MIN,OAK,Twins at Athletics
+04/23/21,OAK,BAL,Athletics at Orioles
+04/24/21,OAK,BAL,Athletics at Orioles
+04/25/21,OAK,BAL,Athletics at Orioles
+04/30/21,BAL,OAK,Orioles at Athletics
+05/01/21,BAL,OAK,Orioles at Athletics
+05/02/21,BAL,OAK,Orioles at Athletics
+05/11/21,OAK,BOS,Athletics at Red Sox
+05/12/21,OAK,BOS,Athletics at Red Sox
+05/13/21,OAK,BOS,Athletics at Red Sox
+05/14/21,OAK,MIN,Athletics at Twins
+05/15/21,OAK,MIN,Athletics at Twins
+05/16/21,OAK,MIN,Athletics at Twins
+05/18/21,HOU,OAK,Astros at Athletics
+05/19/21,HOU,OAK,Astros at Athletics
+05/20/21,HOU,OAK,Astros at Athletics
+05/21/21,OAK,LAA,Athletics at Angels
+05/22/21,OAK,LAA,Athletics at Angels
+05/23/21,OAK,LAA,Athletics at Angels
+05/27/21,LAA,OAK,Angels at Athletics
+05/28/21,LAA,OAK,Angels at Athletics
+05/29/21,LAA,OAK,Angels at Athletics
+05/30/21,LAA,OAK,Angels at Athletics
+06/08/21,ARI,OAK,Diamondbacks at Athletics
+06/09/21,ARI,OAK,Diamondbacks at Athletics
+06/14/21,LAA,OAK,Angels at Athletics
+06/15/21,LAA,OAK,Angels at Athletics
+06/16/21,LAA,OAK,Angels at Athletics
+06/21/21,OAK,TEX,Athletics at Rangers
+06/22/21,OAK,TEX,Athletics at Rangers
+06/23/21,OAK,TEX,Athletics at Rangers
+06/24/21,OAK,TEX,Athletics at Rangers
+06/25/21,OAK,SFG,Athletics at Giants
+06/26/21,OAK,SFG,Athletics at Giants
+06/27/21,OAK,SFG,Athletics at Giants
+06/29/21,TEX,OAK,Rangers at Athletics
+06/30/21,TEX,OAK,Rangers at Athletics
+07/01/21,TEX,OAK,Rangers at Athletics
+07/02/21,BOS,OAK,Red Sox at Athletics
+07/03/21,BOS,OAK,Red Sox at Athletics
+07/04/21,BOS,OAK,Red Sox at Athletics
+07/06/21,OAK,HOU,Athletics at Astros
+07/07/21,OAK,HOU,Athletics at Astros
+07/08/21,OAK,HOU,Athletics at Astros
+07/09/21,OAK,TEX,Athletics at Rangers
+07/10/21,OAK,TEX,Athletics at Rangers
+07/11/21,OAK,TEX,Athletics at Rangers
+07/19/21,LAA,OAK,Angels at Athletics
+07/20/21,LAA,OAK,Angels at Athletics
+07/29/21,OAK,LAA,Athletics at Angels
+07/30/21,OAK,LAA,Athletics at Angels
+07/31/21,OAK,LAA,Athletics at Angels
+08/01/21,OAK,LAA,Athletics at Angels
+08/06/21,TEX,OAK,Rangers at Athletics
+08/07/21,TEX,OAK,Rangers at Athletics
+08/08/21,TEX,OAK,Rangers at Athletics
+08/13/21,OAK,TEX,Athletics at Rangers
+08/14/21,OAK,TEX,Athletics at Rangers
+08/15/21,OAK,TEX,Athletics at Rangers
+08/16/21,OAK,CHW,Athletics at White Sox
+08/17/21,OAK,CHW,Athletics at White Sox
+08/18/21,OAK,CHW,Athletics at White Sox
+08/19/21,OAK,CHW,Athletics at White Sox
+08/20/21,SFG,OAK,Giants at Athletics
+08/21/21,SFG,OAK,Giants at Athletics
+08/22/21,SFG,OAK,Giants at Athletics
+08/31/21,OAK,DET,Athletics at Tigers
+09/01/21,OAK,DET,Athletics at Tigers
+09/02/21,OAK,DET,Athletics at Tigers
+09/07/21,CHW,OAK,White Sox at Athletics
+09/08/21,CHW,OAK,White Sox at Athletics
+09/09/21,CHW,OAK,White Sox at Athletics
+09/10/21,TEX,OAK,Rangers at Athletics
+09/11/21,TEX,OAK,Rangers at Athletics
+09/12/21,TEX,OAK,Rangers at Athletics
+09/17/21,OAK,LAA,Athletics at Angels
+09/18/21,OAK,LAA,Athletics at Angels
+09/19/21,OAK,LAA,Athletics at Angels
+09/24/21,HOU,OAK,Astros at Athletics
+09/25/21,HOU,OAK,Astros at Athletics
+09/26/21,HOU,OAK,Astros at Athletics
+10/01/21,OAK,HOU,Athletics at Astros
+10/02/21,OAK,HOU,Athletics at Astros
+10/03/21,OAK,HOU,Athletics at Astros
+5/13/21,TEX,HOU,Rangers at Astros
+5/14/21,TEX,HOU,Rangers at Astros
+5/15/21,TEX,HOU,Rangers at Astros
+5/16/21,TEX,HOU,Rangers at Astros
+5/21/21,HOU,TEX,Astros at Rangers
+5/22/21,HOU,TEX,Astros at Rangers
+5/23/21,HOU,TEX,Astros at Rangers
+6/15/21,TEX,HOU,Rangers at Astros
+6/16/21,TEX,HOU,Rangers at Astros
+6/23/21,TEX,HOU,Rangers at Astros
+6/24/21,TEX,HOU,Rangers at Astros
+6/25/21,TEX,HOU,Rangers at Astros
+8/27/21,HOU,TEX,Astros at Rangers
+8/28/21,HOU,TEX,Astros at Rangers
+8/29/21,HOU,TEX,Astros at Rangers
+9/13/21,HOU,TEX,Astros at Rangers
+9/14/21,HOU,TEX,Astros at Rangers
+9/15/21,HOU,TEX,Astros at Rangers
+9/16/21,HOU,TEX,Astros at Rangers
+04/19/21,SFG,PHI,Giants at Phillies
+04/20/21,SFG,PHI,Giants at Phillies
+04/21/21,SFG,PHI,Giants at Phillies
+05/10/21,TEX,SFG,Rangers at Giants
+05/11/21,TEX,SFG,Rangers at Giants
+05/21/21,LAD,SFG,Dodgers at Giants
+05/22/21,LAD,SFG,Dodgers at Giants
+05/23/21,LAD,SFG,Dodgers at Giants
+05/25/21,SFG,ARI,Giants at Diamondbacks
+05/26/21,SFG,ARI,Giants at Diamondbacks
+05/27/21,SFG,LAD,Giants at Dodgers
+05/28/21,SFG,LAD,Giants at Dodgers
+05/29/21,SFG,LAD,Giants at Dodgers
+05/30/21,SFG,LAD,Giants at Dodgers
+05/31/21,LAA,SFG,Angels at Giants
+06/01/21,LAA,SFG,Angels at Giants
+06/03/21,CHC,SFG,Cubs at Giants
+06/04/21,CHC,SFG,Cubs at Giants
+06/05/21,CHC,SFG,Cubs at Giants
+06/06/21,CHC,SFG,Cubs at Giants
+06/08/21,SFG,TEX,Giants at Rangers
+06/09/21,SFG,TEX,Giants at Rangers
+06/14/21,ARI,SFG,Diamondbacks at Giants
+06/15/21,ARI,SFG,Diamondbacks at Giants
+06/16/21,ARI,SFG,Diamondbacks at Giants
+06/17/21,ARI,SFG,Diamondbacks at Giants
+06/18/21,PHI,SFG,Phillies at Giants
+06/19/21,PHI,SFG,Phillies at Giants
+06/20/21,PHI,SFG,Phillies at Giants
+06/22/21,SFG,LAA,Giants at Angels
+06/23/21,SFG,LAA,Giants at Angels
+06/28/21,SFG,LAD,Giants at Dodgers
+06/29/21,SFG,LAD,Giants at Dodgers
+07/01/21,SFG,ARI,Giants at Diamondbacks
+07/02/21,SFG,ARI,Giants at Diamondbacks
+07/03/21,SFG,ARI,Giants at Diamondbacks
+07/04/21,SFG,ARI,Giants at Diamondbacks
+07/19/21,SFG,LAD,Giants at Dodgers
+07/20/21,SFG,LAD,Giants at Dodgers
+07/21/21,SFG,LAD,Giants at Dodgers
+07/22/21,SFG,LAD,Giants at Dodgers
+07/27/21,LAD,SFG,Dodgers at Giants
+07/28/21,LAD,SFG,Dodgers at Giants
+07/29/21,LAD,SFG,Dodgers at Giants
+07/30/21,HOU,SFG,Astros at Giants
+07/31/21,HOU,SFG,Astros at Giants
+08/01/21,HOU,SFG,Astros at Giants
+08/02/21,SFG,ARI,Giants at Diamondbacks
+08/03/21,SFG,ARI,Giants at Diamondbacks
+08/04/21,SFG,ARI,Giants at Diamondbacks
+08/05/21,SFG,ARI,Giants at Diamondbacks
+08/06/21,SFG,MIL,Giants at Brewers
+08/07/21,SFG,MIL,Giants at Brewers
+08/08/21,SFG,MIL,Giants at Brewers
+08/10/21,ARI,SFG,Diamondbacks at Giants
+08/11/21,ARI,SFG,Diamondbacks at Giants
+08/27/21,SFG,ATL,Giants at Braves
+08/28/21,SFG,ATL,Giants at Braves
+08/29/21,SFG,ATL,Giants at Braves
+08/30/21,MIL,SFG,Brewers at Giants
+08/31/21,MIL,SFG,Brewers at Giants
+09/01/21,MIL,SFG,Brewers at Giants
+09/02/21,MIL,SFG,Brewers at Giants
+09/03/21,LAD,SFG,Dodgers at Giants
+09/04/21,LAD,SFG,Dodgers at Giants
+09/05/21,LAD,SFG,Dodgers at Giants
+09/10/21,SFG,CHC,Giants at Cubs
+09/11/21,SFG,CHC,Giants at Cubs
+09/12/21,SFG,CHC,Giants at Cubs
+09/17/21,ATL,SFG,Braves at Giants
+09/18/21,ATL,SFG,Braves at Giants
+09/19/21,ATL,SFG,Braves at Giants
+09/28/21,ARI,SFG,Diamondbacks at Giants
+09/29/21,ARI,SFG,Diamondbacks at Giants
+09/30/21,ARI,SFG,Diamondbacks at Giants
+04/05/21,MIN,DET,Twins at Tigers
+04/06/21,MIN,DET,Twins at Tigers
+04/07/21,MIN,DET,Twins at Tigers
+04/12/21,DET,HOU,Tigers at Astros
+04/13/21,DET,HOU,Tigers at Astros
+04/14/21,DET,HOU,Tigers at Astros
+04/27/21,DET,CHW,Tigers at White Sox
+04/28/21,DET,CHW,Tigers at White Sox
+04/29/21,DET,CHW,Tigers at White Sox
+05/04/21,DET,BOS,Tigers at Red Sox
+05/05/21,DET,BOS,Tigers at Red Sox
+05/06/21,DET,BOS,Tigers at Red Sox
+05/07/21,MIN,DET,Twins at Tigers
+05/08/21,MIN,DET,Twins at Tigers
+05/09/21,MIN,DET,Twins at Tigers
+05/14/21,CHC,DET,Cubs at Tigers
+05/15/21,CHC,DET,Cubs at Tigers
+05/16/21,CHC,DET,Cubs at Tigers
+05/31/21,DET,MIL,Tigers at Brewers
+06/01/21,DET,MIL,Tigers at Brewers
+06/03/21,DET,CHW,Tigers at White Sox
+06/04/21,DET,CHW,Tigers at White Sox
+06/05/21,DET,CHW,Tigers at White Sox
+06/06/21,DET,CHW,Tigers at White Sox
+06/11/21,CHW,DET,White Sox at Tigers
+06/12/21,CHW,DET,White Sox at Tigers
+06/13/21,CHW,DET,White Sox at Tigers
+06/17/21,DET,LAA,Tigers at Angels
+06/18/21,DET,LAA,Tigers at Angels
+06/19/21,DET,LAA,Tigers at Angels
+06/20/21,DET,LAA,Tigers at Angels
+06/24/21,HOU,DET,Astros at Tigers
+06/25/21,HOU,DET,Astros at Tigers
+06/26/21,HOU,DET,Astros at Tigers
+06/27/21,HOU,DET,Astros at Tigers
+07/02/21,CHW,DET,White Sox at Tigers
+07/03/21,CHW,DET,White Sox at Tigers
+07/04/21,CHW,DET,White Sox at Tigers
+07/05/21,DET,TEX,Tigers at Rangers
+07/06/21,DET,TEX,Tigers at Rangers
+07/07/21,DET,TEX,Tigers at Rangers
+07/08/21,DET,MIN,Tigers at Twins
+07/09/21,DET,MIN,Tigers at Twins
+07/10/21,DET,MIN,Tigers at Twins
+07/11/21,DET,MIN,Tigers at Twins
+07/16/21,MIN,DET,Twins at Tigers
+07/17/21,MIN,DET,Twins at Tigers
+07/18/21,MIN,DET,Twins at Tigers
+07/19/21,TEX,DET,Rangers at Tigers
+07/20/21,TEX,DET,Rangers at Tigers
+07/21/21,TEX,DET,Rangers at Tigers
+07/22/21,TEX,DET,Rangers at Tigers
+07/26/21,DET,MIN,Tigers at Twins
+07/27/21,DET,MIN,Tigers at Twins
+07/28/21,DET,MIN,Tigers at Twins
+07/29/21,BAL,DET,Orioles at Tigers
+07/30/21,BAL,DET,Orioles at Tigers
+07/31/21,BAL,DET,Orioles at Tigers
+08/01/21,BAL,DET,Orioles at Tigers
+08/03/21,BOS,DET,Red Sox at Tigers
+08/04/21,BOS,DET,Red Sox at Tigers
+08/05/21,BOS,DET,Red Sox at Tigers
+08/10/21,DET,BAL,Tigers at Orioles
+08/11/21,DET,BAL,Tigers at Orioles
+08/12/21,DET,BAL,Tigers at Orioles
+08/17/21,LAA,DET,Angels at Tigers
+08/18/21,LAA,DET,Angels at Tigers
+08/19/21,LAA,DET,Angels at Tigers
+09/14/21,MIL,DET,Brewers at Tigers
+09/15/21,MIL,DET,Brewers at Tigers
+09/20/21,CHW,DET,White Sox at Tigers
+09/21/21,CHW,DET,White Sox at Tigers
+09/22/21,CHW,DET,White Sox at Tigers
+09/28/21,DET,MIN,Tigers at Twins
+09/29/21,DET,MIN,Tigers at Twins
+09/30/21,DET,MIN,Tigers at Twins
+10/01/21,DET,CHW,Tigers at White Sox
+10/02/21,DET,CHW,Tigers at White Sox
+10/03/21,DET,CHW,Tigers at White Sox
+04/01/21,ATL,PHI,Braves at Phillies
+04/03/21,ATL,PHI,Braves at Phillies
+04/04/21,ATL,PHI,Braves at Phillies
+04/09/21,PHI,ATL,Phillies at Braves
+04/10/21,PHI,ATL,Phillies at Braves
+04/11/21,PHI,ATL,Phillies at Braves
+04/16/21,ATL,CHC,Braves at Cubs
+04/17/21,ATL,CHC,Braves at Cubs
+04/18/21,ATL,CHC,Braves at Cubs
+04/23/21,ARI,ATL,Diamondbacks at Braves
+04/24/21,ARI,ATL,Diamondbacks at Braves
+04/25/21,ARI,ATL,Diamondbacks at Braves
+04/26/21,CHC,ATL,Cubs at Braves
+04/27/21,CHC,ATL,Cubs at Braves
+04/28/21,CHC,ATL,Cubs at Braves
+04/29/21,CHC,ATL,Cubs at Braves
+05/07/21,PHI,ATL,Phillies at Braves
+05/08/21,PHI,ATL,Phillies at Braves
+05/09/21,PHI,ATL,Phillies at Braves
+05/14/21,ATL,MIL,Braves at Brewers
+05/15/21,ATL,MIL,Braves at Brewers
+05/16/21,ATL,MIL,Braves at Brewers
+05/25/21,ATL,BOS,Braves at Red Sox
+05/26/21,ATL,BOS,Braves at Red Sox
+06/04/21,LAD,ATL,Dodgers at Braves
+06/05/21,LAD,ATL,Dodgers at Braves
+06/06/21,LAD,ATL,Dodgers at Braves
+06/08/21,ATL,PHI,Braves at Phillies
+06/09/21,ATL,PHI,Braves at Phillies
+06/10/21,ATL,PHI,Braves at Phillies
+06/15/21,BOS,ATL,Red Sox at Braves
+06/16/21,BOS,ATL,Red Sox at Braves
+07/22/21,ATL,PHI,Braves at Phillies
+07/23/21,ATL,PHI,Braves at Phillies
+07/24/21,ATL,PHI,Braves at Phillies
+07/25/21,ATL,PHI,Braves at Phillies
+07/30/21,MIL,ATL,Brewers at Braves
+07/31/21,MIL,ATL,Brewers at Braves
+08/01/21,MIL,ATL,Brewers at Braves
+08/20/21,ATL,BAL,Braves at Orioles
+08/21/21,ATL,BAL,Braves at Orioles
+08/22/21,ATL,BAL,Braves at Orioles
+08/30/21,ATL,LAD,Braves at Dodgers
+08/31/21,ATL,LAD,Braves at Dodgers
+09/01/21,ATL,LAD,Braves at Dodgers
+09/20/21,ATL,ARI,Braves at Diamondbacks
+09/21/21,ATL,ARI,Braves at Diamondbacks
+09/22/21,ATL,ARI,Braves at Diamondbacks
+09/23/21,ATL,ARI,Braves at Diamondbacks
+09/28/21,PHI,ATL,Phillies at Braves
+09/29/21,PHI,ATL,Phillies at Braves
+09/30/21,PHI,ATL,Phillies at Braves
+04/01/21,MIN,MIL,Twins at Brewers
+04/03/21,MIN,MIL,Twins at Brewers
+04/04/21,MIN,MIL,Twins at Brewers
+04/05/21,MIL,CHC,Brewers at Cubs
+04/06/21,MIL,CHC,Brewers at Cubs
+04/07/21,MIL,CHC,Brewers at Cubs
+04/12/21,CHC,MIL,Cubs at Brewers
+04/13/21,CHC,MIL,Cubs at Brewers
+04/14/21,CHC,MIL,Cubs at Brewers
+04/23/21,MIL,CHC,Brewers at Cubs
+04/24/21,MIL,CHC,Brewers at Cubs
+04/25/21,MIL,CHC,Brewers at Cubs
+04/29/21,LAD,MIL,Dodgers at Brewers
+04/30/21,LAD,MIL,Dodgers at Brewers
+05/01/21,LAD,MIL,Dodgers at Brewers
+05/02/21,LAD,MIL,Dodgers at Brewers
+05/03/21,MIL,PHI,Brewers at Phillies
+05/04/21,MIL,PHI,Brewers at Phillies
+05/05/21,MIL,PHI,Brewers at Phillies
+05/06/21,MIL,PHI,Brewers at Phillies
+06/03/21,ARI,MIL,Diamondbacks at Brewers
+06/04/21,ARI,MIL,Diamondbacks at Brewers
+06/05/21,ARI,MIL,Diamondbacks at Brewers
+06/06/21,ARI,MIL,Diamondbacks at Brewers
+06/21/21,MIL,ARI,Brewers at Diamondbacks
+06/22/21,MIL,ARI,Brewers at Diamondbacks
+06/23/21,MIL,ARI,Brewers at Diamondbacks
+06/28/21,CHC,MIL,Cubs at Brewers
+06/29/21,CHC,MIL,Cubs at Brewers
+06/30/21,CHC,MIL,Cubs at Brewers
+07/23/21,CHW,MIL,White Sox at Brewers
+07/24/21,CHW,MIL,White Sox at Brewers
+07/25/21,CHW,MIL,White Sox at Brewers
+08/09/21,MIL,CHC,Brewers at Cubs
+08/10/21,MIL,CHC,Brewers at Cubs
+08/11/21,MIL,CHC,Brewers at Cubs
+08/12/21,MIL,CHC,Brewers at Cubs
+08/27/21,MIL,MIN,Brewers at Twins
+08/28/21,MIL,MIN,Brewers at Twins
+08/29/21,MIL,MIN,Brewers at Twins
+09/06/21,PHI,MIL,Phillies at Brewers
+09/07/21,PHI,MIL,Phillies at Brewers
+09/08/21,PHI,MIL,Phillies at Brewers
+09/17/21,CHC,MIL,Cubs at Brewers
+09/18/21,CHC,MIL,Cubs at Brewers
+09/19/21,CHC,MIL,Cubs at Brewers
+10/01/21,MIL,LAD,Brewers at Dodgers
+10/02/21,MIL,LAD,Brewers at Dodgers
+10/03/21,MIL,LAD,Brewers at Dodgers
+05/03/21,LAD,CHC,Dodgers at Cubs
+05/04/21,LAD,CHC,Dodgers at Cubs
+05/05/21,LAD,CHC,Dodgers at Cubs
+05/07/21,LAD,LAA,Dodgers at Angels
+05/08/21,LAD,LAA,Dodgers at Angels
+05/09/21,LAD,LAA,Dodgers at Angels
+05/17/21,ARI,LAD,Diamondbacks at Dodgers
+05/18/21,ARI,LAD,Diamondbacks at Dodgers
+05/19/21,ARI,LAD,Diamondbacks at Dodgers
+05/20/21,ARI,LAD,Diamondbacks at Dodgers
+05/25/21,LAD,HOU,Dodgers at Astros
+05/26/21,LAD,HOU,Dodgers at Astros
+06/11/21,TEX,LAD,Rangers at Dodgers
+06/12/21,TEX,LAD,Rangers at Dodgers
+06/13/21,TEX,LAD,Rangers at Dodgers
+06/14/21,PHI,LAD,Phillies at Dodgers
+06/15/21,PHI,LAD,Phillies at Dodgers
+06/16/21,PHI,LAD,Phillies at Dodgers
+06/18/21,LAD,ARI,Dodgers at Diamondbacks
+06/19/21,LAD,ARI,Dodgers at Diamondbacks
+06/20/21,LAD,ARI,Dodgers at Diamondbacks
+06/24/21,CHC,LAD,Cubs at Dodgers
+06/25/21,CHC,LAD,Cubs at Dodgers
+06/26/21,CHC,LAD,Cubs at Dodgers
+06/27/21,CHC,LAD,Cubs at Dodgers
+07/09/21,ARI,LAD,Diamondbacks at Dodgers
+07/10/21,ARI,LAD,Diamondbacks at Dodgers
+07/11/21,ARI,LAD,Diamondbacks at Dodgers
+07/30/21,LAD,ARI,Dodgers at Diamondbacks
+07/31/21,LAD,ARI,Dodgers at Diamondbacks
+08/01/21,LAD,ARI,Dodgers at Diamondbacks
+08/03/21,HOU,LAD,Astros at Dodgers
+08/04/21,HOU,LAD,Astros at Dodgers
+08/06/21,LAA,LAD,Angels at Dodgers
+08/07/21,LAA,LAD,Angels at Dodgers
+08/08/21,LAA,LAD,Angels at Dodgers
+08/10/21,LAD,PHI,Dodgers at Phillies
+08/11/21,LAD,PHI,Dodgers at Phillies
+08/12/21,LAD,PHI,Dodgers at Phillies
+09/13/21,ARI,LAD,Diamondbacks at Dodgers
+09/14/21,ARI,LAD,Diamondbacks at Dodgers
+09/15/21,ARI,LAD,Diamondbacks at Dodgers
+09/24/21,LAD,ARI,Dodgers at Diamondbacks
+09/25/21,LAD,ARI,Dodgers at Diamondbacks
+09/26/21,LAD,ARI,Dodgers at Diamondbacks
+04/12/21,BOS,MIN,Red Sox at Twins
+04/13/21,BOS,MIN,Red Sox at Twins
+04/14/21,BOS,MIN,Red Sox at Twins
+04/15/21,BOS,MIN,Red Sox at Twins
+04/16/21,MIN,LAA,Twins at Angels
+04/17/21,MIN,LAA,Twins at Angels
+04/18/21,MIN,LAA,Twins at Angels
+05/03/21,TEX,MIN,Rangers at Twins
+05/04/21,TEX,MIN,Rangers at Twins
+05/05/21,TEX,MIN,Rangers at Twins
+05/06/21,TEX,MIN,Rangers at Twins
+05/11/21,MIN,CHW,Twins at White Sox
+05/12/21,MIN,CHW,Twins at White Sox
+05/13/21,MIN,CHW,Twins at White Sox
+05/17/21,CHW,MIN,White Sox at Twins
+05/18/21,CHW,MIN,White Sox at Twins
+05/19/21,CHW,MIN,White Sox at Twins
+05/24/21,BAL,MIN,Orioles at Twins
+05/25/21,BAL,MIN,Orioles at Twins
+05/26/21,BAL,MIN,Orioles at Twins
+05/31/21,MIN,BAL,Twins at Orioles
+06/01/21,MIN,BAL,Twins at Orioles
+06/02/21,MIN,BAL,Twins at Orioles
+06/11/21,HOU,MIN,Astros at Twins
+06/12/21,HOU,MIN,Astros at Twins
+06/13/21,HOU,MIN,Astros at Twins
+06/18/21,MIN,TEX,Twins at Rangers
+06/19/21,MIN,TEX,Twins at Rangers
+06/20/21,MIN,TEX,Twins at Rangers
+06/28/21,MIN,CHW,Twins at White Sox
+06/29/21,MIN,CHW,Twins at White Sox
+06/30/21,MIN,CHW,Twins at White Sox
+07/01/21,MIN,CHW,Twins at White Sox
+07/05/21,CHW,MIN,White Sox at Twins
+07/06/21,CHW,MIN,White Sox at Twins
+07/07/21,CHW,MIN,White Sox at Twins
+07/19/21,MIN,CHW,Twins at White Sox
+07/20/21,MIN,CHW,Twins at White Sox
+07/21/21,MIN,CHW,Twins at White Sox
+07/22/21,LAA,MIN,Angels at Twins
+07/23/21,LAA,MIN,Angels at Twins
+07/24/21,LAA,MIN,Angels at Twins
+07/25/21,LAA,MIN,Angels at Twins
+08/05/21,MIN,HOU,Twins at Astros
+08/06/21,MIN,HOU,Twins at Astros
+08/07/21,MIN,HOU,Twins at Astros
+08/08/21,MIN,HOU,Twins at Astros
+08/09/21,CHW,MIN,White Sox at Twins
+08/10/21,CHW,MIN,White Sox at Twins
+08/11/21,CHW,MIN,White Sox at Twins
+08/24/21,MIN,BOS,Twins at Red Sox
+08/25/21,MIN,BOS,Twins at Red Sox
+08/26/21,MIN,BOS,Twins at Red Sox
+08/31/21,CHC,MIN,Cubs at Twins
+09/01/21,CHC,MIN,Cubs at Twins
+09/21/21,MIN,CHC,Twins at Cubs
+09/22/21,MIN,CHC,Twins at Cubs
+06/11/21,LAA,ARI,Angels at Diamondbacks
+06/12/21,LAA,ARI,Angels at Diamondbacks
+06/13/21,LAA,ARI,Angels at Diamondbacks
+07/16/21,CHC,ARI,Cubs at Diamondbacks
+07/17/21,CHC,ARI,Cubs at Diamondbacks
+07/18/21,CHC,ARI,Cubs at Diamondbacks
+07/23/21,ARI,CHC,Diamondbacks at Cubs
+07/24/21,ARI,CHC,Diamondbacks at Cubs
+07/25/21,ARI,CHC,Diamondbacks at Cubs
+07/27/21,ARI,TEX,Diamondbacks at Rangers
+07/28/21,ARI,TEX,Diamondbacks at Rangers
+08/17/21,PHI,ARI,Phillies at Diamondbacks
+08/18/21,PHI,ARI,Phillies at Diamondbacks
+08/19/21,PHI,ARI,Phillies at Diamondbacks
+08/26/21,ARI,PHI,Diamondbacks at Phillies
+08/27/21,ARI,PHI,Diamondbacks at Phillies
+08/28/21,ARI,PHI,Diamondbacks at Phillies
+08/29/21,ARI,PHI,Diamondbacks at Phillies
+09/07/21,TEX,ARI,Rangers at Diamondbacks
+09/08/21,TEX,ARI,Rangers at Diamondbacks
+09/17/21,ARI,HOU,Diamondbacks at Astros
+09/18/21,ARI,HOU,Diamondbacks at Astros
+09/19/21,ARI,HOU,Diamondbacks at Astros
+05/21/21,BOS,PHI,Red Sox at Phillies
+05/22/21,BOS,PHI,Red Sox at Phillies
+05/23/21,BOS,PHI,Red Sox at Phillies
+07/05/21,PHI,CHC,Phillies at Cubs
+07/06/21,PHI,CHC,Phillies at Cubs
+07/07/21,PHI,CHC,Phillies at Cubs
+07/08/21,PHI,CHC,Phillies at Cubs
+07/09/21,PHI,BOS,Phillies at Red Sox
+07/10/21,PHI,BOS,Phillies at Red Sox
+07/11/21,PHI,BOS,Phillies at Red Sox
+09/14/21,CHC,PHI,Cubs at Phillies
+09/15/21,CHC,PHI,Cubs at Phillies
+09/16/21,CHC,PHI,Cubs at Phillies
+09/20/21,BAL,PHI,Orioles at Phillies
+09/21/21,BAL,PHI,Orioles at Phillies
+09/22/21,BAL,PHI,Orioles at Phillies
+04/01/21,CHW,LAA,White Sox at Angels
+04/02/21,CHW,LAA,White Sox at Angels
+04/03/21,CHW,LAA,White Sox at Angels
+04/04/21,CHW,LAA,White Sox at Angels
+04/05/21,HOU,LAA,Astros at Angels
+04/06/21,HOU,LAA,Astros at Angels
+04/19/21,TEX,LAA,Rangers at Angels
+04/20/21,TEX,LAA,Rangers at Angels
+04/21/21,TEX,LAA,Rangers at Angels
+04/22/21,LAA,HOU,Angels at Astros
+04/23/21,LAA,HOU,Angels at Astros
+04/24/21,LAA,HOU,Angels at Astros
+04/25/21,LAA,HOU,Angels at Astros
+04/26/21,LAA,TEX,Angels at Rangers
+04/27/21,LAA,TEX,Angels at Rangers
+04/28/21,LAA,TEX,Angels at Rangers
+05/10/21,LAA,HOU,Angels at Astros
+05/11/21,LAA,HOU,Angels at Astros
+05/12/21,LAA,HOU,Angels at Astros
+05/14/21,LAA,BOS,Angels at Red Sox
+05/15/21,LAA,BOS,Angels at Red Sox
+05/16/21,LAA,BOS,Angels at Red Sox
+05/25/21,TEX,LAA,Rangers at Angels
+05/26/21,TEX,LAA,Rangers at Angels
+07/02/21,BAL,LAA,Orioles at Angels
+07/03/21,BAL,LAA,Orioles at Angels
+07/04/21,BAL,LAA,Orioles at Angels
+07/05/21,BOS,LAA,Red Sox at Angels
+07/06/21,BOS,LAA,Red Sox at Angels
+07/07/21,BOS,LAA,Red Sox at Angels
+08/02/21,LAA,TEX,Angels at Rangers
+08/03/21,LAA,TEX,Angels at Rangers
+08/04/21,LAA,TEX,Angels at Rangers
+08/05/21,LAA,TEX,Angels at Rangers
+08/13/21,HOU,LAA,Astros at Angels
+08/14/21,HOU,LAA,Astros at Angels
+08/15/21,HOU,LAA,Astros at Angels
+08/24/21,LAA,BAL,Angels at Orioles
+08/25/21,LAA,BAL,Angels at Orioles
+08/26/21,LAA,BAL,Angels at Orioles
+09/03/21,TEX,LAA,Rangers at Angels
+09/04/21,TEX,LAA,Rangers at Angels
+09/05/21,TEX,LAA,Rangers at Angels
+09/06/21,TEX,LAA,Rangers at Angels
+09/10/21,LAA,HOU,Angels at Astros
+09/11/21,LAA,HOU,Angels at Astros
+09/12/21,LAA,HOU,Angels at Astros
+09/14/21,LAA,CHW,Angels at White Sox
+09/15/21,LAA,CHW,Angels at White Sox
+09/16/21,LAA,CHW,Angels at White Sox
+09/20/21,HOU,LAA,Astros at Angels
+09/21/21,HOU,LAA,Astros at Angels
+09/22/21,HOU,LAA,Astros at Angels
+09/23/21,HOU,LAA,Astros at Angels
+09/28/21,LAA,TEX,Angels at Rangers
+09/29/21,LAA,TEX,Angels at Rangers
+09/30/21,LAA,TEX,Angels at Rangers
+04/16/21,CHW,BOS,White Sox at Red Sox
+04/17/21,CHW,BOS,White Sox at Red Sox
+04/18/21,CHW,BOS,White Sox at Red Sox
+04/19/21,CHW,BOS,White Sox at Red Sox
+04/23/21,TEX,CHW,Rangers at White Sox
+04/24/21,TEX,CHW,Rangers at White Sox
+04/25/21,TEX,CHW,Rangers at White Sox
+05/27/21,BAL,CHW,Orioles at White Sox
+05/28/21,BAL,CHW,Orioles at White Sox
+05/29/21,BAL,CHW,Orioles at White Sox
+05/30/21,BAL,CHW,Orioles at White Sox
+06/17/21,CHW,HOU,White Sox at Astros
+06/18/21,CHW,HOU,White Sox at Astros
+06/19/21,CHW,HOU,White Sox at Astros
+06/20/21,CHW,HOU,White Sox at Astros
+07/09/21,CHW,BAL,White Sox at Orioles
+07/10/21,CHW,BAL,White Sox at Orioles
+07/11/21,CHW,BAL,White Sox at Orioles
+07/16/21,HOU,CHW,Astros at White Sox
+07/17/21,HOU,CHW,Astros at White Sox
+07/18/21,HOU,CHW,Astros at White Sox
+08/06/21,CHW,CHC,White Sox at Cubs
+08/07/21,CHW,CHC,White Sox at Cubs
+08/08/21,CHW,CHC,White Sox at Cubs
+08/27/21,CHC,CHW,Cubs at White Sox
+08/28/21,CHC,CHW,Cubs at White Sox
+08/29/21,CHC,CHW,Cubs at White Sox
+09/10/21,BOS,CHW,Red Sox at White Sox
+09/11/21,BOS,CHW,Red Sox at White Sox
+09/12/21,BOS,CHW,Red Sox at White Sox
+09/17/21,CHW,TEX,White Sox at Rangers
+09/18/21,CHW,TEX,White Sox at Rangers
+09/19/21,CHW,TEX,White Sox at Rangers
+04/01/21,BAL,BOS,Orioles at Red Sox
+04/03/21,BAL,BOS,Orioles at Red Sox
+04/04/21,BAL,BOS,Orioles at Red Sox
+04/08/21,BOS,BAL,Red Sox at Orioles
+04/10/21,BOS,BAL,Red Sox at Orioles
+04/11/21,BOS,BAL,Red Sox at Orioles
+04/29/21,BOS,TEX,Red Sox at Rangers
+04/30/21,BOS,TEX,Red Sox at Rangers
+05/01/21,BOS,TEX,Red Sox at Rangers
+05/02/21,BOS,TEX,Red Sox at Rangers
+05/07/21,BOS,BAL,Red Sox at Orioles
+05/08/21,BOS,BAL,Red Sox at Orioles
+05/09/21,BOS,BAL,Red Sox at Orioles
+05/10/21,BOS,BAL,Red Sox at Orioles
+05/31/21,BOS,HOU,Red Sox at Astros
+06/01/21,BOS,HOU,Red Sox at Astros
+06/02/21,BOS,HOU,Red Sox at Astros
+06/03/21,BOS,HOU,Red Sox at Astros
+06/08/21,HOU,BOS,Astros at Red Sox
+06/09/21,HOU,BOS,Astros at Red Sox
+06/10/21,HOU,BOS,Astros at Red Sox
+08/13/21,BAL,BOS,Orioles at Red Sox
+08/14/21,BAL,BOS,Orioles at Red Sox
+08/15/21,BAL,BOS,Orioles at Red Sox
+08/20/21,TEX,BOS,Rangers at Red Sox
+08/21/21,TEX,BOS,Rangers at Red Sox
+08/22/21,TEX,BOS,Rangers at Red Sox
+09/17/21,BAL,BOS,Orioles at Red Sox
+09/18/21,BAL,BOS,Orioles at Red Sox
+09/19/21,BAL,BOS,Orioles at Red Sox
+09/28/21,BOS,BAL,Red Sox at Orioles
+09/29/21,BOS,BAL,Red Sox at Orioles
+09/30/21,BOS,BAL,Red Sox at Orioles
+04/16/21,BAL,TEX,Orioles at Rangers
+04/17/21,BAL,TEX,Orioles at Rangers
+04/18/21,BAL,TEX,Orioles at Rangers
+06/21/21,HOU,BAL,Astros at Orioles
+06/22/21,HOU,BAL,Astros at Orioles
+06/23/21,HOU,BAL,Astros at Orioles
+06/28/21,BAL,HOU,Orioles at Astros
+06/29/21,BAL,HOU,Orioles at Astros
+06/30/21,BAL,HOU,Orioles at Astros
+09/23/21,TEX,BAL,Rangers at Orioles
+09/24/21,TEX,BAL,Rangers at Orioles
+09/25/21,TEX,BAL,Rangers at Orioles
+09/26/21,TEX,BAL,Rangers at Orioles
