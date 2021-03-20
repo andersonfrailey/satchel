@@ -7,6 +7,8 @@ from . import constants
 
 @dataclass
 class SatchelResults:
+    """Results class for the Satchel model"""
+
     ws_counter: Counter
     league_counter: Counter  # league championships
     div_counter: Counter  # division championships
@@ -99,12 +101,28 @@ class SatchelResults:
         )
 
     def boxplot(self):
+        """Create boxplot that shows the distribution of wins for each team"""
         return plotting.boxplot(self.results_df)
 
     def results_grid(self):
+        """Create a grid of results distribution histograms"""
         return plotting.results_grid(self.results_df)
 
     def results_dist_chart(self, team, cmap=["red", "blue", "green", "purple"]):
+        """Create a results distribution for the specified team
+
+        Parameters
+        ----------
+        team : str
+            String with the team name
+        cmap : list, optional
+            List of colors to use in the plot, by default ["red", "blue", "green", "purple"]
+
+        Returns
+        -------
+        figure
+            Matplotlib figure with the chart
+        """
         return plotting.results_dist_chart(
             self.results_df[self.results_df["Team"] == team], title=team, cmap=cmap,
         )

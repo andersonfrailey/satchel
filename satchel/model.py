@@ -48,10 +48,21 @@ class Satchel:
         self.random.seed(seed)
         self.noise = noise
 
-    def simulate(
-        self, n: int = 10000, noise: bool = True, seed: int = None,
-    ) -> SatchelResults:
-        self.random.seed(seed)
+    def simulate(self, n: int = 10000, noise: bool = True,) -> SatchelResults:
+        """Run a model simulation n times
+
+        Parameters
+        ----------
+        n : int, optional
+            Number of iterations to run the model for, by default 10000
+        noise : bool, optional
+            Whether or not to add noise to team talent levels, by default True
+
+        Returns
+        -------
+        SatchelResults
+            Instance of the SatchelResults class.
+        """
         # merge schedule and WAR data to get our dataset for simulations
         data = pd.merge(
             self.schedule,
@@ -102,12 +113,18 @@ class Satchel:
         )
 
     def simseason(self, data) -> tuple:
-        """
-        Run full simulation of a season
+        """Run full simulation of a single season
+
         Parameters
         ----------
-        data: dataframe with team talent info merged onto the schedule
-        playoffs: function for dealing with playoffs
+        data : pd.DataFrame
+            DataFrame containing merged talent and schedule information.
+
+        Returns
+        -------
+        tuple
+            Tuple containing final results, wild card and division winners, and
+            playoff matchups.
         """
         data["h_talent"] = data["home_talent"]
         data["a_talent"] = data["away_talent"]
@@ -242,6 +259,22 @@ class Satchel:
     ####### Private methods #######
 
     def _calculate_talent(self, trades=None):
+        """Private method used to calculate each team's talent level by taking
+        the average of ZiPS and Steamer WAR projections on FanGraphs
+
+        Parameters
+        ----------
+        trades : dict, optional
+            Dictionary containing trade information. Part of a currently
+            unsupported feature to allow users to simulate the effects of
+            hypothetical trades, by default None
+
+        Returns
+        -------
+        pd.DataFrame
+            DataFrame containing talent levels for each team.
+        """
+        active = pd.read_csv(Path(DATA_PATH, "activeids.csv"))
         # take average of steamer and zips talents for our standard talent measure
         steamer_p = pd.read_csv(Path(DATA_PATH, "steamer_pitcher.csv"))
         zips_p = pd.read_csv(Path(DATA_PATH, "zips_pitcher.csv"))
@@ -250,7 +283,12 @@ class Satchel:
             zips_p[["WAR", "playerid"]],
             on="playerid",
             suffixes=["_s", "_z"],
+            how="outer",
         )
+        # drop everyone who isn't on a 40-man roster
+        # note: we don't always have projections for the entire 40-man. When
+        # that happens we just assume they're replacement level. i.e. WAR = 0
+        pitch_proj = pitch_proj[pitch_proj["playerid"].isin(active["pid"])].copy()
         pitch_proj["WAR"] = pitch_proj[["WAR_s", "WAR_z"]].mean(axis=1)
         pwar_proj = pitch_proj.groupby("Team")["WAR"].sum()
 
@@ -261,7 +299,9 @@ class Satchel:
             zips_b[["WAR", "playerid"]],
             on="playerid",
             suffixes=["_s", "_z"],
+            how="outer",
         )
+        batter_proj = batter_proj[batter_proj["playerid"].isin(active["pid"])]
         batter_proj["WAR"] = batter_proj[["WAR_s", "WAR_z"]].mean(axis=1)
         bwar_proj = batter_proj.groupby("Team")["WAR"].sum()
         talent = pd.concat([bwar_proj, pwar_proj], axis=1)
