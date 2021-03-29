@@ -4,6 +4,7 @@ from this main class
 """
 import pandas as pd
 import numpy as np
+import difflib
 from . import constants
 from .modelresults import SatchelResults
 from collections import Counter
@@ -44,8 +45,7 @@ class Satchel:
         self.talent = self._calculate_talent(trades)
         self.schedule = pd.read_csv(SCHEDUEL_PATH)
         self.teams = set(constants.DIVS.keys())
-        self.random = np.random
-        self.random.seed(seed)
+        self.random = np.random.default_rng(seed)
         self.noise = noise
 
     def simulate(self, n: int = 10000, noise: bool = True,) -> SatchelResults:
@@ -110,6 +110,8 @@ class Satchel:
             self.talent,
             n,
             self.trades,
+            self.schedule,
+            data,
         )
 
     def simseason(self, data) -> tuple:
@@ -143,7 +145,7 @@ class Satchel:
         home_win_prob = np.exp(data["h_talent"]) / (
             np.exp(data["a_talent"]) + np.exp(data["h_talent"])
         )
-        probs = self.random.rand(len(data))
+        probs = self.random.random(len(data))
         winner = pd.Series(
             np.where(home_win_prob >= probs, data["home"], data["away"]), name="wins"
         )
@@ -188,7 +190,7 @@ class Satchel:
                 np.exp(talent[teams[0]]["talent"]) + np.exp(talent[teams[1]]["talent"])
             )
             for _ in range(n_games):
-                prob = self.random.rand()
+                prob = self.random.random()
                 if prob >= team1_win_prob:
                     team1 += 1
                     continue
@@ -255,6 +257,43 @@ class Satchel:
             wc_winners,
             matchups,
         )
+
+    def matchup(self, team1: str, team2: str) -> float:
+        """Calculate the probability of two teams winning when they play each other
+
+        Parameters
+        ----------
+        team1 : str
+            First team in the matchup
+        team2 : str
+            Second team in the matchup
+
+        Returns
+        -------
+        float
+            Tuple with each team's win probability: (team1, team2)
+
+        Raises
+        ------
+        ValueError
+            Raised if either team1 or team2 is an invalid team name
+        """
+        # assert that the two teams are actual team abbreviations
+        if team1.upper() not in self.teams:
+            similar = difflib.get_close_matches(team1, self.teams)
+            msg = f"{team1} is not valid. Similar teams are: {similar}"
+            raise ValueError(msg)
+        if team2.upper() not in self.teams:
+            similar = difflib.get_close_matches(team2, self.teams)
+            msg = f"{team2} is not valid. Similar teams are: {similar}"
+            raise ValueError(msg)
+        team1_talent = self.talent["talent"][self.talent["Team"] == team1].values
+        team2_talent = self.talent["talent"][self.talent["Team"] == team2].values
+        team1_prob = np.exp(team1_talent) / (
+            np.exp(team1_talent) + np.exp(team2_talent)
+        )
+
+        return team1_prob[0], 1 - team1_prob[0]
 
     ####### Private methods #######
 

@@ -19,6 +19,8 @@ class SatchelResults:
     base_talent: pd.DataFrame
     n: int
     trades: dict
+    schedule: pd.DataFrame
+    merged_schedule: pd.DataFrame
 
     def __post_init__(self):
         """Set all of the default values calculated from the results"""
