@@ -48,7 +48,11 @@ class Satchel:
         self.random = np.random.default_rng(seed)
         self.noise = noise
 
-    def simulate(self, n: int = 10000, noise: bool = True,) -> SatchelResults:
+    def simulate(
+        self,
+        n: int = 10000,
+        noise: bool = True,
+    ) -> SatchelResults:
         """Run a model simulation n times
 
         Parameters
@@ -87,7 +91,9 @@ class Satchel:
         all_results = []
         all_matchups = []
         for i in tqdm(range(n)):
-            results, playoffs, div_winners, wc_winners, matchups = self.simseason(data,)
+            results, playoffs, div_winners, wc_winners, matchups = self.simseason(
+                data,
+            )
             ws_counter.update([playoffs["ws"]])
             div_counter.update(div_winners["Team"])
             league_counter.update([playoffs["nl"]["cs"]])
@@ -160,20 +166,28 @@ class Satchel:
         results["division"] = results["Team"].map(constants.DIV)
 
         # post season play
-        final_res, div_winners, wc_winners, matchups = self.standard_playoff(
-            results, _talent
-        )
+        (
+            final_res,
+            cs_winners,
+            div_winners,
+            wc_winners,
+            matchups,
+        ) = self.standard_playoff(results, _talent)
         # column for season result
         results["season_result"] = np.where(
             results["Team"] == final_res["ws"],
             "Win World Series",
             np.where(
-                results["Team"].isin(div_winners["Team"]),
-                "Division Champ",
+                results["Team"].isin(cs_winners),
+                "Win League",
                 np.where(
-                    results["Team"].isin(wc_winners["Team"]),
-                    "Wild Card",
-                    "Missed Playoff",
+                    results["Team"].isin(div_winners["Team"]),
+                    "Division Champ",
+                    np.where(
+                        results["Team"].isin(wc_winners["Team"]),
+                        "Wild Card",
+                        "Missed Playoff",
+                    ),
                 ),
             ),
         )
@@ -191,7 +205,7 @@ class Satchel:
             )
             for _ in range(n_games):
                 prob = self.random.random()
-                if prob >= team1_win_prob:
+                if team1_win_prob >= prob:
                     team1 += 1
                     continue
                 team2 += 1
@@ -253,6 +267,7 @@ class Satchel:
         matchups["WS Winner"] = champ
         return (
             {"nl": nlres, "al": alres, "ws": champ},
+            [alres["cs"], nlres["cs"]],
             div_winners,
             wc_winners,
             matchups,
