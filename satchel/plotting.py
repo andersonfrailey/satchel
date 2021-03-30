@@ -26,6 +26,9 @@ def results_dataprep(data, team):
         df[["wins", "count"]][df["season_result"] == "Missed Playoff"].rename(
             {"count": "mp"}, axis=1
         ),
+        df[["wins", "count"]][df["season_result"] == "Win League"].rename(
+            {"count": "cs"}, axis=1
+        ),
     ]
     plot_data = reduce(
         lambda left, right: pd.merge(left, right, on="wins", how="outer"), subdfs
@@ -35,7 +38,8 @@ def results_dataprep(data, team):
     plot_data["mp_b"] = 0
     plot_data["wc_b"] = plot_data[["mp"]].sum(axis=1)
     plot_data["div_b"] = plot_data[["wc", "mp"]].sum(axis=1)
-    plot_data["ws_b"] = plot_data[["div", "wc", "mp"]].sum(axis=1)
+    plot_data["cs_b"] = plot_data[["div", "wc", "mp"]].sum(axis=1)
+    plot_data["ws_b"] = plot_data[["cs", "div", "wc", "mp"]].sum(axis=1)
     return plot_data
 
 
@@ -126,7 +130,7 @@ def results_grid(results):
         Figure with the results
     """
     # make the grid!
-    cmap = ["blue", "orange", "green", "red"]
+    cmap = ["blue", "orange", "green", "darkgrey", "red"]
     nrows = 5
     ncols = 6
     # set teams up so each column is a division
@@ -156,7 +160,7 @@ def results_grid(results):
             axs[i, j].bar(
                 plot_data["wins"],
                 plot_data["wc"],
-                label="Make Wild Card",
+                label="Win Wild Card",
                 bottom=plot_data["wc_b"],
                 color=cmap[1],
             )
@@ -169,10 +173,17 @@ def results_grid(results):
             )
             axs[i, j].bar(
                 plot_data["wins"],
+                plot_data["cs"],
+                label="Win League",
+                bottom=plot_data["cs_b"],
+                color=cmap[3],
+            )
+            axs[i, j].bar(
+                plot_data["wins"],
                 plot_data["ws"],
                 label="Win World Series",
                 bottom=plot_data["ws_b"],
-                color=cmap[3],
+                color=cmap[4],
             )
             axs[i, j].set_xlim(min_wins, max_wins)
             axs[i, j].set_ylim(0, 0.075)
@@ -191,7 +202,7 @@ def results_grid(results):
             else:
                 axs[i, j].set_yticklabels([])
     handles, labels = axs[i, j].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="upper center", ncol=4, bbox_to_anchor=(0.5, 1.07))
+    fig.legend(handles, labels, loc="upper center", ncol=5, bbox_to_anchor=(0.5, 1.07))
     fig.tight_layout(pad=0)
 
     return fig
@@ -220,4 +231,3 @@ def boxplot(results):
     boxax.set_title("Distribution of Total Wins")
 
     return boxfig, boxax
-
