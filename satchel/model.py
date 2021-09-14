@@ -90,8 +90,18 @@ class Satchel:
         playoff_counter = Counter()  # any postseason appearance
         all_results = []
         all_matchups = []
+        all_noise = []  # the talent noise for a given team in a season
+        full_seasons = []  # hold all of the results for each season
         for i in tqdm(range(n)):
-            results, playoffs, div_winners, wc_winners, matchups = self.simseason(
+            (
+                results,
+                playoffs,
+                div_winners,
+                wc_winners,
+                matchups,
+                noise,
+                full_season,
+            ) = self.simseason(
                 data,
             )
             ws_counter.update([playoffs["ws"]])
@@ -104,6 +114,8 @@ class Satchel:
             results["sim"] = i
             all_results.append(results)
             all_matchups.append(matchups)
+            all_noise.append(noise)
+            full_seasons.append(full_season)
 
         return SatchelResults(
             ws_counter,
@@ -118,6 +130,8 @@ class Satchel:
             self.trades,
             self.schedule,
             data,
+            noise,
+            full_seasons,
         )
 
     def simseason(self, data) -> tuple:
@@ -158,6 +172,8 @@ class Satchel:
         loser = pd.Series(
             np.where(home_win_prob >= probs, data["away"], data["home"]), name="losses"
         )
+        data["winner"] = winner
+        data["loser"] = loser
         results = pd.concat(
             [winner.value_counts(), loser.value_counts()], axis=1
         ).reset_index()
@@ -191,7 +207,7 @@ class Satchel:
                 ),
             ),
         )
-        return results, final_res, div_winners, wc_winners, matchups
+        return results, final_res, div_winners, wc_winners, matchups, team_noise, data
 
     def standard_playoff(self, results, talent, n_divwinners=1, n_wildcard=2):
         def sim_round(teams, talent, n_games):
