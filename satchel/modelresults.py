@@ -21,6 +21,8 @@ class SatchelResults:
     trades: dict
     schedule: pd.DataFrame
     merged_schedule: pd.DataFrame
+    noise: dict  # the noise added to each team's talent in every season
+    full_seasons: list  # full season results for each simulation
 
     def __post_init__(self):
         """Set all of the default values calculated from the results"""
@@ -126,8 +128,29 @@ class SatchelResults:
             Matplotlib figure with the chart
         """
         return plotting.results_dist_chart(
-            self.results_df[self.results_df["Team"] == team], title=team, cmap=cmap,
+            self.results_df[self.results_df["Team"] == team],
+            title=team,
+            cmap=cmap,
         )
+
+    def season_percentile(self, team, wins):
+        """Return the percentile of the wins distribution of the specified team
+        the given number of wins would be in
+
+        Parameters
+        ----------
+        team : str
+            Three letter abreviation for the team
+        wins : int
+            Number of wins
+
+        Returns
+        -------
+        float
+            Percentile of the wins distribution the given number of wins is in
+        """
+        subresults = self.results_df[self.results_df["Team"] == team]
+        return (subresults["wins"] < wins).sum() / subresults.shape[0]
 
     ####### Private methods #######
 
