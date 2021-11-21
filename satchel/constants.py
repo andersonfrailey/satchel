@@ -40,7 +40,7 @@ ABBR_TO_NAME = {
     "BOS": "Boston Red Sox",
     "CHC": "Chicago Cubs",
     "CHW": "Chicago White Sox",
-    "CIN": "Cininnati Reds",
+    "CIN": "Cincinnati Reds",
     "CLE": "Cleveland Indians",
     "COL": "Colorado Rockies",
     "DET": "Detroit Tigers",
