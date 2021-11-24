@@ -30,6 +30,8 @@ DIVS = {
     "TEX": "AL West",
     "TOR": "AL East",
 }
+
+TEAM_ABBRS = DIVS.keys()
 LEAGUE = {team: div.split(" ")[0] for team, div in DIVS.items()}
 DIV = {team: div.split(" ")[1] for team, div in DIVS.items()}
 
@@ -40,7 +42,7 @@ ABBR_TO_NAME = {
     "BOS": "Boston Red Sox",
     "CHC": "Chicago Cubs",
     "CHW": "Chicago White Sox",
-    "CIN": "Cininnati Reds",
+    "CIN": "Cincinnati Reds",
     "CLE": "Cleveland Indians",
     "COL": "Colorado Rockies",
     "DET": "Detroit Tigers",

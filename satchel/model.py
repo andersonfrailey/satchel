@@ -23,9 +23,13 @@ class Satchel:
     def __init__(
         self,
         talent_measure: str = "median",
-        trades: dict = None,
+        transactions: dict = None,
         noise: bool = True,
         seed: int = None,
+        steamer_p_wt: float = 0.5,
+        zips_p_wt: float = 0.5,
+        steamer_b_wt: float = 0.5,
+        zips_b_wt: float = 0.5,
     ):
         """Main model class
 
@@ -37,16 +41,30 @@ class Satchel:
             function used to simulate the playoffs, by default standard_playoff
         seed : int, float, optional
             seed used for random draws, by default None
+        steamer_p_wt: float, optional
+            Weight placed on steamer pitcher projections
+        zips_p_wt: float, optional
+            Weight placed on ZIPs pitcher projections
+        steamer_b_wt: float, optional
+            Weight placed on steamer batter projections
+        zips_b_wt: float, optional
+            Weight placed on ZIPs batter projections
         """
         if talent_measure.lower() not in ["median", "mean"]:
             raise ValueError("`talent_measure` must be median or mean")
         self.talent_measure = talent_measure
-        self.trades = trades
-        self.talent = self._calculate_talent(trades)
+        self.transactions = transactions
         self.schedule = pd.read_csv(SCHEDUEL_PATH)
-        self.teams = set(constants.DIVS.keys())
+        self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
         self.noise = noise
+        self.seed = seed
+        self.steamer_p_wt = steamer_p_wt
+        self.zips_p_wt = zips_p_wt
+        self.steamer_b_wt = steamer_b_wt
+        self.zips_b_wt = zips_b_wt
+
+        self.talent = self._calculate_talent(transactions)
 
     def simulate(
         self,
@@ -127,11 +145,12 @@ class Satchel:
             pd.DataFrame(all_matchups),
             self.talent,
             n,
-            self.trades,
+            self.transactions,
             self.schedule,
             data,
             noise,
             full_seasons,
+            self.seed,
         )
 
     def simseason(self, data) -> tuple:
@@ -328,16 +347,14 @@ class Satchel:
 
     ####### Private methods #######
 
-    def _calculate_talent(self, trades=None):
+    def _calculate_talent(self, transactions=None):
         """Private method used to calculate each team's talent level by taking
         the average of ZiPS and Steamer WAR projections on FanGraphs
 
         Parameters
         ----------
-        trades : dict, optional
-            Dictionary containing trade information. Part of a currently
-            unsupported feature to allow users to simulate the effects of
-            hypothetical trades, by default None
+        transactions : dict, optional
+            Dictionary containing transaction information.
 
         Returns
         -------
@@ -359,8 +376,11 @@ class Satchel:
         # note: we don't always have projections for the entire 40-man. When
         # that happens we just assume they're replacement level. i.e. WAR = 0
         pitch_proj = pitch_proj[pitch_proj["playerid"].isin(active["pid"])].copy()
-        pitch_proj["WAR"] = pitch_proj[["WAR_s", "WAR_z"]].mean(axis=1)
-        pwar_proj = pitch_proj.groupby("Team")["WAR"].sum()
+        pitch_proj["WAR_P"] = (
+            pitch_proj["WAR_s"] * self.steamer_p_wt
+            + pitch_proj["WAR_z"] * self.zips_p_wt
+        )
+        pitch_proj.set_index("playerid", inplace=True)
 
         steamer_b = pd.read_csv(Path(DATA_PATH, "steamer_batter.csv"))
         zips_b = pd.read_csv(Path(DATA_PATH, "zips_batter.csv"))
@@ -372,8 +392,20 @@ class Satchel:
             how="outer",
         )
         batter_proj = batter_proj[batter_proj["playerid"].isin(active["pid"])]
-        batter_proj["WAR"] = batter_proj[["WAR_s", "WAR_z"]].mean(axis=1)
-        bwar_proj = batter_proj.groupby("Team")["WAR"].sum()
+        batter_proj["WAR_B"] = (
+            batter_proj["WAR_s"] * self.steamer_b_wt
+            + batter_proj["WAR_z"] * self.zips_b_wt
+        )
+        batter_proj.set_index("playerid", inplace=True)
+
+        # conduct transactions
+        if transactions:
+            self._conduct_transactions(pitch_proj, batter_proj, transactions)
+
+        # group all of the WAR projections by team and add them
+        pwar_proj = pitch_proj.groupby("Team")["WAR_P"].sum()
+        bwar_proj = batter_proj.groupby("Team")["WAR_B"].sum()
+
         talent = pd.concat([bwar_proj, pwar_proj], axis=1)
         talent["total"] = talent.sum(axis=1)
         talent.reset_index(inplace=True)
@@ -388,3 +420,34 @@ class Satchel:
         talent["league"] = talent["Team"].map(constants.LEAGUE)
         talent["division"] = talent["Team"].map(constants.DIV)
         return talent
+
+    def _conduct_transactions(self, pitchers, batters, transactions):
+        """Update the pitcher and hitter projection DFs with the transactions
+        specified
+
+        Parameters
+        ----------
+        pitchers : pd.DataFrame
+            DataFrame with the pitcher projections
+        batters : pd.DataFrame
+            DataFrame with the batter projections
+        transactions : dict
+            Dictionary with each transaction. Key: Value pattern is ID: New Team
+        """
+        assert isinstance(transactions, dict), "Transactions must be dictionary"
+        # loop through each transaction and update the player's team
+        for _id, _team in transactions.items():
+            # verify the team exists
+            team = _team.upper()
+            # check that it's a valid team name, or no team at all
+            if team not in self.teams and team != "":
+                close = difflib.get_close_matches(team, self.teams)
+                msg = f"{team} is not a valid team. Close matches are: {close}"
+                raise ValueError(msg)
+            if _id in pitchers.index:
+                pitchers.at[_id, "Team"] = team
+            elif _id in batters.index:
+                batters.at[_id, "Team"] = team
+            else:
+                msg = f"{_id} is an unrecognized player ID"
+                raise ValueError(msg)

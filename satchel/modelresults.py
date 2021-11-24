@@ -1,6 +1,7 @@
 import pandas as pd
 from dataclasses import dataclass
 from collections import Counter
+from typing import Union
 from . import plotting
 from . import constants
 
@@ -23,6 +24,7 @@ class SatchelResults:
     merged_schedule: pd.DataFrame
     noise: dict  # the noise added to each team's talent in every season
     full_seasons: list  # full season results for each simulation
+    seed: Union[int, None]  # seed used for the simulation
 
     def __post_init__(self):
         """Set all of the default values calculated from the results"""
