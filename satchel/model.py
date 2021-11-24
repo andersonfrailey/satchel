@@ -26,6 +26,10 @@ class Satchel:
         transactions: dict = None,
         noise: bool = True,
         seed: int = None,
+        steamer_p_wt: float = 0.5,
+        zips_p_wt: float = 0.5,
+        steamer_b_wt: float = 0.5,
+        zips_b_wt: float = 0.5,
     ):
         """Main model class
 
@@ -37,16 +41,30 @@ class Satchel:
             function used to simulate the playoffs, by default standard_playoff
         seed : int, float, optional
             seed used for random draws, by default None
+        steamer_p_wt: float, optional
+            Weight placed on steamer pitcher projections
+        zips_p_wt: float, optional
+            Weight placed on ZIPs pitcher projections
+        steamer_b_wt: float, optional
+            Weight placed on steamer batter projections
+        zips_b_wt: float, optional
+            Weight placed on ZIPs batter projections
         """
         if talent_measure.lower() not in ["median", "mean"]:
             raise ValueError("`talent_measure` must be median or mean")
         self.talent_measure = talent_measure
         self.transactions = transactions
-        self.talent = self._calculate_talent(transactions)
         self.schedule = pd.read_csv(SCHEDUEL_PATH)
         self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
         self.noise = noise
+        self.seed = seed
+        self.steamer_p_wt = steamer_p_wt
+        self.zips_p_wt = zips_p_wt
+        self.steamer_b_wt = steamer_b_wt
+        self.zips_b_wt = zips_b_wt
+
+        self.talent = self._calculate_talent(transactions)
 
     def simulate(
         self,
@@ -132,6 +150,7 @@ class Satchel:
             data,
             noise,
             full_seasons,
+            self.seed,
         )
 
     def simseason(self, data) -> tuple:
@@ -357,7 +376,10 @@ class Satchel:
         # note: we don't always have projections for the entire 40-man. When
         # that happens we just assume they're replacement level. i.e. WAR = 0
         pitch_proj = pitch_proj[pitch_proj["playerid"].isin(active["pid"])].copy()
-        pitch_proj["WAR_P"] = pitch_proj[["WAR_s", "WAR_z"]].mean(axis=1)
+        pitch_proj["WAR_P"] = (
+            pitch_proj["WAR_s"] * self.steamer_p_wt
+            + pitch_proj["WAR_z"] * self.zips_p_wt
+        )
         pitch_proj.set_index("playerid", inplace=True)
 
         steamer_b = pd.read_csv(Path(DATA_PATH, "steamer_batter.csv"))
@@ -370,7 +392,10 @@ class Satchel:
             how="outer",
         )
         batter_proj = batter_proj[batter_proj["playerid"].isin(active["pid"])]
-        batter_proj["WAR_B"] = batter_proj[["WAR_s", "WAR_z"]].mean(axis=1)
+        batter_proj["WAR_B"] = (
+            batter_proj["WAR_s"] * self.steamer_b_wt
+            + batter_proj["WAR_z"] * self.zips_b_wt
+        )
         batter_proj.set_index("playerid", inplace=True)
 
         # conduct transactions
@@ -411,11 +436,18 @@ class Satchel:
         """
         assert isinstance(transactions, dict), "Transactions must be dictionary"
         # loop through each transaction and update the player's team
-        for _id, team in transactions.items():
+        for _id, _team in transactions.items():
+            # verify the team exists
+            team = _team.upper()
+            # check that it's a valid team name, or no team at all
+            if team not in self.teams and team != "":
+                close = difflib.get_close_matches(team, self.teams)
+                msg = f"{team} is not a valid team. Close matches are: {close}"
+                raise ValueError(msg)
             if _id in pitchers.index:
                 pitchers.at[_id, "Team"] = team
             elif _id in batters.index:
                 batters.at[_id, "Team"] = team
             else:
-                msg = f"{_id} is unrecognized player ID"
+                msg = f"{_id} is an unrecognized player ID"
                 raise ValueError(msg)

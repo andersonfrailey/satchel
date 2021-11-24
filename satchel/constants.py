@@ -30,6 +30,8 @@ DIVS = {
     "TEX": "AL West",
     "TOR": "AL East",
 }
+
+TEAM_ABBRS = DIVS.keys()
 LEAGUE = {team: div.split(" ")[0] for team, div in DIVS.items()}
 DIV = {team: div.split(" ")[1] for team, div in DIVS.items()}
 
