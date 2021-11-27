@@ -517,7 +517,7 @@ class Satchel:
         # find the final talent for each team after all the transactions. This
         # will be used for the playoff simulations
         finaldf = (
-            st_data[st_data["START DATE"] > last_date]
+            st_data[st_data["START DATE"] >= last_date]
             .groupby("away")["away_total"]
             .mean()
             .reset_index()
