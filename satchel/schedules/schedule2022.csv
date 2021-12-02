@@ -1,0 +1,2431 @@
+START DATE,away,home,SUBJECT
+2022-04-04,TBR,TOR,Rays at Blue Jays
+2022-04-05,TBR,TOR,Rays at Blue Jays
+2022-04-06,TBR,TOR,Rays at Blue Jays
+2022-04-08,TEX,TOR,Rangers at Blue Jays
+2022-04-09,TEX,TOR,Rangers at Blue Jays
+2022-04-10,TEX,TOR,Rangers at Blue Jays
+2022-04-15,OAK,TOR,Athletics at Blue Jays
+2022-04-16,OAK,TOR,Athletics at Blue Jays
+2022-04-17,OAK,TOR,Athletics at Blue Jays
+2022-04-25,BOS,TOR,Red Sox at Blue Jays
+2022-04-26,BOS,TOR,Red Sox at Blue Jays
+2022-04-27,BOS,TOR,Red Sox at Blue Jays
+2022-04-28,BOS,TOR,Red Sox at Blue Jays
+2022-04-29,HOU,TOR,Astros at Blue Jays
+2022-04-30,HOU,TOR,Astros at Blue Jays
+2022-05-01,HOU,TOR,Astros at Blue Jays
+2022-05-02,NYY,TOR,Yankees at Blue Jays
+2022-05-03,NYY,TOR,Yankees at Blue Jays
+2022-05-04,NYY,TOR,Yankees at Blue Jays
+2022-05-16,SEA,TOR,Mariners at Blue Jays
+2022-05-17,SEA,TOR,Mariners at Blue Jays
+2022-05-18,SEA,TOR,Mariners at Blue Jays
+2022-05-20,CIN,TOR,Reds at Blue Jays
+2022-05-21,CIN,TOR,Reds at Blue Jays
+2022-05-22,CIN,TOR,Reds at Blue Jays
+2022-05-31,CHW,TOR,White Sox at Blue Jays
+2022-06-01,CHW,TOR,White Sox at Blue Jays
+2022-06-02,CHW,TOR,White Sox at Blue Jays
+2022-06-03,MIN,TOR,Twins at Blue Jays
+2022-06-04,MIN,TOR,Twins at Blue Jays
+2022-06-05,MIN,TOR,Twins at Blue Jays
+2022-06-13,BAL,TOR,Orioles at Blue Jays
+2022-06-14,BAL,TOR,Orioles at Blue Jays
+2022-06-15,BAL,TOR,Orioles at Blue Jays
+2022-06-16,BAL,TOR,Orioles at Blue Jays
+2022-06-17,NYY,TOR,Yankees at Blue Jays
+2022-06-18,NYY,TOR,Yankees at Blue Jays
+2022-06-19,NYY,TOR,Yankees at Blue Jays
+2022-06-27,BOS,TOR,Red Sox at Blue Jays
+2022-06-28,BOS,TOR,Red Sox at Blue Jays
+2022-06-29,BOS,TOR,Red Sox at Blue Jays
+2022-06-30,TBR,TOR,Rays at Blue Jays
+2022-07-01,TBR,TOR,Rays at Blue Jays
+2022-07-02,TBR,TOR,Rays at Blue Jays
+2022-07-03,TBR,TOR,Rays at Blue Jays
+2022-07-12,PHI,TOR,Phillies at Blue Jays
+2022-07-13,PHI,TOR,Phillies at Blue Jays
+2022-07-14,KCR,TOR,Royals at Blue Jays
+2022-07-15,KCR,TOR,Royals at Blue Jays
+2022-07-16,KCR,TOR,Royals at Blue Jays
+2022-07-17,KCR,TOR,Royals at Blue Jays
+2022-07-26,STL,TOR,Cardinals at Blue Jays
+2022-07-27,STL,TOR,Cardinals at Blue Jays
+2022-07-28,DET,TOR,Tigers at Blue Jays
+2022-07-29,DET,TOR,Tigers at Blue Jays
+2022-07-30,DET,TOR,Tigers at Blue Jays
+2022-07-31,DET,TOR,Tigers at Blue Jays
+2022-08-12,CLE,TOR,Guardians at Blue Jays
+2022-08-13,CLE,TOR,Guardians at Blue Jays
+2022-08-14,CLE,TOR,Guardians at Blue Jays
+2022-08-15,BAL,TOR,Orioles at Blue Jays
+2022-08-16,BAL,TOR,Orioles at Blue Jays
+2022-08-17,BAL,TOR,Orioles at Blue Jays
+2022-08-26,LAA,TOR,Angels at Blue Jays
+2022-08-27,LAA,TOR,Angels at Blue Jays
+2022-08-28,LAA,TOR,Angels at Blue Jays
+2022-08-29,CHC,TOR,Cubs at Blue Jays
+2022-08-30,CHC,TOR,Cubs at Blue Jays
+2022-08-31,CHC,TOR,Cubs at Blue Jays
+2022-09-12,TBR,TOR,Rays at Blue Jays
+2022-09-13,TBR,TOR,Rays at Blue Jays
+2022-09-14,TBR,TOR,Rays at Blue Jays
+2022-09-16,BAL,TOR,Orioles at Blue Jays
+2022-09-17,BAL,TOR,Orioles at Blue Jays
+2022-09-18,BAL,TOR,Orioles at Blue Jays
+2022-09-26,NYY,TOR,Yankees at Blue Jays
+2022-09-27,NYY,TOR,Yankees at Blue Jays
+2022-09-28,NYY,TOR,Yankees at Blue Jays
+2022-09-30,BOS,TOR,Red Sox at Blue Jays
+2022-10-01,BOS,TOR,Red Sox at Blue Jays
+2022-10-02,BOS,TOR,Red Sox at Blue Jays
+2022-03-31,TOR,BAL,Blue Jays at Orioles
+2022-04-02,TOR,BAL,Blue Jays at Orioles
+2022-04-03,TOR,BAL,Blue Jays at Orioles
+2022-04-11,MIL,BAL,Brewers at Orioles
+2022-04-12,MIL,BAL,Brewers at Orioles
+2022-04-13,MIL,BAL,Brewers at Orioles
+2022-04-15,NYY,BAL,Yankees at Orioles
+2022-04-16,NYY,BAL,Yankees at Orioles
+2022-04-17,NYY,BAL,Yankees at Orioles
+2022-04-29,BOS,BAL,Red Sox at Orioles
+2022-04-30,BOS,BAL,Red Sox at Orioles
+2022-05-01,BOS,BAL,Red Sox at Orioles
+2022-05-02,MIN,BAL,Twins at Orioles
+2022-05-03,MIN,BAL,Twins at Orioles
+2022-05-04,MIN,BAL,Twins at Orioles
+2022-05-05,MIN,BAL,Twins at Orioles
+2022-05-06,KCR,BAL,Royals at Orioles
+2022-05-07,KCR,BAL,Royals at Orioles
+2022-05-08,KCR,BAL,Royals at Orioles
+2022-05-16,NYY,BAL,Yankees at Orioles
+2022-05-17,NYY,BAL,Yankees at Orioles
+2022-05-18,NYY,BAL,Yankees at Orioles
+2022-05-19,NYY,BAL,Yankees at Orioles
+2022-05-20,TBR,BAL,Rays at Orioles
+2022-05-21,TBR,BAL,Rays at Orioles
+2022-05-22,TBR,BAL,Rays at Orioles
+2022-05-31,SEA,BAL,Mariners at Orioles
+2022-06-01,SEA,BAL,Mariners at Orioles
+2022-06-02,SEA,BAL,Mariners at Orioles
+2022-06-03,CLE,BAL,Guardians at Orioles
+2022-06-04,CLE,BAL,Guardians at Orioles
+2022-06-05,CLE,BAL,Guardians at Orioles
+2022-06-07,CHC,BAL,Cubs at Orioles
+2022-06-08,CHC,BAL,Cubs at Orioles
+2022-06-17,TBR,BAL,Rays at Orioles
+2022-06-18,TBR,BAL,Rays at Orioles
+2022-06-19,TBR,BAL,Rays at Orioles
+2022-06-21,WSN,BAL,Nationals at Orioles
+2022-06-22,WSN,BAL,Nationals at Orioles
+2022-07-04,TEX,BAL,Rangers at Orioles
+2022-07-05,TEX,BAL,Rangers at Orioles
+2022-07-06,TEX,BAL,Rangers at Orioles
+2022-07-07,LAA,BAL,Angels at Orioles
+2022-07-08,LAA,BAL,Angels at Orioles
+2022-07-09,LAA,BAL,Angels at Orioles
+2022-07-10,LAA,BAL,Angels at Orioles
+2022-07-22,NYY,BAL,Yankees at Orioles
+2022-07-23,NYY,BAL,Yankees at Orioles
+2022-07-24,NYY,BAL,Yankees at Orioles
+2022-07-25,TBR,BAL,Rays at Orioles
+2022-07-26,TBR,BAL,Rays at Orioles
+2022-07-27,TBR,BAL,Rays at Orioles
+2022-07-28,TBR,BAL,Rays at Orioles
+2022-08-05,PIT,BAL,Pirates at Orioles
+2022-08-06,PIT,BAL,Pirates at Orioles
+2022-08-07,PIT,BAL,Pirates at Orioles
+2022-08-08,TOR,BAL,Blue Jays at Orioles
+2022-08-09,TOR,BAL,Blue Jays at Orioles
+2022-08-10,TOR,BAL,Blue Jays at Orioles
+2022-08-19,BOS,BAL,Red Sox at Orioles
+2022-08-20,BOS,BAL,Red Sox at Orioles
+2022-08-21,BOS,BAL,Red Sox at Orioles
+2022-08-23,CHW,BAL,White Sox at Orioles
+2022-08-24,CHW,BAL,White Sox at Orioles
+2022-08-25,CHW,BAL,White Sox at Orioles
+2022-09-02,OAK,BAL,Athletics at Orioles
+2022-09-03,OAK,BAL,Athletics at Orioles
+2022-09-04,OAK,BAL,Athletics at Orioles
+2022-09-05,TOR,BAL,Blue Jays at Orioles
+2022-09-06,TOR,BAL,Blue Jays at Orioles
+2022-09-07,TOR,BAL,Blue Jays at Orioles
+2022-09-09,BOS,BAL,Red Sox at Orioles
+2022-09-10,BOS,BAL,Red Sox at Orioles
+2022-09-11,BOS,BAL,Red Sox at Orioles
+2022-09-19,DET,BAL,Tigers at Orioles
+2022-09-20,DET,BAL,Tigers at Orioles
+2022-09-21,DET,BAL,Tigers at Orioles
+2022-09-22,HOU,BAL,Astros at Orioles
+2022-09-23,HOU,BAL,Astros at Orioles
+2022-09-24,HOU,BAL,Astros at Orioles
+2022-09-25,HOU,BAL,Astros at Orioles
+2022-04-08,BAL,TBR,Orioles at Rays
+2022-04-09,BAL,TBR,Orioles at Rays
+2022-04-10,BAL,TBR,Orioles at Rays
+2022-04-11,OAK,TBR,Athletics at Rays
+2022-04-12,OAK,TBR,Athletics at Rays
+2022-04-13,OAK,TBR,Athletics at Rays
+2022-04-14,OAK,TBR,Athletics at Rays
+2022-04-22,BOS,TBR,Red Sox at Rays
+2022-04-23,BOS,TBR,Red Sox at Rays
+2022-04-24,BOS,TBR,Red Sox at Rays
+2022-04-26,SEA,TBR,Mariners at Rays
+2022-04-27,SEA,TBR,Mariners at Rays
+2022-04-28,SEA,TBR,Mariners at Rays
+2022-04-29,MIN,TBR,Twins at Rays
+2022-04-30,MIN,TBR,Twins at Rays
+2022-05-01,MIN,TBR,Twins at Rays
+2022-05-13,TOR,TBR,Blue Jays at Rays
+2022-05-14,TOR,TBR,Blue Jays at Rays
+2022-05-15,TOR,TBR,Blue Jays at Rays
+2022-05-16,DET,TBR,Tigers at Rays
+2022-05-17,DET,TBR,Tigers at Rays
+2022-05-18,DET,TBR,Tigers at Rays
+2022-05-24,MIA,TBR,Marlins at Rays
+2022-05-25,MIA,TBR,Marlins at Rays
+2022-05-26,NYY,TBR,Yankees at Rays
+2022-05-27,NYY,TBR,Yankees at Rays
+2022-05-28,NYY,TBR,Yankees at Rays
+2022-05-29,NYY,TBR,Yankees at Rays
+2022-06-03,CHW,TBR,White Sox at Rays
+2022-06-04,CHW,TBR,White Sox at Rays
+2022-06-05,CHW,TBR,White Sox at Rays
+2022-06-07,STL,TBR,Cardinals at Rays
+2022-06-08,STL,TBR,Cardinals at Rays
+2022-06-09,STL,TBR,Cardinals at Rays
+2022-06-20,NYY,TBR,Yankees at Rays
+2022-06-21,NYY,TBR,Yankees at Rays
+2022-06-22,NYY,TBR,Yankees at Rays
+2022-06-24,PIT,TBR,Pirates at Rays
+2022-06-25,PIT,TBR,Pirates at Rays
+2022-06-26,PIT,TBR,Pirates at Rays
+2022-06-28,MIL,TBR,Brewers at Rays
+2022-06-29,MIL,TBR,Brewers at Rays
+2022-07-11,BOS,TBR,Red Sox at Rays
+2022-07-12,BOS,TBR,Red Sox at Rays
+2022-07-13,BOS,TBR,Red Sox at Rays
+2022-07-14,BOS,TBR,Red Sox at Rays
+2022-07-15,BAL,TBR,Orioles at Rays
+2022-07-16,BAL,TBR,Orioles at Rays
+2022-07-17,BAL,TBR,Orioles at Rays
+2022-07-29,CLE,TBR,Guardians at Rays
+2022-07-30,CLE,TBR,Guardians at Rays
+2022-07-31,CLE,TBR,Guardians at Rays
+2022-08-02,TOR,TBR,Blue Jays at Rays
+2022-08-03,TOR,TBR,Blue Jays at Rays
+2022-08-12,BAL,TBR,Orioles at Rays
+2022-08-13,BAL,TBR,Orioles at Rays
+2022-08-14,BAL,TBR,Orioles at Rays
+2022-08-18,KCR,TBR,Royals at Rays
+2022-08-19,KCR,TBR,Royals at Rays
+2022-08-20,KCR,TBR,Royals at Rays
+2022-08-21,KCR,TBR,Royals at Rays
+2022-08-22,LAA,TBR,Angels at Rays
+2022-08-23,LAA,TBR,Angels at Rays
+2022-08-24,LAA,TBR,Angels at Rays
+2022-08-25,LAA,TBR,Angels at Rays
+2022-09-02,NYY,TBR,Yankees at Rays
+2022-09-03,NYY,TBR,Yankees at Rays
+2022-09-04,NYY,TBR,Yankees at Rays
+2022-09-05,BOS,TBR,Red Sox at Rays
+2022-09-06,BOS,TBR,Red Sox at Rays
+2022-09-07,BOS,TBR,Red Sox at Rays
+2022-09-16,TEX,TBR,Rangers at Rays
+2022-09-17,TEX,TBR,Rangers at Rays
+2022-09-18,TEX,TBR,Rangers at Rays
+2022-09-19,HOU,TBR,Astros at Rays
+2022-09-20,HOU,TBR,Astros at Rays
+2022-09-21,HOU,TBR,Astros at Rays
+2022-09-22,TOR,TBR,Blue Jays at Rays
+2022-09-23,TOR,TBR,Blue Jays at Rays
+2022-09-24,TOR,TBR,Blue Jays at Rays
+2022-09-25,TOR,TBR,Blue Jays at Rays
+2022-03-31,TBR,BOS,Rays at Red Sox
+2022-04-02,TBR,BOS,Rays at Red Sox
+2022-04-03,TBR,BOS,Rays at Red Sox
+2022-04-04,BAL,BOS,Orioles at Red Sox
+2022-04-05,BAL,BOS,Orioles at Red Sox
+2022-04-06,BAL,BOS,Orioles at Red Sox
+2022-04-15,MIN,BOS,Twins at Red Sox
+2022-04-16,MIN,BOS,Twins at Red Sox
+2022-04-17,MIN,BOS,Twins at Red Sox
+2022-04-18,MIN,BOS,Twins at Red Sox
+2022-04-19,TOR,BOS,Blue Jays at Red Sox
+2022-04-20,TOR,BOS,Blue Jays at Red Sox
+2022-04-21,TOR,BOS,Blue Jays at Red Sox
+2022-05-03,LAA,BOS,Angels at Red Sox
+2022-05-04,LAA,BOS,Angels at Red Sox
+2022-05-05,LAA,BOS,Angels at Red Sox
+2022-05-06,CHW,BOS,White Sox at Red Sox
+2022-05-07,CHW,BOS,White Sox at Red Sox
+2022-05-08,CHW,BOS,White Sox at Red Sox
+2022-05-16,HOU,BOS,Astros at Red Sox
+2022-05-17,HOU,BOS,Astros at Red Sox
+2022-05-18,HOU,BOS,Astros at Red Sox
+2022-05-19,SEA,BOS,Mariners at Red Sox
+2022-05-20,SEA,BOS,Mariners at Red Sox
+2022-05-21,SEA,BOS,Mariners at Red Sox
+2022-05-22,SEA,BOS,Mariners at Red Sox
+2022-05-27,BAL,BOS,Orioles at Red Sox
+2022-05-28,BAL,BOS,Orioles at Red Sox
+2022-05-29,BAL,BOS,Orioles at Red Sox
+2022-05-30,BAL,BOS,Orioles at Red Sox
+2022-05-31,CIN,BOS,Reds at Red Sox
+2022-06-01,CIN,BOS,Reds at Red Sox
+2022-06-14,OAK,BOS,Athletics at Red Sox
+2022-06-15,OAK,BOS,Athletics at Red Sox
+2022-06-16,OAK,BOS,Athletics at Red Sox
+2022-06-17,STL,BOS,Cardinals at Red Sox
+2022-06-18,STL,BOS,Cardinals at Red Sox
+2022-06-19,STL,BOS,Cardinals at Red Sox
+2022-06-20,DET,BOS,Tigers at Red Sox
+2022-06-21,DET,BOS,Tigers at Red Sox
+2022-06-22,DET,BOS,Tigers at Red Sox
+2022-07-04,TBR,BOS,Rays at Red Sox
+2022-07-05,TBR,BOS,Rays at Red Sox
+2022-07-06,TBR,BOS,Rays at Red Sox
+2022-07-07,NYY,BOS,Yankees at Red Sox
+2022-07-08,NYY,BOS,Yankees at Red Sox
+2022-07-09,NYY,BOS,Yankees at Red Sox
+2022-07-10,NYY,BOS,Yankees at Red Sox
+2022-07-22,TOR,BOS,Blue Jays at Red Sox
+2022-07-23,TOR,BOS,Blue Jays at Red Sox
+2022-07-24,TOR,BOS,Blue Jays at Red Sox
+2022-07-25,CLE,BOS,Guardians at Red Sox
+2022-07-26,CLE,BOS,Guardians at Red Sox
+2022-07-27,CLE,BOS,Guardians at Red Sox
+2022-07-28,CLE,BOS,Guardians at Red Sox
+2022-07-29,MIL,BOS,Brewers at Red Sox
+2022-07-30,MIL,BOS,Brewers at Red Sox
+2022-07-31,MIL,BOS,Brewers at Red Sox
+2022-08-09,ATL,BOS,Braves at Red Sox
+2022-08-10,ATL,BOS,Braves at Red Sox
+2022-08-12,NYY,BOS,Yankees at Red Sox
+2022-08-13,NYY,BOS,Yankees at Red Sox
+2022-08-14,NYY,BOS,Yankees at Red Sox
+2022-08-23,TOR,BOS,Blue Jays at Red Sox
+2022-08-24,TOR,BOS,Blue Jays at Red Sox
+2022-08-25,TOR,BOS,Blue Jays at Red Sox
+2022-08-26,TBR,BOS,Rays at Red Sox
+2022-08-27,TBR,BOS,Rays at Red Sox
+2022-08-28,TBR,BOS,Rays at Red Sox
+2022-09-01,TEX,BOS,Rangers at Red Sox
+2022-09-02,TEX,BOS,Rangers at Red Sox
+2022-09-03,TEX,BOS,Rangers at Red Sox
+2022-09-04,TEX,BOS,Rangers at Red Sox
+2022-09-13,NYY,BOS,Yankees at Red Sox
+2022-09-14,NYY,BOS,Yankees at Red Sox
+2022-09-16,KCR,BOS,Royals at Red Sox
+2022-09-17,KCR,BOS,Royals at Red Sox
+2022-09-18,KCR,BOS,Royals at Red Sox
+2022-09-27,BAL,BOS,Orioles at Red Sox
+2022-09-28,BAL,BOS,Orioles at Red Sox
+2022-09-29,BAL,BOS,Orioles at Red Sox
+2022-04-07,BOS,NYY,Red Sox at Yankees
+2022-04-09,BOS,NYY,Red Sox at Yankees
+2022-04-10,BOS,NYY,Red Sox at Yankees
+2022-04-11,TOR,NYY,Blue Jays at Yankees
+2022-04-12,TOR,NYY,Blue Jays at Yankees
+2022-04-13,TOR,NYY,Blue Jays at Yankees
+2022-04-14,TOR,NYY,Blue Jays at Yankees
+2022-04-22,CLE,NYY,Guardians at Yankees
+2022-04-23,CLE,NYY,Guardians at Yankees
+2022-04-24,CLE,NYY,Guardians at Yankees
+2022-04-26,BAL,NYY,Orioles at Yankees
+2022-04-27,BAL,NYY,Orioles at Yankees
+2022-04-28,BAL,NYY,Orioles at Yankees
+2022-05-06,TEX,NYY,Rangers at Yankees
+2022-05-07,TEX,NYY,Rangers at Yankees
+2022-05-08,TEX,NYY,Rangers at Yankees
+2022-05-10,TOR,NYY,Blue Jays at Yankees
+2022-05-11,TOR,NYY,Blue Jays at Yankees
+2022-05-20,CHW,NYY,White Sox at Yankees
+2022-05-21,CHW,NYY,White Sox at Yankees
+2022-05-22,CHW,NYY,White Sox at Yankees
+2022-05-23,BAL,NYY,Orioles at Yankees
+2022-05-24,BAL,NYY,Orioles at Yankees
+2022-05-25,BAL,NYY,Orioles at Yankees
+2022-05-31,LAA,NYY,Angels at Yankees
+2022-06-01,LAA,NYY,Angels at Yankees
+2022-06-02,LAA,NYY,Angels at Yankees
+2022-06-03,DET,NYY,Tigers at Yankees
+2022-06-04,DET,NYY,Tigers at Yankees
+2022-06-05,DET,NYY,Tigers at Yankees
+2022-06-10,CHC,NYY,Cubs at Yankees
+2022-06-11,CHC,NYY,Cubs at Yankees
+2022-06-12,CHC,NYY,Cubs at Yankees
+2022-06-14,TBR,NYY,Rays at Yankees
+2022-06-15,TBR,NYY,Rays at Yankees
+2022-06-16,TBR,NYY,Rays at Yankees
+2022-06-23,HOU,NYY,Astros at Yankees
+2022-06-24,HOU,NYY,Astros at Yankees
+2022-06-25,HOU,NYY,Astros at Yankees
+2022-06-26,HOU,NYY,Astros at Yankees
+2022-06-27,OAK,NYY,Athletics at Yankees
+2022-06-28,OAK,NYY,Athletics at Yankees
+2022-06-29,OAK,NYY,Athletics at Yankees
+2022-07-12,CIN,NYY,Reds at Yankees
+2022-07-13,CIN,NYY,Reds at Yankees
+2022-07-14,CIN,NYY,Reds at Yankees
+2022-07-15,BOS,NYY,Red Sox at Yankees
+2022-07-16,BOS,NYY,Red Sox at Yankees
+2022-07-17,BOS,NYY,Red Sox at Yankees
+2022-07-28,KCR,NYY,Royals at Yankees
+2022-07-29,KCR,NYY,Royals at Yankees
+2022-07-30,KCR,NYY,Royals at Yankees
+2022-07-31,KCR,NYY,Royals at Yankees
+2022-08-01,SEA,NYY,Mariners at Yankees
+2022-08-02,SEA,NYY,Mariners at Yankees
+2022-08-03,SEA,NYY,Mariners at Yankees
+2022-08-15,TBR,NYY,Rays at Yankees
+2022-08-16,TBR,NYY,Rays at Yankees
+2022-08-17,TBR,NYY,Rays at Yankees
+2022-08-18,TOR,NYY,Blue Jays at Yankees
+2022-08-19,TOR,NYY,Blue Jays at Yankees
+2022-08-20,TOR,NYY,Blue Jays at Yankees
+2022-08-21,TOR,NYY,Blue Jays at Yankees
+2022-08-22,NYM,NYY,Mets at Yankees
+2022-08-23,NYM,NYY,Mets at Yankees
+2022-09-05,MIN,NYY,Twins at Yankees
+2022-09-06,MIN,NYY,Twins at Yankees
+2022-09-07,MIN,NYY,Twins at Yankees
+2022-09-08,MIN,NYY,Twins at Yankees
+2022-09-09,TBR,NYY,Rays at Yankees
+2022-09-10,TBR,NYY,Rays at Yankees
+2022-09-11,TBR,NYY,Rays at Yankees
+2022-09-20,PIT,NYY,Pirates at Yankees
+2022-09-21,PIT,NYY,Pirates at Yankees
+2022-09-22,BOS,NYY,Red Sox at Yankees
+2022-09-23,BOS,NYY,Red Sox at Yankees
+2022-09-24,BOS,NYY,Red Sox at Yankees
+2022-09-25,BOS,NYY,Red Sox at Yankees
+2022-09-30,BAL,NYY,Orioles at Yankees
+2022-10-01,BAL,NYY,Orioles at Yankees
+2022-10-02,BAL,NYY,Orioles at Yankees
+2022-03-31,KCR,CLE,Royals at Guardians
+2022-04-02,KCR,CLE,Royals at Guardians
+2022-04-03,KCR,CLE,Royals at Guardians
+2022-04-04,MIN,CLE,Twins at Guardians
+2022-04-05,MIN,CLE,Twins at Guardians
+2022-04-06,MIN,CLE,Twins at Guardians
+2022-04-15,SFG,CLE,Giants at Guardians
+2022-04-16,SFG,CLE,Giants at Guardians
+2022-04-17,SFG,CLE,Giants at Guardians
+2022-04-18,CHW,CLE,White Sox at Guardians
+2022-04-19,CHW,CLE,White Sox at Guardians
+2022-04-20,CHW,CLE,White Sox at Guardians
+2022-04-21,CHW,CLE,White Sox at Guardians
+2022-05-03,SDP,CLE,Padres at Guardians
+2022-05-04,SDP,CLE,Padres at Guardians
+2022-05-05,TOR,CLE,Blue Jays at Guardians
+2022-05-06,TOR,CLE,Blue Jays at Guardians
+2022-05-07,TOR,CLE,Blue Jays at Guardians
+2022-05-08,TOR,CLE,Blue Jays at Guardians
+2022-05-17,CIN,CLE,Reds at Guardians
+2022-05-18,CIN,CLE,Reds at Guardians
+2022-05-20,DET,CLE,Tigers at Guardians
+2022-05-21,DET,CLE,Tigers at Guardians
+2022-05-22,DET,CLE,Tigers at Guardians
+2022-05-30,KCR,CLE,Royals at Guardians
+2022-05-31,KCR,CLE,Royals at Guardians
+2022-06-01,KCR,CLE,Royals at Guardians
+2022-06-06,TEX,CLE,Rangers at Guardians
+2022-06-07,TEX,CLE,Rangers at Guardians
+2022-06-08,TEX,CLE,Rangers at Guardians
+2022-06-09,OAK,CLE,Athletics at Guardians
+2022-06-10,OAK,CLE,Athletics at Guardians
+2022-06-11,OAK,CLE,Athletics at Guardians
+2022-06-12,OAK,CLE,Athletics at Guardians
+2022-06-24,BOS,CLE,Red Sox at Guardians
+2022-06-25,BOS,CLE,Red Sox at Guardians
+2022-06-26,BOS,CLE,Red Sox at Guardians
+2022-06-27,MIN,CLE,Twins at Guardians
+2022-06-28,MIN,CLE,Twins at Guardians
+2022-06-29,MIN,CLE,Twins at Guardians
+2022-06-30,MIN,CLE,Twins at Guardians
+2022-07-01,NYY,CLE,Yankees at Guardians
+2022-07-02,NYY,CLE,Yankees at Guardians
+2022-07-03,NYY,CLE,Yankees at Guardians
+2022-07-11,CHW,CLE,White Sox at Guardians
+2022-07-12,CHW,CLE,White Sox at Guardians
+2022-07-13,CHW,CLE,White Sox at Guardians
+2022-07-15,DET,CLE,Tigers at Guardians
+2022-07-16,DET,CLE,Tigers at Guardians
+2022-07-17,DET,CLE,Tigers at Guardians
+2022-08-01,ARI,CLE,D-backs at Guardians
+2022-08-02,ARI,CLE,D-backs at Guardians
+2022-08-03,ARI,CLE,D-backs at Guardians
+2022-08-04,HOU,CLE,Astros at Guardians
+2022-08-05,HOU,CLE,Astros at Guardians
+2022-08-06,HOU,CLE,Astros at Guardians
+2022-08-07,HOU,CLE,Astros at Guardians
+2022-08-15,DET,CLE,Tigers at Guardians
+2022-08-16,DET,CLE,Tigers at Guardians
+2022-08-17,DET,CLE,Tigers at Guardians
+2022-08-19,CHW,CLE,White Sox at Guardians
+2022-08-20,CHW,CLE,White Sox at Guardians
+2022-08-21,CHW,CLE,White Sox at Guardians
+2022-08-30,BAL,CLE,Orioles at Guardians
+2022-08-31,BAL,CLE,Orioles at Guardians
+2022-09-01,BAL,CLE,Orioles at Guardians
+2022-09-02,SEA,CLE,Mariners at Guardians
+2022-09-03,SEA,CLE,Mariners at Guardians
+2022-09-04,SEA,CLE,Mariners at Guardians
+2022-09-12,LAA,CLE,Angels at Guardians
+2022-09-13,LAA,CLE,Angels at Guardians
+2022-09-14,LAA,CLE,Angels at Guardians
+2022-09-16,MIN,CLE,Twins at Guardians
+2022-09-17,MIN,CLE,Twins at Guardians
+2022-09-18,MIN,CLE,Twins at Guardians
+2022-09-27,TBR,CLE,Rays at Guardians
+2022-09-28,TBR,CLE,Rays at Guardians
+2022-09-29,TBR,CLE,Rays at Guardians
+2022-09-30,KCR,CLE,Royals at Guardians
+2022-10-01,KCR,CLE,Royals at Guardians
+2022-10-02,KCR,CLE,Royals at Guardians
+2022-04-04,CHW,KCR,White Sox at Royals
+2022-04-06,CHW,KCR,White Sox at Royals
+2022-04-07,CHW,KCR,White Sox at Royals
+2022-04-08,CLE,KCR,Guardians at Royals
+2022-04-09,CLE,KCR,Guardians at Royals
+2022-04-10,CLE,KCR,Guardians at Royals
+2022-04-11,CLE,KCR,Guardians at Royals
+2022-04-14,DET,KCR,Tigers at Royals
+2022-04-15,DET,KCR,Tigers at Royals
+2022-04-16,DET,KCR,Tigers at Royals
+2022-04-17,DET,KCR,Tigers at Royals
+2022-04-19,MIN,KCR,Twins at Royals
+2022-04-20,MIN,KCR,Twins at Royals
+2022-04-21,MIN,KCR,Twins at Royals
+2022-04-29,NYY,KCR,Yankees at Royals
+2022-04-30,NYY,KCR,Yankees at Royals
+2022-05-01,NYY,KCR,Yankees at Royals
+2022-05-03,STL,KCR,Cardinals at Royals
+2022-05-04,STL,KCR,Cardinals at Royals
+2022-05-16,CHW,KCR,White Sox at Royals
+2022-05-17,CHW,KCR,White Sox at Royals
+2022-05-18,CHW,KCR,White Sox at Royals
+2022-05-19,CHW,KCR,White Sox at Royals
+2022-05-20,MIN,KCR,Twins at Royals
+2022-05-21,MIN,KCR,Twins at Royals
+2022-05-22,MIN,KCR,Twins at Royals
+2022-06-03,HOU,KCR,Astros at Royals
+2022-06-04,HOU,KCR,Astros at Royals
+2022-06-05,HOU,KCR,Astros at Royals
+2022-06-06,TOR,KCR,Blue Jays at Royals
+2022-06-07,TOR,KCR,Blue Jays at Royals
+2022-06-08,TOR,KCR,Blue Jays at Royals
+2022-06-09,BAL,KCR,Orioles at Royals
+2022-06-10,BAL,KCR,Orioles at Royals
+2022-06-11,BAL,KCR,Orioles at Royals
+2022-06-12,BAL,KCR,Orioles at Royals
+2022-06-24,OAK,KCR,Athletics at Royals
+2022-06-25,OAK,KCR,Athletics at Royals
+2022-06-26,OAK,KCR,Athletics at Royals
+2022-06-27,TEX,KCR,Rangers at Royals
+2022-06-28,TEX,KCR,Rangers at Royals
+2022-06-29,TEX,KCR,Rangers at Royals
+2022-07-08,CLE,KCR,Guardians at Royals
+2022-07-09,CLE,KCR,Guardians at Royals
+2022-07-10,CLE,KCR,Guardians at Royals
+2022-07-11,DET,KCR,Tigers at Royals
+2022-07-12,DET,KCR,Tigers at Royals
+2022-07-13,DET,KCR,Tigers at Royals
+2022-07-22,TBR,KCR,Rays at Royals
+2022-07-23,TBR,KCR,Rays at Royals
+2022-07-24,TBR,KCR,Rays at Royals
+2022-07-25,LAA,KCR,Angels at Royals
+2022-07-26,LAA,KCR,Angels at Royals
+2022-07-27,LAA,KCR,Angels at Royals
+2022-08-04,BOS,KCR,Red Sox at Royals
+2022-08-05,BOS,KCR,Red Sox at Royals
+2022-08-06,BOS,KCR,Red Sox at Royals
+2022-08-07,BOS,KCR,Red Sox at Royals
+2022-08-09,CHW,KCR,White Sox at Royals
+2022-08-10,CHW,KCR,White Sox at Royals
+2022-08-11,CHW,KCR,White Sox at Royals
+2022-08-12,LAD,KCR,Dodgers at Royals
+2022-08-13,LAD,KCR,Dodgers at Royals
+2022-08-14,LAD,KCR,Dodgers at Royals
+2022-08-23,ARI,KCR,D-backs at Royals
+2022-08-24,ARI,KCR,D-backs at Royals
+2022-08-26,SDP,KCR,Padres at Royals
+2022-08-27,SDP,KCR,Padres at Royals
+2022-08-28,SDP,KCR,Padres at Royals
+2022-09-05,CLE,KCR,Guardians at Royals
+2022-09-06,CLE,KCR,Guardians at Royals
+2022-09-07,CLE,KCR,Guardians at Royals
+2022-09-09,DET,KCR,Tigers at Royals
+2022-09-10,DET,KCR,Tigers at Royals
+2022-09-11,DET,KCR,Tigers at Royals
+2022-09-20,MIN,KCR,Twins at Royals
+2022-09-21,MIN,KCR,Twins at Royals
+2022-09-22,MIN,KCR,Twins at Royals
+2022-09-23,SEA,KCR,Mariners at Royals
+2022-09-24,SEA,KCR,Mariners at Royals
+2022-09-25,SEA,KCR,Mariners at Royals
+2022-04-08,CHW,DET,White Sox at Tigers
+2022-04-09,CHW,DET,White Sox at Tigers
+2022-04-10,CHW,DET,White Sox at Tigers
+2022-04-11,BOS,DET,Red Sox at Tigers
+2022-04-12,BOS,DET,Red Sox at Tigers
+2022-04-13,BOS,DET,Red Sox at Tigers
+2022-04-19,NYY,DET,Yankees at Tigers
+2022-04-20,NYY,DET,Yankees at Tigers
+2022-04-21,NYY,DET,Yankees at Tigers
+2022-04-22,COL,DET,Rockies at Tigers
+2022-04-23,COL,DET,Rockies at Tigers
+2022-04-24,COL,DET,Rockies at Tigers
+2022-05-03,PIT,DET,Pirates at Tigers
+2022-05-04,PIT,DET,Pirates at Tigers
+2022-05-09,OAK,DET,Athletics at Tigers
+2022-05-10,OAK,DET,Athletics at Tigers
+2022-05-11,OAK,DET,Athletics at Tigers
+2022-05-12,OAK,DET,Athletics at Tigers
+2022-05-13,BAL,DET,Orioles at Tigers
+2022-05-14,BAL,DET,Orioles at Tigers
+2022-05-15,BAL,DET,Orioles at Tigers
+2022-05-26,CLE,DET,Guardians at Tigers
+2022-05-27,CLE,DET,Guardians at Tigers
+2022-05-28,CLE,DET,Guardians at Tigers
+2022-05-29,CLE,DET,Guardians at Tigers
+2022-05-30,MIN,DET,Twins at Tigers
+2022-05-31,MIN,DET,Twins at Tigers
+2022-06-01,MIN,DET,Twins at Tigers
+2022-06-02,MIN,DET,Twins at Tigers
+2022-06-10,TOR,DET,Blue Jays at Tigers
+2022-06-11,TOR,DET,Blue Jays at Tigers
+2022-06-12,TOR,DET,Blue Jays at Tigers
+2022-06-13,CHW,DET,White Sox at Tigers
+2022-06-14,CHW,DET,White Sox at Tigers
+2022-06-15,CHW,DET,White Sox at Tigers
+2022-06-16,TEX,DET,Rangers at Tigers
+2022-06-17,TEX,DET,Rangers at Tigers
+2022-06-18,TEX,DET,Rangers at Tigers
+2022-06-19,TEX,DET,Rangers at Tigers
+2022-07-01,KCR,DET,Royals at Tigers
+2022-07-02,KCR,DET,Royals at Tigers
+2022-07-03,KCR,DET,Royals at Tigers
+2022-07-04,CLE,DET,Guardians at Tigers
+2022-07-05,CLE,DET,Guardians at Tigers
+2022-07-06,CLE,DET,Guardians at Tigers
+2022-07-23,MIN,DET,Twins at Tigers
+2022-07-23,MIN,DET,Twins at Tigers
+2022-07-24,MIN,DET,Twins at Tigers
+2022-07-25,SDP,DET,Padres at Tigers
+2022-07-26,SDP,DET,Padres at Tigers
+2022-07-27,SDP,DET,Padres at Tigers
+2022-08-04,TBR,DET,Rays at Tigers
+2022-08-05,TBR,DET,Rays at Tigers
+2022-08-06,TBR,DET,Rays at Tigers
+2022-08-07,TBR,DET,Rays at Tigers
+2022-08-09,CLE,DET,Guardians at Tigers
+2022-08-10,CLE,DET,Guardians at Tigers
+2022-08-11,CLE,DET,Guardians at Tigers
+2022-08-19,LAA,DET,Angels at Tigers
+2022-08-20,LAA,DET,Angels at Tigers
+2022-08-21,LAA,DET,Angels at Tigers
+2022-08-23,SFG,DET,Giants at Tigers
+2022-08-24,SFG,DET,Giants at Tigers
+2022-08-30,SEA,DET,Mariners at Tigers
+2022-08-31,SEA,DET,Mariners at Tigers
+2022-09-01,SEA,DET,Mariners at Tigers
+2022-09-02,KCR,DET,Royals at Tigers
+2022-09-03,KCR,DET,Royals at Tigers
+2022-09-04,KCR,DET,Royals at Tigers
+2022-09-12,HOU,DET,Astros at Tigers
+2022-09-13,HOU,DET,Astros at Tigers
+2022-09-14,HOU,DET,Astros at Tigers
+2022-09-16,CHW,DET,White Sox at Tigers
+2022-09-17,CHW,DET,White Sox at Tigers
+2022-09-18,CHW,DET,White Sox at Tigers
+2022-09-27,KCR,DET,Royals at Tigers
+2022-09-28,KCR,DET,Royals at Tigers
+2022-09-29,KCR,DET,Royals at Tigers
+2022-09-30,MIN,DET,Twins at Tigers
+2022-10-01,MIN,DET,Twins at Tigers
+2022-10-02,MIN,DET,Twins at Tigers
+2022-04-07,SEA,MIN,Mariners at Twins
+2022-04-09,SEA,MIN,Mariners at Twins
+2022-04-10,SEA,MIN,Mariners at Twins
+2022-04-11,SEA,MIN,Mariners at Twins
+2022-04-12,LAD,MIN,Dodgers at Twins
+2022-04-13,LAD,MIN,Dodgers at Twins
+2022-04-22,CHW,MIN,White Sox at Twins
+2022-04-23,CHW,MIN,White Sox at Twins
+2022-04-24,CHW,MIN,White Sox at Twins
+2022-04-26,DET,MIN,Tigers at Twins
+2022-04-27,DET,MIN,Tigers at Twins
+2022-04-28,DET,MIN,Tigers at Twins
+2022-05-06,OAK,MIN,Athletics at Twins
+2022-05-07,OAK,MIN,Athletics at Twins
+2022-05-08,OAK,MIN,Athletics at Twins
+2022-05-10,HOU,MIN,Astros at Twins
+2022-05-11,HOU,MIN,Astros at Twins
+2022-05-12,HOU,MIN,Astros at Twins
+2022-05-13,CLE,MIN,Guardians at Twins
+2022-05-14,CLE,MIN,Guardians at Twins
+2022-05-15,CLE,MIN,Guardians at Twins
+2022-05-23,DET,MIN,Tigers at Twins
+2022-05-24,DET,MIN,Tigers at Twins
+2022-05-25,DET,MIN,Tigers at Twins
+2022-05-26,KCR,MIN,Royals at Twins
+2022-05-27,KCR,MIN,Royals at Twins
+2022-05-28,KCR,MIN,Royals at Twins
+2022-05-29,KCR,MIN,Royals at Twins
+2022-06-07,NYY,MIN,Yankees at Twins
+2022-06-08,NYY,MIN,Yankees at Twins
+2022-06-09,NYY,MIN,Yankees at Twins
+2022-06-10,TBR,MIN,Rays at Twins
+2022-06-11,TBR,MIN,Rays at Twins
+2022-06-12,TBR,MIN,Rays at Twins
+2022-06-21,CLE,MIN,Guardians at Twins
+2022-06-22,CLE,MIN,Guardians at Twins
+2022-06-23,CLE,MIN,Guardians at Twins
+2022-06-24,COL,MIN,Rockies at Twins
+2022-06-25,COL,MIN,Rockies at Twins
+2022-06-26,COL,MIN,Rockies at Twins
+2022-07-01,BAL,MIN,Orioles at Twins
+2022-07-02,BAL,MIN,Orioles at Twins
+2022-07-03,BAL,MIN,Orioles at Twins
+2022-07-12,MIL,MIN,Brewers at Twins
+2022-07-13,MIL,MIN,Brewers at Twins
+2022-07-14,CHW,MIN,White Sox at Twins
+2022-07-15,CHW,MIN,White Sox at Twins
+2022-07-16,CHW,MIN,White Sox at Twins
+2022-07-17,CHW,MIN,White Sox at Twins
+2022-08-01,DET,MIN,Tigers at Twins
+2022-08-02,DET,MIN,Tigers at Twins
+2022-08-03,DET,MIN,Tigers at Twins
+2022-08-04,TOR,MIN,Blue Jays at Twins
+2022-08-05,TOR,MIN,Blue Jays at Twins
+2022-08-06,TOR,MIN,Blue Jays at Twins
+2022-08-07,TOR,MIN,Blue Jays at Twins
+2022-08-15,KCR,MIN,Royals at Twins
+2022-08-16,KCR,MIN,Royals at Twins
+2022-08-17,KCR,MIN,Royals at Twins
+2022-08-19,TEX,MIN,Rangers at Twins
+2022-08-20,TEX,MIN,Rangers at Twins
+2022-08-21,TEX,MIN,Rangers at Twins
+2022-08-22,TEX,MIN,Rangers at Twins
+2022-08-26,SFG,MIN,Giants at Twins
+2022-08-27,SFG,MIN,Giants at Twins
+2022-08-28,SFG,MIN,Giants at Twins
+2022-08-29,BOS,MIN,Red Sox at Twins
+2022-08-30,BOS,MIN,Red Sox at Twins
+2022-08-31,BOS,MIN,Red Sox at Twins
+2022-09-09,CLE,MIN,Guardians at Twins
+2022-09-10,CLE,MIN,Guardians at Twins
+2022-09-11,CLE,MIN,Guardians at Twins
+2022-09-13,KCR,MIN,Royals at Twins
+2022-09-14,KCR,MIN,Royals at Twins
+2022-09-15,KCR,MIN,Royals at Twins
+2022-09-23,LAA,MIN,Angels at Twins
+2022-09-24,LAA,MIN,Angels at Twins
+2022-09-25,LAA,MIN,Angels at Twins
+2022-09-27,CHW,MIN,White Sox at Twins
+2022-09-28,CHW,MIN,White Sox at Twins
+2022-09-29,CHW,MIN,White Sox at Twins
+2022-03-31,MIN,CHW,Twins at White Sox
+2022-04-02,MIN,CHW,Twins at White Sox
+2022-04-03,MIN,CHW,Twins at White Sox
+2022-04-12,SEA,CHW,Mariners at White Sox
+2022-04-13,SEA,CHW,Mariners at White Sox
+2022-04-14,SEA,CHW,Mariners at White Sox
+2022-04-15,TBR,CHW,Rays at White Sox
+2022-04-16,TBR,CHW,Rays at White Sox
+2022-04-17,TBR,CHW,Rays at White Sox
+2022-04-26,KCR,CHW,Royals at White Sox
+2022-04-27,KCR,CHW,Royals at White Sox
+2022-04-28,KCR,CHW,Royals at White Sox
+2022-04-29,LAA,CHW,Angels at White Sox
+2022-04-30,LAA,CHW,Angels at White Sox
+2022-05-01,LAA,CHW,Angels at White Sox
+2022-05-02,LAA,CHW,Angels at White Sox
+2022-05-09,CLE,CHW,Guardians at White Sox
+2022-05-10,CLE,CHW,Guardians at White Sox
+2022-05-11,CLE,CHW,Guardians at White Sox
+2022-05-12,NYY,CHW,Yankees at White Sox
+2022-05-13,NYY,CHW,Yankees at White Sox
+2022-05-14,NYY,CHW,Yankees at White Sox
+2022-05-15,NYY,CHW,Yankees at White Sox
+2022-05-24,BOS,CHW,Red Sox at White Sox
+2022-05-25,BOS,CHW,Red Sox at White Sox
+2022-05-26,BOS,CHW,Red Sox at White Sox
+2022-05-28,CHC,CHW,Cubs at White Sox
+2022-05-29,CHC,CHW,Cubs at White Sox
+2022-06-07,LAD,CHW,Dodgers at White Sox
+2022-06-08,LAD,CHW,Dodgers at White Sox
+2022-06-09,LAD,CHW,Dodgers at White Sox
+2022-06-10,TEX,CHW,Rangers at White Sox
+2022-06-11,TEX,CHW,Rangers at White Sox
+2022-06-12,TEX,CHW,Rangers at White Sox
+2022-06-20,TOR,CHW,Blue Jays at White Sox
+2022-06-21,TOR,CHW,Blue Jays at White Sox
+2022-06-22,TOR,CHW,Blue Jays at White Sox
+2022-06-23,BAL,CHW,Orioles at White Sox
+2022-06-24,BAL,CHW,Orioles at White Sox
+2022-06-25,BAL,CHW,Orioles at White Sox
+2022-06-26,BAL,CHW,Orioles at White Sox
+2022-07-04,MIN,CHW,Twins at White Sox
+2022-07-05,MIN,CHW,Twins at White Sox
+2022-07-06,MIN,CHW,Twins at White Sox
+2022-07-07,DET,CHW,Tigers at White Sox
+2022-07-08,DET,CHW,Tigers at White Sox
+2022-07-09,DET,CHW,Tigers at White Sox
+2022-07-10,DET,CHW,Tigers at White Sox
+2022-07-22,CLE,CHW,Guardians at White Sox
+2022-07-23,CLE,CHW,Guardians at White Sox
+2022-07-24,CLE,CHW,Guardians at White Sox
+2022-07-29,OAK,CHW,Athletics at White Sox
+2022-07-30,OAK,CHW,Athletics at White Sox
+2022-07-31,OAK,CHW,Athletics at White Sox
+2022-08-01,KCR,CHW,Royals at White Sox
+2022-08-02,KCR,CHW,Royals at White Sox
+2022-08-03,KCR,CHW,Royals at White Sox
+2022-08-12,DET,CHW,Tigers at White Sox
+2022-08-13,DET,CHW,Tigers at White Sox
+2022-08-14,DET,CHW,Tigers at White Sox
+2022-08-15,HOU,CHW,Astros at White Sox
+2022-08-16,HOU,CHW,Astros at White Sox
+2022-08-17,HOU,CHW,Astros at White Sox
+2022-08-18,HOU,CHW,Astros at White Sox
+2022-08-26,ARI,CHW,D-backs at White Sox
+2022-08-27,ARI,CHW,D-backs at White Sox
+2022-08-28,ARI,CHW,D-backs at White Sox
+2022-08-30,KCR,CHW,Royals at White Sox
+2022-08-31,KCR,CHW,Royals at White Sox
+2022-09-01,KCR,CHW,Royals at White Sox
+2022-09-02,MIN,CHW,Twins at White Sox
+2022-09-03,MIN,CHW,Twins at White Sox
+2022-09-04,MIN,CHW,Twins at White Sox
+2022-09-13,COL,CHW,Rockies at White Sox
+2022-09-14,COL,CHW,Rockies at White Sox
+2022-09-20,CLE,CHW,Guardians at White Sox
+2022-09-21,CLE,CHW,Guardians at White Sox
+2022-09-22,CLE,CHW,Guardians at White Sox
+2022-09-23,DET,CHW,Tigers at White Sox
+2022-09-24,DET,CHW,Tigers at White Sox
+2022-09-25,DET,CHW,Tigers at White Sox
+2022-04-07,HOU,LAA,Astros at Angels
+2022-04-08,HOU,LAA,Astros at Angels
+2022-04-09,HOU,LAA,Astros at Angels
+2022-04-10,HOU,LAA,Astros at Angels
+2022-04-11,MIA,LAA,Marlins at Angels
+2022-04-12,MIA,LAA,Marlins at Angels
+2022-04-22,BAL,LAA,Orioles at Angels
+2022-04-23,BAL,LAA,Orioles at Angels
+2022-04-24,BAL,LAA,Orioles at Angels
+2022-04-25,CLE,LAA,Guardians at Angels
+2022-04-26,CLE,LAA,Guardians at Angels
+2022-04-27,CLE,LAA,Guardians at Angels
+2022-04-28,CLE,LAA,Guardians at Angels
+2022-05-06,WSN,LAA,Nationals at Angels
+2022-05-07,WSN,LAA,Nationals at Angels
+2022-05-08,WSN,LAA,Nationals at Angels
+2022-05-09,TBR,LAA,Rays at Angels
+2022-05-10,TBR,LAA,Rays at Angels
+2022-05-11,TBR,LAA,Rays at Angels
+2022-05-20,OAK,LAA,Athletics at Angels
+2022-05-21,OAK,LAA,Athletics at Angels
+2022-05-22,OAK,LAA,Athletics at Angels
+2022-05-24,TEX,LAA,Rangers at Angels
+2022-05-25,TEX,LAA,Rangers at Angels
+2022-05-26,TOR,LAA,Blue Jays at Angels
+2022-05-27,TOR,LAA,Blue Jays at Angels
+2022-05-28,TOR,LAA,Blue Jays at Angels
+2022-05-29,TOR,LAA,Blue Jays at Angels
+2022-06-06,BOS,LAA,Red Sox at Angels
+2022-06-07,BOS,LAA,Red Sox at Angels
+2022-06-08,BOS,LAA,Red Sox at Angels
+2022-06-09,BOS,LAA,Red Sox at Angels
+2022-06-10,NYM,LAA,Mets at Angels
+2022-06-11,NYM,LAA,Mets at Angels
+2022-06-12,NYM,LAA,Mets at Angels
+2022-06-20,KCR,LAA,Royals at Angels
+2022-06-21,KCR,LAA,Royals at Angels
+2022-06-22,KCR,LAA,Royals at Angels
+2022-06-24,SEA,LAA,Mariners at Angels
+2022-06-25,SEA,LAA,Mariners at Angels
+2022-06-26,SEA,LAA,Mariners at Angels
+2022-06-27,CHW,LAA,White Sox at Angels
+2022-06-28,CHW,LAA,White Sox at Angels
+2022-06-29,CHW,LAA,White Sox at Angels
+2022-07-12,HOU,LAA,Astros at Angels
+2022-07-13,HOU,LAA,Astros at Angels
+2022-07-14,HOU,LAA,Astros at Angels
+2022-07-15,LAD,LAA,Dodgers at Angels
+2022-07-16,LAD,LAA,Dodgers at Angels
+2022-07-28,TEX,LAA,Rangers at Angels
+2022-07-29,TEX,LAA,Rangers at Angels
+2022-07-30,TEX,LAA,Rangers at Angels
+2022-07-31,TEX,LAA,Rangers at Angels
+2022-08-02,OAK,LAA,Athletics at Angels
+2022-08-03,OAK,LAA,Athletics at Angels
+2022-08-04,OAK,LAA,Athletics at Angels
+2022-08-12,MIN,LAA,Twins at Angels
+2022-08-13,MIN,LAA,Twins at Angels
+2022-08-14,MIN,LAA,Twins at Angels
+2022-08-15,SEA,LAA,Mariners at Angels
+2022-08-16,SEA,LAA,Mariners at Angels
+2022-08-17,SEA,LAA,Mariners at Angels
+2022-08-29,NYY,LAA,Yankees at Angels
+2022-08-30,NYY,LAA,Yankees at Angels
+2022-08-31,NYY,LAA,Yankees at Angels
+2022-09-02,HOU,LAA,Astros at Angels
+2022-09-03,HOU,LAA,Astros at Angels
+2022-09-04,HOU,LAA,Astros at Angels
+2022-09-05,DET,LAA,Tigers at Angels
+2022-09-06,DET,LAA,Tigers at Angels
+2022-09-07,DET,LAA,Tigers at Angels
+2022-09-16,SEA,LAA,Mariners at Angels
+2022-09-17,SEA,LAA,Mariners at Angels
+2022-09-18,SEA,LAA,Mariners at Angels
+2022-09-19,SEA,LAA,Mariners at Angels
+2022-09-27,OAK,LAA,Athletics at Angels
+2022-09-28,OAK,LAA,Athletics at Angels
+2022-09-29,OAK,LAA,Athletics at Angels
+2022-09-30,TEX,LAA,Rangers at Angels
+2022-10-01,TEX,LAA,Rangers at Angels
+2022-10-02,TEX,LAA,Rangers at Angels
+2022-03-31,PHI,HOU,Phillies at Astros
+2022-04-02,PHI,HOU,Phillies at Astros
+2022-04-03,PHI,HOU,Phillies at Astros
+2022-04-04,NYY,HOU,Yankees at Astros
+2022-04-05,NYY,HOU,Yankees at Astros
+2022-04-06,NYY,HOU,Yankees at Astros
+2022-04-18,LAA,HOU,Angels at Astros
+2022-04-19,LAA,HOU,Angels at Astros
+2022-04-20,LAA,HOU,Angels at Astros
+2022-04-22,TOR,HOU,Blue Jays at Astros
+2022-04-23,TOR,HOU,Blue Jays at Astros
+2022-04-24,TOR,HOU,Blue Jays at Astros
+2022-05-02,SEA,HOU,Mariners at Astros
+2022-05-03,SEA,HOU,Mariners at Astros
+2022-05-04,SEA,HOU,Mariners at Astros
+2022-05-05,DET,HOU,Tigers at Astros
+2022-05-06,DET,HOU,Tigers at Astros
+2022-05-07,DET,HOU,Tigers at Astros
+2022-05-08,DET,HOU,Tigers at Astros
+2022-05-19,TEX,HOU,Rangers at Astros
+2022-05-20,TEX,HOU,Rangers at Astros
+2022-05-21,TEX,HOU,Rangers at Astros
+2022-05-22,TEX,HOU,Rangers at Astros
+2022-05-23,CLE,HOU,Guardians at Astros
+2022-05-24,CLE,HOU,Guardians at Astros
+2022-05-25,CLE,HOU,Guardians at Astros
+2022-06-06,SEA,HOU,Mariners at Astros
+2022-06-07,SEA,HOU,Mariners at Astros
+2022-06-08,SEA,HOU,Mariners at Astros
+2022-06-10,MIA,HOU,Marlins at Astros
+2022-06-11,MIA,HOU,Marlins at Astros
+2022-06-12,MIA,HOU,Marlins at Astros
+2022-06-17,CHW,HOU,White Sox at Astros
+2022-06-18,CHW,HOU,White Sox at Astros
+2022-06-19,CHW,HOU,White Sox at Astros
+2022-06-21,NYM,HOU,Mets at Astros
+2022-06-22,NYM,HOU,Mets at Astros
+2022-07-01,LAA,HOU,Angels at Astros
+2022-07-02,LAA,HOU,Angels at Astros
+2022-07-03,LAA,HOU,Angels at Astros
+2022-07-04,KCR,HOU,Royals at Astros
+2022-07-05,KCR,HOU,Royals at Astros
+2022-07-06,KCR,HOU,Royals at Astros
+2022-07-07,KCR,HOU,Royals at Astros
+2022-07-15,OAK,HOU,Athletics at Astros
+2022-07-16,OAK,HOU,Athletics at Astros
+2022-07-17,OAK,HOU,Athletics at Astros
+2022-07-28,SEA,HOU,Mariners at Astros
+2022-07-29,SEA,HOU,Mariners at Astros
+2022-07-30,SEA,HOU,Mariners at Astros
+2022-07-31,SEA,HOU,Mariners at Astros
+2022-08-01,BOS,HOU,Red Sox at Astros
+2022-08-02,BOS,HOU,Red Sox at Astros
+2022-08-03,BOS,HOU,Red Sox at Astros
+2022-08-09,TEX,HOU,Rangers at Astros
+2022-08-10,TEX,HOU,Rangers at Astros
+2022-08-11,TEX,HOU,Rangers at Astros
+2022-08-12,OAK,HOU,Athletics at Astros
+2022-08-13,OAK,HOU,Athletics at Astros
+2022-08-14,OAK,HOU,Athletics at Astros
+2022-08-23,MIN,HOU,Twins at Astros
+2022-08-24,MIN,HOU,Twins at Astros
+2022-08-25,MIN,HOU,Twins at Astros
+2022-08-26,BAL,HOU,Orioles at Astros
+2022-08-27,BAL,HOU,Orioles at Astros
+2022-08-28,BAL,HOU,Orioles at Astros
+2022-09-05,TEX,HOU,Rangers at Astros
+2022-09-06,TEX,HOU,Rangers at Astros
+2022-09-07,TEX,HOU,Rangers at Astros
+2022-09-09,LAA,HOU,Angels at Astros
+2022-09-10,LAA,HOU,Angels at Astros
+2022-09-11,LAA,HOU,Angels at Astros
+2022-09-15,OAK,HOU,Athletics at Astros
+2022-09-16,OAK,HOU,Athletics at Astros
+2022-09-17,OAK,HOU,Athletics at Astros
+2022-09-18,OAK,HOU,Athletics at Astros
+2022-09-27,ARI,HOU,D-backs at Astros
+2022-09-28,ARI,HOU,D-backs at Astros
+2022-09-30,TBR,HOU,Rays at Astros
+2022-10-01,TBR,HOU,Rays at Astros
+2022-10-02,TBR,HOU,Rays at Astros
+2022-03-31,LAA,OAK,Angels at Athletics
+2022-04-01,LAA,OAK,Angels at Athletics
+2022-04-02,LAA,OAK,Angels at Athletics
+2022-04-03,LAA,OAK,Angels at Athletics
+2022-04-04,DET,OAK,Tigers at Athletics
+2022-04-05,DET,OAK,Tigers at Athletics
+2022-04-06,DET,OAK,Tigers at Athletics
+2022-04-18,BAL,OAK,Orioles at Athletics
+2022-04-19,BAL,OAK,Orioles at Athletics
+2022-04-20,BAL,OAK,Orioles at Athletics
+2022-04-21,BAL,OAK,Orioles at Athletics
+2022-04-22,TEX,OAK,Rangers at Athletics
+2022-04-23,TEX,OAK,Rangers at Athletics
+2022-04-24,TEX,OAK,Rangers at Athletics
+2022-04-29,CLE,OAK,Guardians at Athletics
+2022-04-30,CLE,OAK,Guardians at Athletics
+2022-05-01,CLE,OAK,Guardians at Athletics
+2022-05-02,TBR,OAK,Rays at Athletics
+2022-05-03,TBR,OAK,Rays at Athletics
+2022-05-04,TBR,OAK,Rays at Athletics
+2022-05-13,LAA,OAK,Angels at Athletics
+2022-05-14,LAA,OAK,Angels at Athletics
+2022-05-15,LAA,OAK,Angels at Athletics
+2022-05-16,MIN,OAK,Twins at Athletics
+2022-05-17,MIN,OAK,Twins at Athletics
+2022-05-18,MIN,OAK,Twins at Athletics
+2022-05-26,TEX,OAK,Rangers at Athletics
+2022-05-27,TEX,OAK,Rangers at Athletics
+2022-05-28,TEX,OAK,Rangers at Athletics
+2022-05-29,TEX,OAK,Rangers at Athletics
+2022-05-30,HOU,OAK,Astros at Athletics
+2022-05-31,HOU,OAK,Astros at Athletics
+2022-06-01,HOU,OAK,Astros at Athletics
+2022-06-03,BOS,OAK,Red Sox at Athletics
+2022-06-04,BOS,OAK,Red Sox at Athletics
+2022-06-05,BOS,OAK,Red Sox at Athletics
+2022-06-17,KCR,OAK,Royals at Athletics
+2022-06-18,KCR,OAK,Royals at Athletics
+2022-06-19,KCR,OAK,Royals at Athletics
+2022-06-21,SEA,OAK,Mariners at Athletics
+2022-06-22,SEA,OAK,Mariners at Athletics
+2022-06-23,SEA,OAK,Mariners at Athletics
+2022-07-04,TOR,OAK,Blue Jays at Athletics
+2022-07-05,TOR,OAK,Blue Jays at Athletics
+2022-07-06,TOR,OAK,Blue Jays at Athletics
+2022-07-08,HOU,OAK,Astros at Athletics
+2022-07-09,HOU,OAK,Astros at Athletics
+2022-07-10,HOU,OAK,Astros at Athletics
+2022-07-22,TEX,OAK,Rangers at Athletics
+2022-07-23,TEX,OAK,Rangers at Athletics
+2022-07-24,TEX,OAK,Rangers at Athletics
+2022-07-25,HOU,OAK,Astros at Athletics
+2022-07-26,HOU,OAK,Astros at Athletics
+2022-07-27,HOU,OAK,Astros at Athletics
+2022-08-06,SFG,OAK,Giants at Athletics
+2022-08-07,SFG,OAK,Giants at Athletics
+2022-08-08,LAA,OAK,Angels at Athletics
+2022-08-09,LAA,OAK,Angels at Athletics
+2022-08-10,LAA,OAK,Angels at Athletics
+2022-08-19,SEA,OAK,Mariners at Athletics
+2022-08-20,SEA,OAK,Mariners at Athletics
+2022-08-21,SEA,OAK,Mariners at Athletics
+2022-08-22,MIA,OAK,Marlins at Athletics
+2022-08-23,MIA,OAK,Marlins at Athletics
+2022-08-24,MIA,OAK,Marlins at Athletics
+2022-08-25,NYY,OAK,Yankees at Athletics
+2022-08-26,NYY,OAK,Yankees at Athletics
+2022-08-27,NYY,OAK,Yankees at Athletics
+2022-08-28,NYY,OAK,Yankees at Athletics
+2022-09-06,ATL,OAK,Braves at Athletics
+2022-09-07,ATL,OAK,Braves at Athletics
+2022-09-08,CHW,OAK,White Sox at Athletics
+2022-09-09,CHW,OAK,White Sox at Athletics
+2022-09-10,CHW,OAK,White Sox at Athletics
+2022-09-11,CHW,OAK,White Sox at Athletics
+2022-09-20,SEA,OAK,Mariners at Athletics
+2022-09-21,SEA,OAK,Mariners at Athletics
+2022-09-22,SEA,OAK,Mariners at Athletics
+2022-09-23,NYM,OAK,Mets at Athletics
+2022-09-24,NYM,OAK,Mets at Athletics
+2022-09-25,NYM,OAK,Mets at Athletics
+2022-03-31,DET,SEA,Tigers at Mariners
+2022-04-01,DET,SEA,Tigers at Mariners
+2022-04-02,DET,SEA,Tigers at Mariners
+2022-04-03,DET,SEA,Tigers at Mariners
+2022-04-04,LAA,SEA,Angels at Mariners
+2022-04-05,LAA,SEA,Angels at Mariners
+2022-04-15,HOU,SEA,Astros at Mariners
+2022-04-16,HOU,SEA,Astros at Mariners
+2022-04-17,HOU,SEA,Astros at Mariners
+2022-04-19,TEX,SEA,Rangers at Mariners
+2022-04-20,TEX,SEA,Rangers at Mariners
+2022-04-21,TEX,SEA,Rangers at Mariners
+2022-04-22,KCR,SEA,Royals at Mariners
+2022-04-23,KCR,SEA,Royals at Mariners
+2022-04-24,KCR,SEA,Royals at Mariners
+2022-05-05,TBR,SEA,Rays at Mariners
+2022-05-06,TBR,SEA,Rays at Mariners
+2022-05-07,TBR,SEA,Rays at Mariners
+2022-05-08,TBR,SEA,Rays at Mariners
+2022-05-09,PHI,SEA,Phillies at Mariners
+2022-05-10,PHI,SEA,Phillies at Mariners
+2022-05-11,PHI,SEA,Phillies at Mariners
+2022-05-23,OAK,SEA,Athletics at Mariners
+2022-05-24,OAK,SEA,Athletics at Mariners
+2022-05-25,OAK,SEA,Athletics at Mariners
+2022-05-27,HOU,SEA,Astros at Mariners
+2022-05-28,HOU,SEA,Astros at Mariners
+2022-05-29,HOU,SEA,Astros at Mariners
+2022-06-10,BOS,SEA,Red Sox at Mariners
+2022-06-11,BOS,SEA,Red Sox at Mariners
+2022-06-12,BOS,SEA,Red Sox at Mariners
+2022-06-13,MIN,SEA,Twins at Mariners
+2022-06-14,MIN,SEA,Twins at Mariners
+2022-06-15,MIN,SEA,Twins at Mariners
+2022-06-16,LAA,SEA,Angels at Mariners
+2022-06-17,LAA,SEA,Angels at Mariners
+2022-06-18,LAA,SEA,Angels at Mariners
+2022-06-19,LAA,SEA,Angels at Mariners
+2022-06-27,BAL,SEA,Orioles at Mariners
+2022-06-28,BAL,SEA,Orioles at Mariners
+2022-06-29,BAL,SEA,Orioles at Mariners
+2022-06-30,OAK,SEA,Athletics at Mariners
+2022-07-01,OAK,SEA,Athletics at Mariners
+2022-07-02,OAK,SEA,Athletics at Mariners
+2022-07-03,OAK,SEA,Athletics at Mariners
+2022-07-07,TOR,SEA,Blue Jays at Mariners
+2022-07-08,TOR,SEA,Blue Jays at Mariners
+2022-07-09,TOR,SEA,Blue Jays at Mariners
+2022-07-10,TOR,SEA,Blue Jays at Mariners
+2022-07-22,HOU,SEA,Astros at Mariners
+2022-07-23,HOU,SEA,Astros at Mariners
+2022-07-24,HOU,SEA,Astros at Mariners
+2022-07-25,TEX,SEA,Rangers at Mariners
+2022-07-26,TEX,SEA,Rangers at Mariners
+2022-07-27,TEX,SEA,Rangers at Mariners
+2022-08-05,LAA,SEA,Angels at Mariners
+2022-08-06,LAA,SEA,Angels at Mariners
+2022-08-07,LAA,SEA,Angels at Mariners
+2022-08-08,NYY,SEA,Yankees at Mariners
+2022-08-09,NYY,SEA,Yankees at Mariners
+2022-08-10,NYY,SEA,Yankees at Mariners
+2022-08-23,WSN,SEA,Nationals at Mariners
+2022-08-24,WSN,SEA,Nationals at Mariners
+2022-08-25,CLE,SEA,Guardians at Mariners
+2022-08-26,CLE,SEA,Guardians at Mariners
+2022-08-27,CLE,SEA,Guardians at Mariners
+2022-08-28,CLE,SEA,Guardians at Mariners
+2022-09-05,CHW,SEA,White Sox at Mariners
+2022-09-06,CHW,SEA,White Sox at Mariners
+2022-09-07,CHW,SEA,White Sox at Mariners
+2022-09-09,ATL,SEA,Braves at Mariners
+2022-09-10,ATL,SEA,Braves at Mariners
+2022-09-11,ATL,SEA,Braves at Mariners
+2022-09-13,SDP,SEA,Padres at Mariners
+2022-09-14,SDP,SEA,Padres at Mariners
+2022-09-27,TEX,SEA,Rangers at Mariners
+2022-09-28,TEX,SEA,Rangers at Mariners
+2022-09-29,TEX,SEA,Rangers at Mariners
+2022-09-30,OAK,SEA,Athletics at Mariners
+2022-10-01,OAK,SEA,Athletics at Mariners
+2022-10-02,OAK,SEA,Athletics at Mariners
+2022-03-31,NYY,TEX,Yankees at Rangers
+2022-04-01,NYY,TEX,Yankees at Rangers
+2022-04-02,NYY,TEX,Yankees at Rangers
+2022-04-03,NYY,TEX,Yankees at Rangers
+2022-04-11,COL,TEX,Rockies at Rangers
+2022-04-12,COL,TEX,Rockies at Rangers
+2022-04-14,LAA,TEX,Angels at Rangers
+2022-04-15,LAA,TEX,Angels at Rangers
+2022-04-16,LAA,TEX,Angels at Rangers
+2022-04-17,LAA,TEX,Angels at Rangers
+2022-04-25,HOU,TEX,Astros at Rangers
+2022-04-26,HOU,TEX,Astros at Rangers
+2022-04-27,HOU,TEX,Astros at Rangers
+2022-04-28,HOU,TEX,Astros at Rangers
+2022-04-29,ATL,TEX,Braves at Rangers
+2022-04-30,ATL,TEX,Braves at Rangers
+2022-05-01,ATL,TEX,Braves at Rangers
+2022-05-10,KCR,TEX,Royals at Rangers
+2022-05-11,KCR,TEX,Royals at Rangers
+2022-05-12,KCR,TEX,Royals at Rangers
+2022-05-13,BOS,TEX,Red Sox at Rangers
+2022-05-14,BOS,TEX,Red Sox at Rangers
+2022-05-15,BOS,TEX,Red Sox at Rangers
+2022-05-16,LAA,TEX,Angels at Rangers
+2022-05-17,LAA,TEX,Angels at Rangers
+2022-05-18,LAA,TEX,Angels at Rangers
+2022-05-30,TBR,TEX,Rays at Rangers
+2022-05-31,TBR,TEX,Rays at Rangers
+2022-06-01,TBR,TEX,Rays at Rangers
+2022-06-02,TBR,TEX,Rays at Rangers
+2022-06-03,SEA,TEX,Mariners at Rangers
+2022-06-04,SEA,TEX,Mariners at Rangers
+2022-06-05,SEA,TEX,Mariners at Rangers
+2022-06-13,HOU,TEX,Astros at Rangers
+2022-06-14,HOU,TEX,Astros at Rangers
+2022-06-15,HOU,TEX,Astros at Rangers
+2022-06-21,PHI,TEX,Phillies at Rangers
+2022-06-22,PHI,TEX,Phillies at Rangers
+2022-06-24,WSN,TEX,Nationals at Rangers
+2022-06-25,WSN,TEX,Nationals at Rangers
+2022-06-26,WSN,TEX,Nationals at Rangers
+2022-07-08,MIN,TEX,Twins at Rangers
+2022-07-09,MIN,TEX,Twins at Rangers
+2022-07-10,MIN,TEX,Twins at Rangers
+2022-07-11,OAK,TEX,Athletics at Rangers
+2022-07-12,OAK,TEX,Athletics at Rangers
+2022-07-13,OAK,TEX,Athletics at Rangers
+2022-07-14,SEA,TEX,Mariners at Rangers
+2022-07-15,SEA,TEX,Mariners at Rangers
+2022-07-16,SEA,TEX,Mariners at Rangers
+2022-07-17,SEA,TEX,Mariners at Rangers
+2022-08-01,BAL,TEX,Orioles at Rangers
+2022-08-02,BAL,TEX,Orioles at Rangers
+2022-08-03,BAL,TEX,Orioles at Rangers
+2022-08-04,CHW,TEX,White Sox at Rangers
+2022-08-05,CHW,TEX,White Sox at Rangers
+2022-08-06,CHW,TEX,White Sox at Rangers
+2022-08-07,CHW,TEX,White Sox at Rangers
+2022-08-12,SEA,TEX,Mariners at Rangers
+2022-08-13,SEA,TEX,Mariners at Rangers
+2022-08-14,SEA,TEX,Mariners at Rangers
+2022-08-15,OAK,TEX,Athletics at Rangers
+2022-08-16,OAK,TEX,Athletics at Rangers
+2022-08-17,OAK,TEX,Athletics at Rangers
+2022-08-18,OAK,TEX,Athletics at Rangers
+2022-08-26,DET,TEX,Tigers at Rangers
+2022-08-27,DET,TEX,Tigers at Rangers
+2022-08-28,DET,TEX,Tigers at Rangers
+2022-08-30,HOU,TEX,Astros at Rangers
+2022-08-31,HOU,TEX,Astros at Rangers
+2022-09-09,TOR,TEX,Blue Jays at Rangers
+2022-09-10,TOR,TEX,Blue Jays at Rangers
+2022-09-11,TOR,TEX,Blue Jays at Rangers
+2022-09-13,OAK,TEX,Athletics at Rangers
+2022-09-14,OAK,TEX,Athletics at Rangers
+2022-09-20,LAA,TEX,Angels at Rangers
+2022-09-21,LAA,TEX,Angels at Rangers
+2022-09-22,LAA,TEX,Angels at Rangers
+2022-09-23,CLE,TEX,Guardians at Rangers
+2022-09-24,CLE,TEX,Guardians at Rangers
+2022-09-25,CLE,TEX,Guardians at Rangers
+2022-04-07,CIN,ATL,Reds at Braves
+2022-04-08,CIN,ATL,Reds at Braves
+2022-04-09,CIN,ATL,Reds at Braves
+2022-04-10,CIN,ATL,Reds at Braves
+2022-04-11,WSN,ATL,Nationals at Braves
+2022-04-12,WSN,ATL,Nationals at Braves
+2022-04-13,WSN,ATL,Nationals at Braves
+2022-04-22,MIA,ATL,Marlins at Braves
+2022-04-23,MIA,ATL,Marlins at Braves
+2022-04-24,MIA,ATL,Marlins at Braves
+2022-04-26,CHC,ATL,Cubs at Braves
+2022-04-27,CHC,ATL,Cubs at Braves
+2022-04-28,CHC,ATL,Cubs at Braves
+2022-05-06,MIL,ATL,Brewers at Braves
+2022-05-07,MIL,ATL,Brewers at Braves
+2022-05-08,MIL,ATL,Brewers at Braves
+2022-05-10,BOS,ATL,Red Sox at Braves
+2022-05-11,BOS,ATL,Red Sox at Braves
+2022-05-13,SDP,ATL,Padres at Braves
+2022-05-14,SDP,ATL,Padres at Braves
+2022-05-15,SDP,ATL,Padres at Braves
+2022-05-23,PHI,ATL,Phillies at Braves
+2022-05-24,PHI,ATL,Phillies at Braves
+2022-05-25,PHI,ATL,Phillies at Braves
+2022-05-26,PHI,ATL,Phillies at Braves
+2022-05-27,MIA,ATL,Marlins at Braves
+2022-05-28,MIA,ATL,Marlins at Braves
+2022-05-29,MIA,ATL,Marlins at Braves
+2022-06-07,OAK,ATL,Athletics at Braves
+2022-06-08,OAK,ATL,Athletics at Braves
+2022-06-09,PIT,ATL,Pirates at Braves
+2022-06-10,PIT,ATL,Pirates at Braves
+2022-06-11,PIT,ATL,Pirates at Braves
+2022-06-12,PIT,ATL,Pirates at Braves
+2022-06-20,SFG,ATL,Giants at Braves
+2022-06-21,SFG,ATL,Giants at Braves
+2022-06-22,SFG,ATL,Giants at Braves
+2022-06-23,SFG,ATL,Giants at Braves
+2022-06-24,LAD,ATL,Dodgers at Braves
+2022-06-25,LAD,ATL,Dodgers at Braves
+2022-06-26,LAD,ATL,Dodgers at Braves
+2022-07-04,STL,ATL,Cardinals at Braves
+2022-07-05,STL,ATL,Cardinals at Braves
+2022-07-06,STL,ATL,Cardinals at Braves
+2022-07-07,STL,ATL,Cardinals at Braves
+2022-07-08,WSN,ATL,Nationals at Braves
+2022-07-09,WSN,ATL,Nationals at Braves
+2022-07-10,WSN,ATL,Nationals at Braves
+2022-07-11,NYM,ATL,Mets at Braves
+2022-07-12,NYM,ATL,Mets at Braves
+2022-07-13,NYM,ATL,Mets at Braves
+2022-07-22,LAA,ATL,Angels at Braves
+2022-07-23,LAA,ATL,Angels at Braves
+2022-07-24,LAA,ATL,Angels at Braves
+2022-07-29,ARI,ATL,D-backs at Braves
+2022-07-30,ARI,ATL,D-backs at Braves
+2022-07-31,ARI,ATL,D-backs at Braves
+2022-08-02,PHI,ATL,Phillies at Braves
+2022-08-03,PHI,ATL,Phillies at Braves
+2022-08-15,NYM,ATL,Mets at Braves
+2022-08-16,NYM,ATL,Mets at Braves
+2022-08-17,NYM,ATL,Mets at Braves
+2022-08-18,NYM,ATL,Mets at Braves
+2022-08-19,HOU,ATL,Astros at Braves
+2022-08-20,HOU,ATL,Astros at Braves
+2022-08-21,HOU,ATL,Astros at Braves
+2022-08-30,COL,ATL,Rockies at Braves
+2022-08-31,COL,ATL,Rockies at Braves
+2022-09-01,COL,ATL,Rockies at Braves
+2022-09-02,MIA,ATL,Marlins at Braves
+2022-09-03,MIA,ATL,Marlins at Braves
+2022-09-04,MIA,ATL,Marlins at Braves
+2022-09-16,PHI,ATL,Phillies at Braves
+2022-09-17,PHI,ATL,Phillies at Braves
+2022-09-18,PHI,ATL,Phillies at Braves
+2022-09-19,WSN,ATL,Nationals at Braves
+2022-09-20,WSN,ATL,Nationals at Braves
+2022-09-21,WSN,ATL,Nationals at Braves
+2022-09-30,NYM,ATL,Mets at Braves
+2022-10-01,NYM,ATL,Mets at Braves
+2022-10-02,NYM,ATL,Mets at Braves
+2022-03-31,ATL,MIA,Braves at Marlins
+2022-04-01,ATL,MIA,Braves at Marlins
+2022-04-02,ATL,MIA,Braves at Marlins
+2022-04-03,ATL,MIA,Braves at Marlins
+2022-04-04,TEX,MIA,Rangers at Marlins
+2022-04-05,TEX,MIA,Rangers at Marlins
+2022-04-06,TEX,MIA,Rangers at Marlins
+2022-04-14,PHI,MIA,Phillies at Marlins
+2022-04-15,PHI,MIA,Phillies at Marlins
+2022-04-16,PHI,MIA,Phillies at Marlins
+2022-04-17,PHI,MIA,Phillies at Marlins
+2022-04-19,STL,MIA,Cardinals at Marlins
+2022-04-20,STL,MIA,Cardinals at Marlins
+2022-04-21,STL,MIA,Cardinals at Marlins
+2022-04-29,SEA,MIA,Mariners at Marlins
+2022-04-30,SEA,MIA,Mariners at Marlins
+2022-05-01,SEA,MIA,Mariners at Marlins
+2022-05-02,ARI,MIA,D-backs at Marlins
+2022-05-03,ARI,MIA,D-backs at Marlins
+2022-05-04,ARI,MIA,D-backs at Marlins
+2022-05-13,MIL,MIA,Brewers at Marlins
+2022-05-14,MIL,MIA,Brewers at Marlins
+2022-05-15,MIL,MIA,Brewers at Marlins
+2022-05-16,WSN,MIA,Nationals at Marlins
+2022-05-17,WSN,MIA,Nationals at Marlins
+2022-05-18,WSN,MIA,Nationals at Marlins
+2022-05-20,ATL,MIA,Braves at Marlins
+2022-05-21,ATL,MIA,Braves at Marlins
+2022-05-22,ATL,MIA,Braves at Marlins
+2022-06-02,SFG,MIA,Giants at Marlins
+2022-06-03,SFG,MIA,Giants at Marlins
+2022-06-04,SFG,MIA,Giants at Marlins
+2022-06-05,SFG,MIA,Giants at Marlins
+2022-06-07,WSN,MIA,Nationals at Marlins
+2022-06-08,WSN,MIA,Nationals at Marlins
+2022-06-09,WSN,MIA,Nationals at Marlins
+2022-06-21,COL,MIA,Rockies at Marlins
+2022-06-22,COL,MIA,Rockies at Marlins
+2022-06-23,COL,MIA,Rockies at Marlins
+2022-06-24,NYM,MIA,Mets at Marlins
+2022-06-25,NYM,MIA,Mets at Marlins
+2022-06-26,NYM,MIA,Mets at Marlins
+2022-07-05,LAA,MIA,Angels at Marlins
+2022-07-06,LAA,MIA,Angels at Marlins
+2022-07-11,PIT,MIA,Pirates at Marlins
+2022-07-12,PIT,MIA,Pirates at Marlins
+2022-07-13,PIT,MIA,Pirates at Marlins
+2022-07-14,PIT,MIA,Pirates at Marlins
+2022-07-15,PHI,MIA,Phillies at Marlins
+2022-07-16,PHI,MIA,Phillies at Marlins
+2022-07-17,PHI,MIA,Phillies at Marlins
+2022-07-29,NYM,MIA,Mets at Marlins
+2022-07-30,NYM,MIA,Mets at Marlins
+2022-07-31,NYM,MIA,Mets at Marlins
+2022-08-01,CIN,MIA,Reds at Marlins
+2022-08-02,CIN,MIA,Reds at Marlins
+2022-08-03,CIN,MIA,Reds at Marlins
+2022-08-12,ATL,MIA,Braves at Marlins
+2022-08-13,ATL,MIA,Braves at Marlins
+2022-08-14,ATL,MIA,Braves at Marlins
+2022-08-15,SDP,MIA,Padres at Marlins
+2022-08-16,SDP,MIA,Padres at Marlins
+2022-08-17,SDP,MIA,Padres at Marlins
+2022-08-26,LAD,MIA,Dodgers at Marlins
+2022-08-27,LAD,MIA,Dodgers at Marlins
+2022-08-28,LAD,MIA,Dodgers at Marlins
+2022-08-29,LAD,MIA,Dodgers at Marlins
+2022-08-30,TBR,MIA,Rays at Marlins
+2022-08-31,TBR,MIA,Rays at Marlins
+2022-09-09,NYM,MIA,Mets at Marlins
+2022-09-10,NYM,MIA,Mets at Marlins
+2022-09-11,NYM,MIA,Mets at Marlins
+2022-09-13,PHI,MIA,Phillies at Marlins
+2022-09-14,PHI,MIA,Phillies at Marlins
+2022-09-15,PHI,MIA,Phillies at Marlins
+2022-09-19,CHC,MIA,Cubs at Marlins
+2022-09-20,CHC,MIA,Cubs at Marlins
+2022-09-21,CHC,MIA,Cubs at Marlins
+2022-09-23,WSN,MIA,Nationals at Marlins
+2022-09-24,WSN,MIA,Nationals at Marlins
+2022-09-25,WSN,MIA,Nationals at Marlins
+2022-03-31,WSN,NYM,Nationals at Mets
+2022-04-02,WSN,NYM,Nationals at Mets
+2022-04-03,WSN,NYM,Nationals at Mets
+2022-04-04,ATL,NYM,Braves at Mets
+2022-04-05,ATL,NYM,Braves at Mets
+2022-04-15,ARI,NYM,D-backs at Mets
+2022-04-16,ARI,NYM,D-backs at Mets
+2022-04-17,ARI,NYM,D-backs at Mets
+2022-04-18,SFG,NYM,Giants at Mets
+2022-04-19,SFG,NYM,Giants at Mets
+2022-04-20,SFG,NYM,Giants at Mets
+2022-04-21,SFG,NYM,Giants at Mets
+2022-04-29,PHI,NYM,Phillies at Mets
+2022-04-30,PHI,NYM,Phillies at Mets
+2022-05-01,PHI,NYM,Phillies at Mets
+2022-05-02,ATL,NYM,Braves at Mets
+2022-05-03,ATL,NYM,Braves at Mets
+2022-05-04,ATL,NYM,Braves at Mets
+2022-05-13,SEA,NYM,Mariners at Mets
+2022-05-14,SEA,NYM,Mariners at Mets
+2022-05-15,SEA,NYM,Mariners at Mets
+2022-05-16,STL,NYM,Cardinals at Mets
+2022-05-17,STL,NYM,Cardinals at Mets
+2022-05-18,STL,NYM,Cardinals at Mets
+2022-05-19,STL,NYM,Cardinals at Mets
+2022-05-27,PHI,NYM,Phillies at Mets
+2022-05-28,PHI,NYM,Phillies at Mets
+2022-05-29,PHI,NYM,Phillies at Mets
+2022-05-30,WSN,NYM,Nationals at Mets
+2022-05-31,WSN,NYM,Nationals at Mets
+2022-06-01,WSN,NYM,Nationals at Mets
+2022-06-14,MIL,NYM,Brewers at Mets
+2022-06-15,MIL,NYM,Brewers at Mets
+2022-06-16,MIL,NYM,Brewers at Mets
+2022-06-17,MIA,NYM,Marlins at Mets
+2022-06-18,MIA,NYM,Marlins at Mets
+2022-06-19,MIA,NYM,Marlins at Mets
+2022-06-20,MIA,NYM,Marlins at Mets
+2022-06-28,HOU,NYM,Astros at Mets
+2022-06-29,HOU,NYM,Astros at Mets
+2022-07-01,TEX,NYM,Rangers at Mets
+2022-07-02,TEX,NYM,Rangers at Mets
+2022-07-03,TEX,NYM,Rangers at Mets
+2022-07-07,MIA,NYM,Marlins at Mets
+2022-07-08,MIA,NYM,Marlins at Mets
+2022-07-09,MIA,NYM,Marlins at Mets
+2022-07-10,MIA,NYM,Marlins at Mets
+2022-07-22,SDP,NYM,Padres at Mets
+2022-07-23,SDP,NYM,Padres at Mets
+2022-07-24,SDP,NYM,Padres at Mets
+2022-07-26,NYY,NYM,Yankees at Mets
+2022-07-27,NYY,NYM,Yankees at Mets
+2022-08-04,ATL,NYM,Braves at Mets
+2022-08-05,ATL,NYM,Braves at Mets
+2022-08-06,ATL,NYM,Braves at Mets
+2022-08-07,ATL,NYM,Braves at Mets
+2022-08-08,CIN,NYM,Reds at Mets
+2022-08-09,CIN,NYM,Reds at Mets
+2022-08-10,CIN,NYM,Reds at Mets
+2022-08-12,PHI,NYM,Phillies at Mets
+2022-08-13,PHI,NYM,Phillies at Mets
+2022-08-14,PHI,NYM,Phillies at Mets
+2022-08-25,COL,NYM,Rockies at Mets
+2022-08-26,COL,NYM,Rockies at Mets
+2022-08-27,COL,NYM,Rockies at Mets
+2022-08-28,COL,NYM,Rockies at Mets
+2022-08-30,LAD,NYM,Dodgers at Mets
+2022-08-31,LAD,NYM,Dodgers at Mets
+2022-09-01,LAD,NYM,Dodgers at Mets
+2022-09-02,WSN,NYM,Nationals at Mets
+2022-09-03,WSN,NYM,Nationals at Mets
+2022-09-04,WSN,NYM,Nationals at Mets
+2022-09-12,CHC,NYM,Cubs at Mets
+2022-09-13,CHC,NYM,Cubs at Mets
+2022-09-14,CHC,NYM,Cubs at Mets
+2022-09-15,PIT,NYM,Pirates at Mets
+2022-09-16,PIT,NYM,Pirates at Mets
+2022-09-17,PIT,NYM,Pirates at Mets
+2022-09-18,PIT,NYM,Pirates at Mets
+2022-09-27,MIA,NYM,Marlins at Mets
+2022-09-28,MIA,NYM,Marlins at Mets
+2022-04-04,PHI,WSN,Phillies at Nationals
+2022-04-06,PHI,WSN,Phillies at Nationals
+2022-04-07,NYM,WSN,Mets at Nationals
+2022-04-08,NYM,WSN,Mets at Nationals
+2022-04-09,NYM,WSN,Mets at Nationals
+2022-04-10,NYM,WSN,Mets at Nationals
+2022-04-18,ARI,WSN,D-backs at Nationals
+2022-04-19,ARI,WSN,D-backs at Nationals
+2022-04-20,ARI,WSN,D-backs at Nationals
+2022-04-21,ARI,WSN,D-backs at Nationals
+2022-04-22,SFG,WSN,Giants at Nationals
+2022-04-23,SFG,WSN,Giants at Nationals
+2022-04-24,SFG,WSN,Giants at Nationals
+2022-04-26,MIA,WSN,Marlins at Nationals
+2022-04-27,MIA,WSN,Marlins at Nationals
+2022-04-28,MIA,WSN,Marlins at Nationals
+2022-05-10,NYM,WSN,Mets at Nationals
+2022-05-11,NYM,WSN,Mets at Nationals
+2022-05-12,NYM,WSN,Mets at Nationals
+2022-05-13,HOU,WSN,Astros at Nationals
+2022-05-14,HOU,WSN,Astros at Nationals
+2022-05-15,HOU,WSN,Astros at Nationals
+2022-05-23,LAD,WSN,Dodgers at Nationals
+2022-05-24,LAD,WSN,Dodgers at Nationals
+2022-05-25,LAD,WSN,Dodgers at Nationals
+2022-05-26,COL,WSN,Rockies at Nationals
+2022-05-27,COL,WSN,Rockies at Nationals
+2022-05-28,COL,WSN,Rockies at Nationals
+2022-05-29,COL,WSN,Rockies at Nationals
+2022-06-10,MIL,WSN,Brewers at Nationals
+2022-06-11,MIL,WSN,Brewers at Nationals
+2022-06-12,MIL,WSN,Brewers at Nationals
+2022-06-13,ATL,WSN,Braves at Nationals
+2022-06-14,ATL,WSN,Braves at Nationals
+2022-06-15,ATL,WSN,Braves at Nationals
+2022-06-16,PHI,WSN,Phillies at Nationals
+2022-06-17,PHI,WSN,Phillies at Nationals
+2022-06-18,PHI,WSN,Phillies at Nationals
+2022-06-19,PHI,WSN,Phillies at Nationals
+2022-06-27,PIT,WSN,Pirates at Nationals
+2022-06-28,PIT,WSN,Pirates at Nationals
+2022-06-29,PIT,WSN,Pirates at Nationals
+2022-07-01,MIA,WSN,Marlins at Nationals
+2022-07-02,MIA,WSN,Marlins at Nationals
+2022-07-03,MIA,WSN,Marlins at Nationals
+2022-07-04,MIA,WSN,Marlins at Nationals
+2022-07-12,SEA,WSN,Mariners at Nationals
+2022-07-13,SEA,WSN,Mariners at Nationals
+2022-07-14,ATL,WSN,Braves at Nationals
+2022-07-15,ATL,WSN,Braves at Nationals
+2022-07-16,ATL,WSN,Braves at Nationals
+2022-07-17,ATL,WSN,Braves at Nationals
+2022-07-29,STL,WSN,Cardinals at Nationals
+2022-07-30,STL,WSN,Cardinals at Nationals
+2022-07-31,STL,WSN,Cardinals at Nationals
+2022-08-01,NYM,WSN,Mets at Nationals
+2022-08-02,NYM,WSN,Mets at Nationals
+2022-08-03,NYM,WSN,Mets at Nationals
+2022-08-12,SDP,WSN,Padres at Nationals
+2022-08-13,SDP,WSN,Padres at Nationals
+2022-08-14,SDP,WSN,Padres at Nationals
+2022-08-15,CHC,WSN,Cubs at Nationals
+2022-08-16,CHC,WSN,Cubs at Nationals
+2022-08-17,CHC,WSN,Cubs at Nationals
+2022-08-26,CIN,WSN,Reds at Nationals
+2022-08-27,CIN,WSN,Reds at Nationals
+2022-08-28,CIN,WSN,Reds at Nationals
+2022-08-30,OAK,WSN,Athletics at Nationals
+2022-08-31,OAK,WSN,Athletics at Nationals
+2022-09-01,OAK,WSN,Athletics at Nationals
+2022-09-13,BAL,WSN,Orioles at Nationals
+2022-09-14,BAL,WSN,Orioles at Nationals
+2022-09-16,MIA,WSN,Marlins at Nationals
+2022-09-17,MIA,WSN,Marlins at Nationals
+2022-09-18,MIA,WSN,Marlins at Nationals
+2022-09-26,ATL,WSN,Braves at Nationals
+2022-09-27,ATL,WSN,Braves at Nationals
+2022-09-28,ATL,WSN,Braves at Nationals
+2022-09-30,PHI,WSN,Phillies at Nationals
+2022-10-01,PHI,WSN,Phillies at Nationals
+2022-10-02,PHI,WSN,Phillies at Nationals
+2022-04-08,OAK,PHI,Athletics at Phillies
+2022-04-09,OAK,PHI,Athletics at Phillies
+2022-04-10,OAK,PHI,Athletics at Phillies
+2022-04-11,NYM,PHI,Mets at Phillies
+2022-04-12,NYM,PHI,Mets at Phillies
+2022-04-13,NYM,PHI,Mets at Phillies
+2022-04-22,MIL,PHI,Brewers at Phillies
+2022-04-23,MIL,PHI,Brewers at Phillies
+2022-04-24,MIL,PHI,Brewers at Phillies
+2022-04-25,COL,PHI,Rockies at Phillies
+2022-04-26,COL,PHI,Rockies at Phillies
+2022-04-27,COL,PHI,Rockies at Phillies
+2022-04-28,COL,PHI,Rockies at Phillies
+2022-05-03,TEX,PHI,Rangers at Phillies
+2022-05-04,TEX,PHI,Rangers at Phillies
+2022-05-05,NYM,PHI,Mets at Phillies
+2022-05-06,NYM,PHI,Mets at Phillies
+2022-05-07,NYM,PHI,Mets at Phillies
+2022-05-08,NYM,PHI,Mets at Phillies
+2022-05-17,SDP,PHI,Padres at Phillies
+2022-05-18,SDP,PHI,Padres at Phillies
+2022-05-19,SDP,PHI,Padres at Phillies
+2022-05-20,LAD,PHI,Dodgers at Phillies
+2022-05-21,LAD,PHI,Dodgers at Phillies
+2022-05-22,LAD,PHI,Dodgers at Phillies
+2022-05-30,SFG,PHI,Giants at Phillies
+2022-05-31,SFG,PHI,Giants at Phillies
+2022-06-01,SFG,PHI,Giants at Phillies
+2022-06-03,LAA,PHI,Angels at Phillies
+2022-06-04,LAA,PHI,Angels at Phillies
+2022-06-05,LAA,PHI,Angels at Phillies
+2022-06-10,ARI,PHI,D-backs at Phillies
+2022-06-11,ARI,PHI,D-backs at Phillies
+2022-06-12,ARI,PHI,D-backs at Phillies
+2022-06-13,MIA,PHI,Marlins at Phillies
+2022-06-14,MIA,PHI,Marlins at Phillies
+2022-06-15,MIA,PHI,Marlins at Phillies
+2022-06-28,ATL,PHI,Braves at Phillies
+2022-06-29,ATL,PHI,Braves at Phillies
+2022-06-30,ATL,PHI,Braves at Phillies
+2022-07-01,STL,PHI,Cardinals at Phillies
+2022-07-02,STL,PHI,Cardinals at Phillies
+2022-07-03,STL,PHI,Cardinals at Phillies
+2022-07-05,WSN,PHI,Nationals at Phillies
+2022-07-06,WSN,PHI,Nationals at Phillies
+2022-07-07,WSN,PHI,Nationals at Phillies
+2022-07-22,CHC,PHI,Cubs at Phillies
+2022-07-23,CHC,PHI,Cubs at Phillies
+2022-07-24,CHC,PHI,Cubs at Phillies
+2022-07-25,ATL,PHI,Braves at Phillies
+2022-07-26,ATL,PHI,Braves at Phillies
+2022-07-27,ATL,PHI,Braves at Phillies
+2022-08-04,WSN,PHI,Nationals at Phillies
+2022-08-05,WSN,PHI,Nationals at Phillies
+2022-08-06,WSN,PHI,Nationals at Phillies
+2022-08-07,WSN,PHI,Nationals at Phillies
+2022-08-09,MIA,PHI,Marlins at Phillies
+2022-08-10,MIA,PHI,Marlins at Phillies
+2022-08-11,MIA,PHI,Marlins at Phillies
+2022-08-19,NYM,PHI,Mets at Phillies
+2022-08-20,NYM,PHI,Mets at Phillies
+2022-08-21,NYM,PHI,Mets at Phillies
+2022-08-22,CIN,PHI,Reds at Phillies
+2022-08-23,CIN,PHI,Reds at Phillies
+2022-08-24,CIN,PHI,Reds at Phillies
+2022-08-25,CIN,PHI,Reds at Phillies
+2022-08-26,PIT,PHI,Pirates at Phillies
+2022-08-27,PIT,PHI,Pirates at Phillies
+2022-08-28,PIT,PHI,Pirates at Phillies
+2022-09-06,MIA,PHI,Marlins at Phillies
+2022-09-07,MIA,PHI,Marlins at Phillies
+2022-09-08,MIA,PHI,Marlins at Phillies
+2022-09-09,WSN,PHI,Nationals at Phillies
+2022-09-10,WSN,PHI,Nationals at Phillies
+2022-09-11,WSN,PHI,Nationals at Phillies
+2022-09-20,TOR,PHI,Blue Jays at Phillies
+2022-09-21,TOR,PHI,Blue Jays at Phillies
+2022-09-22,ATL,PHI,Braves at Phillies
+2022-09-23,ATL,PHI,Braves at Phillies
+2022-09-24,ATL,PHI,Braves at Phillies
+2022-09-25,ATL,PHI,Braves at Phillies
+2022-03-31,ARI,MIL,D-backs at Brewers
+2022-04-01,ARI,MIL,D-backs at Brewers
+2022-04-02,ARI,MIL,D-backs at Brewers
+2022-04-04,SFG,MIL,Giants at Brewers
+2022-04-05,SFG,MIL,Giants at Brewers
+2022-04-06,SFG,MIL,Giants at Brewers
+2022-04-14,STL,MIL,Cardinals at Brewers
+2022-04-15,STL,MIL,Cardinals at Brewers
+2022-04-16,STL,MIL,Cardinals at Brewers
+2022-04-17,STL,MIL,Cardinals at Brewers
+2022-04-18,PIT,MIL,Pirates at Brewers
+2022-04-19,PIT,MIL,Pirates at Brewers
+2022-04-20,PIT,MIL,Pirates at Brewers
+2022-04-29,CHC,MIL,Cubs at Brewers
+2022-04-30,CHC,MIL,Cubs at Brewers
+2022-05-01,CHC,MIL,Cubs at Brewers
+2022-05-03,CIN,MIL,Reds at Brewers
+2022-05-04,CIN,MIL,Reds at Brewers
+2022-05-05,CIN,MIL,Reds at Brewers
+2022-05-16,ATL,MIL,Braves at Brewers
+2022-05-17,ATL,MIL,Braves at Brewers
+2022-05-18,ATL,MIL,Braves at Brewers
+2022-05-20,WSN,MIL,Nationals at Brewers
+2022-05-21,WSN,MIL,Nationals at Brewers
+2022-05-22,WSN,MIL,Nationals at Brewers
+2022-06-02,SDP,MIL,Padres at Brewers
+2022-06-03,SDP,MIL,Padres at Brewers
+2022-06-04,SDP,MIL,Padres at Brewers
+2022-06-05,SDP,MIL,Padres at Brewers
+2022-06-07,PHI,MIL,Phillies at Brewers
+2022-06-08,PHI,MIL,Phillies at Brewers
+2022-06-09,PHI,MIL,Phillies at Brewers
+2022-06-20,STL,MIL,Cardinals at Brewers
+2022-06-21,STL,MIL,Cardinals at Brewers
+2022-06-22,STL,MIL,Cardinals at Brewers
+2022-06-23,STL,MIL,Cardinals at Brewers
+2022-06-24,TOR,MIL,Blue Jays at Brewers
+2022-06-25,TOR,MIL,Blue Jays at Brewers
+2022-06-26,TOR,MIL,Blue Jays at Brewers
+2022-07-04,CHC,MIL,Cubs at Brewers
+2022-07-05,CHC,MIL,Cubs at Brewers
+2022-07-06,CHC,MIL,Cubs at Brewers
+2022-07-08,PIT,MIL,Pirates at Brewers
+2022-07-09,PIT,MIL,Pirates at Brewers
+2022-07-10,PIT,MIL,Pirates at Brewers
+2022-07-22,COL,MIL,Rockies at Brewers
+2022-07-23,COL,MIL,Rockies at Brewers
+2022-07-24,COL,MIL,Rockies at Brewers
+2022-07-25,COL,MIL,Rockies at Brewers
+2022-07-26,MIN,MIL,Twins at Brewers
+2022-07-27,MIN,MIL,Twins at Brewers
+2022-08-05,CIN,MIL,Reds at Brewers
+2022-08-06,CIN,MIL,Reds at Brewers
+2022-08-07,CIN,MIL,Reds at Brewers
+2022-08-09,TBR,MIL,Rays at Brewers
+2022-08-10,TBR,MIL,Rays at Brewers
+2022-08-15,LAD,MIL,Dodgers at Brewers
+2022-08-16,LAD,MIL,Dodgers at Brewers
+2022-08-17,LAD,MIL,Dodgers at Brewers
+2022-08-18,LAD,MIL,Dodgers at Brewers
+2022-08-26,CHC,MIL,Cubs at Brewers
+2022-08-27,CHC,MIL,Cubs at Brewers
+2022-08-28,CHC,MIL,Cubs at Brewers
+2022-08-29,PIT,MIL,Pirates at Brewers
+2022-08-30,PIT,MIL,Pirates at Brewers
+2022-08-31,PIT,MIL,Pirates at Brewers
+2022-09-09,CIN,MIL,Reds at Brewers
+2022-09-10,CIN,MIL,Reds at Brewers
+2022-09-11,CIN,MIL,Reds at Brewers
+2022-09-16,NYY,MIL,Yankees at Brewers
+2022-09-17,NYY,MIL,Yankees at Brewers
+2022-09-18,NYY,MIL,Yankees at Brewers
+2022-09-19,NYM,MIL,Mets at Brewers
+2022-09-20,NYM,MIL,Mets at Brewers
+2022-09-21,NYM,MIL,Mets at Brewers
+2022-09-27,STL,MIL,Cardinals at Brewers
+2022-09-28,STL,MIL,Cardinals at Brewers
+2022-09-29,MIA,MIL,Marlins at Brewers
+2022-09-30,MIA,MIL,Marlins at Brewers
+2022-10-01,MIA,MIL,Marlins at Brewers
+2022-10-02,MIA,MIL,Marlins at Brewers
+2022-04-07,PIT,STL,Pirates at Cardinals
+2022-04-09,PIT,STL,Pirates at Cardinals
+2022-04-10,PIT,STL,Pirates at Cardinals
+2022-04-11,PIT,STL,Pirates at Cardinals
+2022-04-12,KCR,STL,Royals at Cardinals
+2022-04-13,KCR,STL,Royals at Cardinals
+2022-04-25,NYM,STL,Mets at Cardinals
+2022-04-26,NYM,STL,Mets at Cardinals
+2022-04-27,NYM,STL,Mets at Cardinals
+2022-04-28,ARI,STL,D-backs at Cardinals
+2022-04-29,ARI,STL,D-backs at Cardinals
+2022-04-30,ARI,STL,D-backs at Cardinals
+2022-05-01,ARI,STL,D-backs at Cardinals
+2022-05-10,BAL,STL,Orioles at Cardinals
+2022-05-11,BAL,STL,Orioles at Cardinals
+2022-05-12,BAL,STL,Orioles at Cardinals
+2022-05-13,SFG,STL,Giants at Cardinals
+2022-05-14,SFG,STL,Giants at Cardinals
+2022-05-15,SFG,STL,Giants at Cardinals
+2022-05-23,TOR,STL,Blue Jays at Cardinals
+2022-05-24,TOR,STL,Blue Jays at Cardinals
+2022-05-26,MIL,STL,Brewers at Cardinals
+2022-05-27,MIL,STL,Brewers at Cardinals
+2022-05-28,MIL,STL,Brewers at Cardinals
+2022-05-29,MIL,STL,Brewers at Cardinals
+2022-05-30,SDP,STL,Padres at Cardinals
+2022-05-31,SDP,STL,Padres at Cardinals
+2022-06-01,SDP,STL,Padres at Cardinals
+2022-06-10,CIN,STL,Reds at Cardinals
+2022-06-11,CIN,STL,Reds at Cardinals
+2022-06-12,CIN,STL,Reds at Cardinals
+2022-06-13,PIT,STL,Pirates at Cardinals
+2022-06-14,PIT,STL,Pirates at Cardinals
+2022-06-15,PIT,STL,Pirates at Cardinals
+2022-06-24,CHC,STL,Cubs at Cardinals
+2022-06-25,CHC,STL,Cubs at Cardinals
+2022-06-26,CHC,STL,Cubs at Cardinals
+2022-06-27,MIA,STL,Marlins at Cardinals
+2022-06-28,MIA,STL,Marlins at Cardinals
+2022-06-29,MIA,STL,Marlins at Cardinals
+2022-07-08,PHI,STL,Phillies at Cardinals
+2022-07-09,PHI,STL,Phillies at Cardinals
+2022-07-10,PHI,STL,Phillies at Cardinals
+2022-07-11,PHI,STL,Phillies at Cardinals
+2022-07-12,LAD,STL,Dodgers at Cardinals
+2022-07-13,LAD,STL,Dodgers at Cardinals
+2022-07-14,LAD,STL,Dodgers at Cardinals
+2022-07-15,CIN,STL,Reds at Cardinals
+2022-07-16,CIN,STL,Reds at Cardinals
+2022-07-17,CIN,STL,Reds at Cardinals
+2022-08-02,CHC,STL,Cubs at Cardinals
+2022-08-03,CHC,STL,Cubs at Cardinals
+2022-08-04,CHC,STL,Cubs at Cardinals
+2022-08-05,NYY,STL,Yankees at Cardinals
+2022-08-06,NYY,STL,Yankees at Cardinals
+2022-08-07,NYY,STL,Yankees at Cardinals
+2022-08-12,MIL,STL,Brewers at Cardinals
+2022-08-13,MIL,STL,Brewers at Cardinals
+2022-08-14,MIL,STL,Brewers at Cardinals
+2022-08-16,COL,STL,Rockies at Cardinals
+2022-08-17,COL,STL,Rockies at Cardinals
+2022-08-18,COL,STL,Rockies at Cardinals
+2022-08-26,ATL,STL,Braves at Cardinals
+2022-08-27,ATL,STL,Braves at Cardinals
+2022-08-28,ATL,STL,Braves at Cardinals
+2022-09-02,CHC,STL,Cubs at Cardinals
+2022-09-03,CHC,STL,Cubs at Cardinals
+2022-09-04,CHC,STL,Cubs at Cardinals
+2022-09-05,WSN,STL,Nationals at Cardinals
+2022-09-06,WSN,STL,Nationals at Cardinals
+2022-09-07,WSN,STL,Nationals at Cardinals
+2022-09-08,WSN,STL,Nationals at Cardinals
+2022-09-13,MIL,STL,Brewers at Cardinals
+2022-09-14,MIL,STL,Brewers at Cardinals
+2022-09-15,CIN,STL,Reds at Cardinals
+2022-09-16,CIN,STL,Reds at Cardinals
+2022-09-17,CIN,STL,Reds at Cardinals
+2022-09-18,CIN,STL,Reds at Cardinals
+2022-09-30,PIT,STL,Pirates at Cardinals
+2022-10-01,PIT,STL,Pirates at Cardinals
+2022-10-02,PIT,STL,Pirates at Cardinals
+2022-04-04,STL,CHC,Cardinals at Cubs
+2022-04-06,STL,CHC,Cardinals at Cubs
+2022-04-07,MIL,CHC,Brewers at Cubs
+2022-04-08,MIL,CHC,Brewers at Cubs
+2022-04-09,MIL,CHC,Brewers at Cubs
+2022-04-10,MIL,CHC,Brewers at Cubs
+2022-04-18,TBR,CHC,Rays at Cubs
+2022-04-19,TBR,CHC,Rays at Cubs
+2022-04-20,TBR,CHC,Rays at Cubs
+2022-04-21,PIT,CHC,Pirates at Cubs
+2022-04-22,PIT,CHC,Pirates at Cubs
+2022-04-23,PIT,CHC,Pirates at Cubs
+2022-04-24,PIT,CHC,Pirates at Cubs
+2022-05-03,CHW,CHC,White Sox at Cubs
+2022-05-04,CHW,CHC,White Sox at Cubs
+2022-05-06,LAD,CHC,Dodgers at Cubs
+2022-05-07,LAD,CHC,Dodgers at Cubs
+2022-05-08,LAD,CHC,Dodgers at Cubs
+2022-05-16,PIT,CHC,Pirates at Cubs
+2022-05-17,PIT,CHC,Pirates at Cubs
+2022-05-18,PIT,CHC,Pirates at Cubs
+2022-05-19,ARI,CHC,D-backs at Cubs
+2022-05-20,ARI,CHC,D-backs at Cubs
+2022-05-21,ARI,CHC,D-backs at Cubs
+2022-05-22,ARI,CHC,D-backs at Cubs
+2022-05-30,MIL,CHC,Brewers at Cubs
+2022-05-31,MIL,CHC,Brewers at Cubs
+2022-06-01,MIL,CHC,Brewers at Cubs
+2022-06-02,STL,CHC,Cardinals at Cubs
+2022-06-03,STL,CHC,Cardinals at Cubs
+2022-06-04,STL,CHC,Cardinals at Cubs
+2022-06-05,STL,CHC,Cardinals at Cubs
+2022-06-13,SDP,CHC,Padres at Cubs
+2022-06-14,SDP,CHC,Padres at Cubs
+2022-06-15,SDP,CHC,Padres at Cubs
+2022-06-16,SDP,CHC,Padres at Cubs
+2022-06-17,ATL,CHC,Braves at Cubs
+2022-06-18,ATL,CHC,Braves at Cubs
+2022-06-19,ATL,CHC,Braves at Cubs
+2022-06-28,CIN,CHC,Reds at Cubs
+2022-06-29,CIN,CHC,Reds at Cubs
+2022-06-30,CIN,CHC,Reds at Cubs
+2022-07-01,BOS,CHC,Red Sox at Cubs
+2022-07-02,BOS,CHC,Red Sox at Cubs
+2022-07-03,BOS,CHC,Red Sox at Cubs
+2022-07-12,BAL,CHC,Orioles at Cubs
+2022-07-13,BAL,CHC,Orioles at Cubs
+2022-07-14,NYM,CHC,Mets at Cubs
+2022-07-15,NYM,CHC,Mets at Cubs
+2022-07-16,NYM,CHC,Mets at Cubs
+2022-07-17,NYM,CHC,Mets at Cubs
+2022-07-25,PIT,CHC,Pirates at Cubs
+2022-07-26,PIT,CHC,Pirates at Cubs
+2022-08-05,MIA,CHC,Marlins at Cubs
+2022-08-06,MIA,CHC,Marlins at Cubs
+2022-08-07,MIA,CHC,Marlins at Cubs
+2022-08-08,WSN,CHC,Nationals at Cubs
+2022-08-09,WSN,CHC,Nationals at Cubs
+2022-08-10,WSN,CHC,Nationals at Cubs
+2022-08-19,MIL,CHC,Brewers at Cubs
+2022-08-20,MIL,CHC,Brewers at Cubs
+2022-08-21,MIL,CHC,Brewers at Cubs
+2022-08-22,STL,CHC,Cardinals at Cubs
+2022-08-23,STL,CHC,Cardinals at Cubs
+2022-08-24,STL,CHC,Cardinals at Cubs
+2022-08-25,STL,CHC,Cardinals at Cubs
+2022-09-06,CIN,CHC,Reds at Cubs
+2022-09-07,CIN,CHC,Reds at Cubs
+2022-09-08,CIN,CHC,Reds at Cubs
+2022-09-09,SFG,CHC,Giants at Cubs
+2022-09-10,SFG,CHC,Giants at Cubs
+2022-09-11,SFG,CHC,Giants at Cubs
+2022-09-16,COL,CHC,Rockies at Cubs
+2022-09-17,COL,CHC,Rockies at Cubs
+2022-09-18,COL,CHC,Rockies at Cubs
+2022-09-27,PHI,CHC,Phillies at Cubs
+2022-09-28,PHI,CHC,Phillies at Cubs
+2022-09-29,PHI,CHC,Phillies at Cubs
+2022-09-30,CIN,CHC,Reds at Cubs
+2022-10-01,CIN,CHC,Reds at Cubs
+2022-10-02,CIN,CHC,Reds at Cubs
+2022-03-31,STL,PIT,Cardinals at Pirates
+2022-04-02,STL,PIT,Cardinals at Pirates
+2022-04-03,STL,PIT,Cardinals at Pirates
+2022-04-12,CHC,PIT,Cubs at Pirates
+2022-04-13,CHC,PIT,Cubs at Pirates
+2022-04-14,WSN,PIT,Nationals at Pirates
+2022-04-15,WSN,PIT,Nationals at Pirates
+2022-04-16,WSN,PIT,Nationals at Pirates
+2022-04-17,WSN,PIT,Nationals at Pirates
+2022-04-26,MIL,PIT,Brewers at Pirates
+2022-04-27,MIL,PIT,Brewers at Pirates
+2022-04-28,MIL,PIT,Brewers at Pirates
+2022-04-29,SDP,PIT,Padres at Pirates
+2022-04-30,SDP,PIT,Padres at Pirates
+2022-05-01,SDP,PIT,Padres at Pirates
+2022-05-09,LAD,PIT,Dodgers at Pirates
+2022-05-10,LAD,PIT,Dodgers at Pirates
+2022-05-11,LAD,PIT,Dodgers at Pirates
+2022-05-12,CIN,PIT,Reds at Pirates
+2022-05-13,CIN,PIT,Reds at Pirates
+2022-05-14,CIN,PIT,Reds at Pirates
+2022-05-15,CIN,PIT,Reds at Pirates
+2022-05-20,STL,PIT,Cardinals at Pirates
+2022-05-21,STL,PIT,Cardinals at Pirates
+2022-05-22,STL,PIT,Cardinals at Pirates
+2022-05-23,COL,PIT,Rockies at Pirates
+2022-05-24,COL,PIT,Rockies at Pirates
+2022-05-25,COL,PIT,Rockies at Pirates
+2022-06-03,ARI,PIT,D-backs at Pirates
+2022-06-04,ARI,PIT,D-backs at Pirates
+2022-06-05,ARI,PIT,D-backs at Pirates
+2022-06-07,DET,PIT,Tigers at Pirates
+2022-06-08,DET,PIT,Tigers at Pirates
+2022-06-17,SFG,PIT,Giants at Pirates
+2022-06-18,SFG,PIT,Giants at Pirates
+2022-06-19,SFG,PIT,Giants at Pirates
+2022-06-20,CHC,PIT,Cubs at Pirates
+2022-06-21,CHC,PIT,Cubs at Pirates
+2022-06-22,CHC,PIT,Cubs at Pirates
+2022-06-23,CHC,PIT,Cubs at Pirates
+2022-06-30,MIL,PIT,Brewers at Pirates
+2022-07-01,MIL,PIT,Brewers at Pirates
+2022-07-02,MIL,PIT,Brewers at Pirates
+2022-07-03,MIL,PIT,Brewers at Pirates
+2022-07-05,NYY,PIT,Yankees at Pirates
+2022-07-06,NYY,PIT,Yankees at Pirates
+2022-07-22,MIA,PIT,Marlins at Pirates
+2022-07-23,MIA,PIT,Marlins at Pirates
+2022-07-24,MIA,PIT,Marlins at Pirates
+2022-07-28,PHI,PIT,Phillies at Pirates
+2022-07-29,PHI,PIT,Phillies at Pirates
+2022-07-30,PHI,PIT,Phillies at Pirates
+2022-07-31,PHI,PIT,Phillies at Pirates
+2022-08-02,MIL,PIT,Brewers at Pirates
+2022-08-03,MIL,PIT,Brewers at Pirates
+2022-08-04,MIL,PIT,Brewers at Pirates
+2022-08-16,BOS,PIT,Red Sox at Pirates
+2022-08-17,BOS,PIT,Red Sox at Pirates
+2022-08-18,BOS,PIT,Red Sox at Pirates
+2022-08-19,CIN,PIT,Reds at Pirates
+2022-08-20,CIN,PIT,Reds at Pirates
+2022-08-21,CIN,PIT,Reds at Pirates
+2022-08-22,ATL,PIT,Braves at Pirates
+2022-08-23,ATL,PIT,Braves at Pirates
+2022-08-24,ATL,PIT,Braves at Pirates
+2022-09-02,TOR,PIT,Blue Jays at Pirates
+2022-09-03,TOR,PIT,Blue Jays at Pirates
+2022-09-04,TOR,PIT,Blue Jays at Pirates
+2022-09-05,NYM,PIT,Mets at Pirates
+2022-09-06,NYM,PIT,Mets at Pirates
+2022-09-07,NYM,PIT,Mets at Pirates
+2022-09-09,STL,PIT,Cardinals at Pirates
+2022-09-10,STL,PIT,Cardinals at Pirates
+2022-09-11,STL,PIT,Cardinals at Pirates
+2022-09-22,CHC,PIT,Cubs at Pirates
+2022-09-23,CHC,PIT,Cubs at Pirates
+2022-09-24,CHC,PIT,Cubs at Pirates
+2022-09-25,CHC,PIT,Cubs at Pirates
+2022-09-26,CIN,PIT,Reds at Pirates
+2022-09-27,CIN,PIT,Reds at Pirates
+2022-09-28,CIN,PIT,Reds at Pirates
+2022-03-31,CHC,CIN,Cubs at Reds
+2022-04-02,CHC,CIN,Cubs at Reds
+2022-04-03,CHC,CIN,Cubs at Reds
+2022-04-04,PIT,CIN,Pirates at Reds
+2022-04-05,PIT,CIN,Pirates at Reds
+2022-04-06,PIT,CIN,Pirates at Reds
+2022-04-12,CLE,CIN,Guardians at Reds
+2022-04-13,CLE,CIN,Guardians at Reds
+2022-04-22,STL,CIN,Cardinals at Reds
+2022-04-23,STL,CIN,Cardinals at Reds
+2022-04-24,STL,CIN,Cardinals at Reds
+2022-04-26,SDP,CIN,Padres at Reds
+2022-04-27,SDP,CIN,Padres at Reds
+2022-04-28,SDP,CIN,Padres at Reds
+2022-05-06,PIT,CIN,Pirates at Reds
+2022-05-07,PIT,CIN,Pirates at Reds
+2022-05-08,PIT,CIN,Pirates at Reds
+2022-05-09,MIL,CIN,Brewers at Reds
+2022-05-10,MIL,CIN,Brewers at Reds
+2022-05-11,MIL,CIN,Brewers at Reds
+2022-05-23,CHC,CIN,Cubs at Reds
+2022-05-24,CHC,CIN,Cubs at Reds
+2022-05-25,CHC,CIN,Cubs at Reds
+2022-05-26,CHC,CIN,Cubs at Reds
+2022-05-27,SFG,CIN,Giants at Reds
+2022-05-28,SFG,CIN,Giants at Reds
+2022-05-29,SFG,CIN,Giants at Reds
+2022-06-02,WSN,CIN,Nationals at Reds
+2022-06-03,WSN,CIN,Nationals at Reds
+2022-06-04,WSN,CIN,Nationals at Reds
+2022-06-05,WSN,CIN,Nationals at Reds
+2022-06-06,ARI,CIN,D-backs at Reds
+2022-06-07,ARI,CIN,D-backs at Reds
+2022-06-08,ARI,CIN,D-backs at Reds
+2022-06-09,ARI,CIN,D-backs at Reds
+2022-06-17,MIL,CIN,Brewers at Reds
+2022-06-18,MIL,CIN,Brewers at Reds
+2022-06-19,MIL,CIN,Brewers at Reds
+2022-06-21,LAD,CIN,Dodgers at Reds
+2022-06-22,LAD,CIN,Dodgers at Reds
+2022-06-23,LAD,CIN,Dodgers at Reds
+2022-07-01,ATL,CIN,Braves at Reds
+2022-07-02,ATL,CIN,Braves at Reds
+2022-07-03,ATL,CIN,Braves at Reds
+2022-07-04,NYM,CIN,Mets at Reds
+2022-07-05,NYM,CIN,Mets at Reds
+2022-07-06,NYM,CIN,Mets at Reds
+2022-07-08,TBR,CIN,Rays at Reds
+2022-07-09,TBR,CIN,Rays at Reds
+2022-07-10,TBR,CIN,Rays at Reds
+2022-07-22,STL,CIN,Cardinals at Reds
+2022-07-23,STL,CIN,Cardinals at Reds
+2022-07-24,STL,CIN,Cardinals at Reds
+2022-07-25,MIA,CIN,Marlins at Reds
+2022-07-26,MIA,CIN,Marlins at Reds
+2022-07-27,MIA,CIN,Marlins at Reds
+2022-07-28,MIA,CIN,Marlins at Reds
+2022-07-29,BAL,CIN,Orioles at Reds
+2022-07-30,BAL,CIN,Orioles at Reds
+2022-07-31,BAL,CIN,Orioles at Reds
+2022-08-11,CHC,CIN,Cubs at Reds
+2022-08-13,CHC,CIN,Cubs at Reds
+2022-08-14,CHC,CIN,Cubs at Reds
+2022-08-15,PHI,CIN,Phillies at Reds
+2022-08-16,PHI,CIN,Phillies at Reds
+2022-08-17,PHI,CIN,Phillies at Reds
+2022-08-29,STL,CIN,Cardinals at Reds
+2022-08-30,STL,CIN,Cardinals at Reds
+2022-08-31,STL,CIN,Cardinals at Reds
+2022-09-02,COL,CIN,Rockies at Reds
+2022-09-03,COL,CIN,Rockies at Reds
+2022-09-04,COL,CIN,Rockies at Reds
+2022-09-12,PIT,CIN,Pirates at Reds
+2022-09-13,PIT,CIN,Pirates at Reds
+2022-09-14,PIT,CIN,Pirates at Reds
+2022-09-20,BOS,CIN,Red Sox at Reds
+2022-09-21,BOS,CIN,Red Sox at Reds
+2022-09-22,MIL,CIN,Brewers at Reds
+2022-09-23,MIL,CIN,Brewers at Reds
+2022-09-24,MIL,CIN,Brewers at Reds
+2022-09-25,MIL,CIN,Brewers at Reds
+2022-04-07,SDP,ARI,Padres at D-backs
+2022-04-08,SDP,ARI,Padres at D-backs
+2022-04-09,SDP,ARI,Padres at D-backs
+2022-04-10,SDP,ARI,Padres at D-backs
+2022-04-12,HOU,ARI,Astros at D-backs
+2022-04-13,HOU,ARI,Astros at D-backs
+2022-04-22,NYM,ARI,Mets at D-backs
+2022-04-23,NYM,ARI,Mets at D-backs
+2022-04-24,NYM,ARI,Mets at D-backs
+2022-04-25,LAD,ARI,Dodgers at D-backs
+2022-04-26,LAD,ARI,Dodgers at D-backs
+2022-04-27,LAD,ARI,Dodgers at D-backs
+2022-05-06,COL,ARI,Rockies at D-backs
+2022-05-07,COL,ARI,Rockies at D-backs
+2022-05-08,COL,ARI,Rockies at D-backs
+2022-05-09,MIA,ARI,Marlins at D-backs
+2022-05-10,MIA,ARI,Marlins at D-backs
+2022-05-11,MIA,ARI,Marlins at D-backs
+2022-05-13,CHC,ARI,Cubs at D-backs
+2022-05-14,CHC,ARI,Cubs at D-backs
+2022-05-15,CHC,ARI,Cubs at D-backs
+2022-05-23,KCR,ARI,Royals at D-backs
+2022-05-24,KCR,ARI,Royals at D-backs
+2022-05-26,LAD,ARI,Dodgers at D-backs
+2022-05-27,LAD,ARI,Dodgers at D-backs
+2022-05-28,LAD,ARI,Dodgers at D-backs
+2022-05-29,LAD,ARI,Dodgers at D-backs
+2022-05-30,ATL,ARI,Braves at D-backs
+2022-05-31,ATL,ARI,Braves at D-backs
+2022-06-01,ATL,ARI,Braves at D-backs
+2022-06-13,CIN,ARI,Reds at D-backs
+2022-06-14,CIN,ARI,Reds at D-backs
+2022-06-15,CIN,ARI,Reds at D-backs
+2022-06-17,MIN,ARI,Twins at D-backs
+2022-06-18,MIN,ARI,Twins at D-backs
+2022-06-19,MIN,ARI,Twins at D-backs
+2022-06-24,DET,ARI,Tigers at D-backs
+2022-06-25,DET,ARI,Tigers at D-backs
+2022-06-26,DET,ARI,Tigers at D-backs
+2022-06-28,SDP,ARI,Padres at D-backs
+2022-06-29,SDP,ARI,Padres at D-backs
+2022-07-04,SFG,ARI,Giants at D-backs
+2022-07-05,SFG,ARI,Giants at D-backs
+2022-07-06,SFG,ARI,Giants at D-backs
+2022-07-07,COL,ARI,Rockies at D-backs
+2022-07-08,COL,ARI,Rockies at D-backs
+2022-07-09,COL,ARI,Rockies at D-backs
+2022-07-10,COL,ARI,Rockies at D-backs
+2022-07-22,WSN,ARI,Nationals at D-backs
+2022-07-23,WSN,ARI,Nationals at D-backs
+2022-07-24,WSN,ARI,Nationals at D-backs
+2022-07-25,SFG,ARI,Giants at D-backs
+2022-07-26,SFG,ARI,Giants at D-backs
+2022-07-27,SFG,ARI,Giants at D-backs
+2022-08-05,COL,ARI,Rockies at D-backs
+2022-08-06,COL,ARI,Rockies at D-backs
+2022-08-07,COL,ARI,Rockies at D-backs
+2022-08-08,PIT,ARI,Pirates at D-backs
+2022-08-09,PIT,ARI,Pirates at D-backs
+2022-08-10,PIT,ARI,Pirates at D-backs
+2022-08-11,PIT,ARI,Pirates at D-backs
+2022-08-19,STL,ARI,Cardinals at D-backs
+2022-08-20,STL,ARI,Cardinals at D-backs
+2022-08-21,STL,ARI,Cardinals at D-backs
+2022-08-29,PHI,ARI,Phillies at D-backs
+2022-08-30,PHI,ARI,Phillies at D-backs
+2022-08-31,PHI,ARI,Phillies at D-backs
+2022-09-01,MIL,ARI,Brewers at D-backs
+2022-09-02,MIL,ARI,Brewers at D-backs
+2022-09-03,MIL,ARI,Brewers at D-backs
+2022-09-04,MIL,ARI,Brewers at D-backs
+2022-09-12,LAD,ARI,Dodgers at D-backs
+2022-09-13,LAD,ARI,Dodgers at D-backs
+2022-09-14,LAD,ARI,Dodgers at D-backs
+2022-09-15,SDP,ARI,Padres at D-backs
+2022-09-16,SDP,ARI,Padres at D-backs
+2022-09-17,SDP,ARI,Padres at D-backs
+2022-09-18,SDP,ARI,Padres at D-backs
+2022-09-23,SFG,ARI,Giants at D-backs
+2022-09-24,SFG,ARI,Giants at D-backs
+2022-09-25,SFG,ARI,Giants at D-backs
+2022-03-31,COL,LAD,Rockies at Dodgers
+2022-04-01,COL,LAD,Rockies at Dodgers
+2022-04-02,COL,LAD,Rockies at Dodgers
+2022-04-03,COL,LAD,Rockies at Dodgers
+2022-04-04,ARI,LAD,D-backs at Dodgers
+2022-04-05,ARI,LAD,D-backs at Dodgers
+2022-04-06,ARI,LAD,D-backs at Dodgers
+2022-04-14,CIN,LAD,Reds at Dodgers
+2022-04-15,CIN,LAD,Reds at Dodgers
+2022-04-16,CIN,LAD,Reds at Dodgers
+2022-04-17,CIN,LAD,Reds at Dodgers
+2022-04-18,ATL,LAD,Braves at Dodgers
+2022-04-19,ATL,LAD,Braves at Dodgers
+2022-04-20,ATL,LAD,Braves at Dodgers
+2022-04-29,DET,LAD,Tigers at Dodgers
+2022-04-30,DET,LAD,Tigers at Dodgers
+2022-05-01,DET,LAD,Tigers at Dodgers
+2022-05-03,SFG,LAD,Giants at Dodgers
+2022-05-04,SFG,LAD,Giants at Dodgers
+2022-05-12,PHI,LAD,Phillies at Dodgers
+2022-05-13,PHI,LAD,Phillies at Dodgers
+2022-05-14,PHI,LAD,Phillies at Dodgers
+2022-05-15,PHI,LAD,Phillies at Dodgers
+2022-05-16,ARI,LAD,D-backs at Dodgers
+2022-05-17,ARI,LAD,D-backs at Dodgers
+2022-05-18,ARI,LAD,D-backs at Dodgers
+2022-05-30,PIT,LAD,Pirates at Dodgers
+2022-05-31,PIT,LAD,Pirates at Dodgers
+2022-06-01,PIT,LAD,Pirates at Dodgers
+2022-06-02,NYM,LAD,Mets at Dodgers
+2022-06-03,NYM,LAD,Mets at Dodgers
+2022-06-04,NYM,LAD,Mets at Dodgers
+2022-06-05,NYM,LAD,Mets at Dodgers
+2022-06-14,LAA,LAD,Angels at Dodgers
+2022-06-15,LAA,LAD,Angels at Dodgers
+2022-06-17,CLE,LAD,Guardians at Dodgers
+2022-06-18,CLE,LAD,Guardians at Dodgers
+2022-06-19,CLE,LAD,Guardians at Dodgers
+2022-06-30,SDP,LAD,Padres at Dodgers
+2022-07-01,SDP,LAD,Padres at Dodgers
+2022-07-02,SDP,LAD,Padres at Dodgers
+2022-07-03,SDP,LAD,Padres at Dodgers
+2022-07-04,COL,LAD,Rockies at Dodgers
+2022-07-05,COL,LAD,Rockies at Dodgers
+2022-07-07,CHC,LAD,Cubs at Dodgers
+2022-07-08,CHC,LAD,Cubs at Dodgers
+2022-07-09,CHC,LAD,Cubs at Dodgers
+2022-07-10,CHC,LAD,Cubs at Dodgers
+2022-07-21,SFG,LAD,Giants at Dodgers
+2022-07-22,SFG,LAD,Giants at Dodgers
+2022-07-23,SFG,LAD,Giants at Dodgers
+2022-07-24,SFG,LAD,Giants at Dodgers
+2022-07-25,WSN,LAD,Nationals at Dodgers
+2022-07-26,WSN,LAD,Nationals at Dodgers
+2022-07-27,WSN,LAD,Nationals at Dodgers
+2022-08-05,SDP,LAD,Padres at Dodgers
+2022-08-06,SDP,LAD,Padres at Dodgers
+2022-08-07,SDP,LAD,Padres at Dodgers
+2022-08-09,MIN,LAD,Twins at Dodgers
+2022-08-10,MIN,LAD,Twins at Dodgers
+2022-08-19,MIA,LAD,Marlins at Dodgers
+2022-08-20,MIA,LAD,Marlins at Dodgers
+2022-08-21,MIA,LAD,Marlins at Dodgers
+2022-08-22,MIL,LAD,Brewers at Dodgers
+2022-08-23,MIL,LAD,Brewers at Dodgers
+2022-08-24,MIL,LAD,Brewers at Dodgers
+2022-09-02,SDP,LAD,Padres at Dodgers
+2022-09-03,SDP,LAD,Padres at Dodgers
+2022-09-04,SDP,LAD,Padres at Dodgers
+2022-09-05,SFG,LAD,Giants at Dodgers
+2022-09-06,SFG,LAD,Giants at Dodgers
+2022-09-07,SFG,LAD,Giants at Dodgers
+2022-09-20,ARI,LAD,D-backs at Dodgers
+2022-09-21,ARI,LAD,D-backs at Dodgers
+2022-09-22,ARI,LAD,D-backs at Dodgers
+2022-09-23,STL,LAD,Cardinals at Dodgers
+2022-09-24,STL,LAD,Cardinals at Dodgers
+2022-09-25,STL,LAD,Cardinals at Dodgers
+2022-09-30,COL,LAD,Rockies at Dodgers
+2022-10-01,COL,LAD,Rockies at Dodgers
+2022-10-02,COL,LAD,Rockies at Dodgers
+2022-04-08,MIA,SFG,Marlins at Giants
+2022-04-09,MIA,SFG,Marlins at Giants
+2022-04-10,MIA,SFG,Marlins at Giants
+2022-04-11,SDP,SFG,Padres at Giants
+2022-04-12,SDP,SFG,Padres at Giants
+2022-04-13,SDP,SFG,Padres at Giants
+2022-04-26,OAK,SFG,Athletics at Giants
+2022-04-27,OAK,SFG,Athletics at Giants
+2022-04-29,WSN,SFG,Nationals at Giants
+2022-04-30,WSN,SFG,Nationals at Giants
+2022-05-01,WSN,SFG,Nationals at Giants
+2022-05-05,STL,SFG,Cardinals at Giants
+2022-05-06,STL,SFG,Cardinals at Giants
+2022-05-07,STL,SFG,Cardinals at Giants
+2022-05-08,STL,SFG,Cardinals at Giants
+2022-05-09,COL,SFG,Rockies at Giants
+2022-05-10,COL,SFG,Rockies at Giants
+2022-05-11,COL,SFG,Rockies at Giants
+2022-05-20,SDP,SFG,Padres at Giants
+2022-05-21,SDP,SFG,Padres at Giants
+2022-05-22,SDP,SFG,Padres at Giants
+2022-05-23,NYM,SFG,Mets at Giants
+2022-05-24,NYM,SFG,Mets at Giants
+2022-05-25,NYM,SFG,Mets at Giants
+2022-06-07,COL,SFG,Rockies at Giants
+2022-06-08,COL,SFG,Rockies at Giants
+2022-06-09,COL,SFG,Rockies at Giants
+2022-06-10,LAD,SFG,Dodgers at Giants
+2022-06-11,LAD,SFG,Dodgers at Giants
+2022-06-12,LAD,SFG,Dodgers at Giants
+2022-06-13,KCR,SFG,Royals at Giants
+2022-06-14,KCR,SFG,Royals at Giants
+2022-06-15,KCR,SFG,Royals at Giants
+2022-06-24,CIN,SFG,Reds at Giants
+2022-06-25,CIN,SFG,Reds at Giants
+2022-06-26,CIN,SFG,Reds at Giants
+2022-06-28,DET,SFG,Tigers at Giants
+2022-06-29,DET,SFG,Tigers at Giants
+2022-07-01,CHW,SFG,White Sox at Giants
+2022-07-02,CHW,SFG,White Sox at Giants
+2022-07-03,CHW,SFG,White Sox at Giants
+2022-07-11,ARI,SFG,D-backs at Giants
+2022-07-12,ARI,SFG,D-backs at Giants
+2022-07-13,ARI,SFG,D-backs at Giants
+2022-07-14,MIL,SFG,Brewers at Giants
+2022-07-15,MIL,SFG,Brewers at Giants
+2022-07-16,MIL,SFG,Brewers at Giants
+2022-07-17,MIL,SFG,Brewers at Giants
+2022-07-28,CHC,SFG,Cubs at Giants
+2022-07-29,CHC,SFG,Cubs at Giants
+2022-07-30,CHC,SFG,Cubs at Giants
+2022-07-31,CHC,SFG,Cubs at Giants
+2022-08-01,LAD,SFG,Dodgers at Giants
+2022-08-02,LAD,SFG,Dodgers at Giants
+2022-08-03,LAD,SFG,Dodgers at Giants
+2022-08-04,LAD,SFG,Dodgers at Giants
+2022-08-12,PIT,SFG,Pirates at Giants
+2022-08-13,PIT,SFG,Pirates at Giants
+2022-08-14,PIT,SFG,Pirates at Giants
+2022-08-15,ARI,SFG,D-backs at Giants
+2022-08-16,ARI,SFG,D-backs at Giants
+2022-08-17,ARI,SFG,D-backs at Giants
+2022-08-18,ARI,SFG,D-backs at Giants
+2022-08-29,SDP,SFG,Padres at Giants
+2022-08-30,SDP,SFG,Padres at Giants
+2022-08-31,SDP,SFG,Padres at Giants
+2022-09-02,PHI,SFG,Phillies at Giants
+2022-09-03,PHI,SFG,Phillies at Giants
+2022-09-04,PHI,SFG,Phillies at Giants
+2022-09-12,ATL,SFG,Braves at Giants
+2022-09-13,ATL,SFG,Braves at Giants
+2022-09-14,ATL,SFG,Braves at Giants
+2022-09-16,LAD,SFG,Dodgers at Giants
+2022-09-17,LAD,SFG,Dodgers at Giants
+2022-09-18,LAD,SFG,Dodgers at Giants
+2022-09-27,COL,SFG,Rockies at Giants
+2022-09-28,COL,SFG,Rockies at Giants
+2022-09-29,COL,SFG,Rockies at Giants
+2022-09-30,ARI,SFG,D-backs at Giants
+2022-10-01,ARI,SFG,D-backs at Giants
+2022-10-02,ARI,SFG,D-backs at Giants
+2022-03-31,SFG,SDP,Giants at Padres
+2022-04-01,SFG,SDP,Giants at Padres
+2022-04-02,SFG,SDP,Giants at Padres
+2022-04-03,SFG,SDP,Giants at Padres
+2022-04-05,COL,SDP,Rockies at Padres
+2022-04-06,COL,SDP,Rockies at Padres
+2022-04-14,ATL,SDP,Braves at Padres
+2022-04-15,ATL,SDP,Braves at Padres
+2022-04-16,ATL,SDP,Braves at Padres
+2022-04-17,ATL,SDP,Braves at Padres
+2022-04-18,CIN,SDP,Reds at Padres
+2022-04-19,CIN,SDP,Reds at Padres
+2022-04-20,CIN,SDP,Reds at Padres
+2022-04-22,LAD,SDP,Dodgers at Padres
+2022-04-23,LAD,SDP,Dodgers at Padres
+2022-04-24,LAD,SDP,Dodgers at Padres
+2022-05-05,MIA,SDP,Marlins at Padres
+2022-05-06,MIA,SDP,Marlins at Padres
+2022-05-07,MIA,SDP,Marlins at Padres
+2022-05-08,MIA,SDP,Marlins at Padres
+2022-05-09,CHC,SDP,Cubs at Padres
+2022-05-10,CHC,SDP,Cubs at Padres
+2022-05-11,CHC,SDP,Cubs at Padres
+2022-05-23,MIL,SDP,Brewers at Padres
+2022-05-24,MIL,SDP,Brewers at Padres
+2022-05-25,MIL,SDP,Brewers at Padres
+2022-05-27,PIT,SDP,Pirates at Padres
+2022-05-28,PIT,SDP,Pirates at Padres
+2022-05-29,PIT,SDP,Pirates at Padres
+2022-06-06,NYM,SDP,Mets at Padres
+2022-06-07,NYM,SDP,Mets at Padres
+2022-06-08,NYM,SDP,Mets at Padres
+2022-06-10,COL,SDP,Rockies at Padres
+2022-06-11,COL,SDP,Rockies at Padres
+2022-06-12,COL,SDP,Rockies at Padres
+2022-06-20,ARI,SDP,D-backs at Padres
+2022-06-21,ARI,SDP,D-backs at Padres
+2022-06-22,ARI,SDP,D-backs at Padres
+2022-06-23,PHI,SDP,Phillies at Padres
+2022-06-24,PHI,SDP,Phillies at Padres
+2022-06-25,PHI,SDP,Phillies at Padres
+2022-06-26,PHI,SDP,Phillies at Padres
+2022-07-04,SEA,SDP,Mariners at Padres
+2022-07-05,SEA,SDP,Mariners at Padres
+2022-07-08,SFG,SDP,Giants at Padres
+2022-07-09,SFG,SDP,Giants at Padres
+2022-07-10,SFG,SDP,Giants at Padres
+2022-07-15,ARI,SDP,D-backs at Padres
+2022-07-16,ARI,SDP,D-backs at Padres
+2022-07-17,ARI,SDP,D-backs at Padres
+2022-07-29,MIN,SDP,Twins at Padres
+2022-07-30,MIN,SDP,Twins at Padres
+2022-07-31,MIN,SDP,Twins at Padres
+2022-08-01,COL,SDP,Rockies at Padres
+2022-08-02,COL,SDP,Rockies at Padres
+2022-08-03,COL,SDP,Rockies at Padres
+2022-08-04,COL,SDP,Rockies at Padres
+2022-08-08,SFG,SDP,Giants at Padres
+2022-08-09,SFG,SDP,Giants at Padres
+2022-08-10,SFG,SDP,Giants at Padres
+2022-08-18,WSN,SDP,Nationals at Padres
+2022-08-19,WSN,SDP,Nationals at Padres
+2022-08-20,WSN,SDP,Nationals at Padres
+2022-08-21,WSN,SDP,Nationals at Padres
+2022-08-23,CLE,SDP,Guardians at Padres
+2022-08-24,CLE,SDP,Guardians at Padres
+2022-09-05,ARI,SDP,D-backs at Padres
+2022-09-06,ARI,SDP,D-backs at Padres
+2022-09-07,ARI,SDP,D-backs at Padres
+2022-09-09,LAD,SDP,Dodgers at Padres
+2022-09-10,LAD,SDP,Dodgers at Padres
+2022-09-11,LAD,SDP,Dodgers at Padres
+2022-09-20,STL,SDP,Cardinals at Padres
+2022-09-21,STL,SDP,Cardinals at Padres
+2022-09-22,STL,SDP,Cardinals at Padres
+2022-09-27,LAD,SDP,Dodgers at Padres
+2022-09-28,LAD,SDP,Dodgers at Padres
+2022-09-29,LAD,SDP,Dodgers at Padres
+2022-09-30,CHW,SDP,White Sox at Padres
+2022-10-01,CHW,SDP,White Sox at Padres
+2022-10-02,CHW,SDP,White Sox at Padres
+2022-04-08,LAD,COL,Dodgers at Rockies
+2022-04-09,LAD,COL,Dodgers at Rockies
+2022-04-10,LAD,COL,Dodgers at Rockies
+2022-04-14,CHC,COL,Cubs at Rockies
+2022-04-15,CHC,COL,Cubs at Rockies
+2022-04-16,CHC,COL,Cubs at Rockies
+2022-04-17,CHC,COL,Cubs at Rockies
+2022-04-18,PHI,COL,Phillies at Rockies
+2022-04-19,PHI,COL,Phillies at Rockies
+2022-04-20,PHI,COL,Phillies at Rockies
+2022-04-29,CIN,COL,Reds at Rockies
+2022-04-30,CIN,COL,Reds at Rockies
+2022-05-01,CIN,COL,Reds at Rockies
+2022-05-03,WSN,COL,Nationals at Rockies
+2022-05-04,WSN,COL,Nationals at Rockies
+2022-05-05,WSN,COL,Nationals at Rockies
+2022-05-13,KCR,COL,Royals at Rockies
+2022-05-14,KCR,COL,Royals at Rockies
+2022-05-15,KCR,COL,Royals at Rockies
+2022-05-16,SFG,COL,Giants at Rockies
+2022-05-17,SFG,COL,Giants at Rockies
+2022-05-18,SFG,COL,Giants at Rockies
+2022-05-20,NYM,COL,Mets at Rockies
+2022-05-21,NYM,COL,Mets at Rockies
+2022-05-22,NYM,COL,Mets at Rockies
+2022-05-30,MIA,COL,Marlins at Rockies
+2022-05-31,MIA,COL,Marlins at Rockies
+2022-06-01,MIA,COL,Marlins at Rockies
+2022-06-02,ATL,COL,Braves at Rockies
+2022-06-03,ATL,COL,Braves at Rockies
+2022-06-04,ATL,COL,Braves at Rockies
+2022-06-05,ATL,COL,Braves at Rockies
+2022-06-14,CLE,COL,Guardians at Rockies
+2022-06-15,CLE,COL,Guardians at Rockies
+2022-06-16,CLE,COL,Guardians at Rockies
+2022-06-17,SDP,COL,Padres at Rockies
+2022-06-18,SDP,COL,Padres at Rockies
+2022-06-19,SDP,COL,Padres at Rockies
+2022-06-27,LAD,COL,Dodgers at Rockies
+2022-06-28,LAD,COL,Dodgers at Rockies
+2022-06-29,LAD,COL,Dodgers at Rockies
+2022-07-01,ARI,COL,D-backs at Rockies
+2022-07-02,ARI,COL,D-backs at Rockies
+2022-07-03,ARI,COL,D-backs at Rockies
+2022-07-11,SDP,COL,Padres at Rockies
+2022-07-12,SDP,COL,Padres at Rockies
+2022-07-13,SDP,COL,Padres at Rockies
+2022-07-14,SDP,COL,Padres at Rockies
+2022-07-15,PIT,COL,Pirates at Rockies
+2022-07-16,PIT,COL,Pirates at Rockies
+2022-07-17,PIT,COL,Pirates at Rockies
+2022-07-26,CHW,COL,White Sox at Rockies
+2022-07-27,CHW,COL,White Sox at Rockies
+2022-07-28,LAD,COL,Dodgers at Rockies
+2022-07-29,LAD,COL,Dodgers at Rockies
+2022-07-30,LAD,COL,Dodgers at Rockies
+2022-07-31,LAD,COL,Dodgers at Rockies
+2022-08-09,STL,COL,Cardinals at Rockies
+2022-08-10,STL,COL,Cardinals at Rockies
+2022-08-11,STL,COL,Cardinals at Rockies
+2022-08-12,ARI,COL,D-backs at Rockies
+2022-08-13,ARI,COL,D-backs at Rockies
+2022-08-14,ARI,COL,D-backs at Rockies
+2022-08-19,SFG,COL,Giants at Rockies
+2022-08-20,SFG,COL,Giants at Rockies
+2022-08-21,SFG,COL,Giants at Rockies
+2022-08-23,TEX,COL,Rangers at Rockies
+2022-08-24,TEX,COL,Rangers at Rockies
+2022-09-05,MIL,COL,Brewers at Rockies
+2022-09-06,MIL,COL,Brewers at Rockies
+2022-09-07,MIL,COL,Brewers at Rockies
+2022-09-09,ARI,COL,D-backs at Rockies
+2022-09-10,ARI,COL,D-backs at Rockies
+2022-09-11,ARI,COL,D-backs at Rockies
+2022-09-19,SFG,COL,Giants at Rockies
+2022-09-20,SFG,COL,Giants at Rockies
+2022-09-21,SFG,COL,Giants at Rockies
+2022-09-22,SFG,COL,Giants at Rockies
+2022-09-23,SDP,COL,Padres at Rockies
+2022-09-24,SDP,COL,Padres at Rockies
+2022-09-25,SDP,COL,Padres at Rockies
