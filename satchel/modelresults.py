@@ -1,3 +1,4 @@
+from matplotlib.pyplot import get
 import pandas as pd
 from dataclasses import dataclass
 from collections import Counter
@@ -168,3 +169,19 @@ class SatchelResults:
 
     def __str__(self):
         return f"Simulation Parameters:\n\t n:{self.n}\n\t trades: {self.trades}"
+
+    def __eq__(self, __o: object) -> bool:
+        # compare all of the objects of the results to see if they're equal
+        for attr, val in self.__dict__.items():
+            if isinstance(val, pd.DataFrame):
+                if not val.equals(getattr(__o, attr)):
+                    return False
+            elif attr == "full_seasons":
+                for s1, s2 in zip(val, getattr(__o, "full_seasons")):
+                    if not s1.equals(s2):
+                        return False
+            else:
+                print(attr)
+                if not val == getattr(__o, attr):
+                    return False
+        return True

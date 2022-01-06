@@ -55,7 +55,7 @@ class Satchel:
         self.talent_measure = talent_measure
         self.transactions = transactions
         self.schedule = pd.read_csv(SCHEDUEL_PATH)
-        self.teams = constants.DIVS.keys()
+        self.teams = constants.TEAM_ABBRS
         self.random = np.random.default_rng(seed)
         self.noise = noise
         self.seed = seed
