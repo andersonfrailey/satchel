@@ -2,6 +2,7 @@
 This moduel contains the heart of satchel. All of the season will be simulated
 from this main class
 """
+import pdb
 import pandas as pd
 import numpy as np
 import difflib
@@ -197,9 +198,11 @@ class Satchel:
         )
         data["winner"] = winner
         data["loser"] = loser
-        results = pd.concat(
-            [winner.value_counts(), loser.value_counts()], axis=1
-        ).reset_index()
+        wins = winner.value_counts().reset_index()
+        losses = loser.value_counts().reset_index()
+        # ensure that teams will always be in the same order
+        results = pd.merge(wins, losses, on="index")
+        results.sort_values("wins", ascending=False, inplace=True, kind="mergesort")
         results.rename(columns={"index": "Team"}, inplace=True)
         results["league"] = results["Team"].map(constants.LEAGUE)
         results["division"] = results["Team"].map(constants.DIV)
