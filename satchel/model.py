@@ -202,7 +202,9 @@ class Satchel:
         losses = loser.value_counts().reset_index()
         # ensure that teams will always be in the same order
         results = pd.merge(wins, losses, on="index")
-        results.sort_values("wins", ascending=False, inplace=True, kind="mergesort")
+        results = results.sort_values(
+            ["wins", "index"], ascending=False, kind="mergesort"
+        )
         results.rename(columns={"index": "Team"}, inplace=True)
         results["league"] = results["Team"].map(constants.LEAGUE)
         results["division"] = results["Team"].map(constants.DIV)
