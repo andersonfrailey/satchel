@@ -2,7 +2,6 @@
 This moduel contains the heart of satchel. All of the season will be simulated
 from this main class
 """
-import pdb
 import pandas as pd
 import numpy as np
 import difflib
@@ -88,21 +87,6 @@ class Satchel:
         SatchelResults
             Instance of the SatchelResults class.
         """
-        # # merge schedule and WAR data to get our dataset for simulations
-        # data = pd.merge(
-        #     self.schedule,
-        #     self.talent[["Team", "talent"]],
-        #     left_on="away",
-        #     right_on="Team",
-        # )
-        # data = pd.merge(
-        #     data, self.talent[["Team", "talent"]], left_on="home", right_on="Team"
-        # )
-        # # clean up data after merge
-        # data.drop(["Team_x", "Team_y"], axis=1, inplace=True)
-        # data.rename(
-        #     columns={"talent_x": "away_talent", "talent_y": "home_talent"}, inplace=True
-        # )
         # counters to track outcomes
         ws_counter = Counter()  # world series championships
         league_counter = Counter()  # league championships
@@ -528,11 +512,6 @@ class Satchel:
             .reset_index()
             .rename({"away": "Team", "away_total": "final_total"}, axis=1)
         )
-        # import pdb
-
-        # pdb.set_trace()
         talent = talent.merge(finaldf, on="Team")
-        # import pdb
 
-        # pdb.set_trace()
         return talent
