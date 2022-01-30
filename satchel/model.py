@@ -12,6 +12,7 @@ from functools import reduce
 from pathlib import Path
 from typing import Callable
 from tqdm import tqdm
+from datetime import datetime
 
 
 CUR_PATH = Path(__file__).resolve().parent
@@ -55,6 +56,7 @@ class Satchel:
         self.talent_measure = talent_measure
         self.transactions = transactions
         self.schedule = pd.read_csv(SCHEDUEL_PATH)
+        self.schedule["START DATE"] = pd.to_datetime(self.schedule["START DATE"])
         self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
         self.noise = noise
@@ -64,7 +66,7 @@ class Satchel:
         self.steamer_b_wt = steamer_b_wt
         self.zips_b_wt = zips_b_wt
 
-        self.talent = self._calculate_talent(transactions)
+        self.talent, self.st_data = self._calculate_talent(transactions)
 
     def simulate(
         self,
@@ -85,21 +87,6 @@ class Satchel:
         SatchelResults
             Instance of the SatchelResults class.
         """
-        # merge schedule and WAR data to get our dataset for simulations
-        data = pd.merge(
-            self.schedule,
-            self.talent[["Team", "talent"]],
-            left_on="away",
-            right_on="Team",
-        )
-        data = pd.merge(
-            data, self.talent[["Team", "talent"]], left_on="home", right_on="Team"
-        )
-        # clean up data after merge
-        data.drop(["Team_x", "Team_y"], axis=1, inplace=True)
-        data.rename(
-            columns={"talent_x": "away_talent", "talent_y": "home_talent"}, inplace=True
-        )
         # counters to track outcomes
         ws_counter = Counter()  # world series championships
         league_counter = Counter()  # league championships
@@ -120,7 +107,7 @@ class Satchel:
                 noise,
                 full_season,
             ) = self.simseason(
-                data,
+                self.st_data,
             )
             ws_counter.update([playoffs["ws"]])
             div_counter.update(div_winners["Team"])
@@ -147,7 +134,7 @@ class Satchel:
             n,
             self.transactions,
             self.schedule,
-            data,
+            self.st_data,
             noise,
             full_seasons,
             self.seed,
@@ -169,17 +156,19 @@ class Satchel:
         """
         data["h_talent"] = data["home_talent"]
         data["a_talent"] = data["away_talent"]
-        _talent = self.talent[["Team", "talent"]].set_index("Team").to_dict("index")
+        _talent = (
+            self.talent[["Team", "final_talent"]].set_index("Team").to_dict("index")
+        )
         # add random noise to team talent for the season
         if self.noise:
             _noise = self.random.normal(
-                scale=self.talent["talent"].std(), size=len(self.teams)
+                scale=self.talent["base_talent"].std(), size=len(self.teams)
             )
             team_noise = {team: _noise[i] for i, team in enumerate(self.teams)}
             data["a_talent"] += np.array([team_noise[team] for team in data["away"]])
             data["h_talent"] += np.array([team_noise[team] for team in data["home"]])
             for team, value in team_noise.items():
-                _talent[team]["talent"] += value
+                _talent[team]["final_talent"] += value
         # sim regular season
         home_win_prob = np.exp(data["h_talent"]) / (
             np.exp(data["a_talent"]) + np.exp(data["h_talent"])
@@ -193,9 +182,13 @@ class Satchel:
         )
         data["winner"] = winner
         data["loser"] = loser
-        results = pd.concat(
-            [winner.value_counts(), loser.value_counts()], axis=1
-        ).reset_index()
+        wins = winner.value_counts().reset_index()
+        losses = loser.value_counts().reset_index()
+        # ensure that teams will always be in the same order
+        results = pd.merge(wins, losses, on="index")
+        results = results.sort_values(
+            ["wins", "index"], ascending=False, kind="mergesort"
+        )
         results.rename(columns={"index": "Team"}, inplace=True)
         results["league"] = results["Team"].map(constants.LEAGUE)
         results["division"] = results["Team"].map(constants.DIV)
@@ -235,8 +228,9 @@ class Satchel:
             """
             team1 = 0
             team2 = 0
-            team1_win_prob = np.exp(talent[teams[0]]["talent"]) / (
-                np.exp(talent[teams[0]]["talent"]) + np.exp(talent[teams[1]]["talent"])
+            team1_win_prob = np.exp(talent[teams[0]]["final_talent"]) / (
+                np.exp(talent[teams[0]]["final_talent"])
+                + np.exp(talent[teams[1]]["final_talent"])
             )
             for _ in range(n_games):
                 prob = self.random.random()
@@ -398,10 +392,6 @@ class Satchel:
         )
         batter_proj.set_index("playerid", inplace=True)
 
-        # conduct transactions
-        if transactions:
-            self._conduct_transactions(pitch_proj, batter_proj, transactions)
-
         # group all of the WAR projections by team and add them
         pwar_proj = pitch_proj.groupby("Team")["WAR_P"].sum()
         bwar_proj = batter_proj.groupby("Team")["WAR_B"].sum()
@@ -409,21 +399,53 @@ class Satchel:
         talent = pd.concat([bwar_proj, pwar_proj], axis=1)
         talent["total"] = talent.sum(axis=1)
         talent.reset_index(inplace=True)
-        # calculate talent
+        # calculate baseline talent
         if self.talent_measure == "median":
             league_base = np.median(talent["total"])
         elif self.talent_measure == "mean":
             league_base = np.mean(talent["total"])
-        talent["talent"] = talent["total"] / league_base - 1
+        # baseline talent before any transactions
+        talent["base_talent"] = talent["total"] / league_base - 1
 
         # merge on division info
         talent["league"] = talent["Team"].map(constants.LEAGUE)
         talent["division"] = talent["Team"].map(constants.DIV)
-        return talent
 
-    def _conduct_transactions(self, pitchers, batters, transactions):
+        # merge together schedule and talent data
+        st_data = pd.merge(
+            self.schedule,
+            talent[["Team", "total"]],
+            left_on="away",
+            right_on="Team",
+        )
+        st_data = pd.merge(
+            st_data, talent[["Team", "total"]], left_on="home", right_on="Team"
+        )
+        # clean up data after merge
+        st_data.drop(["Team_x", "Team_y"], axis=1, inplace=True)
+        st_data.rename(
+            columns={"total_x": "away_total", "total_y": "home_total"}, inplace=True
+        )
+
+        # conduct transactions
+        if transactions:
+            talent = self._conduct_transactions(
+                pitch_proj, batter_proj, transactions, st_data, talent
+            )
+            talent["final_talent"] = talent["final_total"] / league_base - 1
+        else:
+            talent["final_talent"] = talent["base_talent"]
+
+        # calculate talent levels used for simulations
+        st_data["away_talent"] = st_data["away_total"] / league_base - 1
+        st_data["home_talent"] = st_data["home_total"] / league_base - 1
+
+        return talent, st_data
+
+    def _conduct_transactions(self, pitchers, batters, transactions, st_data, talent):
         """Update the pitcher and hitter projection DFs with the transactions
-        specified
+        specified. Format should be:
+        {player_id: {'date': 'YYYY-MM-DD', 'team': new_team}}
 
         Parameters
         ----------
@@ -436,18 +458,60 @@ class Satchel:
         """
         assert isinstance(transactions, dict), "Transactions must be dictionary"
         # loop through each transaction and update the player's team
-        for _id, _team in transactions.items():
+        last_date = datetime.strptime("1900-01-01", "%Y-%m-%d")
+        for _id, info in transactions.items():
             # verify the team exists
-            team = _team.upper()
+            team = info["team"].upper()
             # check that it's a valid team name, or no team at all
             if team not in self.teams and team != "":
                 close = difflib.get_close_matches(team, self.teams)
                 msg = f"{team} is not a valid team. Close matches are: {close}"
                 raise ValueError(msg)
+            # find the old team and WAR of player being moved
             if _id in pitchers.index:
-                pitchers.at[_id, "Team"] = team
+                old_team = pitchers.at[_id, "Team"]
+                war = pitchers.at[_id, "WAR_P"]
             elif _id in batters.index:
-                batters.at[_id, "Team"] = team
+                old_team = batters.at[_id, "Team"]
+                war = batters.at[_id, "WAR_B"]
             else:
                 msg = f"{_id} is an unrecognized player ID"
                 raise ValueError(msg)
+            # update the talent for each each team involved
+            st_data["away_total"] = np.where(
+                (st_data["START DATE"] >= info["date"]) & (st_data["away"] == team),
+                st_data["away_total"] + war,
+                st_data["away_total"],
+            )
+            st_data["home_total"] = np.where(
+                (st_data["START DATE"] >= info["date"]) & (st_data["home"] == team),
+                st_data["home_total"] + war,
+                st_data["home_total"],
+            )
+            # remove the player's WAR from their old team
+            st_data["away_total"] = np.where(
+                (st_data["START DATE"] >= info["date"]) & (st_data["away"] == old_team),
+                st_data["away_total"] - war,
+                st_data["away_total"],
+            )
+            st_data["home_total"] = np.where(
+                (st_data["START DATE"] >= info["date"]) & (st_data["home"] == old_team),
+                st_data["home_total"] - war,
+                st_data["home_total"],
+            )
+            # update date of last transaction
+            if datetime.strptime(info["date"], "%Y-%m-%d") > last_date:
+                last_date = datetime.strptime(info["date"], "%Y-%m-%d")
+
+        # find the final talent for each team after all the transactions. This
+        # will be used for the playoff simulations
+        finaldf = (
+            st_data[st_data["START DATE"] >= last_date]
+            .groupby("away")["away_total"]
+            .mean()
+            .reset_index()
+            .rename({"away": "Team", "away_total": "final_total"}, axis=1)
+        )
+        talent = talent.merge(finaldf, on="Team")
+
+        return talent
