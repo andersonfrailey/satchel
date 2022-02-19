@@ -17,7 +17,7 @@ from datetime import datetime
 
 CUR_PATH = Path(__file__).resolve().parent
 DATA_PATH = Path(CUR_PATH, "data")
-SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2021.csv")
+SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2022.csv")
 
 
 class Satchel:
@@ -341,9 +341,9 @@ class Satchel:
 
     ####### Private methods #######
 
-    def _calculate_talent(self, transactions=None):
+    def _calculate_talent(self, transactions=None, pitcher_wt=1, batter_wt=1):
         """Private method used to calculate each team's talent level by taking
-        the average of ZiPS and Steamer WAR projections on FanGraphs
+        the depth chart projections from FanGraphs
 
         Parameters
         ----------
@@ -355,41 +355,12 @@ class Satchel:
         pd.DataFrame
             DataFrame containing talent levels for each team.
         """
-        active = pd.read_csv(Path(DATA_PATH, "activeids.csv"))
-        # take average of steamer and zips talents for our standard talent measure
-        steamer_p = pd.read_csv(Path(DATA_PATH, "steamer_pitcher.csv"))
-        zips_p = pd.read_csv(Path(DATA_PATH, "zips_pitcher.csv"))
-        pitch_proj = pd.merge(
-            steamer_p[["Name", "Team", "WAR", "playerid"]],
-            zips_p[["WAR", "playerid"]],
-            on="playerid",
-            suffixes=["_s", "_z"],
-            how="outer",
-        )
-        # drop everyone who isn't on a 40-man roster
-        # note: we don't always have projections for the entire 40-man. When
-        # that happens we just assume they're replacement level. i.e. WAR = 0
-        pitch_proj = pitch_proj[pitch_proj["playerid"].isin(active["pid"])].copy()
-        pitch_proj["WAR_P"] = (
-            pitch_proj["WAR_s"] * self.steamer_p_wt
-            + pitch_proj["WAR_z"] * self.zips_p_wt
-        )
+        pitch_proj = pd.read_csv(Path(DATA_PATH, "pitcherprojections.csv"))
+        pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
         pitch_proj.set_index("playerid", inplace=True)
 
-        steamer_b = pd.read_csv(Path(DATA_PATH, "steamer_batter.csv"))
-        zips_b = pd.read_csv(Path(DATA_PATH, "zips_batter.csv"))
-        batter_proj = pd.merge(
-            steamer_b[["Name", "Team", "WAR", "playerid"]],
-            zips_b[["WAR", "playerid"]],
-            on="playerid",
-            suffixes=["_s", "_z"],
-            how="outer",
-        )
-        batter_proj = batter_proj[batter_proj["playerid"].isin(active["pid"])]
-        batter_proj["WAR_B"] = (
-            batter_proj["WAR_s"] * self.steamer_b_wt
-            + batter_proj["WAR_z"] * self.zips_b_wt
-        )
+        batter_proj = pd.read_csv(Path(DATA_PATH, "batterprojections.csv"))
+        batter_proj.rename(columns={"WAR": "WAR_B"}, inplace=True)
         batter_proj.set_index("playerid", inplace=True)
 
         # group all of the WAR projections by team and add them
@@ -397,7 +368,9 @@ class Satchel:
         bwar_proj = batter_proj.groupby("Team")["WAR_B"].sum()
 
         talent = pd.concat([bwar_proj, pwar_proj], axis=1)
-        talent["total"] = talent.sum(axis=1)
+        # allow users to place more weight on pitchers or hitters, equally
+        # weighted by default
+        talent["total"] = talent["WAR_P"] * pitcher_wt + talent["WAR_B"] * batter_wt
         talent.reset_index(inplace=True)
         # calculate baseline talent
         if self.talent_measure == "median":
