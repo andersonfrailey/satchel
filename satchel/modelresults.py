@@ -1,3 +1,5 @@
+from nis import match
+from matplotlib.pyplot import get
 import pandas as pd
 from dataclasses import dataclass
 from collections import Counter
@@ -164,7 +166,29 @@ class SatchelResults:
         matchups = pd.DataFrame(series.value_counts(normalize=True))
         matchups.reset_index(inplace=True)
         matchups.columns = ["Matchup", "Probability"]
+        # sort to ensure equality when comparing results
+        matchups.sort_values(
+            ["Probability", "Matchup"], ascending=False, inplace=True, kind="mergesort"
+        )
+        matchups.reset_index(inplace=True, drop=True)
         return matchups
 
     def __str__(self):
         return f"Simulation Parameters:\n\t n:{self.n}\n\t trades: {self.trades}"
+
+    def __eq__(self, __o: object) -> bool:
+        # compare all of the objects of the results to see if they're equal
+        for attr, val in self.__dict__.items():
+            if isinstance(val, pd.DataFrame):
+                otherval = getattr(__o, attr).reset_index(drop=True)
+                if not val.reset_index(drop=True).equals(otherval):
+                    return False
+            elif attr == "full_seasons":
+                for s1, s2 in zip(val, getattr(__o, "full_seasons")):
+                    if not s1.reset_index(drop=True).equals(s2.reset_index(drop=True)):
+                        return False
+            else:
+                if not val == getattr(__o, attr):
+                    return False
+        print("out")
+        return True

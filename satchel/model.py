@@ -69,9 +69,7 @@ class Satchel:
         self.talent, self.st_data = self._calculate_talent(transactions)
 
     def simulate(
-        self,
-        n: int = 10000,
-        noise: bool = True,
+        self, n: int = 10000, noise: bool = True, quiet: bool = False
     ) -> SatchelResults:
         """Run a model simulation n times
 
@@ -81,6 +79,8 @@ class Satchel:
             Number of iterations to run the model for, by default 10000
         noise : bool, optional
             Whether or not to add noise to team talent levels, by default True
+        quiet : bool, optional
+            If true, suppresses TQDM progress bar when running simulations
 
         Returns
         -------
@@ -97,7 +97,7 @@ class Satchel:
         all_matchups = []
         all_noise = []  # the talent noise for a given team in a season
         full_seasons = []  # hold all of the results for each season
-        for i in tqdm(range(n)):
+        for i in tqdm(range(n), disable=quiet):
             (
                 results,
                 playoffs,
