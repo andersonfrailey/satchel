@@ -30,21 +30,24 @@ class SatchelResults:
 
     def __post_init__(self):
         """Set all of the default values calculated from the results"""
-        self.nlwc_matchups = self._clean_matchup(self.playoff_matchups["NL Wild Card"])
-        self.alwc_matchups = self._clean_matchup(self.playoff_matchups["AL Wild Card"])
-        self.nlds_matchups = self._clean_matchup(
-            pd.concat(
-                [self.playoff_matchups["NLDS 1"], self.playoff_matchups["NLDS 2"]]
-            )
-        )
-        self.alds_matchups = self._clean_matchup(
-            pd.concat(
-                [self.playoff_matchups["ALDS 1"], self.playoff_matchups["ALDS 2"]]
-            )
-        )
-        self.nlcs_matchups = self._clean_matchup(self.playoff_matchups["NLCS"])
-        self.alcs_matchups = self._clean_matchup(self.playoff_matchups["ALCS"])
-        self.ws_matchups = self._clean_matchup(self.playoff_matchups["World Series"])
+        for col in self.playoff_matchups.columns:
+            attrname = col.replace(" ", "_").lower()
+            setattr(self, attrname, self._clean_matchup(self.playoff_matchups[col]))
+        # self.nlwc_matchups = self._clean_matchup(self.playoff_matchups["NL Wild Card"])
+        # self.alwc_matchups = self._clean_matchup(self.playoff_matchups["AL Wild Card"])
+        # self.nlds_matchups = self._clean_matchup(
+        #     pd.concat(
+        #         [self.playoff_matchups["NLDS 1"], self.playoff_matchups["NLDS 2"]]
+        #     )
+        # )
+        # self.alds_matchups = self._clean_matchup(
+        #     pd.concat(
+        #         [self.playoff_matchups["ALDS 1"], self.playoff_matchups["ALDS 2"]]
+        #     )
+        # )
+        # self.nlcs_matchups = self._clean_matchup(self.playoff_matchups["NLCS"])
+        # self.alcs_matchups = self._clean_matchup(self.playoff_matchups["ALCS"])
+        # self.ws_matchups = self._clean_matchup(self.playoff_matchups["World Series"])
 
         # summary stats
         mean_wins = pd.DataFrame(self.results_df.groupby("Team")["wins"].mean())
