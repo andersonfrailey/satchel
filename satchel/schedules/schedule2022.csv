@@ -1,4 +1,7 @@
 START DATE,away,home,SUBJECT
+2022-04-04,TBR,TOR,Rays at Blue Jays
+2022-04-05,TBR,TOR,Rays at Blue Jays
+2022-04-06,TBR,TOR,Rays at Blue Jays
 2022-04-08,TEX,TOR,Rangers at Blue Jays
 2022-04-09,TEX,TOR,Rangers at Blue Jays
 2022-04-10,TEX,TOR,Rangers at Blue Jays
@@ -77,6 +80,9 @@ START DATE,away,home,SUBJECT
 2022-09-30,BOS,TOR,Red Sox at Blue Jays
 2022-10-01,BOS,TOR,Red Sox at Blue Jays
 2022-10-02,BOS,TOR,Red Sox at Blue Jays
+2022-03-31,TOR,BAL,Blue Jays at Orioles
+2022-04-02,TOR,BAL,Blue Jays at Orioles
+2022-04-03,TOR,BAL,Blue Jays at Orioles
 2022-04-11,MIL,BAL,Brewers at Orioles
 2022-04-12,MIL,BAL,Brewers at Orioles
 2022-04-13,MIL,BAL,Brewers at Orioles
@@ -236,6 +242,12 @@ START DATE,away,home,SUBJECT
 2022-09-23,TOR,TBR,Blue Jays at Rays
 2022-09-24,TOR,TBR,Blue Jays at Rays
 2022-09-25,TOR,TBR,Blue Jays at Rays
+2022-03-31,TBR,BOS,Rays at Red Sox
+2022-04-02,TBR,BOS,Rays at Red Sox
+2022-04-03,TBR,BOS,Rays at Red Sox
+2022-04-04,BAL,BOS,Orioles at Red Sox
+2022-04-05,BAL,BOS,Orioles at Red Sox
+2022-04-06,BAL,BOS,Orioles at Red Sox
 2022-04-15,MIN,BOS,Twins at Red Sox
 2022-04-16,MIN,BOS,Twins at Red Sox
 2022-04-17,MIN,BOS,Twins at Red Sox
@@ -392,6 +404,12 @@ START DATE,away,home,SUBJECT
 2022-09-30,BAL,NYY,Orioles at Yankees
 2022-10-01,BAL,NYY,Orioles at Yankees
 2022-10-02,BAL,NYY,Orioles at Yankees
+2022-03-31,KCR,CLE,Royals at Guardians
+2022-04-02,KCR,CLE,Royals at Guardians
+2022-04-03,KCR,CLE,Royals at Guardians
+2022-04-04,MIN,CLE,Twins at Guardians
+2022-04-05,MIN,CLE,Twins at Guardians
+2022-04-06,MIN,CLE,Twins at Guardians
 2022-04-15,SFG,CLE,Giants at Guardians
 2022-04-16,SFG,CLE,Giants at Guardians
 2022-04-17,SFG,CLE,Giants at Guardians
@@ -467,6 +485,9 @@ START DATE,away,home,SUBJECT
 2022-09-30,KCR,CLE,Royals at Guardians
 2022-10-01,KCR,CLE,Royals at Guardians
 2022-10-02,KCR,CLE,Royals at Guardians
+2022-04-04,CHW,KCR,White Sox at Royals
+2022-04-06,CHW,KCR,White Sox at Royals
+2022-04-07,CHW,KCR,White Sox at Royals
 2022-04-08,CLE,KCR,Guardians at Royals
 2022-04-09,CLE,KCR,Guardians at Royals
 2022-04-10,CLE,KCR,Guardians at Royals
@@ -707,6 +728,9 @@ START DATE,away,home,SUBJECT
 2022-09-27,CHW,MIN,White Sox at Twins
 2022-09-28,CHW,MIN,White Sox at Twins
 2022-09-29,CHW,MIN,White Sox at Twins
+2022-03-31,MIN,CHW,Twins at White Sox
+2022-04-02,MIN,CHW,Twins at White Sox
+2022-04-03,MIN,CHW,Twins at White Sox
 2022-04-12,SEA,CHW,Mariners at White Sox
 2022-04-13,SEA,CHW,Mariners at White Sox
 2022-04-14,SEA,CHW,Mariners at White Sox
@@ -866,6 +890,12 @@ START DATE,away,home,SUBJECT
 2022-09-30,TEX,LAA,Rangers at Angels
 2022-10-01,TEX,LAA,Rangers at Angels
 2022-10-02,TEX,LAA,Rangers at Angels
+2022-03-31,PHI,HOU,Phillies at Astros
+2022-04-02,PHI,HOU,Phillies at Astros
+2022-04-03,PHI,HOU,Phillies at Astros
+2022-04-04,NYY,HOU,Yankees at Astros
+2022-04-05,NYY,HOU,Yankees at Astros
+2022-04-06,NYY,HOU,Yankees at Astros
 2022-04-18,LAA,HOU,Angels at Astros
 2022-04-19,LAA,HOU,Angels at Astros
 2022-04-20,LAA,HOU,Angels at Astros
@@ -941,6 +971,13 @@ START DATE,away,home,SUBJECT
 2022-09-30,TBR,HOU,Rays at Astros
 2022-10-01,TBR,HOU,Rays at Astros
 2022-10-02,TBR,HOU,Rays at Astros
+2022-03-31,LAA,OAK,Angels at Athletics
+2022-04-01,LAA,OAK,Angels at Athletics
+2022-04-02,LAA,OAK,Angels at Athletics
+2022-04-03,LAA,OAK,Angels at Athletics
+2022-04-04,DET,OAK,Tigers at Athletics
+2022-04-05,DET,OAK,Tigers at Athletics
+2022-04-06,DET,OAK,Tigers at Athletics
 2022-04-18,BAL,OAK,Orioles at Athletics
 2022-04-19,BAL,OAK,Orioles at Athletics
 2022-04-20,BAL,OAK,Orioles at Athletics
@@ -1015,6 +1052,12 @@ START DATE,away,home,SUBJECT
 2022-09-23,NYM,OAK,Mets at Athletics
 2022-09-24,NYM,OAK,Mets at Athletics
 2022-09-25,NYM,OAK,Mets at Athletics
+2022-03-31,DET,SEA,Tigers at Mariners
+2022-04-01,DET,SEA,Tigers at Mariners
+2022-04-02,DET,SEA,Tigers at Mariners
+2022-04-03,DET,SEA,Tigers at Mariners
+2022-04-04,LAA,SEA,Angels at Mariners
+2022-04-05,LAA,SEA,Angels at Mariners
 2022-04-15,HOU,SEA,Astros at Mariners
 2022-04-16,HOU,SEA,Astros at Mariners
 2022-04-17,HOU,SEA,Astros at Mariners
@@ -1090,6 +1133,10 @@ START DATE,away,home,SUBJECT
 2022-09-30,OAK,SEA,Athletics at Mariners
 2022-10-01,OAK,SEA,Athletics at Mariners
 2022-10-02,OAK,SEA,Athletics at Mariners
+2022-03-31,NYY,TEX,Yankees at Rangers
+2022-04-01,NYY,TEX,Yankees at Rangers
+2022-04-02,NYY,TEX,Yankees at Rangers
+2022-04-03,NYY,TEX,Yankees at Rangers
 2022-04-11,COL,TEX,Rockies at Rangers
 2022-04-12,COL,TEX,Rockies at Rangers
 2022-04-14,LAA,TEX,Angels at Rangers
@@ -1248,6 +1295,13 @@ START DATE,away,home,SUBJECT
 2022-09-30,NYM,ATL,Mets at Braves
 2022-10-01,NYM,ATL,Mets at Braves
 2022-10-02,NYM,ATL,Mets at Braves
+2022-03-31,ATL,MIA,Braves at Marlins
+2022-04-01,ATL,MIA,Braves at Marlins
+2022-04-02,ATL,MIA,Braves at Marlins
+2022-04-03,ATL,MIA,Braves at Marlins
+2022-04-04,TEX,MIA,Rangers at Marlins
+2022-04-05,TEX,MIA,Rangers at Marlins
+2022-04-06,TEX,MIA,Rangers at Marlins
 2022-04-14,PHI,MIA,Phillies at Marlins
 2022-04-15,PHI,MIA,Phillies at Marlins
 2022-04-16,PHI,MIA,Phillies at Marlins
@@ -1322,6 +1376,11 @@ START DATE,away,home,SUBJECT
 2022-09-23,WSN,MIA,Nationals at Marlins
 2022-09-24,WSN,MIA,Nationals at Marlins
 2022-09-25,WSN,MIA,Nationals at Marlins
+2022-03-31,WSN,NYM,Nationals at Mets
+2022-04-02,WSN,NYM,Nationals at Mets
+2022-04-03,WSN,NYM,Nationals at Mets
+2022-04-04,ATL,NYM,Braves at Mets
+2022-04-05,ATL,NYM,Braves at Mets
 2022-04-15,ARI,NYM,D-backs at Mets
 2022-04-16,ARI,NYM,D-backs at Mets
 2022-04-17,ARI,NYM,D-backs at Mets
@@ -1398,6 +1457,8 @@ START DATE,away,home,SUBJECT
 2022-09-18,PIT,NYM,Pirates at Mets
 2022-09-27,MIA,NYM,Marlins at Mets
 2022-09-28,MIA,NYM,Marlins at Mets
+2022-04-04,PHI,WSN,Phillies at Nationals
+2022-04-06,PHI,WSN,Phillies at Nationals
 2022-04-07,NYM,WSN,Mets at Nationals
 2022-04-08,NYM,WSN,Mets at Nationals
 2022-04-09,NYM,WSN,Mets at Nationals
@@ -1558,6 +1619,12 @@ START DATE,away,home,SUBJECT
 2022-09-23,ATL,PHI,Braves at Phillies
 2022-09-24,ATL,PHI,Braves at Phillies
 2022-09-25,ATL,PHI,Braves at Phillies
+2022-03-31,ARI,MIL,D-backs at Brewers
+2022-04-01,ARI,MIL,D-backs at Brewers
+2022-04-02,ARI,MIL,D-backs at Brewers
+2022-04-04,SFG,MIL,Giants at Brewers
+2022-04-05,SFG,MIL,Giants at Brewers
+2022-04-06,SFG,MIL,Giants at Brewers
 2022-04-14,STL,MIL,Cardinals at Brewers
 2022-04-15,STL,MIL,Cardinals at Brewers
 2022-04-16,STL,MIL,Cardinals at Brewers
@@ -1714,6 +1781,8 @@ START DATE,away,home,SUBJECT
 2022-09-30,PIT,STL,Pirates at Cardinals
 2022-10-01,PIT,STL,Pirates at Cardinals
 2022-10-02,PIT,STL,Pirates at Cardinals
+2022-04-04,STL,CHC,Cardinals at Cubs
+2022-04-06,STL,CHC,Cardinals at Cubs
 2022-04-07,MIL,CHC,Brewers at Cubs
 2022-04-08,MIL,CHC,Brewers at Cubs
 2022-04-09,MIL,CHC,Brewers at Cubs
@@ -1793,6 +1862,9 @@ START DATE,away,home,SUBJECT
 2022-09-30,CIN,CHC,Reds at Cubs
 2022-10-01,CIN,CHC,Reds at Cubs
 2022-10-02,CIN,CHC,Reds at Cubs
+2022-03-31,STL,PIT,Cardinals at Pirates
+2022-04-02,STL,PIT,Cardinals at Pirates
+2022-04-03,STL,PIT,Cardinals at Pirates
 2022-04-12,CHC,PIT,Cubs at Pirates
 2022-04-13,CHC,PIT,Cubs at Pirates
 2022-04-14,WSN,PIT,Nationals at Pirates
@@ -1871,6 +1943,12 @@ START DATE,away,home,SUBJECT
 2022-09-26,CIN,PIT,Reds at Pirates
 2022-09-27,CIN,PIT,Reds at Pirates
 2022-09-28,CIN,PIT,Reds at Pirates
+2022-03-31,CHC,CIN,Cubs at Reds
+2022-04-02,CHC,CIN,Cubs at Reds
+2022-04-03,CHC,CIN,Cubs at Reds
+2022-04-04,PIT,CIN,Pirates at Reds
+2022-04-05,PIT,CIN,Pirates at Reds
+2022-04-06,PIT,CIN,Pirates at Reds
 2022-04-12,CLE,CIN,Guardians at Reds
 2022-04-13,CLE,CIN,Guardians at Reds
 2022-04-22,STL,CIN,Cardinals at Reds
@@ -1925,7 +2003,7 @@ START DATE,away,home,SUBJECT
 2022-07-29,BAL,CIN,Orioles at Reds
 2022-07-30,BAL,CIN,Orioles at Reds
 2022-07-31,BAL,CIN,Orioles at Reds
-2022-08-12,CHC,CIN,Cubs at Reds
+2022-08-11,CHC,CIN,Cubs at Reds
 2022-08-13,CHC,CIN,Cubs at Reds
 2022-08-14,CHC,CIN,Cubs at Reds
 2022-08-15,PHI,CIN,Phillies at Reds
@@ -2027,6 +2105,13 @@ START DATE,away,home,SUBJECT
 2022-09-23,SFG,ARI,Giants at D-backs
 2022-09-24,SFG,ARI,Giants at D-backs
 2022-09-25,SFG,ARI,Giants at D-backs
+2022-03-31,COL,LAD,Rockies at Dodgers
+2022-04-01,COL,LAD,Rockies at Dodgers
+2022-04-02,COL,LAD,Rockies at Dodgers
+2022-04-03,COL,LAD,Rockies at Dodgers
+2022-04-04,ARI,LAD,D-backs at Dodgers
+2022-04-05,ARI,LAD,D-backs at Dodgers
+2022-04-06,ARI,LAD,D-backs at Dodgers
 2022-04-14,CIN,LAD,Reds at Dodgers
 2022-04-15,CIN,LAD,Reds at Dodgers
 2022-04-16,CIN,LAD,Reds at Dodgers
@@ -2182,6 +2267,12 @@ START DATE,away,home,SUBJECT
 2022-09-30,ARI,SFG,D-backs at Giants
 2022-10-01,ARI,SFG,D-backs at Giants
 2022-10-02,ARI,SFG,D-backs at Giants
+2022-03-31,SFG,SDP,Giants at Padres
+2022-04-01,SFG,SDP,Giants at Padres
+2022-04-02,SFG,SDP,Giants at Padres
+2022-04-03,SFG,SDP,Giants at Padres
+2022-04-05,COL,SDP,Rockies at Padres
+2022-04-06,COL,SDP,Rockies at Padres
 2022-04-14,ATL,SDP,Braves at Padres
 2022-04-15,ATL,SDP,Braves at Padres
 2022-04-16,ATL,SDP,Braves at Padres

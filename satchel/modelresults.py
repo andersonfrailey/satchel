@@ -50,9 +50,13 @@ class SatchelResults:
         # self.ws_matchups = self._clean_matchup(self.playoff_matchups["World Series"])
 
         # summary stats
-        mean_wins = pd.DataFrame(self.results_df.groupby("Team")["wins"].mean())
+        mean_wins = pd.DataFrame(
+            self.results_df.groupby("Team")["wins"].mean().round(0).astype(int)
+        )
         mean_wins.columns = ["Mean Wins"]
-        mean_loss = pd.DataFrame(self.results_df.groupby("Team")["losses"].mean())
+        mean_loss = pd.DataFrame(
+            self.results_df.groupby("Team")["losses"].mean().round(0).astype(int)
+        )
         mean_loss.columns = ["Mean Losses"]
         max_wins = pd.DataFrame(self.results_df.groupby("Team")["wins"].max())
         max_wins.columns = ["Max Wins"]

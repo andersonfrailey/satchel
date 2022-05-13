@@ -2,7 +2,6 @@
 This moduel contains the heart of satchel. All of the season will be simulated
 from this main class
 """
-from pdb import Pdb
 import pandas as pd
 import numpy as np
 import difflib
@@ -74,7 +73,11 @@ class Satchel:
         self.talent, self.st_data = self._calculate_talent(transactions)
 
     def simulate(
-        self, n: int = 10000, noise: bool = True, quiet: bool = False
+        self,
+        n: int = 10000,
+        noise: bool = True,
+        playoff_func="twelve",
+        quiet: bool = False,
     ) -> SatchelResults:
         """Run a model simulation n times
 
@@ -111,9 +114,7 @@ class Satchel:
                 matchups,
                 noise,
                 full_season,
-            ) = self.simseason(
-                self.st_data,
-            )
+            ) = self.simseason(self.st_data, playoff_func=playoff_func)
             ws_counter.update([playoffs["ws"]])
             div_counter.update(div_winners["Team"])
             league_counter.update([playoffs["nl"]["cs"]])
@@ -145,7 +146,7 @@ class Satchel:
             self.seed,
         )
 
-    def simseason(self, data) -> tuple:
+    def simseason(self, data, playoff_func) -> tuple:
         """Run full simulation of a single season
 
         Parameters
@@ -205,24 +206,22 @@ class Satchel:
             div_winners,
             wc_winners,
             matchups,
-        ) = self.sim_playoff(results, _talent)
+        ) = self.sim_playoff(results, _talent, playoff_func=playoff_func)
         # column for season result
+        results["season_result"] = np.where(
+            results["Team"].isin(div_winners["Team"]),
+            "Division Champ",
+            np.where(
+                results["Team"].isin(wc_winners["Team"]), "Wild Card", "Missed Playoffs"
+            ),
+        )
+        results["season_result"] = np.where(
+            results["Team"].isin(cs_winners), "Win League", results["season_result"]
+        )
         results["season_result"] = np.where(
             results["Team"] == final_res["ws"],
             "Win World Series",
-            np.where(
-                results["Team"].isin(cs_winners),
-                "Win League",
-                np.where(
-                    results["Team"].isin(div_winners["Team"]),
-                    "Division Champ",
-                    np.where(
-                        results["Team"].isin(wc_winners["Team"]),
-                        "Wild Card",
-                        "Missed Playoff",
-                    ),
-                ),
-            ),
+            results["season_result"],
         )
         return results, final_res, div_winners, wc_winners, matchups, team_noise, data
 
