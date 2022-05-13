@@ -5,8 +5,6 @@ from this main class
 import pandas as pd
 import numpy as np
 import difflib
-
-from soupsieve import match
 from . import constants
 from .modelresults import SatchelResults
 from collections import Counter
