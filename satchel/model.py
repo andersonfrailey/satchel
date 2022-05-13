@@ -8,9 +8,8 @@ import difflib
 from . import constants
 from .modelresults import SatchelResults
 from collections import Counter
-from functools import reduce
 from pathlib import Path
-from typing import Callable
+from typing import Union
 from tqdm import tqdm
 from datetime import datetime
 
@@ -31,6 +30,7 @@ class Satchel:
         zips_p_wt: float = 0.5,
         steamer_b_wt: float = 0.5,
         zips_b_wt: float = 0.5,
+        schedule: Union[Path, str] = SCHEDUEL_PATH,
     ):
         """Main model class
 
@@ -50,12 +50,14 @@ class Satchel:
             Weight placed on steamer batter projections
         zips_b_wt: float, optional
             Weight placed on ZIPs batter projections
+        schedule: Path, str, optional
+            Path to a CSV with the season schedule
         """
         if talent_measure.lower() not in ["median", "mean"]:
             raise ValueError("`talent_measure` must be median or mean")
         self.talent_measure = talent_measure
         self.transactions = transactions
-        self.schedule = pd.read_csv(SCHEDUEL_PATH)
+        self.schedule = pd.read_csv(schedule)
         self.schedule["START DATE"] = pd.to_datetime(self.schedule["START DATE"])
         self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
@@ -69,7 +71,11 @@ class Satchel:
         self.talent, self.st_data = self._calculate_talent(transactions)
 
     def simulate(
-        self, n: int = 10000, noise: bool = True, quiet: bool = False
+        self,
+        n: int = 10000,
+        noise: bool = True,
+        playoff_func="twelve",
+        quiet: bool = False,
     ) -> SatchelResults:
         """Run a model simulation n times
 
@@ -106,9 +112,7 @@ class Satchel:
                 matchups,
                 noise,
                 full_season,
-            ) = self.simseason(
-                self.st_data,
-            )
+            ) = self.simseason(self.st_data, playoff_func=playoff_func)
             ws_counter.update([playoffs["ws"]])
             div_counter.update(div_winners["Team"])
             league_counter.update([playoffs["nl"]["cs"]])
@@ -140,7 +144,7 @@ class Satchel:
             self.seed,
         )
 
-    def simseason(self, data) -> tuple:
+    def simseason(self, data, playoff_func) -> tuple:
         """Run full simulation of a single season
 
         Parameters
@@ -200,99 +204,77 @@ class Satchel:
             div_winners,
             wc_winners,
             matchups,
-        ) = self.standard_playoff(results, _talent)
+        ) = self.sim_playoff(results, _talent, playoff_func=playoff_func)
         # column for season result
+        results["season_result"] = np.where(
+            results["Team"].isin(div_winners["Team"]),
+            "Division Champ",
+            np.where(
+                results["Team"].isin(wc_winners["Team"]), "Wild Card", "Missed Playoffs"
+            ),
+        )
+        results["season_result"] = np.where(
+            results["Team"].isin(cs_winners), "Win League", results["season_result"]
+        )
         results["season_result"] = np.where(
             results["Team"] == final_res["ws"],
             "Win World Series",
-            np.where(
-                results["Team"].isin(cs_winners),
-                "Win League",
-                np.where(
-                    results["Team"].isin(div_winners["Team"]),
-                    "Division Champ",
-                    np.where(
-                        results["Team"].isin(wc_winners["Team"]),
-                        "Wild Card",
-                        "Missed Playoff",
-                    ),
-                ),
-            ),
+            results["season_result"],
         )
         return results, final_res, div_winners, wc_winners, matchups, team_noise, data
 
-    def standard_playoff(self, results, talent, n_divwinners=1, n_wildcard=2):
-        def sim_round(teams, talent, n_games):
-            """
-            Simulate a playoff round with n_games
-            """
-            team1 = 0
-            team2 = 0
-            team1_win_prob = np.exp(talent[teams[0]]["final_talent"]) / (
-                np.exp(talent[teams[0]]["final_talent"])
-                + np.exp(talent[teams[1]]["final_talent"])
-            )
-            for _ in range(n_games):
-                prob = self.random.random()
-                if team1_win_prob >= prob:
-                    team1 += 1
-                    continue
-                team2 += 1
-            if team1 > team2:
-                return teams[0]
-            return teams[1]
+    def sim_playoff(
+        self, results, talent, n_divwinners=1, n_wildcard=3, playoff_func="twelve"
+    ):
+        """Run the playoff simulation.
 
-        def league_sim(wc_winners, div_winners, talent, league, matchups):
-            """
-            Simulate a leagues half of the postseason
-            """
-            # sort and join the teams so that all match ups count the same
-            wc = "-".join(
-                sorted([wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]])
-            )
-            matchups[f"{league} Wild Card"] = wc
-            wc_winner = sim_round(
-                [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]], talent, 1
-            )
-            matchups[f"{league} WC Champ"] = wc_winner
-            ds1 = "-".join(sorted([wc_winner, div_winners["Team"].iloc[0]]))
-            matchups[f"{league}DS 1"] = ds1
-            div_rd1 = sim_round([wc_winner, div_winners["Team"].iloc[0]], talent, 5)
-            matchups[f"{league}DS 1 Champ"] = div_rd1
-            ds2 = "-".join(
-                sorted([div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]])
-            )
-            matchups[f"{league}DS 2"] = ds2
-            div_rd2 = sim_round(
-                [div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]], talent, 5
-            )
-            matchups[f"{league}DS 2 Champ"] = div_rd2
-            matchups[f"{league}CS"] = "-".join(sorted([div_rd1, div_rd2]))
-            cs = sim_round([div_rd1, div_rd2], talent, 7)
-            matchups[f"{league} Champ"] = cs
-            return (
-                {"wc": wc_winner, "div_rd1": div_rd1, "div_rd2": div_rd2, "cs": cs},
-                matchups,
-            )
+        Parameters
+        ----------
+        results : pd.DataFrame
+            DataFrame with the results of the regular season
+        talent : pd.DataFrame
+            DataFrame with the team talent for the season
+        n_divwinners : int, optional
+            number of division winners, by default 1
+        n_wildcard : int, optional
+            Number of wild card winners, by default 2
+        playoff_func: str, optional
+            String to indicate which play off function is used. Right now must
+            be either 'twelve' for a 12 team playoff, or 'ten' for 10 team.
 
-        div_winners = results.groupby(["league", "division"]).apply(
-            pd.DataFrame.nlargest, n=n_divwinners, columns="wins"
+        Returns
+        -------
+        tuple
+            Tuple with league results, leage champions, division and wild card
+            winners, and all of the post season matchups
+        """
+
+        div_winners = (
+            results.groupby(["league", "division"])
+            .apply(pd.DataFrame.nlargest, n=n_divwinners, columns="wins")
+            .sort_values("wins", ascending=False)
         )
         # take out division winners and pull the top remaining teams 4 wild card
         wc = results[~results["Team"].isin(div_winners["Team"])]
-        wc_winners = wc.groupby("league").apply(
-            pd.DataFrame.nlargest, n=n_wildcard, columns="wins"
+        wc_winners = (
+            wc.groupby("league")
+            .apply(pd.DataFrame.nlargest, n=n_wildcard, columns="wins")
+            .sort_values("wins", ascending=False)
         )
+        # determine which playoff format will be used
+        _playoff_func = self._twelve_team_playoff
+        if playoff_func == "ten":
+            _playoff_func = self._ten_team_playoff
         # simulate all the rounds
-        nlres, matchups = league_sim(
+        nlres, matchups = _playoff_func(
             wc_winners.loc["NL"], div_winners.loc["NL"], talent, "NL", {}
         )
-        alres, matchups = league_sim(
+        alres, matchups = _playoff_func(
             wc_winners.loc["AL"], div_winners.loc["AL"], talent, "AL", matchups
         )
         # world series winner
         matchups["World Series"] = "-".join(sorted([nlres["cs"], alres["cs"]]))
-        champ = sim_round([nlres["cs"], alres["cs"]], talent, 7)
+        champ = self._sim_round([nlres["cs"], alres["cs"]], talent, 7)
         matchups["WS Winner"] = champ
         return (
             {"nl": nlres, "al": alres, "ws": champ},
@@ -488,3 +470,117 @@ class Satchel:
         talent = talent.merge(finaldf, on="Team")
 
         return talent
+
+    def _sim_round(self, teams, talent, n_games):
+        """
+        Simulate a playoff round with n_games
+        """
+        team1 = 0
+        team2 = 0
+        team1_win_prob = np.exp(talent[teams[0]]["final_talent"]) / (
+            np.exp(talent[teams[0]]["final_talent"])
+            + np.exp(talent[teams[1]]["final_talent"])
+        )
+        for _ in range(n_games):
+            prob = self.random.random()
+            if team1_win_prob >= prob:
+                team1 += 1
+                continue
+            team2 += 1
+        if team1 > team2:
+            return teams[0]
+        return teams[1]
+
+    # playoff round functions
+    def _ten_team_playoff(self, wc_winners, div_winners, talent, league, matchups):
+        """
+        Simulate a ten team post season
+        """
+        # sort and join the teams so that all match ups count the same
+        wc = "-".join(sorted([wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]]))
+        matchups[f"{league} Wild Card"] = wc
+        wc_winner = self._sim_round(
+            [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]], talent, 1
+        )
+        matchups[f"{league} WC Champ"] = wc_winner
+        ds1 = "-".join(sorted([wc_winner, div_winners["Team"].iloc[0]]))
+        matchups[f"{league}DS 1"] = ds1
+        div_rd1 = self._sim_round([wc_winner, div_winners["Team"].iloc[0]], talent, 5)
+        matchups[f"{league}DS 1 Champ"] = div_rd1
+        ds2 = "-".join(
+            sorted([div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]])
+        )
+        matchups[f"{league}DS 2"] = ds2
+        div_rd2 = self._sim_round(
+            [div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]], talent, 5
+        )
+        matchups[f"{league}DS 2 Champ"] = div_rd2
+        matchups[f"{league}CS"] = "-".join(sorted([div_rd1, div_rd2]))
+        cs = self._sim_round([div_rd1, div_rd2], talent, 7)
+        matchups[f"{league} Champ"] = cs
+        return (
+            {"wc": wc_winner, "div_rd1": div_rd1, "div_rd2": div_rd2, "cs": cs},
+            matchups,
+        )
+
+    def _twelve_team_playoff(self, wc_winners, div_winners, talent, league, matchups):
+        """
+        12 team playoff with the following bracket in each league:
+        Round 1:
+            - Top two division winners have a bye
+            - Third division winner plays the lowest ranked wild card winner (1)
+            - Top two wild card winners play each other (2)
+        Round 2:
+            - Top seed plays the winner of match up (1)
+            - Second seed plays the winner of match up (2)
+        Round 3:
+            - The winners of the above round play each other
+        """
+        # Round 1
+        # top two wild card seeds
+        wc1 = "-".join(sorted([wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]]))
+        matchups[f"{league} Wild Card 1"] = wc1
+        wc1_winner = self._sim_round(
+            [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]], talent, 3
+        )
+        matchups[f"{league} WC 1 Champ"] = wc1_winner
+        # bottom wild card seed and bottom division winner
+        wc2 = "-".join(
+            sorted([wc_winners["Team"].iloc[2], div_winners["Team"].iloc[2]])
+        )
+        matchups[f"{league} Wild Card 2"] = wc2
+        wc2_winner = self._sim_round(
+            [wc_winners["Team"].iloc[2], div_winners["Team"].iloc[2]], talent, 3
+        )
+        matchups[f"WC 2 Champ"] = wc2_winner
+        # Round 2
+        # top seeded division winner vs. WC 1 winner
+        div1 = "-".join(sorted([wc1_winner, div_winners["Team"].iloc[0]]))
+        matchups[f"{league}DS 1"] = div1
+        div1_winner = self._sim_round(
+            [wc1_winner, div_winners["Team"].iloc[0]], talent, 7
+        )
+        matchups[f"{league}DS 1 Champ"] = div1_winner
+        # second seed division winner vs. WC 2 winner
+        div2 = "-".join(sorted([wc2_winner, div_winners["Team"].iloc[1]]))
+        matchups[f"{league}DS 2"] = div2
+        div2_winner = self._sim_round(
+            [wc2_winner, div_winners["Team"].iloc[1]], talent, 7
+        )
+        matchups[f"{league}DS 2 Champ"] = div2_winner
+        # Round 3
+        # league championship
+        matchups[f"{league}CS"] = "-".join(sorted([div1_winner, div2_winner]))
+        cs = self._sim_round([div1_winner, div2_winner], talent, 7)
+        matchups[f"{league} Champ"] = cs
+
+        return (
+            {
+                "wc1": wc1_winner,
+                "wc2": wc2_winner,
+                "div_rd1": div1_winner,
+                "div_rd2": div2_winner,
+                "cs": cs,
+            },
+            matchups,
+        )
