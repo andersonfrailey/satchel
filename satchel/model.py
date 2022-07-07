@@ -2,11 +2,12 @@
 This moduel contains the heart of satchel. All of the season will be simulated
 from this main class
 """
-import pdb
 import pandas as pd
 import numpy as np
 import difflib
+import warnings
 from . import constants
+from .schedules.cache.clear_cache import clear_cache
 from .modelresults import SatchelResults
 from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR
 from collections import Counter
@@ -15,6 +16,7 @@ from typing import Union
 from tqdm import tqdm
 from datetime import datetime
 from pybaseball import standings
+from io import StringIO
 
 
 CUR_PATH = Path(__file__).resolve().parent
@@ -40,6 +42,7 @@ class Satchel:
         pitcher_proj: Union[Path, str] = PITCHER_PROJ,
         batter_proj: Union[Path, str] = BATTER_PROJ,
         use_current_standings: bool = True,
+        cache: bool = True,
     ):
         """
         Main model class
@@ -76,6 +79,8 @@ class Satchel:
             If true, Satchel will simulate the season from today's date and add
             those results to each team's current record. If false, Satchel will
             simulate the full season using the provided schedule
+        cache: bool, optional
+            If true, the new scheudle generated will be cached
         """
         if talent_measure.lower() not in ["median", "mean"]:
             raise ValueError("`talent_measure` must be median or mean")
@@ -84,17 +89,41 @@ class Satchel:
 
         # if it's before opening day, create the schedule from file. If after,
         # pull the team's current record, then fetch the rest from MLB.com
+        # unless the user specifies that they don't want to
+        if schedule != SCHEDUEL_PATH and use_current_standings:
+            warnings.warn(
+                (
+                    "You have provided a path to a schedule but left"
+                    " `use_current_standings` = True. As a result, the provided"
+                    " schedule will be ignored. To fix this error, set"
+                    " `use_current_standings`=False"
+                )
+            )
         today = datetime.today()
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
+        self.midseason = use_current_standings
         if today > opening_day and use_current_standings:
-            print("Creating new schedule...")
-            self.midseason = True  # flag to be used later
-            self.schedule = create_schedule(
-                year=today.year, start_date=today.strftime("%m%d"), write=False
+            # fetch the remaining schedule if it isn't cached
+            fmt = "%d%m%Y"
+            schedule = Path(
+                CUR_PATH, "schedules", "cache", f"schedule{today.strftime(fmt)}.csv"
             )
-        else:
-            self.midseason = False
-            self.schedule = pd.read_csv(schedule)
+            if not schedule.exists():
+                clear_cache()  # remove the schedules from previous days
+                _return_schedule = False
+                if not cache:
+                    schedule = None
+                    _return_schedule = True
+                print("Creating new schedule...")
+                sched = create_schedule(
+                    year=today.year,
+                    start_date=today.strftime("%m%d"),
+                    outfile=schedule,
+                    _return=_return_schedule,
+                )
+                if not cache:
+                    schedule = StringIO(sched.to_csv(index=False))
+        self.schedule = pd.read_csv(schedule)
         self.schedule["START DATE"] = pd.to_datetime(self.schedule["START DATE"])
 
         self.teams = constants.DIVS.keys()

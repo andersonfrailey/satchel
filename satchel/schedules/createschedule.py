@@ -95,7 +95,8 @@ ID_MAP = {
 def create_schedule(
     year: int = YEAR,
     start_date: str = OPENING_DAY,
-    write: bool = False,
+    outfile: str = "",
+    _return: bool = True,
     verbose: bool = False,
 ):
     def process(_id, team, year, start_date, verbose=False):
@@ -119,11 +120,17 @@ def create_schedule(
         process(_id, team, year, start_date, verbose) for _id, team in ID_MAP.items()
     ]
     final_sched = pd.concat(dfs)
-    if write:
-        final_sched.to_csv(f"schedule{YEAR}.csv", index=False)
-    else:
+    if outfile:
+        final_sched.to_csv(outfile, index=False)
+    if _return:
         return final_sched
 
 
 if __name__ == "__main__":
-    create_schedule(year=YEAR, start_date=OPENING_DAY, write=True, verbose=True)
+    create_schedule(
+        year=YEAR,
+        start_date=OPENING_DAY,
+        outfile=Path(CUR_PATH, f"schedule{YEAR}.csv"),
+        _return=False,
+        verbose=True,
+    )
