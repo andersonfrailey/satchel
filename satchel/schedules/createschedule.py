@@ -5,6 +5,7 @@ NOTE: only put the CSV versions of each team's home schedule in their year
 folder
 """
 import time
+from tracemalloc import start
 import pandas as pd
 from datetime import datetime
 from pathlib import Path
@@ -20,7 +21,7 @@ BASE_URL = (
     "GameTicketPromotionPrice.tiksrv?team_id={team}&home_team_id={team}&"
     "display_in=singlegame&ticket_category=Tickets&site_section=Default&"
     "sub_category=Default&leave_empty_games=true&event_type=T&year="
-    "{year}&begin_date={year}{opener}"
+    "{year}&begin_date={year}{start_date}"
 )
 
 NAME_MAP = {
@@ -91,11 +92,17 @@ ID_MAP = {
 }
 
 
-def main():
-    def process(_id, team):
-        print(team)
+def create_schedule(
+    year: int = YEAR,
+    start_date: str = OPENING_DAY,
+    write: bool = False,
+    verbose: bool = False,
+):
+    def process(_id, team, year, start_date, verbose=False):
+        if verbose:
+            print(team)
         sched = pd.read_csv(
-            BASE_URL.format(year=YEAR, opener=OPENING_DAY, team=_id),
+            BASE_URL.format(year=year, start_date=start_date, team=_id),
             usecols=["START DATE", "SUBJECT"],
         )
         sched["START DATE"] = pd.to_datetime(sched["START DATE"])
@@ -108,10 +115,15 @@ def main():
         time.sleep(1)
         return sched[["START DATE", "away", "home", "SUBJECT"]]
 
-    dfs = [process(_id, team) for _id, team in ID_MAP.items()]
+    dfs = [
+        process(_id, team, year, start_date, verbose) for _id, team in ID_MAP.items()
+    ]
     final_sched = pd.concat(dfs)
-    final_sched.to_csv(f"schedule{YEAR}.csv", index=False)
+    if write:
+        final_sched.to_csv(f"schedule{YEAR}.csv", index=False)
+    else:
+        return final_sched
 
 
 if __name__ == "__main__":
-    main()
+    create_schedule(year=YEAR, start_date=OPENING_DAY, write=True, verbose=True)

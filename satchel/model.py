@@ -7,6 +7,7 @@ import numpy as np
 import difflib
 from . import constants
 from .modelresults import SatchelResults
+from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR
 from collections import Counter
 from pathlib import Path
 from typing import Union
@@ -17,6 +18,9 @@ from datetime import datetime
 CUR_PATH = Path(__file__).resolve().parent
 DATA_PATH = Path(CUR_PATH, "data")
 SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2022.csv")
+# projections for pitchers and batters
+PITCHER_PROJ = Path(DATA_PATH, "pitcherprojections.csv")
+BATTER_PROJ = Path(DATA_PATH, "batterprojections.csv")
 
 
 class Satchel:
@@ -31,6 +35,8 @@ class Satchel:
         steamer_b_wt: float = 0.5,
         zips_b_wt: float = 0.5,
         schedule: Union[Path, str] = SCHEDUEL_PATH,
+        pitcher_proj: Union[Path, str] = PITCHER_PROJ,
+        batter_proj: Union[Path, str] = BATTER_PROJ,
     ):
         """Main model class
 
@@ -57,8 +63,21 @@ class Satchel:
             raise ValueError("`talent_measure` must be median or mean")
         self.talent_measure = talent_measure
         self.transactions = transactions
-        self.schedule = pd.read_csv(schedule)
+
+        # if it's before opening day, create the schedule from file. If after,
+        # pull the team's current record, then fetch the rest from MLB.com
+        today = datetime.today()
+        opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
+        if today > opening_day:
+            self.midseason = True  # flag to be used later
+            self.schedule = create_schedule(
+                year=today.year, start_date=today.strftime("%m%d"), write=False
+            )
+        else:
+            self.midseason = False
+            self.schedule = pd.read_csv(schedule)
         self.schedule["START DATE"] = pd.to_datetime(self.schedule["START DATE"])
+
         self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
         self.noise = noise
@@ -67,6 +86,14 @@ class Satchel:
         self.zips_p_wt = zips_p_wt
         self.steamer_b_wt = steamer_b_wt
         self.zips_b_wt = zips_b_wt
+
+        self.pitch_proj = pd.read_csv(pitcher_proj)
+        self.pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
+        self.pitch_proj.set_index("playerid", inplace=True)
+
+        self.batter_proj = pd.read_csv(batter_proj)
+        self.batter_proj.rename(columns={"WAR": "WAR_B"}, inplace=True)
+        self.batter_proj.set_index("playerid", inplace=True)
 
         self.talent, self.st_data = self._calculate_talent(transactions)
 
@@ -337,17 +364,9 @@ class Satchel:
         pd.DataFrame
             DataFrame containing talent levels for each team.
         """
-        pitch_proj = pd.read_csv(Path(DATA_PATH, "pitcherprojections.csv"))
-        pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
-        pitch_proj.set_index("playerid", inplace=True)
-
-        batter_proj = pd.read_csv(Path(DATA_PATH, "batterprojections.csv"))
-        batter_proj.rename(columns={"WAR": "WAR_B"}, inplace=True)
-        batter_proj.set_index("playerid", inplace=True)
-
         # group all of the WAR projections by team and add them
-        pwar_proj = pitch_proj.groupby("Team")["WAR_P"].sum()
-        bwar_proj = batter_proj.groupby("Team")["WAR_B"].sum()
+        pwar_proj = self.pitch_proj.groupby("Team")["WAR_P"].sum()
+        bwar_proj = self.batter_proj.groupby("Team")["WAR_B"].sum()
 
         talent = pd.concat([bwar_proj, pwar_proj], axis=1)
         # allow users to place more weight on pitchers or hitters, equally
@@ -385,7 +404,7 @@ class Satchel:
         # conduct transactions
         if transactions:
             talent = self._conduct_transactions(
-                pitch_proj, batter_proj, transactions, st_data, talent
+                self.pitch_proj, self.batter_proj, transactions, st_data, talent
             )
             talent["final_talent"] = talent["final_total"] / league_base - 1
         else:
