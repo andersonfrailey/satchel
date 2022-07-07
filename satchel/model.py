@@ -2,6 +2,7 @@
 This moduel contains the heart of satchel. All of the season will be simulated
 from this main class
 """
+import pdb
 import pandas as pd
 import numpy as np
 import difflib
@@ -13,6 +14,7 @@ from pathlib import Path
 from typing import Union
 from tqdm import tqdm
 from datetime import datetime
+from pybaseball import standings
 
 
 CUR_PATH = Path(__file__).resolve().parent
@@ -37,15 +39,23 @@ class Satchel:
         schedule: Union[Path, str] = SCHEDUEL_PATH,
         pitcher_proj: Union[Path, str] = PITCHER_PROJ,
         batter_proj: Union[Path, str] = BATTER_PROJ,
+        use_current_standings: bool = True,
     ):
-        """Main model class
+        """
+        Main model class
 
         Parameters
         ----------
-        n : int, optional
-            number of times to run the simulation, by default 10000
-        playoffs : function, optional
-            function used to simulate the playoffs, by default standard_playoff
+        talent_measure: str
+            "mean" or "median". Each team's total WAR will be compared to the
+            league's `talent_measure` to determine their talent value
+        transactions: dict
+            Dictionary containing any transactions to include in the simulation.
+            The format of the dictionary should be:
+            {`player_fangraphs_id`: {"team": `new_team`, "date": `effective_date`}}
+        noise: bool
+            If true, random noise will be added to each team's talent measure
+            during the simulation
         seed : int, float, optional
             seed used for random draws, by default None
         steamer_p_wt: float, optional
@@ -58,6 +68,14 @@ class Satchel:
             Weight placed on ZIPs batter projections
         schedule: Path, str, optional
             Path to a CSV with the season schedule
+        pitcher_proj: Path, str, optional
+            Path to a CSV with pitcher WAR projections suitable for Satchel
+        batter_proj: Path, str, optional
+            Path to a CSV with batter WAR projections suitable for Satchel
+        use_current_standings: bool, optional
+            If true, Satchel will simulate the season from today's date and add
+            those results to each team's current record. If false, Satchel will
+            simulate the full season using the provided schedule
         """
         if talent_measure.lower() not in ["median", "mean"]:
             raise ValueError("`talent_measure` must be median or mean")
@@ -68,7 +86,8 @@ class Satchel:
         # pull the team's current record, then fetch the rest from MLB.com
         today = datetime.today()
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
-        if today > opening_day:
+        if today > opening_day and use_current_standings:
+            print("Creating new schedule...")
             self.midseason = True  # flag to be used later
             self.schedule = create_schedule(
                 year=today.year, start_date=today.strftime("%m%d"), write=False
@@ -130,6 +149,15 @@ class Satchel:
         all_matchups = []
         all_noise = []  # the talent noise for a given team in a season
         full_seasons = []  # hold all of the results for each season
+
+        current_standings = None
+        if self.midseason:
+            current_standings = pd.concat(standings(YEAR))
+            current_standings["index"] = current_standings["Tm"].map(
+                constants.NAME_TO_ABBR
+            )
+            current_standings["W"] = current_standings["W"].astype(int)
+            current_standings["L"] = current_standings["L"].astype(int)
         for i in tqdm(range(n), disable=quiet):
             (
                 results,
@@ -139,7 +167,11 @@ class Satchel:
                 matchups,
                 noise,
                 full_season,
-            ) = self.simseason(self.st_data, playoff_func=playoff_func)
+            ) = self.simseason(
+                self.st_data,
+                playoff_func=playoff_func,
+                current_standings=current_standings,
+            )
             ws_counter.update([playoffs["ws"]])
             div_counter.update(div_winners["Team"])
             league_counter.update([playoffs["nl"]["cs"]])
@@ -171,7 +203,7 @@ class Satchel:
             self.seed,
         )
 
-    def simseason(self, data, playoff_func) -> tuple:
+    def simseason(self, data, playoff_func, current_standings=None) -> tuple:
         """Run full simulation of a single season
 
         Parameters
@@ -217,6 +249,12 @@ class Satchel:
         losses = loser.value_counts().reset_index()
         # ensure that teams will always be in the same order
         results = pd.merge(wins, losses, on="index")
+        # merge on season-to-date results
+        if isinstance(current_standings, pd.DataFrame):
+            results = results.merge(current_standings, on="index")
+            results["wins"] += results["W"]
+            results["losses"] += results["L"]
+            results = results.filter(["index", "wins", "losses"], axis="columns")
         results = results.sort_values(
             ["wins", "index"], ascending=False, kind="mergesort"
         )
