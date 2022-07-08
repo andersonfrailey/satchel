@@ -9,13 +9,13 @@ import warnings
 from . import constants
 from .schedules.cache.clear_cache import clear_cache
 from .modelresults import SatchelResults
-from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR
+from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR, FINAL_DAY
 from collections import Counter
 from pathlib import Path
 from typing import Union
 from tqdm import tqdm
 from datetime import datetime
-from pybaseball import standings
+from pybaseball import standings, batting_stats, pitching_stats
 from io import StringIO
 
 
@@ -41,7 +41,7 @@ class Satchel:
         schedule: Union[Path, str] = SCHEDUEL_PATH,
         pitcher_proj: Union[Path, str] = PITCHER_PROJ,
         batter_proj: Union[Path, str] = BATTER_PROJ,
-        use_current_standings: bool = True,
+        use_current_results: bool = True,
         cache: bool = True,
     ):
         """
@@ -75,10 +75,12 @@ class Satchel:
             Path to a CSV with pitcher WAR projections suitable for Satchel
         batter_proj: Path, str, optional
             Path to a CSV with batter WAR projections suitable for Satchel
-        use_current_standings: bool, optional
+        use_current_results: bool, optional
             If true, Satchel will simulate the season from today's date and add
-            those results to each team's current record. If false, Satchel will
-            simulate the full season using the provided schedule
+            those results to each team's current record. This includes using
+            both the team's records and the player's stats on the season in the
+            talent calculations. If false, Satchel will simulate the full
+            season using the provided schedule and pre-season projections
         cache: bool, optional
             If true, the new scheudle generated will be cached
         """
@@ -90,19 +92,19 @@ class Satchel:
         # if it's before opening day, create the schedule from file. If after,
         # pull the team's current record, then fetch the rest from MLB.com
         # unless the user specifies that they don't want to
-        if schedule != SCHEDUEL_PATH and use_current_standings:
+        if schedule != SCHEDUEL_PATH and use_current_results:
             warnings.warn(
                 (
                     "You have provided a path to a schedule but left"
-                    " `use_current_standings` = True. As a result, the provided"
+                    " `use_current_results` = True. As a result, the provided"
                     " schedule will be ignored. To fix this error, set"
-                    " `use_current_standings`=False"
+                    " `use_current_results`=False"
                 )
             )
         today = datetime.today()
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
-        self.midseason = use_current_standings
-        if today > opening_day and use_current_standings:
+        self.midseason = use_current_results
+        if today > opening_day and use_current_results:
             # fetch the remaining schedule if it isn't cached
             fmt = "%d%m%Y"
             schedule = Path(
@@ -136,10 +138,20 @@ class Satchel:
         self.zips_b_wt = zips_b_wt
 
         self.pitch_proj = pd.read_csv(pitcher_proj)
+        self.batter_proj = pd.read_csv(batter_proj)
+
+        if use_current_results:
+            # update talent to include what the players
+            batter_stats = batting_stats(YEAR)
+            pitcher_stats = pitching_stats(YEAR)
+            batter_stats["playerid"] = batter_stats["IDfg"].astype(str)
+            pitcher_stats["playerid"] = pitcher_stats["IDfg"].astype(str)
+            stats_cols = ["playerid", "WAR"]
+            self._prep_talent_data(batter_stats[stats_cols], pitcher_stats[stats_cols])
+            del batter_stats, pitcher_stats
         self.pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
         self.pitch_proj.set_index("playerid", inplace=True)
 
-        self.batter_proj = pd.read_csv(batter_proj)
         self.batter_proj.rename(columns={"WAR": "WAR_B"}, inplace=True)
         self.batter_proj.set_index("playerid", inplace=True)
 
@@ -670,3 +682,30 @@ class Satchel:
             },
             matchups,
         )
+
+    def _prep_talent_data(self, batter_stats, pitcher_stats):
+        def process(data, stats, remaining):
+            _data = pd.merge(
+                data, stats, on="playerid", suffixes=["_proj", "_cur"], how="outer"
+            )
+            # some players may be in the projections, but not the current data
+            # or vice versa. For these cases, replace missing values with the
+            # value we do have
+            _data["WAR_cur"].fillna(_data["WAR_proj"], inplace=True)
+            _data["WAR_proj"].fillna(_data["WAR_cur"], inplace=True)
+            _data["WAR"] = (_data["WAR_proj"] * (remaining)) + _data["WAR_cur"]
+            return _data
+
+        # calculate how much of the season has been played. This fraction will
+        # be used to weight the projections and current results when getting
+        # final WAR used in the talent calculations
+        opener = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
+        final = datetime.strptime(FINAL_DAY, "%m/%d/%Y")
+        n_days = (final - opener).days  # total number of days in the season
+        remaining_days = (final - datetime.today()).days
+        remaining = remaining_days / n_days
+
+        _batter = process(self.batter_proj, batter_stats, remaining)
+        _pitcher = process(self.pitch_proj, pitcher_stats, remaining)
+        self.batter_proj = _batter.drop(columns=["WAR_proj", "WAR_cur"])
+        self.pitch_proj = _pitcher.drop(columns=["WAR_proj", "WAR_cur"])

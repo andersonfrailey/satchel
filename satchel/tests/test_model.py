@@ -14,7 +14,7 @@ def test_model(curpath, schedule2021, batter_projections, pitcher_projections):
     mod = Satchel(
         seed=123,
         schedule=schedule2021,
-        use_current_standings=False,
+        use_current_results=False,
         batter_proj=batter_projections,
         pitcher_proj=pitcher_projections,
     )
@@ -31,7 +31,7 @@ def test_transaction(
         seed=123,
         transactions=transaction,
         schedule=schedule2021,
-        use_current_standings=False,
+        use_current_results=False,
         batter_proj=batter_projections,
         pitcher_proj=pitcher_projections,
     )
