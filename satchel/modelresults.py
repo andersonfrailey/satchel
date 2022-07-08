@@ -1,9 +1,9 @@
-from nis import match
-from matplotlib.pyplot import get
 import pandas as pd
 from dataclasses import dataclass
 from collections import Counter
 from typing import Union
+from pybaseball import standings
+from .schedules.createschedule import YEAR
 from . import plotting
 from . import constants
 
@@ -147,6 +147,51 @@ class SatchelResults:
         """
         subresults = self.results_df[self.results_df["Team"] == team]
         return (subresults["wins"] < wins).sum() / subresults.shape[0]
+
+    def season_to_date(self):
+        """
+        Create a table showing results to date and the remaining season projected
+
+        Returns
+        -------
+        pd.DataFrame
+            Table with record to date and final projections
+        """
+        midseason = pd.concat(standings(YEAR))
+        midseason["Team"] = midseason["Tm"].map(constants.NAME_TO_ABBR)
+        midseason["W"] = midseason["W"].astype(int)
+        midseason["L"] = midseason["L"].astype(int)
+        final = pd.merge(
+            midseason,
+            self.season_summary[["Team", "Mean Wins", "Mean Losses"]],
+            on=["Team"],
+        )
+        final.rename(
+            columns={
+                "W": "Wins to Date",
+                "L": "Losses to Date",
+                "Mean Wins": "Projected Wins",
+                "Mean Losses": "Projected Losses",
+            },
+            inplace=True,
+        )
+        final["Wins RoS"] = final["Projected Wins"] - final["Wins to Date"]
+        final["Losses RoS"] = final["Projected Losses"] - final["Losses to Date"]
+        final_cols = [
+            "Team",
+            "Wins to Date",
+            "Losses to Date",
+            "Wins RoS",
+            "Losses RoS",
+            "Projected Wins",
+            "Projected Losses",
+        ]
+
+        return (
+            final[final_cols]
+            .sort_values("Projected Wins", ascending=False)
+            .reset_index(drop=True)
+        )
 
     ####### Private methods #######
 
