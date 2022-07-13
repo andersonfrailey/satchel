@@ -62,6 +62,20 @@ class SatchelComparison:
         divpct = self.season_summary["Win Division (%)"].loc[team]
         meanwins = self.season_summary["Mean Wins"].loc[team]
 
+        # get new values of the variables
+        wspct_res2 = self.res2.season_summary["Win WS (%)"][
+            self.res2.season_summary["Team"] == team
+        ].values[0]
+        playoffpct_res2 = self.res2.season_summary["Make Playoffs (%)"][
+            self.res2.season_summary["Team"] == team
+        ].values[0]
+        divpct_res2 = self.res2.season_summary["Win Division (%)"][
+            self.res2.season_summary["Team"] == team
+        ].values[0]
+        meanwins_res2 = self.res2.season_summary["Mean Wins"][
+            self.res2.season_summary["Team"] == team
+        ].values[0]
+
         # create figure
         fig, ax = plt.subplots(2)
         ax[0].plot(wins1["index"], wins1["wins"], color="blue", label=sim1_label)
@@ -78,24 +92,27 @@ class SatchelComparison:
 
         # text description of season changes
         items = [
-            (wspct, "World Series Odds"),
-            (playoffpct, "Playoff Odds"),
-            (divpct, "Division Winner Odds"),
-            (meanwins, "Expected Wins"),
+            (wspct, "World Series Odds", wspct_res2),
+            (playoffpct, "Playoff Odds", playoffpct_res2),
+            (divpct, "Division Winner Odds", divpct_res2),
+            (meanwins, "Expected Wins", meanwins_res2),
         ]
         yval = 0.8
-        for var, name in items:
+        for var, name, res2 in items:
             ax[1].text(0.0, yval, name, size=15)
             color = "green"
             arrow = r"$\blacktriangle$"
             if var < 0:
                 color = "red"
                 arrow = r"$\blacktriangledown$"
-            ax[1].text(0.55, yval, arrow, color=color, size=20)
+            ax[1].text(0.75, yval, arrow, color=color, size=20)
             varstr = f"{abs(var):.2f}%".rjust(6, "0")
+            numvar = f"{res2:.2f}%".rjust(6, "0")
             if name == "Expected Wins":
-                varstr = f"{abs(var):.2f}".rjust(5, "0")
-            ax[1].text(0.6, yval, varstr, color=color, size=15)
+                varstr = f"{abs(var):.0f}".rjust(3, " ")
+                numvar = f"{res2:.0f}".rjust(3, " ")
+            ax[1].text(0.8, yval, varstr, color=color, size=15)
+            ax[1].text(0.55, yval, numvar, color="black", size=15)
             yval -= 0.2
 
         ax[1].spines["top"].set_visible(False)

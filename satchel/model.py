@@ -5,18 +5,26 @@ from this main class
 import pandas as pd
 import numpy as np
 import difflib
+import warnings
 from . import constants
+from .schedules.cache.clear_cache import clear_cache
 from .modelresults import SatchelResults
+from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR, FINAL_DAY
 from collections import Counter
 from pathlib import Path
 from typing import Union
 from tqdm import tqdm
 from datetime import datetime
+from pybaseball import standings, batting_stats, pitching_stats
+from io import StringIO
 
 
 CUR_PATH = Path(__file__).resolve().parent
 DATA_PATH = Path(CUR_PATH, "data")
 SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2022.csv")
+# projections for pitchers and batters
+PITCHER_PROJ = Path(DATA_PATH, "pitcherprojections.csv")
+BATTER_PROJ = Path(DATA_PATH, "batterprojections.csv")
 
 
 class Satchel:
@@ -31,15 +39,27 @@ class Satchel:
         steamer_b_wt: float = 0.5,
         zips_b_wt: float = 0.5,
         schedule: Union[Path, str] = SCHEDUEL_PATH,
+        pitcher_proj: Union[Path, str] = PITCHER_PROJ,
+        batter_proj: Union[Path, str] = BATTER_PROJ,
+        use_current_results: bool = True,
+        war_method: str = "current_pace",
+        cache: bool = True,
     ):
-        """Main model class
+        """
+        Main model class
 
         Parameters
         ----------
-        n : int, optional
-            number of times to run the simulation, by default 10000
-        playoffs : function, optional
-            function used to simulate the playoffs, by default standard_playoff
+        talent_measure: str
+            "mean" or "median". Each team's total WAR will be compared to the
+            league's `talent_measure` to determine their talent value
+        transactions: dict
+            Dictionary containing any transactions to include in the simulation.
+            The format of the dictionary should be:
+            {`player_fangraphs_id`: {"team": `new_team`, "date": `effective_date`}}
+        noise: bool
+            If true, random noise will be added to each team's talent measure
+            during the simulation
         seed : int, float, optional
             seed used for random draws, by default None
         steamer_p_wt: float, optional
@@ -52,13 +72,84 @@ class Satchel:
             Weight placed on ZIPs batter projections
         schedule: Path, str, optional
             Path to a CSV with the season schedule
+        pitcher_proj: Path, str, optional
+            Path to a CSV with pitcher WAR projections suitable for Satchel
+        batter_proj: Path, str, optional
+            Path to a CSV with batter WAR projections suitable for Satchel
+        use_current_results: bool, optional
+            If true, Satchel will simulate the season from today's date and add
+            those results to each team's current record. This includes using
+            both the team's records and the player's stats on the season in the
+            talent calculations. If false, Satchel will simulate the full
+            season using the provided schedule and pre-season projections
+        war_method: str, optional
+            Method used for calculating all player's remaining WAR. If
+            `only_projections` a player's final WAR will be their WAR to date
+            plus their projected WAR multiplied by the fraction of the season
+            remaining. If `current_pace`, it will be their current WAR plus
+            their projected WAR multiplied by the remaining fraction of the
+            season and their relative production rate. The latter is calculated
+            by multiplying their projection by the fraction of the season already
+            played and dividing their WAR to date by that number
+        cache: bool, optional
+            If true, the new scheudle generated will be cached
         """
         if talent_measure.lower() not in ["median", "mean"]:
             raise ValueError("`talent_measure` must be median or mean")
         self.talent_measure = talent_measure
         self.transactions = transactions
+
+        if not war_method in ["current_pace", "only_projections"]:
+            raise ValueError("`war_method must be `current_pace` or `only_projections`")
+        self.war_method = war_method
+
+        # if it's before opening day, create the schedule from file. If after,
+        # pull the team's current record, then fetch the rest from MLB.com
+        # unless the user specifies that they don't want to
+        if schedule != SCHEDUEL_PATH and use_current_results:
+            warnings.warn(
+                (
+                    "You have provided a path to a schedule but left"
+                    " `use_current_results` = True. As a result, the provided"
+                    " schedule will be ignored. To fix this error, set"
+                    " `use_current_results`=False"
+                )
+            )
+        today = datetime.today()
+        opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
+        self.midseason = use_current_results
+        self.current_standings = None
+        if self.midseason:
+            self.current_standings = pd.concat(standings(YEAR))
+            self.current_standings["index"] = self.current_standings["Tm"].map(
+                constants.NAME_TO_ABBR
+            )
+            self.current_standings["W"] = self.current_standings["W"].astype(int)
+            self.current_standings["L"] = self.current_standings["L"].astype(int)
+        if today > opening_day and use_current_results:
+            # fetch the remaining schedule if it isn't cached
+            fmt = "%d%m%Y"
+            schedule = Path(
+                CUR_PATH, "schedules", "cache", f"schedule{today.strftime(fmt)}.csv"
+            )
+            if not schedule.exists():
+                clear_cache()  # remove the schedules from previous days
+                _return_schedule = False
+                if not cache:
+                    schedule = None
+                    _return_schedule = True
+                print("Creating new schedule...")
+                sched = create_schedule(
+                    year=today.year,
+                    start_date=today.strftime("%m%d"),
+                    outfile=schedule,
+                    _return=_return_schedule,
+                )
+                if not cache:
+                    schedule = StringIO(sched.to_csv(index=False))
         self.schedule = pd.read_csv(schedule)
         self.schedule["START DATE"] = pd.to_datetime(self.schedule["START DATE"])
+
         self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
         self.noise = noise
@@ -67,6 +158,26 @@ class Satchel:
         self.zips_p_wt = zips_p_wt
         self.steamer_b_wt = steamer_b_wt
         self.zips_b_wt = zips_b_wt
+
+        self.pitch_proj = pd.read_csv(pitcher_proj)
+        self.batter_proj = pd.read_csv(batter_proj)
+
+        if use_current_results:
+            # update talent to include what the players
+            batter_stats = batting_stats(YEAR, qual=0)
+            pitcher_stats = pitching_stats(YEAR, qual=0)
+            batter_stats["playerid"] = batter_stats["IDfg"].astype(str)
+            pitcher_stats["playerid"] = pitcher_stats["IDfg"].astype(str)
+            stats_cols = ["playerid", "WAR"]
+            self._prep_talent_data(
+                batter_stats[stats_cols], pitcher_stats[stats_cols], war_method
+            )
+            del batter_stats, pitcher_stats
+        self.pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
+        self.pitch_proj.set_index("playerid", inplace=True)
+
+        self.batter_proj.rename(columns={"WAR": "WAR_B"}, inplace=True)
+        self.batter_proj.set_index("playerid", inplace=True)
 
         self.talent, self.st_data = self._calculate_talent(transactions)
 
@@ -112,7 +223,11 @@ class Satchel:
                 matchups,
                 noise,
                 full_season,
-            ) = self.simseason(self.st_data, playoff_func=playoff_func)
+            ) = self.simseason(
+                self.st_data,
+                playoff_func=playoff_func,
+                current_standings=self.current_standings,
+            )
             ws_counter.update([playoffs["ws"]])
             div_counter.update(div_winners["Team"])
             league_counter.update([playoffs["nl"]["cs"]])
@@ -144,7 +259,7 @@ class Satchel:
             self.seed,
         )
 
-    def simseason(self, data, playoff_func) -> tuple:
+    def simseason(self, data, playoff_func, current_standings=None) -> tuple:
         """Run full simulation of a single season
 
         Parameters
@@ -190,6 +305,12 @@ class Satchel:
         losses = loser.value_counts().reset_index()
         # ensure that teams will always be in the same order
         results = pd.merge(wins, losses, on="index")
+        # merge on season-to-date results
+        if isinstance(current_standings, pd.DataFrame):
+            results = results.merge(current_standings, on="index")
+            results["wins"] += results["W"]
+            results["losses"] += results["L"]
+            results = results.filter(["index", "wins", "losses"], axis="columns")
         results = results.sort_values(
             ["wins", "index"], ascending=False, kind="mergesort"
         )
@@ -337,17 +458,9 @@ class Satchel:
         pd.DataFrame
             DataFrame containing talent levels for each team.
         """
-        pitch_proj = pd.read_csv(Path(DATA_PATH, "pitcherprojections.csv"))
-        pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
-        pitch_proj.set_index("playerid", inplace=True)
-
-        batter_proj = pd.read_csv(Path(DATA_PATH, "batterprojections.csv"))
-        batter_proj.rename(columns={"WAR": "WAR_B"}, inplace=True)
-        batter_proj.set_index("playerid", inplace=True)
-
         # group all of the WAR projections by team and add them
-        pwar_proj = pitch_proj.groupby("Team")["WAR_P"].sum()
-        bwar_proj = batter_proj.groupby("Team")["WAR_B"].sum()
+        pwar_proj = self.pitch_proj.groupby("Team")["WAR_P"].sum()
+        bwar_proj = self.batter_proj.groupby("Team")["WAR_B"].sum()
 
         talent = pd.concat([bwar_proj, pwar_proj], axis=1)
         # allow users to place more weight on pitchers or hitters, equally
@@ -385,7 +498,7 @@ class Satchel:
         # conduct transactions
         if transactions:
             talent = self._conduct_transactions(
-                pitch_proj, batter_proj, transactions, st_data, talent
+                self.pitch_proj, self.batter_proj, transactions, st_data, talent
             )
             talent["final_talent"] = talent["final_total"] / league_base - 1
         else:
@@ -584,3 +697,44 @@ class Satchel:
             },
             matchups,
         )
+
+    def _prep_talent_data(self, batter_stats, pitcher_stats, war_method):
+        def process(data, stats, remaining, method):
+            _data = pd.merge(
+                data, stats, on="playerid", suffixes=["_proj", "_cur"], how="outer"
+            )
+            # some players may be in the projections, but not the current data
+            # or vice versa. For these cases, replace missing values with the
+            # value we do have
+            war_proj = _data["WAR_proj"]
+            war_cur = _data["WAR_cur"]
+            _data["WAR_cur"].fillna(war_proj, inplace=True)
+            _data["WAR_proj"].fillna(war_cur, inplace=True)
+            del war_proj, war_cur
+            if method == "only_projections":
+                _data["WAR"] = (_data["WAR_proj"] * (remaining)) + _data["WAR_cur"]
+            elif method == "current_pace":
+                # at this point in the season, they should have some fraction of
+                # their projected war.
+                hypothetical = _data["WAR_proj"] * (1 - remaining)
+                # the rate at which they're under/over performing
+                production_rate = (_data["WAR_cur"] / hypothetical).fillna(1)
+                # final WAR is their current WAR plus the fraction remaining of
+                # their projected WAR if they keep up with their current pace
+                _data["WAR"] = _data["WAR_cur"] + (
+                    _data["WAR_proj"] * remaining * production_rate
+                )
+            return _data
+
+        # calculate how much of the season has been played. This fraction will
+        # be used to weight the projections and current results when getting
+        # final WAR used in the talent calculations
+        games_played = (
+            self.current_standings["W"] + self.current_standings["L"]
+        ).mean()
+        remaining = (162 - games_played) / 162
+
+        _batter = process(self.batter_proj, batter_stats, remaining, war_method)
+        _pitcher = process(self.pitch_proj, pitcher_stats, remaining, war_method)
+        self.batter_proj = _batter.drop(columns=["WAR_proj", "WAR_cur"])
+        self.pitch_proj = _pitcher.drop(columns=["WAR_proj", "WAR_cur"])

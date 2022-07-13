@@ -1,9 +1,9 @@
-from nis import match
-from matplotlib.pyplot import get
 import pandas as pd
 from dataclasses import dataclass
 from collections import Counter
 from typing import Union
+from pybaseball import standings
+from .schedules.createschedule import YEAR
 from . import plotting
 from . import constants
 
@@ -33,21 +33,6 @@ class SatchelResults:
         for col in self.playoff_matchups.columns:
             attrname = col.replace(" ", "_").lower()
             setattr(self, attrname, self._clean_matchup(self.playoff_matchups[col]))
-        # self.nlwc_matchups = self._clean_matchup(self.playoff_matchups["NL Wild Card"])
-        # self.alwc_matchups = self._clean_matchup(self.playoff_matchups["AL Wild Card"])
-        # self.nlds_matchups = self._clean_matchup(
-        #     pd.concat(
-        #         [self.playoff_matchups["NLDS 1"], self.playoff_matchups["NLDS 2"]]
-        #     )
-        # )
-        # self.alds_matchups = self._clean_matchup(
-        #     pd.concat(
-        #         [self.playoff_matchups["ALDS 1"], self.playoff_matchups["ALDS 2"]]
-        #     )
-        # )
-        # self.nlcs_matchups = self._clean_matchup(self.playoff_matchups["NLCS"])
-        # self.alcs_matchups = self._clean_matchup(self.playoff_matchups["ALCS"])
-        # self.ws_matchups = self._clean_matchup(self.playoff_matchups["World Series"])
 
         # summary stats
         mean_wins = pd.DataFrame(
@@ -162,6 +147,54 @@ class SatchelResults:
         """
         subresults = self.results_df[self.results_df["Team"] == team]
         return (subresults["wins"] < wins).sum() / subresults.shape[0]
+
+    def season_to_date(self):
+        """
+        Create a table showing results to date and the remaining season projected
+
+        Returns
+        -------
+        pd.DataFrame
+            Table with record to date and final projections
+        """
+        midseason = pd.concat(standings(YEAR))
+        midseason["Team"] = midseason["Tm"].map(constants.NAME_TO_ABBR)
+        midseason["W"] = midseason["W"].astype(int)
+        midseason["L"] = midseason["L"].astype(int)
+        final = pd.merge(
+            midseason,
+            self.season_summary[
+                ["Team", "Mean Wins", "Mean Losses", "Make Playoffs (%)"]
+            ],
+            on=["Team"],
+        )
+        final.rename(
+            columns={
+                "W": "Wins to Date",
+                "L": "Losses to Date",
+                "Mean Wins": "Projected Wins",
+                "Mean Losses": "Projected Losses",
+            },
+            inplace=True,
+        )
+        final["Wins RoS"] = final["Projected Wins"] - final["Wins to Date"]
+        final["Losses RoS"] = final["Projected Losses"] - final["Losses to Date"]
+        final_cols = [
+            "Team",
+            "Wins to Date",
+            "Losses to Date",
+            "Wins RoS",
+            "Losses RoS",
+            "Projected Wins",
+            "Projected Losses",
+            "Make Playoffs (%)",
+        ]
+
+        return (
+            final[final_cols]
+            .sort_values("Projected Wins", ascending=False)
+            .reset_index(drop=True)
+        )
 
     ####### Private methods #######
 
