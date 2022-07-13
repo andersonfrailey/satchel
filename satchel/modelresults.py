@@ -163,7 +163,9 @@ class SatchelResults:
         midseason["L"] = midseason["L"].astype(int)
         final = pd.merge(
             midseason,
-            self.season_summary[["Team", "Mean Wins", "Mean Losses"]],
+            self.season_summary[
+                ["Team", "Mean Wins", "Mean Losses", "Make Playoffs (%)"]
+            ],
             on=["Team"],
         )
         final.rename(
@@ -185,6 +187,7 @@ class SatchelResults:
             "Losses RoS",
             "Projected Wins",
             "Projected Losses",
+            "Make Playoffs (%)",
         ]
 
         return (

@@ -42,6 +42,7 @@ class Satchel:
         pitcher_proj: Union[Path, str] = PITCHER_PROJ,
         batter_proj: Union[Path, str] = BATTER_PROJ,
         use_current_results: bool = True,
+        war_method: str = "current_pace",
         cache: bool = True,
     ):
         """
@@ -81,6 +82,15 @@ class Satchel:
             both the team's records and the player's stats on the season in the
             talent calculations. If false, Satchel will simulate the full
             season using the provided schedule and pre-season projections
+        war_method: str, optional
+            Method used for calculating all player's remaining WAR. If
+            `only_projections` a player's final WAR will be their WAR to date
+            plus their projected WAR multiplied by the fraction of the season
+            remaining. If `current_pace`, it will be their current WAR plus
+            their projected WAR multiplied by the remaining fraction of the
+            season and their relative production rate. The latter is calculated
+            by multiplying their projection by the fraction of the season already
+            played and dividing their WAR to date by that number
         cache: bool, optional
             If true, the new scheudle generated will be cached
         """
@@ -88,6 +98,10 @@ class Satchel:
             raise ValueError("`talent_measure` must be median or mean")
         self.talent_measure = talent_measure
         self.transactions = transactions
+
+        if not war_method in ["current_pace", "only_projections"]:
+            raise ValueError("`war_method must be `current_pace` or `only_projections`")
+        self.war_method = war_method
 
         # if it's before opening day, create the schedule from file. If after,
         # pull the team's current record, then fetch the rest from MLB.com
@@ -104,6 +118,14 @@ class Satchel:
         today = datetime.today()
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
         self.midseason = use_current_results
+        self.current_standings = None
+        if self.midseason:
+            self.current_standings = pd.concat(standings(YEAR))
+            self.current_standings["index"] = self.current_standings["Tm"].map(
+                constants.NAME_TO_ABBR
+            )
+            self.current_standings["W"] = self.current_standings["W"].astype(int)
+            self.current_standings["L"] = self.current_standings["L"].astype(int)
         if today > opening_day and use_current_results:
             # fetch the remaining schedule if it isn't cached
             fmt = "%d%m%Y"
@@ -142,12 +164,14 @@ class Satchel:
 
         if use_current_results:
             # update talent to include what the players
-            batter_stats = batting_stats(YEAR)
-            pitcher_stats = pitching_stats(YEAR)
+            batter_stats = batting_stats(YEAR, qual=0)
+            pitcher_stats = pitching_stats(YEAR, qual=0)
             batter_stats["playerid"] = batter_stats["IDfg"].astype(str)
             pitcher_stats["playerid"] = pitcher_stats["IDfg"].astype(str)
             stats_cols = ["playerid", "WAR"]
-            self._prep_talent_data(batter_stats[stats_cols], pitcher_stats[stats_cols])
+            self._prep_talent_data(
+                batter_stats[stats_cols], pitcher_stats[stats_cols], war_method
+            )
             del batter_stats, pitcher_stats
         self.pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
         self.pitch_proj.set_index("playerid", inplace=True)
@@ -190,15 +214,6 @@ class Satchel:
         all_matchups = []
         all_noise = []  # the talent noise for a given team in a season
         full_seasons = []  # hold all of the results for each season
-
-        current_standings = None
-        if self.midseason:
-            current_standings = pd.concat(standings(YEAR))
-            current_standings["index"] = current_standings["Tm"].map(
-                constants.NAME_TO_ABBR
-            )
-            current_standings["W"] = current_standings["W"].astype(int)
-            current_standings["L"] = current_standings["L"].astype(int)
         for i in tqdm(range(n), disable=quiet):
             (
                 results,
@@ -211,7 +226,7 @@ class Satchel:
             ) = self.simseason(
                 self.st_data,
                 playoff_func=playoff_func,
-                current_standings=current_standings,
+                current_standings=self.current_standings,
             )
             ws_counter.update([playoffs["ws"]])
             div_counter.update(div_winners["Team"])
@@ -683,29 +698,43 @@ class Satchel:
             matchups,
         )
 
-    def _prep_talent_data(self, batter_stats, pitcher_stats):
-        def process(data, stats, remaining):
+    def _prep_talent_data(self, batter_stats, pitcher_stats, war_method):
+        def process(data, stats, remaining, method):
             _data = pd.merge(
                 data, stats, on="playerid", suffixes=["_proj", "_cur"], how="outer"
             )
             # some players may be in the projections, but not the current data
             # or vice versa. For these cases, replace missing values with the
             # value we do have
-            _data["WAR_cur"].fillna(_data["WAR_proj"], inplace=True)
-            _data["WAR_proj"].fillna(_data["WAR_cur"], inplace=True)
-            _data["WAR"] = (_data["WAR_proj"] * (remaining)) + _data["WAR_cur"]
+            war_proj = _data["WAR_proj"]
+            war_cur = _data["WAR_cur"]
+            _data["WAR_cur"].fillna(war_proj, inplace=True)
+            _data["WAR_proj"].fillna(war_cur, inplace=True)
+            del war_proj, war_cur
+            if method == "only_projections":
+                _data["WAR"] = (_data["WAR_proj"] * (remaining)) + _data["WAR_cur"]
+            elif method == "current_pace":
+                # at this point in the season, they should have some fraction of
+                # their projected war.
+                hypothetical = _data["WAR_proj"] * (1 - remaining)
+                # the rate at which they're under/over performing
+                production_rate = (_data["WAR_cur"] / hypothetical).fillna(1)
+                # final WAR is their current WAR plus the fraction remaining of
+                # their projected WAR if they keep up with their current pace
+                _data["WAR"] = _data["WAR_cur"] + (
+                    _data["WAR_proj"] * remaining * production_rate
+                )
             return _data
 
         # calculate how much of the season has been played. This fraction will
         # be used to weight the projections and current results when getting
         # final WAR used in the talent calculations
-        opener = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
-        final = datetime.strptime(FINAL_DAY, "%m/%d/%Y")
-        n_days = (final - opener).days  # total number of days in the season
-        remaining_days = (final - datetime.today()).days
-        remaining = remaining_days / n_days
+        games_played = (
+            self.current_standings["W"] + self.current_standings["L"]
+        ).mean()
+        remaining = (162 - games_played) / 162
 
-        _batter = process(self.batter_proj, batter_stats, remaining)
-        _pitcher = process(self.pitch_proj, pitcher_stats, remaining)
+        _batter = process(self.batter_proj, batter_stats, remaining, war_method)
+        _pitcher = process(self.pitch_proj, pitcher_stats, remaining, war_method)
         self.batter_proj = _batter.drop(columns=["WAR_proj", "WAR_cur"])
         self.pitch_proj = _pitcher.drop(columns=["WAR_proj", "WAR_cur"])

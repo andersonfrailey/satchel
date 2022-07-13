@@ -14,6 +14,8 @@ s2 = Satchel(
     seed=123,
     transactions={"10954": {"team": "HOU", "date": "2021-04-01"}},
     schedule=schedule2021,
+    use_current_results=False,
+    cache=False,
 )
 r2 = s2.simulate(100)
 pickle.dump(r1, Path("satchel", "tests", "basesim.p").open("wb"))
