@@ -5,9 +5,7 @@ NOTE: only put the CSV versions of each team's home schedule in their year
 folder
 """
 import time
-from tracemalloc import start
 import pandas as pd
-from datetime import datetime
 from pathlib import Path
 
 CUR_PATH = Path(__file__).resolve().parent
