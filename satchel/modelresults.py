@@ -108,7 +108,9 @@ class SatchelResults:
         """Create a grid of results distribution histograms"""
         return plotting.results_grid(self.results_df)
 
-    def results_dist_chart(self, team, cmap=["red", "blue", "green", "purple"]):
+    def results_dist_chart(
+        self, team, cmap=["darkgrey", "orange", "green", "red", "blue"]
+    ):
         """Create a results distribution for the specified team
 
         Parameters
@@ -116,8 +118,8 @@ class SatchelResults:
         team : str
             String with the team name
         cmap : list, optional
-            List of colors to use in the plot, by default ["red", "blue", "green", "purple"]
-
+            List of colors to use in the plot, by default
+            ["darkgrey", "orange", "green", "red", "blue"]
         Returns
         -------
         figure
@@ -127,6 +129,15 @@ class SatchelResults:
             self.results_df[self.results_df["Team"] == team],
             title=team,
             cmap=cmap,
+        )
+
+    def results_scatter(self, team, offset=0.05, y=0):
+        plot_data = self.results_df[self.results_df["Team"] == team].copy()
+        mean_wins = self.season_summary["Mean Wins"][
+            self.season_summary["Team"] == team
+        ].iloc[0]
+        return plotting.results_scatter(
+            plot_data, mean_wins=mean_wins, offset=offset, y=y
         )
 
     def season_percentile(self, team, wins):
