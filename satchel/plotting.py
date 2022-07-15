@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from functools import reduce
+from collections import defaultdict
 
 
 def results_dataprep(data, team):
@@ -43,7 +44,9 @@ def results_dataprep(data, team):
     return plot_data
 
 
-def results_dist_chart(data, cmap=["red", "blue", "green", "purple"], title=""):
+def results_dist_chart(
+    data, cmap=["darkgrey", "orange", "green", "red", "blue"], title=""
+):
     """
     Create a stacked bar chart to display season outcomes
     Parameters
@@ -51,6 +54,7 @@ def results_dist_chart(data, cmap=["red", "blue", "green", "purple"], title=""):
     data: Results data for a single team
     cmap: Color map to use
     """
+    assert len(cmap) == 5
     df = pd.DataFrame(data.groupby("wins")["season_result"].value_counts())
     df.columns = ["count"]
     df["count"] /= df["count"].sum()
@@ -62,11 +66,14 @@ def results_dist_chart(data, cmap=["red", "blue", "green", "purple"], title=""):
         df[["wins", "count"]][df["season_result"] == "Wild Card"].rename(
             {"count": "wc"}, axis=1
         ),
-        df[["wins", "count"]][df["season_result"] == "World Series"].rename(
+        df[["wins", "count"]][df["season_result"] == "Win World Series"].rename(
             {"count": "ws"}, axis=1
         ),
         df[["wins", "count"]][df["season_result"] == "Missed Playoff"].rename(
             {"count": "mp"}, axis=1
+        ),
+        df[["wins", "count"]][df["season_result"] == "Win League"].rename(
+            {"count": "wl"}, axis=1
         ),
     ]
     plot_data = reduce(
@@ -77,7 +84,8 @@ def results_dist_chart(data, cmap=["red", "blue", "green", "purple"], title=""):
     plot_data["mp_b"] = 0
     plot_data["wc_b"] = plot_data[["mp"]].sum(axis=1)
     plot_data["div_b"] = plot_data[["wc", "mp"]].sum(axis=1)
-    plot_data["ws_b"] = plot_data[["div", "wc", "mp"]].sum(axis=1)
+    plot_data["wl_b"] = plot_data[["div", "wc", "mp"]].sum(axis=1)
+    plot_data["ws_b"] = plot_data[["wl", "div", "wc", "mp"]].sum(axis=1)
     # make actual plot
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.bar(
@@ -103,10 +111,17 @@ def results_dist_chart(data, cmap=["red", "blue", "green", "purple"], title=""):
     )
     ax.bar(
         plot_data["wins"],
+        plot_data["wl"],
+        label="League Champ",
+        bottom=plot_data["wl_b"],
+        color=cmap[3],
+    )
+    ax.bar(
+        plot_data["wins"],
         plot_data["ws"],
         label="World Series",
         bottom=plot_data["ws_b"],
-        color=cmap[3],
+        color=cmap[4],
     )
     ax.legend()
     ax.set_xlabel("Wins")
@@ -231,3 +246,66 @@ def boxplot(results):
     boxax.set_title("Distribution of Total Wins")
 
     return boxfig, boxax
+
+
+def results_scatter(data, mean_wins, offset=0.05, y=0):
+    def assign_y(x, win_obs, y, offset):
+        nobs = win_obs[x]
+        yval = y + (offset * nobs)
+        if nobs % 2 != 0:
+            yval *= -1
+        win_obs[x] += 1
+        return yval
+
+    color_map = {
+        "Missed Playoffs": "darkgrey",
+        "Wild Card": "orange",
+        "Division Champ": "green",
+        "Win League": "red",
+        "Win World Series": "blue",
+    }
+    res_names = {
+        "Missed Playoffs": "Missed Playoffs",
+        "Wild Card": "Wild Card",
+        "Division Champ": "Won Division",
+        "Win League": "Won League",
+        "Win World Series": "Won World Series",
+    }
+    data["res_cat"] = data["season_result"].astype("category")
+    data["res_cat"].cat.reorder_categories(
+        [
+            "Missed Playoffs",
+            "Wild Card",
+            "Division Champ",
+            "Win League",
+            "Win World Series",
+        ],
+        inplace=True,
+    )
+    data.sort_values("res_cat", inplace=True)
+
+    win_obs = defaultdict(int)
+    data["yval"] = data["wins"].apply(assign_y, win_obs=win_obs, y=y, offset=offset)
+    fig, ax = plt.subplots()
+    ax.axvline(x=mean_wins, color="black", label="Mean Wins")
+    ax.grid(axis="x")
+    for _res in color_map.keys():
+        sub = data[data["season_result"] == _res]
+        ax.scatter(
+            sub["wins"],
+            sub["yval"],
+            color=color_map[_res],
+            label=res_names[_res],
+            alpha=0.65,
+        )
+    ax.spines[["left", "right", "top"]].set_visible(False)
+    ax.yaxis.set_ticks([])
+    ax.set_xlabel("Wins")
+    ax.legend(
+        bbox_to_anchor=(0.99, 1),
+        title="Season Result",
+        title_fontproperties={"weight": "bold"},
+    )
+    ax.set_ylim([data["yval"].min() - offset * 3, data["yval"].max() + offset * 3])
+
+    return fig, ax
