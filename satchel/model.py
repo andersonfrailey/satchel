@@ -326,7 +326,7 @@ class Satchel:
             wc_winners,
             matchups,
         ) = self.sim_playoff(results, _talent, playoff_func=playoff_func)
-        # column for season result
+        # column for season result. This is the best they do in the season
         results["season_result"] = np.where(
             results["Team"].isin(div_winners["Team"]),
             "Division Champ",
@@ -342,6 +342,15 @@ class Satchel:
             "Win World Series",
             results["season_result"],
         )
+        # flags for individual season results. Need this because season_result
+        # won't show if they won the wild card, division, etc. if they
+        # reach a higher achievement
+        results["wild_card"] = np.where(results["Team"].isin(wc_winners["Team"]), 1, 0)
+        results["won_division"] = np.where(
+            results["Team"].isin(div_winners["Team"]), 1, 0
+        )
+        results["won_league"] = np.where(results["Team"].isin(cs_winners), 1, 0)
+        results["won_ws"] = np.where(results["Team"] == final_res["ws"], 1, 0)
         return results, final_res, div_winners, wc_winners, matchups, team_noise, data
 
     def sim_playoff(
