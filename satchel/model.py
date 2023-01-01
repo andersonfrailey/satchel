@@ -159,20 +159,22 @@ class Satchel:
         self.steamer_b_wt = steamer_b_wt
         self.zips_b_wt = zips_b_wt
 
-        self.pitch_proj = pd.read_csv(pitcher_proj)
-        self.batter_proj = pd.read_csv(batter_proj)
-
         if use_current_results:
             # update talent to include what the players
-            batter_stats = batting_stats(YEAR, qual=0)
-            pitcher_stats = pitching_stats(YEAR, qual=0)
-            batter_stats["playerid"] = batter_stats["IDfg"].astype(str)
-            pitcher_stats["playerid"] = pitcher_stats["IDfg"].astype(str)
-            stats_cols = ["playerid", "WAR"]
-            self._prep_talent_data(
-                batter_stats[stats_cols], pitcher_stats[stats_cols], war_method
-            )
-            del batter_stats, pitcher_stats
+            # batter_stats = batting_stats(YEAR, qual=0)
+            # pitcher_stats = pitching_stats(YEAR, qual=0)
+            # batter_stats["playerid"] = batter_stats["IDfg"].astype(str)
+            # pitcher_stats["playerid"] = pitcher_stats["IDfg"].astype(str)
+            # stats_cols = ["playerid", "WAR"]
+            # self._prep_talent_data(
+            #     batter_stats[stats_cols], pitcher_stats[stats_cols], war_method
+            # )
+            # del batter_stats, pitcher_stats
+            pitcher_proj = Path(DATA_PATH, "pitcherprojections_ros.csv")
+            batter_proj = Path(DATA_PATH, "batterprojections_ros.csv")
+
+        self.pitch_proj = pd.read_csv(pitcher_proj)
+        self.batter_proj = pd.read_csv(batter_proj)
         self.pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
         self.pitch_proj.set_index("playerid", inplace=True)
 
@@ -707,43 +709,43 @@ class Satchel:
             matchups,
         )
 
-    def _prep_talent_data(self, batter_stats, pitcher_stats, war_method):
-        def process(data, stats, remaining, method):
-            _data = pd.merge(
-                data, stats, on="playerid", suffixes=["_proj", "_cur"], how="outer"
-            )
-            # some players may be in the projections, but not the current data
-            # or vice versa. For these cases, replace missing values with the
-            # value we do have
-            war_proj = _data["WAR_proj"]
-            war_cur = _data["WAR_cur"]
-            _data["WAR_cur"].fillna(war_proj, inplace=True)
-            _data["WAR_proj"].fillna(war_cur, inplace=True)
-            del war_proj, war_cur
-            if method == "only_projections":
-                _data["WAR"] = (_data["WAR_proj"] * (remaining)) + _data["WAR_cur"]
-            elif method == "current_pace":
-                # at this point in the season, they should have some fraction of
-                # their projected war.
-                hypothetical = _data["WAR_proj"] * (1 - remaining)
-                # the rate at which they're under/over performing
-                production_rate = (_data["WAR_cur"] / hypothetical).fillna(1)
-                # final WAR is their current WAR plus the fraction remaining of
-                # their projected WAR if they keep up with their current pace
-                _data["WAR"] = _data["WAR_cur"] + (
-                    _data["WAR_proj"] * remaining * production_rate
-                )
-            return _data
+    # def _prep_talent_data(self, batter_stats, pitcher_stats, war_method):
+    #     def process(data, stats, remaining, method):
+    #         _data = pd.merge(
+    #             data, stats, on="playerid", suffixes=["_proj", "_cur"], how="outer"
+    #         )
+    #         # some players may be in the projections, but not the current data
+    #         # or vice versa. For these cases, replace missing values with the
+    #         # value we do have
+    #         war_proj = _data["WAR_proj"]
+    #         war_cur = _data["WAR_cur"]
+    #         _data["WAR_cur"].fillna(war_proj, inplace=True)
+    #         _data["WAR_proj"].fillna(war_cur, inplace=True)
+    #         del war_proj, war_cur
+    #         if method == "only_projections":
+    #             _data["WAR"] = (_data["WAR_proj"] * (remaining)) + _data["WAR_cur"]
+    #         elif method == "current_pace":
+    #             # at this point in the season, they should have some fraction of
+    #             # their projected war.
+    #             hypothetical = _data["WAR_proj"] * (1 - remaining)
+    #             # the rate at which they're under/over performing
+    #             production_rate = (_data["WAR_cur"] / hypothetical).fillna(1)
+    #             # final WAR is their current WAR plus the fraction remaining of
+    #             # their projected WAR if they keep up with their current pace
+    #             _data["WAR"] = _data["WAR_cur"] + (
+    #                 _data["WAR_proj"] * remaining * production_rate
+    #             )
+    #         return _data
 
-        # calculate how much of the season has been played. This fraction will
-        # be used to weight the projections and current results when getting
-        # final WAR used in the talent calculations
-        games_played = (
-            self.current_standings["W"] + self.current_standings["L"]
-        ).mean()
-        remaining = (162 - games_played) / 162
+    #     # calculate how much of the season has been played. This fraction will
+    #     # be used to weight the projections and current results when getting
+    #     # final WAR used in the talent calculations
+    #     games_played = (
+    #         self.current_standings["W"] + self.current_standings["L"]
+    #     ).mean()
+    #     remaining = (162 - games_played) / 162
 
-        _batter = process(self.batter_proj, batter_stats, remaining, war_method)
-        _pitcher = process(self.pitch_proj, pitcher_stats, remaining, war_method)
-        self.batter_proj = _batter.drop(columns=["WAR_proj", "WAR_cur"])
-        self.pitch_proj = _pitcher.drop(columns=["WAR_proj", "WAR_cur"])
+    #     _batter = process(self.batter_proj, batter_stats, remaining, war_method)
+    #     _pitcher = process(self.pitch_proj, pitcher_stats, remaining, war_method)
+    #     self.batter_proj = _batter.drop(columns=["WAR_proj", "WAR_cur"])
+    #     self.pitch_proj = _pitcher.drop(columns=["WAR_proj", "WAR_cur"])
