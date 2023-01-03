@@ -7,6 +7,7 @@ import numpy as np
 import difflib
 import warnings
 from . import constants
+from .utils import probability_calculations
 from .schedules.cache.clear_cache import clear_cache
 from .modelresults import SatchelResults
 from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR, FINAL_DAY
@@ -17,6 +18,7 @@ from tqdm import tqdm
 from datetime import datetime
 from pybaseball import standings, batting_stats, pitching_stats
 from io import StringIO
+from typing import Union
 
 
 CUR_PATH = Path(__file__).resolve().parent
@@ -25,6 +27,8 @@ SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2022.csv")
 # projections for pitchers and batters
 PITCHER_PROJ = Path(DATA_PATH, "pitcherprojections.csv")
 BATTER_PROJ = Path(DATA_PATH, "batterprojections.csv")
+PROBABILITY_METHOD = "bradley_terry"
+ELO_SCALE = 400
 
 
 class Satchel:
@@ -189,6 +193,8 @@ class Satchel:
         noise: bool = True,
         playoff_func="twelve",
         quiet: bool = False,
+        probability_method: str = PROBABILITY_METHOD,
+        elo_scale: int = ELO_SCALE,
     ) -> SatchelResults:
         """Run a model simulation n times
 
@@ -200,6 +206,16 @@ class Satchel:
             Whether or not to add noise to team talent levels, by default True
         quiet : bool, optional
             If true, suppresses TQDM progress bar when running simulations
+        probability_method: str, optional
+            Method used to calculate the probability of each team winning the
+            game. Accepted options are `bradley_terry` and `elo`.
+            Under the Bradley-Terry method, the probability of team A winning is
+                P(Team_A) = exp(T_A) / [exp(T_A) + exp(T_B)]
+            Under the Elo system, the probability of team A winning is
+                P(Team_A) = 1/[1 + 10^((T_A - T_B) / elo_scale)]
+            where T_X is the talent level of team X (A or B)
+        elo_scalse: int, optional
+            The scale parameter used in the Elo probability calculations
 
         Returns
         -------
@@ -229,6 +245,8 @@ class Satchel:
                 self.st_data,
                 playoff_func=playoff_func,
                 current_standings=self.current_standings,
+                probability_method=probability_method,
+                elo_scale=elo_scale,
             )
             ws_counter.update([playoffs["ws"]])
             div_counter.update(div_winners["Team"])
@@ -261,7 +279,14 @@ class Satchel:
             self.seed,
         )
 
-    def simseason(self, data, playoff_func, current_standings=None) -> tuple:
+    def simseason(
+        self,
+        data,
+        playoff_func,
+        current_standings=None,
+        probability_method=PROBABILITY_METHOD,
+        elo_scale=ELO_SCALE,
+    ) -> tuple:
         """Run full simulation of a single season
 
         Parameters
@@ -291,8 +316,11 @@ class Satchel:
             for team, value in team_noise.items():
                 _talent[team]["final_talent"] += value
         # sim regular season
-        home_win_prob = np.exp(data["h_talent"]) / (
-            np.exp(data["a_talent"]) + np.exp(data["h_talent"])
+        home_win_prob = probability_calculations(
+            team1_talent=data["h_talent"],
+            team2_talent=data["a_talent"],
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
         probs = self.random.random(len(data))
         winner = pd.Series(
@@ -356,7 +384,14 @@ class Satchel:
         return results, final_res, div_winners, wc_winners, matchups, team_noise, data
 
     def sim_playoff(
-        self, results, talent, n_divwinners=1, n_wildcard=3, playoff_func="twelve"
+        self,
+        results,
+        talent,
+        n_divwinners=1,
+        n_wildcard=3,
+        playoff_func="twelve",
+        probability_method=PROBABILITY_METHOD,
+        elo_scale=ELO_SCALE,
     ):
         """Run the playoff simulation.
 
@@ -406,7 +441,13 @@ class Satchel:
         )
         # world series winner
         matchups["World Series"] = "-".join(sorted([nlres["cs"], alres["cs"]]))
-        champ = self._sim_round([nlres["cs"], alres["cs"]], talent, 7)
+        champ = self._sim_round(
+            [nlres["cs"], alres["cs"]],
+            talent,
+            7,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
+        )
         matchups["WS Winner"] = champ
         return (
             {"nl": nlres, "al": alres, "ws": champ},
@@ -416,7 +457,13 @@ class Satchel:
             matchups,
         )
 
-    def matchup(self, team1: str, team2: str) -> float:
+    def matchup(
+        self,
+        team1: str,
+        team2: str,
+        probability_method: str = PROBABILITY_METHOD,
+        elo_scale: int = ELO_SCALE,
+    ) -> float:
         """Calculate the probability of two teams winning when they play each other
 
         Parameters
@@ -445,13 +492,19 @@ class Satchel:
             similar = difflib.get_close_matches(team2, self.teams)
             msg = f"{team2} is not valid. Similar teams are: {similar}"
             raise ValueError(msg)
-        team1_talent = self.talent["talent"][self.talent["Team"] == team1].values
-        team2_talent = self.talent["talent"][self.talent["Team"] == team2].values
-        team1_prob = np.exp(team1_talent) / (
-            np.exp(team1_talent) + np.exp(team2_talent)
+        team1_talent = self.talent["base_talent"][self.talent["Team"] == team1].values
+        team2_talent = self.talent["base_talent"][self.talent["Team"] == team2].values
+        # team1_prob = np.exp(team1_talent) / (
+        #     np.exp(team1_talent) + np.exp(team2_talent)
+        # )
+        team1_prob = probability_calculations(
+            team1_talent=team1_talent,
+            team2_talent=team2_talent,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
 
-        return team1_prob[0], 1 - team1_prob[0]
+        return team1_prob, 1 - team1_prob
 
     ####### Private methods #######
 
@@ -595,15 +648,17 @@ class Satchel:
 
         return talent
 
-    def _sim_round(self, teams, talent, n_games):
+    def _sim_round(self, teams, talent, n_games, probability_method, elo_scale):
         """
         Simulate a playoff round with n_games
         """
         team1 = 0
         team2 = 0
-        team1_win_prob = np.exp(talent[teams[0]]["final_talent"]) / (
-            np.exp(talent[teams[0]]["final_talent"])
-            + np.exp(talent[teams[1]]["final_talent"])
+        team1_win_prob = probability_calculations(
+            team1_talent=talent[teams[0]]["final_talent"],
+            team2_talent=talent[teams[1]]["final_talent"],
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
         for _ in range(n_games):
             prob = self.random.random()
@@ -616,7 +671,16 @@ class Satchel:
         return teams[1]
 
     # playoff round functions
-    def _ten_team_playoff(self, wc_winners, div_winners, talent, league, matchups):
+    def _ten_team_playoff(
+        self,
+        wc_winners,
+        div_winners,
+        talent,
+        league,
+        matchups,
+        probability_method=PROBABILITY_METHOD,
+        elo_scale=ELO_SCALE,
+    ):
         """
         Simulate a ten team post season
         """
@@ -624,30 +688,59 @@ class Satchel:
         wc = "-".join(sorted([wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]]))
         matchups[f"{league} Wild Card"] = wc
         wc_winner = self._sim_round(
-            [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]], talent, 1
+            [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]],
+            talent,
+            1,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
         matchups[f"{league} WC Champ"] = wc_winner
         ds1 = "-".join(sorted([wc_winner, div_winners["Team"].iloc[0]]))
         matchups[f"{league}DS 1"] = ds1
-        div_rd1 = self._sim_round([wc_winner, div_winners["Team"].iloc[0]], talent, 5)
+        div_rd1 = self._sim_round(
+            [wc_winner, div_winners["Team"].iloc[0]],
+            talent,
+            5,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
+        )
         matchups[f"{league}DS 1 Champ"] = div_rd1
         ds2 = "-".join(
             sorted([div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]])
         )
         matchups[f"{league}DS 2"] = ds2
         div_rd2 = self._sim_round(
-            [div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]], talent, 5
+            [div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]],
+            talent,
+            5,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
         matchups[f"{league}DS 2 Champ"] = div_rd2
         matchups[f"{league}CS"] = "-".join(sorted([div_rd1, div_rd2]))
-        cs = self._sim_round([div_rd1, div_rd2], talent, 7)
+        cs = self._sim_round(
+            [div_rd1, div_rd2],
+            talent,
+            7,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
+        )
         matchups[f"{league} Champ"] = cs
         return (
             {"wc": wc_winner, "div_rd1": div_rd1, "div_rd2": div_rd2, "cs": cs},
             matchups,
         )
 
-    def _twelve_team_playoff(self, wc_winners, div_winners, talent, league, matchups):
+    def _twelve_team_playoff(
+        self,
+        wc_winners,
+        div_winners,
+        talent,
+        league,
+        matchups,
+        probability_method=PROBABILITY_METHOD,
+        elo_scale=ELO_SCALE,
+    ):
         """
         12 team playoff with the following bracket in each league:
         Round 1:
@@ -665,7 +758,11 @@ class Satchel:
         wc1 = "-".join(sorted([wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]]))
         matchups[f"{league} Wild Card 1"] = wc1
         wc1_winner = self._sim_round(
-            [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]], talent, 3
+            [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]],
+            talent,
+            3,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
         matchups[f"{league} WC 1 Champ"] = wc1_winner
         # bottom wild card seed and bottom division winner
@@ -674,7 +771,11 @@ class Satchel:
         )
         matchups[f"{league} Wild Card 2"] = wc2
         wc2_winner = self._sim_round(
-            [wc_winners["Team"].iloc[2], div_winners["Team"].iloc[2]], talent, 3
+            [wc_winners["Team"].iloc[2], div_winners["Team"].iloc[2]],
+            talent,
+            3,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
         matchups[f"WC 2 Champ"] = wc2_winner
         # Round 2
@@ -682,20 +783,34 @@ class Satchel:
         div1 = "-".join(sorted([wc1_winner, div_winners["Team"].iloc[0]]))
         matchups[f"{league}DS 1"] = div1
         div1_winner = self._sim_round(
-            [wc1_winner, div_winners["Team"].iloc[0]], talent, 7
+            [wc1_winner, div_winners["Team"].iloc[0]],
+            talent,
+            7,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
         matchups[f"{league}DS 1 Champ"] = div1_winner
         # second seed division winner vs. WC 2 winner
         div2 = "-".join(sorted([wc2_winner, div_winners["Team"].iloc[1]]))
         matchups[f"{league}DS 2"] = div2
         div2_winner = self._sim_round(
-            [wc2_winner, div_winners["Team"].iloc[1]], talent, 7
+            [wc2_winner, div_winners["Team"].iloc[1]],
+            talent,
+            7,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
         )
         matchups[f"{league}DS 2 Champ"] = div2_winner
         # Round 3
         # league championship
         matchups[f"{league}CS"] = "-".join(sorted([div1_winner, div2_winner]))
-        cs = self._sim_round([div1_winner, div2_winner], talent, 7)
+        cs = self._sim_round(
+            [div1_winner, div2_winner],
+            talent,
+            7,
+            probability_method=probability_method,
+            elo_scale=elo_scale,
+        )
         matchups[f"{league} Champ"] = cs
 
         return (
