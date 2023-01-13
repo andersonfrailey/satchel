@@ -272,14 +272,17 @@ def results_scatter(data, mean_wins, offset=0.05, y=0):
         "Win World Series": "Won World Series",
     }
     data["res_cat"] = data["season_result"].astype("category")
+    # only include values in the re-order that appear in the new order
+    res_order = [
+        "Missed Playoffs",
+        "Wild Card",
+        "Division Champ",
+        "Win League",
+        "Win World Series",
+    ]
+    new_order = [_res for _res in res_order if _res in data["season_result"].unique()]
     data["res_cat"].cat.reorder_categories(
-        [
-            "Missed Playoffs",
-            "Wild Card",
-            "Division Champ",
-            "Win League",
-            "Win World Series",
-        ],
+        new_order,
         inplace=True,
     )
     data.sort_values("res_cat", inplace=True)

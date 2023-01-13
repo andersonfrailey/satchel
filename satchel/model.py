@@ -102,6 +102,7 @@ class Satchel:
             raise ValueError("`talent_measure` must be median or mean")
         self.talent_measure = talent_measure
         self.transactions = transactions
+        self.current_standings = None
 
         if not war_method in ["current_pace", "only_projections"]:
             raise ValueError("`war_method must be `current_pace` or `only_projections`")
@@ -121,16 +122,9 @@ class Satchel:
             )
         today = datetime.today()
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
-        self.midseason = use_current_results
-        self.current_standings = None
-        if self.midseason:
-            self.current_standings = pd.concat(standings(YEAR))
-            self.current_standings["index"] = self.current_standings["Tm"].map(
-                constants.NAME_TO_ABBR
-            )
-            self.current_standings["W"] = self.current_standings["W"].astype(int)
-            self.current_standings["L"] = self.current_standings["L"].astype(int)
-        if today > opening_day and use_current_results:
+        final_day = datetime.strptime(FINAL_DAY, "%m/%d/%Y")
+
+        if today > opening_day and use_current_results and today < final_day:
             # fetch the remaining schedule if it isn't cached
             fmt = "%d%m%Y"
             schedule = Path(
@@ -151,6 +145,29 @@ class Satchel:
                 )
                 if not cache:
                     schedule = StringIO(sched.to_csv(index=False))
+            self.current_standings = pd.concat(standings(YEAR))
+            self.current_standings["index"] = self.current_standings["Tm"].map(
+                constants.NAME_TO_ABBR
+            )
+            self.current_standings["W"] = self.current_standings["W"].astype(int)
+            self.current_standings["L"] = self.current_standings["L"].astype(int)
+            self.midseason = True
+            pitcher_proj = Path(DATA_PATH, "pitcherprojections_ros.csv")
+            batter_proj = Path(DATA_PATH, "batterprojections_ros.csv")
+        else:
+            use_current_results = False
+            self.midseason = False
+
+        # self.midseason = use_current_results
+        # self.current_standings = None
+        # if self.midseason:
+        #     self.current_standings = pd.concat(standings(YEAR))
+        #     self.current_standings["index"] = self.current_standings["Tm"].map(
+        #         constants.NAME_TO_ABBR
+        #     )
+        #     self.current_standings["W"] = self.current_standings["W"].astype(int)
+        #     self.current_standings["L"] = self.current_standings["L"].astype(int)
+
         self.schedule = pd.read_csv(schedule)
         self.schedule["START DATE"] = pd.to_datetime(self.schedule["START DATE"])
 
@@ -163,19 +180,19 @@ class Satchel:
         self.steamer_b_wt = steamer_b_wt
         self.zips_b_wt = zips_b_wt
 
-        if use_current_results:
-            # update talent to include what the players
-            # batter_stats = batting_stats(YEAR, qual=0)
-            # pitcher_stats = pitching_stats(YEAR, qual=0)
-            # batter_stats["playerid"] = batter_stats["IDfg"].astype(str)
-            # pitcher_stats["playerid"] = pitcher_stats["IDfg"].astype(str)
-            # stats_cols = ["playerid", "WAR"]
-            # self._prep_talent_data(
-            #     batter_stats[stats_cols], pitcher_stats[stats_cols], war_method
-            # )
-            # del batter_stats, pitcher_stats
-            pitcher_proj = Path(DATA_PATH, "pitcherprojections_ros.csv")
-            batter_proj = Path(DATA_PATH, "batterprojections_ros.csv")
+        # if use_current_results:
+        #     # update talent to include what the players
+        #     # batter_stats = batting_stats(YEAR, qual=0)
+        #     # pitcher_stats = pitching_stats(YEAR, qual=0)
+        #     # batter_stats["playerid"] = batter_stats["IDfg"].astype(str)
+        #     # pitcher_stats["playerid"] = pitcher_stats["IDfg"].astype(str)
+        #     # stats_cols = ["playerid", "WAR"]
+        #     # self._prep_talent_data(
+        #     #     batter_stats[stats_cols], pitcher_stats[stats_cols], war_method
+        #     # )
+        #     # del batter_stats, pitcher_stats
+        #     pitcher_proj = Path(DATA_PATH, "pitcherprojections_ros.csv")
+        #     batter_proj = Path(DATA_PATH, "batterprojections_ros.csv")
 
         self.pitch_proj = pd.read_csv(pitcher_proj)
         self.batter_proj = pd.read_csv(batter_proj)
