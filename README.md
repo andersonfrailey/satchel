@@ -3,7 +3,9 @@ _An open source model for projecting MLB season outcomes_
 
 <center><img src="https://baseballhall.org/sites/default/files/styles/fullscreen_image_popup/public/islandora_images/Paige%20Satchel%20177-79_PD.jpg?itok=-a_LfgqY" width=45%; height=auto;/></center>
 
-Satchel is a simple MLB projection model, meant to provide a basic forecast with relatively little effort. Much like the [Marcel The Monkey Forecasting System](http://tangotiger.net/marcel/), it is not the most advanced projection method and its projections shouldn't be treated as the word of God. Satchel essentially boils each game in a given season down to a weighted coin flip based on the amount of talent on each team's 40-man roster and then flips that coin thousands of times.
+## Description
+
+Satchel is a simple MLB projection model meant to provide a basic forecast with relatively little effort. Much like the [Marcel The Monkey Forecasting System](http://tangotiger.net/marcel/), it is not the most advanced projection method and its projections shouldn't be treated as the word of God. I like to describe it as a minimum effort projection. Satchel essentially boils each game in a given season down to a weighted coin flip based on the amount of talent on each team's 40-man roster and then flips that coin thousands of times.
 
 Team talent is calculated by summing up the total WAR on their 40-man roster given by FanGraphs' [Depth Charts projections](https://www.fangraphs.com/projections?pos=all&stats=bat&type=rfangraphsdc), then dividing that number by the mean (or median if you so chose) total for the league. By default, Satchel uses the Bradley-Terry model to calculate probabilities. With this model, the probability that team _A_ beats team _B_ is:
 
@@ -16,6 +18,8 @@ Satchel also supports Elo-style probability calculations where the probability t
 <center><i>1 &#247; (1 + 10<sup>[T<sub>A</sub> - T<sub>B</sub>] / 400</sup>)</i></center>
 
 Once each team's talent has been calculated, Satchel will simulate each season 10,000 times (the user can change that number if they wish), adding random noise to each team's talent each time. The results are then averaged to come up with the final projected win/loss totals and the probability each team win the wild card, division, World Series, etc.
+
+## How to use Satchel
 
 Using Satchel is straightforward. Create an instance of the model class, tell it to run, then wait. Running the model will return a new class object, `SatchelResults`, which contains the results of the simulation and a few fun methods for analyzing those results. To get started, you only need three lines of code:
 
@@ -107,3 +111,7 @@ _Methods_
 * `results_dist_chart(team, cmap)`: Creates a bar chart showing the distribution of results for the specified team.
 * `results_grid()`: Creates a grid of bar charts showing the distribution of results for each team.
 * `results_scatter(team, offset, y)`: Creates a scatter plot that shows the distribution of results for the specified team.
+
+## General remarks
+
+Despite its methodological simplicity, Satchel does a pretty good job. When I compared it to FanGraphs' projections in 2021, it [held its own](https://andersonfrailey.github.io/blog/Satchel-2021-Autopsy.html). And it can be used for fun experiments like [trying to get the Angels to the postseason](https://andersonfrailey.github.io/blog/Can-We-Get-the-2022-Angels-to-the-Postseason.html) (a very hard task). Is this whole thing a bit overdone for how simple the model is? Possibly. And I don't care.
