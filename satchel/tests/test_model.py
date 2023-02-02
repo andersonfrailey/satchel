@@ -24,6 +24,18 @@ def test_model(curpath, schedule2021, batter_projections, pitcher_projections):
     assert res == expectedres, MSG
     assert mod.talent["final_talent"].isna().sum() == 0
 
+    mod = Satchel(
+        seed=123,
+        schedule=schedule2021,
+        use_current_results=False,
+        batter_proj=batter_projections,
+        pitcher_proj=pitcher_projections,
+    )
+    res = mod.simulate(100, probability_method="elo", elo_scale=400)
+
+    with pytest.raises(ValueError):
+        res = mod.simulate(100, probability_method="newton")
+
 
 def test_transaction(
     transaction, curpath, schedule2021, batter_projections, pitcher_projections

@@ -241,5 +241,4 @@ class SatchelResults:
             else:
                 if not val == getattr(__o, attr):
                     return False
-        print("out")
         return True
