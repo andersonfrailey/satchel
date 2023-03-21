@@ -1,7 +1,9 @@
+import pickle
 import pandas as pd
 from dataclasses import dataclass
 from collections import Counter
 from typing import Union
+from pathlib import PosixPath
 from pybaseball import standings
 from .schedules.createschedule import YEAR
 from . import plotting
@@ -208,6 +210,17 @@ class SatchelResults:
             .sort_values("Projected Wins", ascending=False)
             .reset_index(drop=True)
         )
+
+    def save(self, outfile: Union[str, PosixPath]):
+        """
+        Save results as a pickle
+
+        Returns
+        -------
+        None
+        """
+        with open(outfile, "wb") as f:
+            pickle.dump(self, f)
 
     ####### Private methods #######
 
