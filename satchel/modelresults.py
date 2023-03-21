@@ -230,6 +230,8 @@ class SatchelResults:
     def __eq__(self, __o: object) -> bool:
         # compare all of the objects of the results to see if they're equal
         for attr, val in self.__dict__.items():
+            if attr == "date":
+                continue
             if isinstance(val, pd.DataFrame):
                 otherval = getattr(__o, attr).reset_index(drop=True)
                 if not val.reset_index(drop=True).equals(otherval):

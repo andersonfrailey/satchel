@@ -36,6 +36,9 @@ def test_model(curpath, schedule2021, batter_projections, pitcher_projections):
     with pytest.raises(ValueError):
         res = mod.simulate(100, probability_method="newton")
 
+    with pytest.raises(ValueError):
+        mod = Satchel(fg_projections="marcel")
+
 
 def test_transaction(
     transaction, curpath, schedule2021, batter_projections, pitcher_projections

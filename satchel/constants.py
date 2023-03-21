@@ -139,3 +139,13 @@ ABBR_TO_CITY = {
 }
 
 CITY_TO_ABBR = {city: abbr for abbr, city in ABBR_TO_CITY.items()}
+
+FG_PROJECTIONS = [
+    "fangraphsdc",
+    "zips",
+    "zipsdc",
+    "steamer",
+    "atc",
+    "thebat",
+    "thebatx",
+]
