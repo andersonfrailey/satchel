@@ -27,6 +27,8 @@ class SatchelResults:
     noise: dict  # the noise added to each team's talent in every season
     full_seasons: list  # full season results for each simulation
     seed: Union[int, None]  # seed used for the simulation
+    fg_projections: str  # Which FanGraphs projections were used
+    date: str  # Date the model was run
 
     def __post_init__(self):
         """Set all of the default values calculated from the results"""

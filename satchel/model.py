@@ -276,6 +276,8 @@ class Satchel:
             noise,
             full_seasons,
             self.seed,
+            self.fg_projections,
+            datetime.strftime(datetime.today(), "%m-%d-%Y"),
         )
 
     def simseason(
