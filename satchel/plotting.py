@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from functools import reduce
 from collections import defaultdict
+from datetime import datetime
 
 
 def results_dataprep(data, team):
@@ -312,3 +313,71 @@ def results_scatter(data, mean_wins, offset=0.05, y=0):
     ax.set_ylim([data["yval"].min() - offset * 3, data["yval"].max() + offset * 3])
 
     return fig, ax
+
+
+def standings_table(standings, division, twitter_tag, date=None):
+    fig, ax = plt.subplots()
+    nrows = 5
+    ncols = 6
+    ax.set_ylim(-nrows - 1, 2)
+    ax.set_xlim(0, ncols + 0.5)
+    # Add column headers
+    ax.text(0.3, 1.25, "Team", weight="bold", ha="left")
+    ax.text(1.2, 1.25, "Wins", weight="bold", ha="left")
+    ax.text(2, 1.25, "Losses", weight="bold", ha="left")
+    ax.text(3, 1.25, "Make\nPlayoffs\n(%)", weight="bold", ha="left", va="center")
+    ax.text(4.25, 1.25, "Win\nDivision\n(%)", weight="bold", ha="left", va="center")
+    ax.text(5.5, 1.25, "Win WS", weight="bold", ha="left")
+    # header gridline
+    ax.plot([0, ncols + 1], [0.4, 0.4], c="black")
+    # add row data
+    for _row in range(nrows):
+        ax.text(x=0.5, y=-_row, s=standings.iloc[_row]["Team"], va="center", ha="left")
+        ax.text(
+            x=1.35, y=-_row, s=standings.iloc[_row]["Mean Wins"], va="center", ha="left"
+        )
+        ax.text(
+            x=2.2,
+            y=-_row,
+            s=standings.iloc[_row]["Mean Losses"],
+            va="center",
+            ha="left",
+        )
+        ax.text(
+            x=3.75,
+            y=-_row,
+            s=f"{standings.iloc[_row]['Make Playoffs (%)']:4.2f}%",
+            va="center",
+            ha="right",
+        )
+        ax.text(
+            x=5,
+            y=-_row,
+            s=f"{standings.iloc[_row]['Win Division (%)']:.2f}%",
+            va="center",
+            ha="right",
+        )
+        ax.text(
+            x=6.25,
+            y=-_row,
+            s=f"{standings.iloc[_row]['Win WS (%)']:.2f}%",
+            va="center",
+            ha="right",
+        )
+        # grid lines
+        ax.plot([0, ncols + 1], [-_row - 0.5, -_row - 0.5], ls=":", lw=0.5, c="grey")
+
+    # add tag
+    ax.text(x=4.75, y=-5.75, s=twitter_tag)
+    if not date:
+        date = datetime.strftime(datetime.today(), "%m-%d-%Y")
+    ax.text(
+        x=0,
+        y=-5.75,
+        s=f"Generated: {date}",
+        fontsize="small",
+    )
+    ax.axis("off")
+    ax.set_title(division, loc="left", fontsize=18, weight="bold")
+
+    return fig
