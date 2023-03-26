@@ -1,10 +1,17 @@
 """
 Utility functions for Satchel
 """
+import requests
+import json
 import pandas as pd
 import numpy as np
 from pybaseball import playerid_lookup
 from typing import Union
+from functools import lru_cache
+from .constants import FG_PROJECTIONS
+
+
+FG_API = "https://www.fangraphs.com/api/projections?stats={stats}&type={proj}"
 
 
 def player_id_lookup(last=None, first=None, fuzzy=False):
@@ -41,3 +48,28 @@ def probability_calculations(
         return 1 / (1 + np.power(10, exp_val))
     else:
         raise ValueError("`probability_method must be `bradley_terry` or `elo`.")
+
+
+@lru_cache(maxsize=5)
+def fetch_fg_projection_data(stats: str, fg_projection: str, date):
+    """
+    Fetch projection data from FanGraphs
+
+    Parameters
+    ----------
+    stats : str
+        `pit` if fetching for pitcher projections. `bat` if fetching
+        batter projections
+    fg_projection : str
+        Which FG projections to fetch
+    date
+        Date the data was fetched on
+    """
+    if fg_projection not in FG_PROJECTIONS:
+        raise ValueError(f"`fg_projections` must be in {FG_PROJECTIONS}")
+    req = requests.get(FG_API.format(stats=stats, proj=fg_projection))
+    if req.status_code != 200:
+        raise ConnectionError("Connection to FanGraphs failed")
+    data = pd.DataFrame(json.loads(req.content))
+    data.rename(columns={"playerids": "playerid"}, inplace=True)
+    return data

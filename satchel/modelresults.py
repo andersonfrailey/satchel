@@ -1,7 +1,9 @@
+import pickle
 import pandas as pd
 from dataclasses import dataclass
 from collections import Counter
 from typing import Union
+from pathlib import PosixPath
 from pybaseball import standings
 from .schedules.createschedule import YEAR
 from . import plotting
@@ -27,6 +29,8 @@ class SatchelResults:
     noise: dict  # the noise added to each team's talent in every season
     full_seasons: list  # full season results for each simulation
     seed: Union[int, None]  # seed used for the simulation
+    fg_projections: str  # Which FanGraphs projections were used
+    date: str  # Date the model was run
 
     def __post_init__(self):
         """Set all of the default values calculated from the results"""
@@ -207,6 +211,17 @@ class SatchelResults:
             .reset_index(drop=True)
         )
 
+    def save(self, outfile: Union[str, PosixPath]):
+        """
+        Save results as a pickle
+
+        Returns
+        -------
+        None
+        """
+        with open(outfile, "wb") as f:
+            pickle.dump(self, f)
+
     ####### Private methods #######
 
     @staticmethod
@@ -230,6 +245,8 @@ class SatchelResults:
     def __eq__(self, __o: object) -> bool:
         # compare all of the objects of the results to see if they're equal
         for attr, val in self.__dict__.items():
+            if attr == "date":
+                continue
             if isinstance(val, pd.DataFrame):
                 otherval = getattr(__o, attr).reset_index(drop=True)
                 if not val.reset_index(drop=True).equals(otherval):

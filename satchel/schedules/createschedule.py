@@ -10,9 +10,9 @@ from pathlib import Path
 
 CUR_PATH = Path(__file__).resolve().parent
 # update year and opening day when updating the file
-YEAR = 2022
-OPENING_DAY = "0331"
-FINAL_DAY = "10/05/2022"
+YEAR = 2023
+OPENING_DAY = "0330"
+FINAL_DAY = "10/01/2023"
 SCHEDULE = Path(CUR_PATH, str(YEAR))
 
 BASE_URL = (
@@ -112,13 +112,15 @@ def create_schedule(
         )
         sched["away"] = sched["away_team"].map(NAME_MAP)
         sched["home"] = sched["home_team"].map(NAME_MAP)
-        time.sleep(1)
+        time.sleep(5)
         return sched[["START DATE", "away", "home", "SUBJECT"]]
 
     dfs = [
         process(_id, team, year, start_date, verbose) for _id, team in ID_MAP.items()
     ]
     final_sched = pd.concat(dfs)
+    if final_sched.shape[0] != 2430:
+        raise AssertionError("Missing games!")
     if outfile:
         final_sched.to_csv(outfile, index=False)
     if _return:

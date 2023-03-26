@@ -1,0 +1,2431 @@
+START DATE,away,home,SUBJECT
+2023-04-11,DET,TOR,Tigers at Blue Jays
+2023-04-12,DET,TOR,Tigers at Blue Jays
+2023-04-13,DET,TOR,Tigers at Blue Jays
+2023-04-14,TBR,TOR,Rays at Blue Jays
+2023-04-15,TBR,TOR,Rays at Blue Jays
+2023-04-16,TBR,TOR,Rays at Blue Jays
+2023-04-24,CHW,TOR,White Sox at Blue Jays
+2023-04-25,CHW,TOR,White Sox at Blue Jays
+2023-04-26,CHW,TOR,White Sox at Blue Jays
+2023-04-28,SEA,TOR,Mariners at Blue Jays
+2023-04-29,SEA,TOR,Mariners at Blue Jays
+2023-04-30,SEA,TOR,Mariners at Blue Jays
+2023-05-12,ATL,TOR,Braves at Blue Jays
+2023-05-13,ATL,TOR,Braves at Blue Jays
+2023-05-14,ATL,TOR,Braves at Blue Jays
+2023-05-15,NYY,TOR,Yankees at Blue Jays
+2023-05-16,NYY,TOR,Yankees at Blue Jays
+2023-05-17,NYY,TOR,Yankees at Blue Jays
+2023-05-18,NYY,TOR,Yankees at Blue Jays
+2023-05-19,BAL,TOR,Orioles at Blue Jays
+2023-05-20,BAL,TOR,Orioles at Blue Jays
+2023-05-21,BAL,TOR,Orioles at Blue Jays
+2023-05-30,MIL,TOR,Brewers at Blue Jays
+2023-05-31,MIL,TOR,Brewers at Blue Jays
+2023-06-01,MIL,TOR,Brewers at Blue Jays
+2023-06-05,HOU,TOR,Astros at Blue Jays
+2023-06-06,HOU,TOR,Astros at Blue Jays
+2023-06-07,HOU,TOR,Astros at Blue Jays
+2023-06-08,HOU,TOR,Astros at Blue Jays
+2023-06-09,MIN,TOR,Twins at Blue Jays
+2023-06-10,MIN,TOR,Twins at Blue Jays
+2023-06-11,MIN,TOR,Twins at Blue Jays
+2023-06-23,OAK,TOR,Athletics at Blue Jays
+2023-06-24,OAK,TOR,Athletics at Blue Jays
+2023-06-25,OAK,TOR,Athletics at Blue Jays
+2023-06-27,SFG,TOR,Giants at Blue Jays
+2023-06-28,SFG,TOR,Giants at Blue Jays
+2023-06-29,SFG,TOR,Giants at Blue Jays
+2023-06-30,BOS,TOR,Red Sox at Blue Jays
+2023-07-01,BOS,TOR,Red Sox at Blue Jays
+2023-07-02,BOS,TOR,Red Sox at Blue Jays
+2023-07-14,ARI,TOR,D-backs at Blue Jays
+2023-07-15,ARI,TOR,D-backs at Blue Jays
+2023-07-16,ARI,TOR,D-backs at Blue Jays
+2023-07-18,SDP,TOR,Padres at Blue Jays
+2023-07-19,SDP,TOR,Padres at Blue Jays
+2023-07-20,SDP,TOR,Padres at Blue Jays
+2023-07-28,LAA,TOR,Angels at Blue Jays
+2023-07-29,LAA,TOR,Angels at Blue Jays
+2023-07-30,LAA,TOR,Angels at Blue Jays
+2023-07-31,BAL,TOR,Orioles at Blue Jays
+2023-08-01,BAL,TOR,Orioles at Blue Jays
+2023-08-02,BAL,TOR,Orioles at Blue Jays
+2023-08-03,BAL,TOR,Orioles at Blue Jays
+2023-08-11,CHC,TOR,Cubs at Blue Jays
+2023-08-12,CHC,TOR,Cubs at Blue Jays
+2023-08-13,CHC,TOR,Cubs at Blue Jays
+2023-08-15,PHI,TOR,Phillies at Blue Jays
+2023-08-16,PHI,TOR,Phillies at Blue Jays
+2023-08-25,CLE,TOR,Guardians at Blue Jays
+2023-08-26,CLE,TOR,Guardians at Blue Jays
+2023-08-27,CLE,TOR,Guardians at Blue Jays
+2023-08-28,WSN,TOR,Nationals at Blue Jays
+2023-08-29,WSN,TOR,Nationals at Blue Jays
+2023-08-30,WSN,TOR,Nationals at Blue Jays
+2023-09-08,KCR,TOR,Royals at Blue Jays
+2023-09-09,KCR,TOR,Royals at Blue Jays
+2023-09-10,KCR,TOR,Royals at Blue Jays
+2023-09-11,TEX,TOR,Rangers at Blue Jays
+2023-09-12,TEX,TOR,Rangers at Blue Jays
+2023-09-13,TEX,TOR,Rangers at Blue Jays
+2023-09-14,TEX,TOR,Rangers at Blue Jays
+2023-09-15,BOS,TOR,Red Sox at Blue Jays
+2023-09-16,BOS,TOR,Red Sox at Blue Jays
+2023-09-17,BOS,TOR,Red Sox at Blue Jays
+2023-09-26,NYY,TOR,Yankees at Blue Jays
+2023-09-27,NYY,TOR,Yankees at Blue Jays
+2023-09-28,NYY,TOR,Yankees at Blue Jays
+2023-09-29,TBR,TOR,Rays at Blue Jays
+2023-09-30,TBR,TOR,Rays at Blue Jays
+2023-10-01,TBR,TOR,Rays at Blue Jays
+2023-04-06,NYY,BAL,Yankees at Orioles
+2023-04-08,NYY,BAL,Yankees at Orioles
+2023-04-09,NYY,BAL,Yankees at Orioles
+2023-04-10,OAK,BAL,Athletics at Orioles
+2023-04-11,OAK,BAL,Athletics at Orioles
+2023-04-12,OAK,BAL,Athletics at Orioles
+2023-04-13,OAK,BAL,Athletics at Orioles
+2023-04-21,DET,BAL,Tigers at Orioles
+2023-04-22,DET,BAL,Tigers at Orioles
+2023-04-23,DET,BAL,Tigers at Orioles
+2023-04-24,BOS,BAL,Red Sox at Orioles
+2023-04-25,BOS,BAL,Red Sox at Orioles
+2023-04-26,BOS,BAL,Red Sox at Orioles
+2023-05-08,TBR,BAL,Rays at Orioles
+2023-05-09,TBR,BAL,Rays at Orioles
+2023-05-10,TBR,BAL,Rays at Orioles
+2023-05-12,PIT,BAL,Pirates at Orioles
+2023-05-13,PIT,BAL,Pirates at Orioles
+2023-05-14,PIT,BAL,Pirates at Orioles
+2023-05-15,LAA,BAL,Angels at Orioles
+2023-05-16,LAA,BAL,Angels at Orioles
+2023-05-17,LAA,BAL,Angels at Orioles
+2023-05-18,LAA,BAL,Angels at Orioles
+2023-05-26,TEX,BAL,Rangers at Orioles
+2023-05-27,TEX,BAL,Rangers at Orioles
+2023-05-28,TEX,BAL,Rangers at Orioles
+2023-05-29,CLE,BAL,Guardians at Orioles
+2023-05-30,CLE,BAL,Guardians at Orioles
+2023-05-31,CLE,BAL,Guardians at Orioles
+2023-06-09,KCR,BAL,Royals at Orioles
+2023-06-10,KCR,BAL,Royals at Orioles
+2023-06-11,KCR,BAL,Royals at Orioles
+2023-06-13,TOR,BAL,Blue Jays at Orioles
+2023-06-14,TOR,BAL,Blue Jays at Orioles
+2023-06-15,TOR,BAL,Blue Jays at Orioles
+2023-06-23,SEA,BAL,Mariners at Orioles
+2023-06-24,SEA,BAL,Mariners at Orioles
+2023-06-25,SEA,BAL,Mariners at Orioles
+2023-06-26,CIN,BAL,Reds at Orioles
+2023-06-27,CIN,BAL,Reds at Orioles
+2023-06-28,CIN,BAL,Reds at Orioles
+2023-06-30,MIN,BAL,Twins at Orioles
+2023-07-01,MIN,BAL,Twins at Orioles
+2023-07-02,MIN,BAL,Twins at Orioles
+2023-07-14,MIA,BAL,Marlins at Orioles
+2023-07-15,MIA,BAL,Marlins at Orioles
+2023-07-16,MIA,BAL,Marlins at Orioles
+2023-07-17,LAD,BAL,Dodgers at Orioles
+2023-07-18,LAD,BAL,Dodgers at Orioles
+2023-07-19,LAD,BAL,Dodgers at Orioles
+2023-07-28,NYY,BAL,Yankees at Orioles
+2023-07-29,NYY,BAL,Yankees at Orioles
+2023-07-30,NYY,BAL,Yankees at Orioles
+2023-08-04,NYM,BAL,Mets at Orioles
+2023-08-05,NYM,BAL,Mets at Orioles
+2023-08-06,NYM,BAL,Mets at Orioles
+2023-08-08,HOU,BAL,Astros at Orioles
+2023-08-09,HOU,BAL,Astros at Orioles
+2023-08-10,HOU,BAL,Astros at Orioles
+2023-08-22,TOR,BAL,Blue Jays at Orioles
+2023-08-23,TOR,BAL,Blue Jays at Orioles
+2023-08-24,TOR,BAL,Blue Jays at Orioles
+2023-08-25,COL,BAL,Rockies at Orioles
+2023-08-26,COL,BAL,Rockies at Orioles
+2023-08-27,COL,BAL,Rockies at Orioles
+2023-08-28,CHW,BAL,White Sox at Orioles
+2023-08-29,CHW,BAL,White Sox at Orioles
+2023-08-30,CHW,BAL,White Sox at Orioles
+2023-09-11,STL,BAL,Cardinals at Orioles
+2023-09-12,STL,BAL,Cardinals at Orioles
+2023-09-13,STL,BAL,Cardinals at Orioles
+2023-09-14,TBR,BAL,Rays at Orioles
+2023-09-15,TBR,BAL,Rays at Orioles
+2023-09-16,TBR,BAL,Rays at Orioles
+2023-09-17,TBR,BAL,Rays at Orioles
+2023-09-26,WSN,BAL,Nationals at Orioles
+2023-09-27,WSN,BAL,Nationals at Orioles
+2023-09-28,BOS,BAL,Red Sox at Orioles
+2023-09-29,BOS,BAL,Red Sox at Orioles
+2023-09-30,BOS,BAL,Red Sox at Orioles
+2023-10-01,BOS,BAL,Red Sox at Orioles
+2023-03-30,DET,TBR,Tigers at Rays
+2023-04-01,DET,TBR,Tigers at Rays
+2023-04-02,DET,TBR,Tigers at Rays
+2023-04-07,OAK,TBR,Athletics at Rays
+2023-04-08,OAK,TBR,Athletics at Rays
+2023-04-09,OAK,TBR,Athletics at Rays
+2023-04-10,BOS,TBR,Red Sox at Rays
+2023-04-11,BOS,TBR,Red Sox at Rays
+2023-04-12,BOS,TBR,Red Sox at Rays
+2023-04-13,BOS,TBR,Red Sox at Rays
+2023-04-21,CHW,TBR,White Sox at Rays
+2023-04-22,CHW,TBR,White Sox at Rays
+2023-04-23,CHW,TBR,White Sox at Rays
+2023-04-24,HOU,TBR,Astros at Rays
+2023-04-25,HOU,TBR,Astros at Rays
+2023-04-26,HOU,TBR,Astros at Rays
+2023-05-02,PIT,TBR,Pirates at Rays
+2023-05-03,PIT,TBR,Pirates at Rays
+2023-05-04,PIT,TBR,Pirates at Rays
+2023-05-05,NYY,TBR,Yankees at Rays
+2023-05-06,NYY,TBR,Yankees at Rays
+2023-05-07,NYY,TBR,Yankees at Rays
+2023-05-19,MIL,TBR,Brewers at Rays
+2023-05-20,MIL,TBR,Brewers at Rays
+2023-05-21,MIL,TBR,Brewers at Rays
+2023-05-22,TOR,TBR,Blue Jays at Rays
+2023-05-23,TOR,TBR,Blue Jays at Rays
+2023-05-24,TOR,TBR,Blue Jays at Rays
+2023-05-25,TOR,TBR,Blue Jays at Rays
+2023-05-26,LAD,TBR,Dodgers at Rays
+2023-05-27,LAD,TBR,Dodgers at Rays
+2023-05-28,LAD,TBR,Dodgers at Rays
+2023-06-06,MIN,TBR,Twins at Rays
+2023-06-07,MIN,TBR,Twins at Rays
+2023-06-08,MIN,TBR,Twins at Rays
+2023-06-09,TEX,TBR,Rangers at Rays
+2023-06-10,TEX,TBR,Rangers at Rays
+2023-06-11,TEX,TBR,Rangers at Rays
+2023-06-20,BAL,TBR,Orioles at Rays
+2023-06-21,BAL,TBR,Orioles at Rays
+2023-06-22,KCR,TBR,Royals at Rays
+2023-06-23,KCR,TBR,Royals at Rays
+2023-06-24,KCR,TBR,Royals at Rays
+2023-06-25,KCR,TBR,Royals at Rays
+2023-07-04,PHI,TBR,Phillies at Rays
+2023-07-05,PHI,TBR,Phillies at Rays
+2023-07-06,PHI,TBR,Phillies at Rays
+2023-07-07,ATL,TBR,Braves at Rays
+2023-07-08,ATL,TBR,Braves at Rays
+2023-07-09,ATL,TBR,Braves at Rays
+2023-07-20,BAL,TBR,Orioles at Rays
+2023-07-21,BAL,TBR,Orioles at Rays
+2023-07-22,BAL,TBR,Orioles at Rays
+2023-07-23,BAL,TBR,Orioles at Rays
+2023-07-25,MIA,TBR,Marlins at Rays
+2023-07-26,MIA,TBR,Marlins at Rays
+2023-08-08,STL,TBR,Cardinals at Rays
+2023-08-09,STL,TBR,Cardinals at Rays
+2023-08-10,STL,TBR,Cardinals at Rays
+2023-08-11,CLE,TBR,Guardians at Rays
+2023-08-12,CLE,TBR,Guardians at Rays
+2023-08-13,CLE,TBR,Guardians at Rays
+2023-08-22,COL,TBR,Rockies at Rays
+2023-08-23,COL,TBR,Rockies at Rays
+2023-08-24,COL,TBR,Rockies at Rays
+2023-08-25,NYY,TBR,Yankees at Rays
+2023-08-26,NYY,TBR,Yankees at Rays
+2023-08-27,NYY,TBR,Yankees at Rays
+2023-09-04,BOS,TBR,Red Sox at Rays
+2023-09-05,BOS,TBR,Red Sox at Rays
+2023-09-06,BOS,TBR,Red Sox at Rays
+2023-09-07,SEA,TBR,Mariners at Rays
+2023-09-08,SEA,TBR,Mariners at Rays
+2023-09-09,SEA,TBR,Mariners at Rays
+2023-09-10,SEA,TBR,Mariners at Rays
+2023-09-19,LAA,TBR,Angels at Rays
+2023-09-20,LAA,TBR,Angels at Rays
+2023-09-21,LAA,TBR,Angels at Rays
+2023-09-22,TOR,TBR,Blue Jays at Rays
+2023-09-23,TOR,TBR,Blue Jays at Rays
+2023-09-24,TOR,TBR,Blue Jays at Rays
+2023-03-30,BAL,BOS,Orioles at Red Sox
+2023-04-01,BAL,BOS,Orioles at Red Sox
+2023-04-02,BAL,BOS,Orioles at Red Sox
+2023-04-03,PIT,BOS,Pirates at Red Sox
+2023-04-04,PIT,BOS,Pirates at Red Sox
+2023-04-05,PIT,BOS,Pirates at Red Sox
+2023-04-14,LAA,BOS,Angels at Red Sox
+2023-04-15,LAA,BOS,Angels at Red Sox
+2023-04-16,LAA,BOS,Angels at Red Sox
+2023-04-17,LAA,BOS,Angels at Red Sox
+2023-04-18,MIN,BOS,Twins at Red Sox
+2023-04-19,MIN,BOS,Twins at Red Sox
+2023-04-20,MIN,BOS,Twins at Red Sox
+2023-04-28,CLE,BOS,Guardians at Red Sox
+2023-04-29,CLE,BOS,Guardians at Red Sox
+2023-04-30,CLE,BOS,Guardians at Red Sox
+2023-05-01,TOR,BOS,Blue Jays at Red Sox
+2023-05-02,TOR,BOS,Blue Jays at Red Sox
+2023-05-03,TOR,BOS,Blue Jays at Red Sox
+2023-05-04,TOR,BOS,Blue Jays at Red Sox
+2023-05-12,STL,BOS,Cardinals at Red Sox
+2023-05-13,STL,BOS,Cardinals at Red Sox
+2023-05-14,STL,BOS,Cardinals at Red Sox
+2023-05-15,SEA,BOS,Mariners at Red Sox
+2023-05-16,SEA,BOS,Mariners at Red Sox
+2023-05-17,SEA,BOS,Mariners at Red Sox
+2023-05-30,CIN,BOS,Reds at Red Sox
+2023-05-31,CIN,BOS,Reds at Red Sox
+2023-06-01,CIN,BOS,Reds at Red Sox
+2023-06-02,TBR,BOS,Rays at Red Sox
+2023-06-03,TBR,BOS,Rays at Red Sox
+2023-06-03,TBR,BOS,Rays at Red Sox
+2023-06-04,TBR,BOS,Rays at Red Sox
+2023-06-12,COL,BOS,Rockies at Red Sox
+2023-06-13,COL,BOS,Rockies at Red Sox
+2023-06-14,COL,BOS,Rockies at Red Sox
+2023-06-16,NYY,BOS,Yankees at Red Sox
+2023-06-17,NYY,BOS,Yankees at Red Sox
+2023-06-18,NYY,BOS,Yankees at Red Sox
+2023-06-27,MIA,BOS,Marlins at Red Sox
+2023-06-28,MIA,BOS,Marlins at Red Sox
+2023-06-29,MIA,BOS,Marlins at Red Sox
+2023-07-04,TEX,BOS,Rangers at Red Sox
+2023-07-05,TEX,BOS,Rangers at Red Sox
+2023-07-06,TEX,BOS,Rangers at Red Sox
+2023-07-07,OAK,BOS,Athletics at Red Sox
+2023-07-08,OAK,BOS,Athletics at Red Sox
+2023-07-09,OAK,BOS,Athletics at Red Sox
+2023-07-21,NYM,BOS,Mets at Red Sox
+2023-07-22,NYM,BOS,Mets at Red Sox
+2023-07-23,NYM,BOS,Mets at Red Sox
+2023-07-25,ATL,BOS,Braves at Red Sox
+2023-07-26,ATL,BOS,Braves at Red Sox
+2023-08-04,TOR,BOS,Blue Jays at Red Sox
+2023-08-05,TOR,BOS,Blue Jays at Red Sox
+2023-08-06,TOR,BOS,Blue Jays at Red Sox
+2023-08-07,KCR,BOS,Royals at Red Sox
+2023-08-08,KCR,BOS,Royals at Red Sox
+2023-08-09,KCR,BOS,Royals at Red Sox
+2023-08-10,KCR,BOS,Royals at Red Sox
+2023-08-11,DET,BOS,Tigers at Red Sox
+2023-08-12,DET,BOS,Tigers at Red Sox
+2023-08-13,DET,BOS,Tigers at Red Sox
+2023-08-25,LAD,BOS,Dodgers at Red Sox
+2023-08-26,LAD,BOS,Dodgers at Red Sox
+2023-08-27,LAD,BOS,Dodgers at Red Sox
+2023-08-28,HOU,BOS,Astros at Red Sox
+2023-08-29,HOU,BOS,Astros at Red Sox
+2023-08-30,HOU,BOS,Astros at Red Sox
+2023-09-08,BAL,BOS,Orioles at Red Sox
+2023-09-09,BAL,BOS,Orioles at Red Sox
+2023-09-10,BAL,BOS,Orioles at Red Sox
+2023-09-11,NYY,BOS,Yankees at Red Sox
+2023-09-12,NYY,BOS,Yankees at Red Sox
+2023-09-13,NYY,BOS,Yankees at Red Sox
+2023-09-14,NYY,BOS,Yankees at Red Sox
+2023-09-22,CHW,BOS,White Sox at Red Sox
+2023-09-23,CHW,BOS,White Sox at Red Sox
+2023-09-24,CHW,BOS,White Sox at Red Sox
+2023-09-26,TBR,BOS,Rays at Red Sox
+2023-09-27,TBR,BOS,Rays at Red Sox
+2023-03-30,SFG,NYY,Giants at Yankees
+2023-04-01,SFG,NYY,Giants at Yankees
+2023-04-02,SFG,NYY,Giants at Yankees
+2023-04-03,PHI,NYY,Phillies at Yankees
+2023-04-04,PHI,NYY,Phillies at Yankees
+2023-04-05,PHI,NYY,Phillies at Yankees
+2023-04-13,MIN,NYY,Twins at Yankees
+2023-04-14,MIN,NYY,Twins at Yankees
+2023-04-15,MIN,NYY,Twins at Yankees
+2023-04-16,MIN,NYY,Twins at Yankees
+2023-04-18,LAA,NYY,Angels at Yankees
+2023-04-19,LAA,NYY,Angels at Yankees
+2023-04-20,LAA,NYY,Angels at Yankees
+2023-04-21,TOR,NYY,Blue Jays at Yankees
+2023-04-22,TOR,NYY,Blue Jays at Yankees
+2023-04-23,TOR,NYY,Blue Jays at Yankees
+2023-05-01,CLE,NYY,Guardians at Yankees
+2023-05-02,CLE,NYY,Guardians at Yankees
+2023-05-03,CLE,NYY,Guardians at Yankees
+2023-05-08,OAK,NYY,Athletics at Yankees
+2023-05-09,OAK,NYY,Athletics at Yankees
+2023-05-10,OAK,NYY,Athletics at Yankees
+2023-05-11,TBR,NYY,Rays at Yankees
+2023-05-12,TBR,NYY,Rays at Yankees
+2023-05-13,TBR,NYY,Rays at Yankees
+2023-05-14,TBR,NYY,Rays at Yankees
+2023-05-23,BAL,NYY,Orioles at Yankees
+2023-05-24,BAL,NYY,Orioles at Yankees
+2023-05-25,BAL,NYY,Orioles at Yankees
+2023-05-26,SDP,NYY,Padres at Yankees
+2023-05-27,SDP,NYY,Padres at Yankees
+2023-05-28,SDP,NYY,Padres at Yankees
+2023-06-06,CHW,NYY,White Sox at Yankees
+2023-06-07,CHW,NYY,White Sox at Yankees
+2023-06-08,CHW,NYY,White Sox at Yankees
+2023-06-09,BOS,NYY,Red Sox at Yankees
+2023-06-10,BOS,NYY,Red Sox at Yankees
+2023-06-11,BOS,NYY,Red Sox at Yankees
+2023-06-20,SEA,NYY,Mariners at Yankees
+2023-06-21,SEA,NYY,Mariners at Yankees
+2023-06-22,SEA,NYY,Mariners at Yankees
+2023-06-23,TEX,NYY,Rangers at Yankees
+2023-06-24,TEX,NYY,Rangers at Yankees
+2023-06-25,TEX,NYY,Rangers at Yankees
+2023-07-03,BAL,NYY,Orioles at Yankees
+2023-07-04,BAL,NYY,Orioles at Yankees
+2023-07-05,BAL,NYY,Orioles at Yankees
+2023-07-06,BAL,NYY,Orioles at Yankees
+2023-07-07,CHC,NYY,Cubs at Yankees
+2023-07-08,CHC,NYY,Cubs at Yankees
+2023-07-09,CHC,NYY,Cubs at Yankees
+2023-07-21,KCR,NYY,Royals at Yankees
+2023-07-22,KCR,NYY,Royals at Yankees
+2023-07-23,KCR,NYY,Royals at Yankees
+2023-07-25,NYM,NYY,Mets at Yankees
+2023-07-26,NYM,NYY,Mets at Yankees
+2023-07-31,TBR,NYY,Rays at Yankees
+2023-08-01,TBR,NYY,Rays at Yankees
+2023-08-02,TBR,NYY,Rays at Yankees
+2023-08-03,HOU,NYY,Astros at Yankees
+2023-08-04,HOU,NYY,Astros at Yankees
+2023-08-05,HOU,NYY,Astros at Yankees
+2023-08-06,HOU,NYY,Astros at Yankees
+2023-08-18,BOS,NYY,Red Sox at Yankees
+2023-08-19,BOS,NYY,Red Sox at Yankees
+2023-08-20,BOS,NYY,Red Sox at Yankees
+2023-08-22,WSN,NYY,Nationals at Yankees
+2023-08-23,WSN,NYY,Nationals at Yankees
+2023-08-24,WSN,NYY,Nationals at Yankees
+2023-09-05,DET,NYY,Tigers at Yankees
+2023-09-06,DET,NYY,Tigers at Yankees
+2023-09-07,DET,NYY,Tigers at Yankees
+2023-09-08,MIL,NYY,Brewers at Yankees
+2023-09-09,MIL,NYY,Brewers at Yankees
+2023-09-10,MIL,NYY,Brewers at Yankees
+2023-09-19,TOR,NYY,Blue Jays at Yankees
+2023-09-20,TOR,NYY,Blue Jays at Yankees
+2023-09-21,TOR,NYY,Blue Jays at Yankees
+2023-09-22,ARI,NYY,D-backs at Yankees
+2023-09-23,ARI,NYY,D-backs at Yankees
+2023-09-24,ARI,NYY,D-backs at Yankees
+2023-04-07,SEA,CLE,Mariners at Guardians
+2023-04-08,SEA,CLE,Mariners at Guardians
+2023-04-09,SEA,CLE,Mariners at Guardians
+2023-04-10,NYY,CLE,Yankees at Guardians
+2023-04-11,NYY,CLE,Yankees at Guardians
+2023-04-12,NYY,CLE,Yankees at Guardians
+2023-04-21,MIA,CLE,Marlins at Guardians
+2023-04-22,MIA,CLE,Marlins at Guardians
+2023-04-23,MIA,CLE,Marlins at Guardians
+2023-04-24,COL,CLE,Rockies at Guardians
+2023-04-25,COL,CLE,Rockies at Guardians
+2023-04-26,COL,CLE,Rockies at Guardians
+2023-05-05,MIN,CLE,Twins at Guardians
+2023-05-06,MIN,CLE,Twins at Guardians
+2023-05-07,MIN,CLE,Twins at Guardians
+2023-05-08,DET,CLE,Tigers at Guardians
+2023-05-09,DET,CLE,Tigers at Guardians
+2023-05-10,DET,CLE,Tigers at Guardians
+2023-05-12,LAA,CLE,Angels at Guardians
+2023-05-13,LAA,CLE,Angels at Guardians
+2023-05-14,LAA,CLE,Angels at Guardians
+2023-05-22,CHW,CLE,White Sox at Guardians
+2023-05-23,CHW,CLE,White Sox at Guardians
+2023-05-24,CHW,CLE,White Sox at Guardians
+2023-05-26,STL,CLE,Cardinals at Guardians
+2023-05-27,STL,CLE,Cardinals at Guardians
+2023-05-28,STL,CLE,Cardinals at Guardians
+2023-06-06,BOS,CLE,Red Sox at Guardians
+2023-06-07,BOS,CLE,Red Sox at Guardians
+2023-06-08,BOS,CLE,Red Sox at Guardians
+2023-06-09,HOU,CLE,Astros at Guardians
+2023-06-10,HOU,CLE,Astros at Guardians
+2023-06-11,HOU,CLE,Astros at Guardians
+2023-06-20,OAK,CLE,Athletics at Guardians
+2023-06-21,OAK,CLE,Athletics at Guardians
+2023-06-22,OAK,CLE,Athletics at Guardians
+2023-06-23,MIL,CLE,Brewers at Guardians
+2023-06-24,MIL,CLE,Brewers at Guardians
+2023-06-25,MIL,CLE,Brewers at Guardians
+2023-07-03,ATL,CLE,Braves at Guardians
+2023-07-04,ATL,CLE,Braves at Guardians
+2023-07-05,ATL,CLE,Braves at Guardians
+2023-07-06,KCR,CLE,Royals at Guardians
+2023-07-07,KCR,CLE,Royals at Guardians
+2023-07-08,KCR,CLE,Royals at Guardians
+2023-07-09,KCR,CLE,Royals at Guardians
+2023-07-21,PHI,CLE,Phillies at Guardians
+2023-07-22,PHI,CLE,Phillies at Guardians
+2023-07-23,PHI,CLE,Phillies at Guardians
+2023-07-24,KCR,CLE,Royals at Guardians
+2023-07-25,KCR,CLE,Royals at Guardians
+2023-07-26,KCR,CLE,Royals at Guardians
+2023-08-04,CHW,CLE,White Sox at Guardians
+2023-08-05,CHW,CLE,White Sox at Guardians
+2023-08-06,CHW,CLE,White Sox at Guardians
+2023-08-07,TOR,CLE,Blue Jays at Guardians
+2023-08-08,TOR,CLE,Blue Jays at Guardians
+2023-08-09,TOR,CLE,Blue Jays at Guardians
+2023-08-10,TOR,CLE,Blue Jays at Guardians
+2023-08-17,DET,CLE,Tigers at Guardians
+2023-08-18,DET,CLE,Tigers at Guardians
+2023-08-19,DET,CLE,Tigers at Guardians
+2023-08-20,DET,CLE,Tigers at Guardians
+2023-08-22,LAD,CLE,Dodgers at Guardians
+2023-08-23,LAD,CLE,Dodgers at Guardians
+2023-08-24,LAD,CLE,Dodgers at Guardians
+2023-09-01,TBR,CLE,Rays at Guardians
+2023-09-02,TBR,CLE,Rays at Guardians
+2023-09-03,TBR,CLE,Rays at Guardians
+2023-09-04,MIN,CLE,Twins at Guardians
+2023-09-05,MIN,CLE,Twins at Guardians
+2023-09-06,MIN,CLE,Twins at Guardians
+2023-09-15,TEX,CLE,Rangers at Guardians
+2023-09-16,TEX,CLE,Rangers at Guardians
+2023-09-17,TEX,CLE,Rangers at Guardians
+2023-09-21,BAL,CLE,Orioles at Guardians
+2023-09-22,BAL,CLE,Orioles at Guardians
+2023-09-23,BAL,CLE,Orioles at Guardians
+2023-09-24,BAL,CLE,Orioles at Guardians
+2023-09-26,CIN,CLE,Reds at Guardians
+2023-09-27,CIN,CLE,Reds at Guardians
+2023-03-30,MIN,KCR,Twins at Royals
+2023-04-01,MIN,KCR,Twins at Royals
+2023-04-02,MIN,KCR,Twins at Royals
+2023-04-03,TOR,KCR,Blue Jays at Royals
+2023-04-04,TOR,KCR,Blue Jays at Royals
+2023-04-05,TOR,KCR,Blue Jays at Royals
+2023-04-06,TOR,KCR,Blue Jays at Royals
+2023-04-14,ATL,KCR,Braves at Royals
+2023-04-15,ATL,KCR,Braves at Royals
+2023-04-16,ATL,KCR,Braves at Royals
+2023-04-17,TEX,KCR,Rangers at Royals
+2023-04-18,TEX,KCR,Rangers at Royals
+2023-04-19,TEX,KCR,Rangers at Royals
+2023-05-02,BAL,KCR,Orioles at Royals
+2023-05-03,BAL,KCR,Orioles at Royals
+2023-05-04,BAL,KCR,Orioles at Royals
+2023-05-05,OAK,KCR,Athletics at Royals
+2023-05-06,OAK,KCR,Athletics at Royals
+2023-05-07,OAK,KCR,Athletics at Royals
+2023-05-08,CHW,KCR,White Sox at Royals
+2023-05-09,CHW,KCR,White Sox at Royals
+2023-05-10,CHW,KCR,White Sox at Royals
+2023-05-11,CHW,KCR,White Sox at Royals
+2023-05-22,DET,KCR,Tigers at Royals
+2023-05-23,DET,KCR,Tigers at Royals
+2023-05-24,DET,KCR,Tigers at Royals
+2023-05-26,WSN,KCR,Nationals at Royals
+2023-05-27,WSN,KCR,Nationals at Royals
+2023-05-28,WSN,KCR,Nationals at Royals
+2023-06-02,COL,KCR,Rockies at Royals
+2023-06-03,COL,KCR,Rockies at Royals
+2023-06-04,COL,KCR,Rockies at Royals
+2023-06-12,CIN,KCR,Reds at Royals
+2023-06-13,CIN,KCR,Reds at Royals
+2023-06-14,CIN,KCR,Reds at Royals
+2023-06-16,LAA,KCR,Angels at Royals
+2023-06-17,LAA,KCR,Angels at Royals
+2023-06-18,LAA,KCR,Angels at Royals
+2023-06-27,CLE,KCR,Guardians at Royals
+2023-06-28,CLE,KCR,Guardians at Royals
+2023-06-29,CLE,KCR,Guardians at Royals
+2023-06-30,LAD,KCR,Dodgers at Royals
+2023-07-01,LAD,KCR,Dodgers at Royals
+2023-07-02,LAD,KCR,Dodgers at Royals
+2023-07-14,TBR,KCR,Rays at Royals
+2023-07-15,TBR,KCR,Rays at Royals
+2023-07-16,TBR,KCR,Rays at Royals
+2023-07-17,DET,KCR,Tigers at Royals
+2023-07-18,DET,KCR,Tigers at Royals
+2023-07-19,DET,KCR,Tigers at Royals
+2023-07-20,DET,KCR,Tigers at Royals
+2023-07-28,MIN,KCR,Twins at Royals
+2023-07-29,MIN,KCR,Twins at Royals
+2023-07-30,MIN,KCR,Twins at Royals
+2023-08-01,NYM,KCR,Mets at Royals
+2023-08-02,NYM,KCR,Mets at Royals
+2023-08-03,NYM,KCR,Mets at Royals
+2023-08-11,STL,KCR,Cardinals at Royals
+2023-08-12,STL,KCR,Cardinals at Royals
+2023-08-14,SEA,KCR,Mariners at Royals
+2023-08-15,SEA,KCR,Mariners at Royals
+2023-08-16,SEA,KCR,Mariners at Royals
+2023-08-17,SEA,KCR,Mariners at Royals
+2023-08-28,PIT,KCR,Pirates at Royals
+2023-08-29,PIT,KCR,Pirates at Royals
+2023-08-30,PIT,KCR,Pirates at Royals
+2023-09-01,BOS,KCR,Red Sox at Royals
+2023-09-02,BOS,KCR,Red Sox at Royals
+2023-09-03,BOS,KCR,Red Sox at Royals
+2023-09-05,CHW,KCR,White Sox at Royals
+2023-09-06,CHW,KCR,White Sox at Royals
+2023-09-07,CHW,KCR,White Sox at Royals
+2023-09-15,HOU,KCR,Astros at Royals
+2023-09-16,HOU,KCR,Astros at Royals
+2023-09-17,HOU,KCR,Astros at Royals
+2023-09-18,CLE,KCR,Guardians at Royals
+2023-09-19,CLE,KCR,Guardians at Royals
+2023-09-20,CLE,KCR,Guardians at Royals
+2023-09-29,NYY,KCR,Yankees at Royals
+2023-09-30,NYY,KCR,Yankees at Royals
+2023-10-01,NYY,KCR,Yankees at Royals
+2023-04-06,BOS,DET,Red Sox at Tigers
+2023-04-08,BOS,DET,Red Sox at Tigers
+2023-04-09,BOS,DET,Red Sox at Tigers
+2023-04-14,SFG,DET,Giants at Tigers
+2023-04-15,SFG,DET,Giants at Tigers
+2023-04-16,SFG,DET,Giants at Tigers
+2023-04-17,CLE,DET,Guardians at Tigers
+2023-04-18,CLE,DET,Guardians at Tigers
+2023-04-19,CLE,DET,Guardians at Tigers
+2023-04-27,BAL,DET,Orioles at Tigers
+2023-04-28,BAL,DET,Orioles at Tigers
+2023-04-29,BAL,DET,Orioles at Tigers
+2023-04-30,BAL,DET,Orioles at Tigers
+2023-05-02,NYM,DET,Mets at Tigers
+2023-05-03,NYM,DET,Mets at Tigers
+2023-05-04,NYM,DET,Mets at Tigers
+2023-05-12,SEA,DET,Mariners at Tigers
+2023-05-13,SEA,DET,Mariners at Tigers
+2023-05-14,SEA,DET,Mariners at Tigers
+2023-05-16,PIT,DET,Pirates at Tigers
+2023-05-17,PIT,DET,Pirates at Tigers
+2023-05-25,CHW,DET,White Sox at Tigers
+2023-05-26,CHW,DET,White Sox at Tigers
+2023-05-27,CHW,DET,White Sox at Tigers
+2023-05-28,CHW,DET,White Sox at Tigers
+2023-05-29,TEX,DET,Rangers at Tigers
+2023-05-30,TEX,DET,Rangers at Tigers
+2023-05-31,TEX,DET,Rangers at Tigers
+2023-06-09,ARI,DET,D-backs at Tigers
+2023-06-10,ARI,DET,D-backs at Tigers
+2023-06-11,ARI,DET,D-backs at Tigers
+2023-06-12,ATL,DET,Braves at Tigers
+2023-06-13,ATL,DET,Braves at Tigers
+2023-06-14,ATL,DET,Braves at Tigers
+2023-06-19,KCR,DET,Royals at Tigers
+2023-06-20,KCR,DET,Royals at Tigers
+2023-06-21,KCR,DET,Royals at Tigers
+2023-06-23,MIN,DET,Twins at Tigers
+2023-06-24,MIN,DET,Twins at Tigers
+2023-06-25,MIN,DET,Twins at Tigers
+2023-07-04,OAK,DET,Athletics at Tigers
+2023-07-05,OAK,DET,Athletics at Tigers
+2023-07-06,OAK,DET,Athletics at Tigers
+2023-07-07,TOR,DET,Blue Jays at Tigers
+2023-07-08,TOR,DET,Blue Jays at Tigers
+2023-07-09,TOR,DET,Blue Jays at Tigers
+2023-07-21,SDP,DET,Padres at Tigers
+2023-07-22,SDP,DET,Padres at Tigers
+2023-07-23,SDP,DET,Padres at Tigers
+2023-07-25,LAA,DET,Angels at Tigers
+2023-07-26,LAA,DET,Angels at Tigers
+2023-07-27,LAA,DET,Angels at Tigers
+2023-08-04,TBR,DET,Rays at Tigers
+2023-08-05,TBR,DET,Rays at Tigers
+2023-08-06,TBR,DET,Rays at Tigers
+2023-08-07,MIN,DET,Twins at Tigers
+2023-08-08,MIN,DET,Twins at Tigers
+2023-08-09,MIN,DET,Twins at Tigers
+2023-08-10,MIN,DET,Twins at Tigers
+2023-08-21,CHC,DET,Cubs at Tigers
+2023-08-22,CHC,DET,Cubs at Tigers
+2023-08-23,CHC,DET,Cubs at Tigers
+2023-08-25,HOU,DET,Astros at Tigers
+2023-08-26,HOU,DET,Astros at Tigers
+2023-08-27,HOU,DET,Astros at Tigers
+2023-08-28,NYY,DET,Yankees at Tigers
+2023-08-29,NYY,DET,Yankees at Tigers
+2023-08-30,NYY,DET,Yankees at Tigers
+2023-08-31,NYY,DET,Yankees at Tigers
+2023-09-08,CHW,DET,White Sox at Tigers
+2023-09-09,CHW,DET,White Sox at Tigers
+2023-09-10,CHW,DET,White Sox at Tigers
+2023-09-12,CIN,DET,Reds at Tigers
+2023-09-13,CIN,DET,Reds at Tigers
+2023-09-14,CIN,DET,Reds at Tigers
+2023-09-26,KCR,DET,Royals at Tigers
+2023-09-27,KCR,DET,Royals at Tigers
+2023-09-28,KCR,DET,Royals at Tigers
+2023-09-29,CLE,DET,Guardians at Tigers
+2023-09-30,CLE,DET,Guardians at Tigers
+2023-10-01,CLE,DET,Guardians at Tigers
+2023-04-06,HOU,MIN,Astros at Twins
+2023-04-08,HOU,MIN,Astros at Twins
+2023-04-09,HOU,MIN,Astros at Twins
+2023-04-10,CHW,MIN,White Sox at Twins
+2023-04-11,CHW,MIN,White Sox at Twins
+2023-04-12,CHW,MIN,White Sox at Twins
+2023-04-21,WSN,MIN,Nationals at Twins
+2023-04-22,WSN,MIN,Nationals at Twins
+2023-04-23,WSN,MIN,Nationals at Twins
+2023-04-24,NYY,MIN,Yankees at Twins
+2023-04-25,NYY,MIN,Yankees at Twins
+2023-04-26,NYY,MIN,Yankees at Twins
+2023-04-27,KCR,MIN,Royals at Twins
+2023-04-28,KCR,MIN,Royals at Twins
+2023-04-29,KCR,MIN,Royals at Twins
+2023-04-30,KCR,MIN,Royals at Twins
+2023-05-09,SDP,MIN,Padres at Twins
+2023-05-10,SDP,MIN,Padres at Twins
+2023-05-11,SDP,MIN,Padres at Twins
+2023-05-12,CHC,MIN,Cubs at Twins
+2023-05-13,CHC,MIN,Cubs at Twins
+2023-05-14,CHC,MIN,Cubs at Twins
+2023-05-22,SFG,MIN,Giants at Twins
+2023-05-23,SFG,MIN,Giants at Twins
+2023-05-24,SFG,MIN,Giants at Twins
+2023-05-26,TOR,MIN,Blue Jays at Twins
+2023-05-27,TOR,MIN,Blue Jays at Twins
+2023-05-28,TOR,MIN,Blue Jays at Twins
+2023-06-01,CLE,MIN,Guardians at Twins
+2023-06-02,CLE,MIN,Guardians at Twins
+2023-06-03,CLE,MIN,Guardians at Twins
+2023-06-04,CLE,MIN,Guardians at Twins
+2023-06-13,MIL,MIN,Brewers at Twins
+2023-06-14,MIL,MIN,Brewers at Twins
+2023-06-15,DET,MIN,Tigers at Twins
+2023-06-16,DET,MIN,Tigers at Twins
+2023-06-17,DET,MIN,Tigers at Twins
+2023-06-18,DET,MIN,Tigers at Twins
+2023-06-19,BOS,MIN,Red Sox at Twins
+2023-06-20,BOS,MIN,Red Sox at Twins
+2023-06-21,BOS,MIN,Red Sox at Twins
+2023-06-22,BOS,MIN,Red Sox at Twins
+2023-07-03,KCR,MIN,Royals at Twins
+2023-07-04,KCR,MIN,Royals at Twins
+2023-07-05,KCR,MIN,Royals at Twins
+2023-07-07,BAL,MIN,Orioles at Twins
+2023-07-08,BAL,MIN,Orioles at Twins
+2023-07-09,BAL,MIN,Orioles at Twins
+2023-07-21,CHW,MIN,White Sox at Twins
+2023-07-22,CHW,MIN,White Sox at Twins
+2023-07-23,CHW,MIN,White Sox at Twins
+2023-07-24,SEA,MIN,Mariners at Twins
+2023-07-25,SEA,MIN,Mariners at Twins
+2023-07-26,SEA,MIN,Mariners at Twins
+2023-08-04,ARI,MIN,D-backs at Twins
+2023-08-05,ARI,MIN,D-backs at Twins
+2023-08-06,ARI,MIN,D-backs at Twins
+2023-08-15,DET,MIN,Tigers at Twins
+2023-08-16,DET,MIN,Tigers at Twins
+2023-08-18,PIT,MIN,Pirates at Twins
+2023-08-19,PIT,MIN,Pirates at Twins
+2023-08-20,PIT,MIN,Pirates at Twins
+2023-08-24,TEX,MIN,Rangers at Twins
+2023-08-25,TEX,MIN,Rangers at Twins
+2023-08-26,TEX,MIN,Rangers at Twins
+2023-08-27,TEX,MIN,Rangers at Twins
+2023-08-28,CLE,MIN,Guardians at Twins
+2023-08-29,CLE,MIN,Guardians at Twins
+2023-08-30,CLE,MIN,Guardians at Twins
+2023-09-08,NYM,MIN,Mets at Twins
+2023-09-09,NYM,MIN,Mets at Twins
+2023-09-10,NYM,MIN,Mets at Twins
+2023-09-11,TBR,MIN,Rays at Twins
+2023-09-12,TBR,MIN,Rays at Twins
+2023-09-13,TBR,MIN,Rays at Twins
+2023-09-22,LAA,MIN,Angels at Twins
+2023-09-23,LAA,MIN,Angels at Twins
+2023-09-24,LAA,MIN,Angels at Twins
+2023-09-26,OAK,MIN,Athletics at Twins
+2023-09-27,OAK,MIN,Athletics at Twins
+2023-09-28,OAK,MIN,Athletics at Twins
+2023-04-03,SFG,CHW,Giants at White Sox
+2023-04-05,SFG,CHW,Giants at White Sox
+2023-04-06,SFG,CHW,Giants at White Sox
+2023-04-14,BAL,CHW,Orioles at White Sox
+2023-04-15,BAL,CHW,Orioles at White Sox
+2023-04-16,BAL,CHW,Orioles at White Sox
+2023-04-17,PHI,CHW,Phillies at White Sox
+2023-04-18,PHI,CHW,Phillies at White Sox
+2023-04-19,PHI,CHW,Phillies at White Sox
+2023-04-27,TBR,CHW,Rays at White Sox
+2023-04-28,TBR,CHW,Rays at White Sox
+2023-04-29,TBR,CHW,Rays at White Sox
+2023-04-30,TBR,CHW,Rays at White Sox
+2023-05-02,MIN,CHW,Twins at White Sox
+2023-05-03,MIN,CHW,Twins at White Sox
+2023-05-04,MIN,CHW,Twins at White Sox
+2023-05-12,HOU,CHW,Astros at White Sox
+2023-05-13,HOU,CHW,Astros at White Sox
+2023-05-14,HOU,CHW,Astros at White Sox
+2023-05-16,CLE,CHW,Guardians at White Sox
+2023-05-17,CLE,CHW,Guardians at White Sox
+2023-05-18,CLE,CHW,Guardians at White Sox
+2023-05-19,KCR,CHW,Royals at White Sox
+2023-05-20,KCR,CHW,Royals at White Sox
+2023-05-21,KCR,CHW,Royals at White Sox
+2023-05-29,LAA,CHW,Angels at White Sox
+2023-05-30,LAA,CHW,Angels at White Sox
+2023-05-31,LAA,CHW,Angels at White Sox
+2023-06-02,DET,CHW,Tigers at White Sox
+2023-06-03,DET,CHW,Tigers at White Sox
+2023-06-04,DET,CHW,Tigers at White Sox
+2023-06-09,MIA,CHW,Marlins at White Sox
+2023-06-10,MIA,CHW,Marlins at White Sox
+2023-06-11,MIA,CHW,Marlins at White Sox
+2023-06-19,TEX,CHW,Rangers at White Sox
+2023-06-20,TEX,CHW,Rangers at White Sox
+2023-06-21,TEX,CHW,Rangers at White Sox
+2023-06-23,BOS,CHW,Red Sox at White Sox
+2023-06-24,BOS,CHW,Red Sox at White Sox
+2023-06-25,BOS,CHW,Red Sox at White Sox
+2023-07-04,TOR,CHW,Blue Jays at White Sox
+2023-07-05,TOR,CHW,Blue Jays at White Sox
+2023-07-06,TOR,CHW,Blue Jays at White Sox
+2023-07-07,STL,CHW,Cardinals at White Sox
+2023-07-08,STL,CHW,Cardinals at White Sox
+2023-07-09,STL,CHW,Cardinals at White Sox
+2023-07-25,CHC,CHW,Cubs at White Sox
+2023-07-26,CHC,CHW,Cubs at White Sox
+2023-07-27,CLE,CHW,Guardians at White Sox
+2023-07-28,CLE,CHW,Guardians at White Sox
+2023-07-29,CLE,CHW,Guardians at White Sox
+2023-07-30,CLE,CHW,Guardians at White Sox
+2023-08-07,NYY,CHW,Yankees at White Sox
+2023-08-08,NYY,CHW,Yankees at White Sox
+2023-08-09,NYY,CHW,Yankees at White Sox
+2023-08-11,MIL,CHW,Brewers at White Sox
+2023-08-12,MIL,CHW,Brewers at White Sox
+2023-08-13,MIL,CHW,Brewers at White Sox
+2023-08-21,SEA,CHW,Mariners at White Sox
+2023-08-22,SEA,CHW,Mariners at White Sox
+2023-08-23,SEA,CHW,Mariners at White Sox
+2023-08-24,OAK,CHW,Athletics at White Sox
+2023-08-25,OAK,CHW,Athletics at White Sox
+2023-08-26,OAK,CHW,Athletics at White Sox
+2023-08-27,OAK,CHW,Athletics at White Sox
+2023-09-01,DET,CHW,Tigers at White Sox
+2023-09-02,DET,CHW,Tigers at White Sox
+2023-09-03,DET,CHW,Tigers at White Sox
+2023-09-11,KCR,CHW,Royals at White Sox
+2023-09-12,KCR,CHW,Royals at White Sox
+2023-09-13,KCR,CHW,Royals at White Sox
+2023-09-14,MIN,CHW,Twins at White Sox
+2023-09-15,MIN,CHW,Twins at White Sox
+2023-09-16,MIN,CHW,Twins at White Sox
+2023-09-17,MIN,CHW,Twins at White Sox
+2023-09-25,ARI,CHW,D-backs at White Sox
+2023-09-26,ARI,CHW,D-backs at White Sox
+2023-09-27,ARI,CHW,D-backs at White Sox
+2023-09-29,SDP,CHW,Padres at White Sox
+2023-09-30,SDP,CHW,Padres at White Sox
+2023-10-01,SDP,CHW,Padres at White Sox
+2023-04-07,TOR,LAA,Blue Jays at Angels
+2023-04-08,TOR,LAA,Blue Jays at Angels
+2023-04-09,TOR,LAA,Blue Jays at Angels
+2023-04-10,WSN,LAA,Nationals at Angels
+2023-04-11,WSN,LAA,Nationals at Angels
+2023-04-12,WSN,LAA,Nationals at Angels
+2023-04-21,KCR,LAA,Royals at Angels
+2023-04-22,KCR,LAA,Royals at Angels
+2023-04-23,KCR,LAA,Royals at Angels
+2023-04-24,OAK,LAA,Athletics at Angels
+2023-04-25,OAK,LAA,Athletics at Angels
+2023-04-26,OAK,LAA,Athletics at Angels
+2023-04-27,OAK,LAA,Athletics at Angels
+2023-05-05,TEX,LAA,Rangers at Angels
+2023-05-06,TEX,LAA,Rangers at Angels
+2023-05-07,TEX,LAA,Rangers at Angels
+2023-05-08,HOU,LAA,Astros at Angels
+2023-05-09,HOU,LAA,Astros at Angels
+2023-05-10,HOU,LAA,Astros at Angels
+2023-05-19,MIN,LAA,Twins at Angels
+2023-05-20,MIN,LAA,Twins at Angels
+2023-05-21,MIN,LAA,Twins at Angels
+2023-05-22,BOS,LAA,Red Sox at Angels
+2023-05-23,BOS,LAA,Red Sox at Angels
+2023-05-24,BOS,LAA,Red Sox at Angels
+2023-05-26,MIA,LAA,Marlins at Angels
+2023-05-27,MIA,LAA,Marlins at Angels
+2023-05-28,MIA,LAA,Marlins at Angels
+2023-06-06,CHC,LAA,Cubs at Angels
+2023-06-07,CHC,LAA,Cubs at Angels
+2023-06-08,CHC,LAA,Cubs at Angels
+2023-06-09,SEA,LAA,Mariners at Angels
+2023-06-10,SEA,LAA,Mariners at Angels
+2023-06-11,SEA,LAA,Mariners at Angels
+2023-06-20,LAD,LAA,Dodgers at Angels
+2023-06-21,LAD,LAA,Dodgers at Angels
+2023-06-26,CHW,LAA,White Sox at Angels
+2023-06-27,CHW,LAA,White Sox at Angels
+2023-06-28,CHW,LAA,White Sox at Angels
+2023-06-29,CHW,LAA,White Sox at Angels
+2023-06-30,ARI,LAA,D-backs at Angels
+2023-07-01,ARI,LAA,D-backs at Angels
+2023-07-02,ARI,LAA,D-backs at Angels
+2023-07-14,HOU,LAA,Astros at Angels
+2023-07-15,HOU,LAA,Astros at Angels
+2023-07-16,HOU,LAA,Astros at Angels
+2023-07-17,NYY,LAA,Yankees at Angels
+2023-07-18,NYY,LAA,Yankees at Angels
+2023-07-19,NYY,LAA,Yankees at Angels
+2023-07-21,PIT,LAA,Pirates at Angels
+2023-07-22,PIT,LAA,Pirates at Angels
+2023-07-23,PIT,LAA,Pirates at Angels
+2023-08-03,SEA,LAA,Mariners at Angels
+2023-08-04,SEA,LAA,Mariners at Angels
+2023-08-05,SEA,LAA,Mariners at Angels
+2023-08-06,SEA,LAA,Mariners at Angels
+2023-08-07,SFG,LAA,Giants at Angels
+2023-08-08,SFG,LAA,Giants at Angels
+2023-08-09,SFG,LAA,Giants at Angels
+2023-08-18,TBR,LAA,Rays at Angels
+2023-08-19,TBR,LAA,Rays at Angels
+2023-08-20,TBR,LAA,Rays at Angels
+2023-08-21,CIN,LAA,Reds at Angels
+2023-08-22,CIN,LAA,Reds at Angels
+2023-08-23,CIN,LAA,Reds at Angels
+2023-09-04,BAL,LAA,Orioles at Angels
+2023-09-05,BAL,LAA,Orioles at Angels
+2023-09-06,BAL,LAA,Orioles at Angels
+2023-09-07,CLE,LAA,Guardians at Angels
+2023-09-08,CLE,LAA,Guardians at Angels
+2023-09-09,CLE,LAA,Guardians at Angels
+2023-09-10,CLE,LAA,Guardians at Angels
+2023-09-15,DET,LAA,Tigers at Angels
+2023-09-16,DET,LAA,Tigers at Angels
+2023-09-17,DET,LAA,Tigers at Angels
+2023-09-25,TEX,LAA,Rangers at Angels
+2023-09-26,TEX,LAA,Rangers at Angels
+2023-09-27,TEX,LAA,Rangers at Angels
+2023-09-29,OAK,LAA,Athletics at Angels
+2023-09-30,OAK,LAA,Athletics at Angels
+2023-10-01,OAK,LAA,Athletics at Angels
+2023-03-30,CHW,HOU,White Sox at Astros
+2023-03-31,CHW,HOU,White Sox at Astros
+2023-04-01,CHW,HOU,White Sox at Astros
+2023-04-02,CHW,HOU,White Sox at Astros
+2023-04-03,DET,HOU,Tigers at Astros
+2023-04-04,DET,HOU,Tigers at Astros
+2023-04-05,DET,HOU,Tigers at Astros
+2023-04-14,TEX,HOU,Rangers at Astros
+2023-04-15,TEX,HOU,Rangers at Astros
+2023-04-16,TEX,HOU,Rangers at Astros
+2023-04-17,TOR,HOU,Blue Jays at Astros
+2023-04-18,TOR,HOU,Blue Jays at Astros
+2023-04-19,TOR,HOU,Blue Jays at Astros
+2023-04-28,PHI,HOU,Phillies at Astros
+2023-04-29,PHI,HOU,Phillies at Astros
+2023-04-30,PHI,HOU,Phillies at Astros
+2023-05-01,SFG,HOU,Giants at Astros
+2023-05-02,SFG,HOU,Giants at Astros
+2023-05-03,SFG,HOU,Giants at Astros
+2023-05-15,CHC,HOU,Cubs at Astros
+2023-05-16,CHC,HOU,Cubs at Astros
+2023-05-17,CHC,HOU,Cubs at Astros
+2023-05-19,OAK,HOU,Athletics at Astros
+2023-05-20,OAK,HOU,Athletics at Astros
+2023-05-21,OAK,HOU,Athletics at Astros
+2023-05-29,MIN,HOU,Twins at Astros
+2023-05-30,MIN,HOU,Twins at Astros
+2023-05-31,MIN,HOU,Twins at Astros
+2023-06-01,LAA,HOU,Angels at Astros
+2023-06-02,LAA,HOU,Angels at Astros
+2023-06-03,LAA,HOU,Angels at Astros
+2023-06-04,LAA,HOU,Angels at Astros
+2023-06-13,WSN,HOU,Nationals at Astros
+2023-06-14,WSN,HOU,Nationals at Astros
+2023-06-15,WSN,HOU,Nationals at Astros
+2023-06-16,CIN,HOU,Reds at Astros
+2023-06-17,CIN,HOU,Reds at Astros
+2023-06-18,CIN,HOU,Reds at Astros
+2023-06-19,NYM,HOU,Mets at Astros
+2023-06-20,NYM,HOU,Mets at Astros
+2023-06-21,NYM,HOU,Mets at Astros
+2023-07-04,COL,HOU,Rockies at Astros
+2023-07-05,COL,HOU,Rockies at Astros
+2023-07-06,SEA,HOU,Mariners at Astros
+2023-07-07,SEA,HOU,Mariners at Astros
+2023-07-08,SEA,HOU,Mariners at Astros
+2023-07-09,SEA,HOU,Mariners at Astros
+2023-07-24,TEX,HOU,Rangers at Astros
+2023-07-25,TEX,HOU,Rangers at Astros
+2023-07-26,TEX,HOU,Rangers at Astros
+2023-07-28,TBR,HOU,Rays at Astros
+2023-07-29,TBR,HOU,Rays at Astros
+2023-07-30,TBR,HOU,Rays at Astros
+2023-07-31,CLE,HOU,Guardians at Astros
+2023-08-01,CLE,HOU,Guardians at Astros
+2023-08-02,CLE,HOU,Guardians at Astros
+2023-08-11,LAA,HOU,Angels at Astros
+2023-08-12,LAA,HOU,Angels at Astros
+2023-08-13,LAA,HOU,Angels at Astros
+2023-08-18,SEA,HOU,Mariners at Astros
+2023-08-19,SEA,HOU,Mariners at Astros
+2023-08-20,SEA,HOU,Mariners at Astros
+2023-08-21,BOS,HOU,Red Sox at Astros
+2023-08-22,BOS,HOU,Red Sox at Astros
+2023-08-23,BOS,HOU,Red Sox at Astros
+2023-08-24,BOS,HOU,Red Sox at Astros
+2023-09-01,NYY,HOU,Yankees at Astros
+2023-09-02,NYY,HOU,Yankees at Astros
+2023-09-03,NYY,HOU,Yankees at Astros
+2023-09-08,SDP,HOU,Padres at Astros
+2023-09-09,SDP,HOU,Padres at Astros
+2023-09-10,SDP,HOU,Padres at Astros
+2023-09-11,OAK,HOU,Athletics at Astros
+2023-09-12,OAK,HOU,Athletics at Astros
+2023-09-13,OAK,HOU,Athletics at Astros
+2023-09-18,BAL,HOU,Orioles at Astros
+2023-09-19,BAL,HOU,Orioles at Astros
+2023-09-20,BAL,HOU,Orioles at Astros
+2023-09-22,KCR,HOU,Royals at Astros
+2023-09-23,KCR,HOU,Royals at Astros
+2023-09-24,KCR,HOU,Royals at Astros
+2023-03-30,LAA,OAK,Angels at Athletics
+2023-04-01,LAA,OAK,Angels at Athletics
+2023-04-02,LAA,OAK,Angels at Athletics
+2023-04-03,CLE,OAK,Guardians at Athletics
+2023-04-04,CLE,OAK,Guardians at Athletics
+2023-04-05,CLE,OAK,Guardians at Athletics
+2023-04-14,NYM,OAK,Mets at Athletics
+2023-04-15,NYM,OAK,Mets at Athletics
+2023-04-16,NYM,OAK,Mets at Athletics
+2023-04-17,CHC,OAK,Cubs at Athletics
+2023-04-18,CHC,OAK,Cubs at Athletics
+2023-04-19,CHC,OAK,Cubs at Athletics
+2023-04-28,CIN,OAK,Reds at Athletics
+2023-04-29,CIN,OAK,Reds at Athletics
+2023-04-30,CIN,OAK,Reds at Athletics
+2023-05-02,SEA,OAK,Mariners at Athletics
+2023-05-03,SEA,OAK,Mariners at Athletics
+2023-05-04,SEA,OAK,Mariners at Athletics
+2023-05-11,TEX,OAK,Rangers at Athletics
+2023-05-12,TEX,OAK,Rangers at Athletics
+2023-05-13,TEX,OAK,Rangers at Athletics
+2023-05-14,TEX,OAK,Rangers at Athletics
+2023-05-15,ARI,OAK,D-backs at Athletics
+2023-05-16,ARI,OAK,D-backs at Athletics
+2023-05-17,ARI,OAK,D-backs at Athletics
+2023-05-26,HOU,OAK,Astros at Athletics
+2023-05-27,HOU,OAK,Astros at Athletics
+2023-05-28,HOU,OAK,Astros at Athletics
+2023-05-29,ATL,OAK,Braves at Athletics
+2023-05-30,ATL,OAK,Braves at Athletics
+2023-05-31,ATL,OAK,Braves at Athletics
+2023-06-12,TBR,OAK,Rays at Athletics
+2023-06-13,TBR,OAK,Rays at Athletics
+2023-06-14,TBR,OAK,Rays at Athletics
+2023-06-15,TBR,OAK,Rays at Athletics
+2023-06-16,PHI,OAK,Phillies at Athletics
+2023-06-17,PHI,OAK,Phillies at Athletics
+2023-06-18,PHI,OAK,Phillies at Athletics
+2023-06-27,NYY,OAK,Yankees at Athletics
+2023-06-28,NYY,OAK,Yankees at Athletics
+2023-06-29,NYY,OAK,Yankees at Athletics
+2023-06-30,CHW,OAK,White Sox at Athletics
+2023-07-01,CHW,OAK,White Sox at Athletics
+2023-07-02,CHW,OAK,White Sox at Athletics
+2023-07-14,MIN,OAK,Twins at Athletics
+2023-07-15,MIN,OAK,Twins at Athletics
+2023-07-16,MIN,OAK,Twins at Athletics
+2023-07-17,BOS,OAK,Red Sox at Athletics
+2023-07-18,BOS,OAK,Red Sox at Athletics
+2023-07-19,BOS,OAK,Red Sox at Athletics
+2023-07-20,HOU,OAK,Astros at Athletics
+2023-07-21,HOU,OAK,Astros at Athletics
+2023-07-22,HOU,OAK,Astros at Athletics
+2023-07-23,HOU,OAK,Astros at Athletics
+2023-08-05,SFG,OAK,Giants at Athletics
+2023-08-06,SFG,OAK,Giants at Athletics
+2023-08-07,TEX,OAK,Rangers at Athletics
+2023-08-08,TEX,OAK,Rangers at Athletics
+2023-08-09,TEX,OAK,Rangers at Athletics
+2023-08-18,BAL,OAK,Orioles at Athletics
+2023-08-19,BAL,OAK,Orioles at Athletics
+2023-08-20,BAL,OAK,Orioles at Athletics
+2023-08-21,KCR,OAK,Royals at Athletics
+2023-08-22,KCR,OAK,Royals at Athletics
+2023-08-23,KCR,OAK,Royals at Athletics
+2023-09-01,LAA,OAK,Angels at Athletics
+2023-09-02,LAA,OAK,Angels at Athletics
+2023-09-03,LAA,OAK,Angels at Athletics
+2023-09-04,TOR,OAK,Blue Jays at Athletics
+2023-09-05,TOR,OAK,Blue Jays at Athletics
+2023-09-06,TOR,OAK,Blue Jays at Athletics
+2023-09-15,SDP,OAK,Padres at Athletics
+2023-09-16,SDP,OAK,Padres at Athletics
+2023-09-17,SDP,OAK,Padres at Athletics
+2023-09-18,SEA,OAK,Mariners at Athletics
+2023-09-19,SEA,OAK,Mariners at Athletics
+2023-09-20,SEA,OAK,Mariners at Athletics
+2023-09-21,DET,OAK,Tigers at Athletics
+2023-09-22,DET,OAK,Tigers at Athletics
+2023-09-23,DET,OAK,Tigers at Athletics
+2023-09-24,DET,OAK,Tigers at Athletics
+2023-03-30,CLE,SEA,Guardians at Mariners
+2023-03-31,CLE,SEA,Guardians at Mariners
+2023-04-01,CLE,SEA,Guardians at Mariners
+2023-04-02,CLE,SEA,Guardians at Mariners
+2023-04-03,LAA,SEA,Angels at Mariners
+2023-04-04,LAA,SEA,Angels at Mariners
+2023-04-05,LAA,SEA,Angels at Mariners
+2023-04-14,COL,SEA,Rockies at Mariners
+2023-04-15,COL,SEA,Rockies at Mariners
+2023-04-16,COL,SEA,Rockies at Mariners
+2023-04-17,MIL,SEA,Brewers at Mariners
+2023-04-18,MIL,SEA,Brewers at Mariners
+2023-04-19,MIL,SEA,Brewers at Mariners
+2023-04-21,STL,SEA,Cardinals at Mariners
+2023-04-22,STL,SEA,Cardinals at Mariners
+2023-04-23,STL,SEA,Cardinals at Mariners
+2023-05-05,HOU,SEA,Astros at Mariners
+2023-05-06,HOU,SEA,Astros at Mariners
+2023-05-07,HOU,SEA,Astros at Mariners
+2023-05-08,TEX,SEA,Rangers at Mariners
+2023-05-09,TEX,SEA,Rangers at Mariners
+2023-05-10,TEX,SEA,Rangers at Mariners
+2023-05-22,OAK,SEA,Athletics at Mariners
+2023-05-23,OAK,SEA,Athletics at Mariners
+2023-05-24,OAK,SEA,Athletics at Mariners
+2023-05-25,OAK,SEA,Athletics at Mariners
+2023-05-26,PIT,SEA,Pirates at Mariners
+2023-05-27,PIT,SEA,Pirates at Mariners
+2023-05-28,PIT,SEA,Pirates at Mariners
+2023-05-29,NYY,SEA,Yankees at Mariners
+2023-05-30,NYY,SEA,Yankees at Mariners
+2023-05-31,NYY,SEA,Yankees at Mariners
+2023-06-12,MIA,SEA,Marlins at Mariners
+2023-06-13,MIA,SEA,Marlins at Mariners
+2023-06-14,MIA,SEA,Marlins at Mariners
+2023-06-16,CHW,SEA,White Sox at Mariners
+2023-06-17,CHW,SEA,White Sox at Mariners
+2023-06-18,CHW,SEA,White Sox at Mariners
+2023-06-26,WSN,SEA,Nationals at Mariners
+2023-06-27,WSN,SEA,Nationals at Mariners
+2023-06-28,WSN,SEA,Nationals at Mariners
+2023-06-30,TBR,SEA,Rays at Mariners
+2023-07-01,TBR,SEA,Rays at Mariners
+2023-07-02,TBR,SEA,Rays at Mariners
+2023-07-14,DET,SEA,Tigers at Mariners
+2023-07-15,DET,SEA,Tigers at Mariners
+2023-07-16,DET,SEA,Tigers at Mariners
+2023-07-17,MIN,SEA,Twins at Mariners
+2023-07-18,MIN,SEA,Twins at Mariners
+2023-07-19,MIN,SEA,Twins at Mariners
+2023-07-20,MIN,SEA,Twins at Mariners
+2023-07-21,TOR,SEA,Blue Jays at Mariners
+2023-07-22,TOR,SEA,Blue Jays at Mariners
+2023-07-23,TOR,SEA,Blue Jays at Mariners
+2023-07-31,BOS,SEA,Red Sox at Mariners
+2023-08-01,BOS,SEA,Red Sox at Mariners
+2023-08-02,BOS,SEA,Red Sox at Mariners
+2023-08-08,SDP,SEA,Padres at Mariners
+2023-08-09,SDP,SEA,Padres at Mariners
+2023-08-11,BAL,SEA,Orioles at Mariners
+2023-08-12,BAL,SEA,Orioles at Mariners
+2023-08-13,BAL,SEA,Orioles at Mariners
+2023-08-25,KCR,SEA,Royals at Mariners
+2023-08-26,KCR,SEA,Royals at Mariners
+2023-08-27,KCR,SEA,Royals at Mariners
+2023-08-28,OAK,SEA,Athletics at Mariners
+2023-08-29,OAK,SEA,Athletics at Mariners
+2023-08-30,OAK,SEA,Athletics at Mariners
+2023-09-11,LAA,SEA,Angels at Mariners
+2023-09-12,LAA,SEA,Angels at Mariners
+2023-09-13,LAA,SEA,Angels at Mariners
+2023-09-15,LAD,SEA,Dodgers at Mariners
+2023-09-16,LAD,SEA,Dodgers at Mariners
+2023-09-17,LAD,SEA,Dodgers at Mariners
+2023-09-25,HOU,SEA,Astros at Mariners
+2023-09-26,HOU,SEA,Astros at Mariners
+2023-09-27,HOU,SEA,Astros at Mariners
+2023-09-28,TEX,SEA,Rangers at Mariners
+2023-09-29,TEX,SEA,Rangers at Mariners
+2023-09-30,TEX,SEA,Rangers at Mariners
+2023-10-01,TEX,SEA,Rangers at Mariners
+2023-03-30,PHI,TEX,Phillies at Rangers
+2023-04-01,PHI,TEX,Phillies at Rangers
+2023-04-02,PHI,TEX,Phillies at Rangers
+2023-04-03,BAL,TEX,Orioles at Rangers
+2023-04-04,BAL,TEX,Orioles at Rangers
+2023-04-05,BAL,TEX,Orioles at Rangers
+2023-04-10,KCR,TEX,Royals at Rangers
+2023-04-11,KCR,TEX,Royals at Rangers
+2023-04-12,KCR,TEX,Royals at Rangers
+2023-04-21,OAK,TEX,Athletics at Rangers
+2023-04-22,OAK,TEX,Athletics at Rangers
+2023-04-23,OAK,TEX,Athletics at Rangers
+2023-04-27,NYY,TEX,Yankees at Rangers
+2023-04-28,NYY,TEX,Yankees at Rangers
+2023-04-29,NYY,TEX,Yankees at Rangers
+2023-04-30,NYY,TEX,Yankees at Rangers
+2023-05-02,ARI,TEX,D-backs at Rangers
+2023-05-03,ARI,TEX,D-backs at Rangers
+2023-05-15,ATL,TEX,Braves at Rangers
+2023-05-16,ATL,TEX,Braves at Rangers
+2023-05-17,ATL,TEX,Braves at Rangers
+2023-05-19,COL,TEX,Rockies at Rangers
+2023-05-20,COL,TEX,Rockies at Rangers
+2023-05-21,COL,TEX,Rockies at Rangers
+2023-06-02,SEA,TEX,Mariners at Rangers
+2023-06-03,SEA,TEX,Mariners at Rangers
+2023-06-04,SEA,TEX,Mariners at Rangers
+2023-06-05,STL,TEX,Cardinals at Rangers
+2023-06-06,STL,TEX,Cardinals at Rangers
+2023-06-07,STL,TEX,Cardinals at Rangers
+2023-06-12,LAA,TEX,Angels at Rangers
+2023-06-13,LAA,TEX,Angels at Rangers
+2023-06-14,LAA,TEX,Angels at Rangers
+2023-06-15,LAA,TEX,Angels at Rangers
+2023-06-16,TOR,TEX,Blue Jays at Rangers
+2023-06-17,TOR,TEX,Blue Jays at Rangers
+2023-06-18,TOR,TEX,Blue Jays at Rangers
+2023-06-26,DET,TEX,Tigers at Rangers
+2023-06-27,DET,TEX,Tigers at Rangers
+2023-06-28,DET,TEX,Tigers at Rangers
+2023-06-29,DET,TEX,Tigers at Rangers
+2023-06-30,HOU,TEX,Astros at Rangers
+2023-07-01,HOU,TEX,Astros at Rangers
+2023-07-02,HOU,TEX,Astros at Rangers
+2023-07-03,HOU,TEX,Astros at Rangers
+2023-07-14,CLE,TEX,Guardians at Rangers
+2023-07-15,CLE,TEX,Guardians at Rangers
+2023-07-16,CLE,TEX,Guardians at Rangers
+2023-07-17,TBR,TEX,Rays at Rangers
+2023-07-18,TBR,TEX,Rays at Rangers
+2023-07-19,TBR,TEX,Rays at Rangers
+2023-07-21,LAD,TEX,Dodgers at Rangers
+2023-07-22,LAD,TEX,Dodgers at Rangers
+2023-07-23,LAD,TEX,Dodgers at Rangers
+2023-08-01,CHW,TEX,White Sox at Rangers
+2023-08-02,CHW,TEX,White Sox at Rangers
+2023-08-03,CHW,TEX,White Sox at Rangers
+2023-08-04,MIA,TEX,Marlins at Rangers
+2023-08-05,MIA,TEX,Marlins at Rangers
+2023-08-06,MIA,TEX,Marlins at Rangers
+2023-08-14,LAA,TEX,Angels at Rangers
+2023-08-15,LAA,TEX,Angels at Rangers
+2023-08-16,LAA,TEX,Angels at Rangers
+2023-08-18,MIL,TEX,Brewers at Rangers
+2023-08-19,MIL,TEX,Brewers at Rangers
+2023-08-20,MIL,TEX,Brewers at Rangers
+2023-09-01,MIN,TEX,Twins at Rangers
+2023-09-02,MIN,TEX,Twins at Rangers
+2023-09-03,MIN,TEX,Twins at Rangers
+2023-09-04,HOU,TEX,Astros at Rangers
+2023-09-05,HOU,TEX,Astros at Rangers
+2023-09-06,HOU,TEX,Astros at Rangers
+2023-09-08,OAK,TEX,Athletics at Rangers
+2023-09-09,OAK,TEX,Athletics at Rangers
+2023-09-10,OAK,TEX,Athletics at Rangers
+2023-09-18,BOS,TEX,Red Sox at Rangers
+2023-09-19,BOS,TEX,Red Sox at Rangers
+2023-09-20,BOS,TEX,Red Sox at Rangers
+2023-09-22,SEA,TEX,Mariners at Rangers
+2023-09-23,SEA,TEX,Mariners at Rangers
+2023-09-24,SEA,TEX,Mariners at Rangers
+2023-04-06,SDP,ATL,Padres at Braves
+2023-04-07,SDP,ATL,Padres at Braves
+2023-04-08,SDP,ATL,Padres at Braves
+2023-04-09,SDP,ATL,Padres at Braves
+2023-04-10,CIN,ATL,Reds at Braves
+2023-04-11,CIN,ATL,Reds at Braves
+2023-04-12,CIN,ATL,Reds at Braves
+2023-04-21,HOU,ATL,Astros at Braves
+2023-04-22,HOU,ATL,Astros at Braves
+2023-04-23,HOU,ATL,Astros at Braves
+2023-04-24,MIA,ATL,Marlins at Braves
+2023-04-25,MIA,ATL,Marlins at Braves
+2023-04-26,MIA,ATL,Marlins at Braves
+2023-04-27,MIA,ATL,Marlins at Braves
+2023-05-05,BAL,ATL,Orioles at Braves
+2023-05-06,BAL,ATL,Orioles at Braves
+2023-05-07,BAL,ATL,Orioles at Braves
+2023-05-09,BOS,ATL,Red Sox at Braves
+2023-05-10,BOS,ATL,Red Sox at Braves
+2023-05-19,SEA,ATL,Mariners at Braves
+2023-05-20,SEA,ATL,Mariners at Braves
+2023-05-21,SEA,ATL,Mariners at Braves
+2023-05-22,LAD,ATL,Dodgers at Braves
+2023-05-23,LAD,ATL,Dodgers at Braves
+2023-05-24,LAD,ATL,Dodgers at Braves
+2023-05-25,PHI,ATL,Phillies at Braves
+2023-05-26,PHI,ATL,Phillies at Braves
+2023-05-27,PHI,ATL,Phillies at Braves
+2023-05-28,PHI,ATL,Phillies at Braves
+2023-06-06,NYM,ATL,Mets at Braves
+2023-06-07,NYM,ATL,Mets at Braves
+2023-06-08,NYM,ATL,Mets at Braves
+2023-06-09,WSN,ATL,Nationals at Braves
+2023-06-10,WSN,ATL,Nationals at Braves
+2023-06-11,WSN,ATL,Nationals at Braves
+2023-06-15,COL,ATL,Rockies at Braves
+2023-06-16,COL,ATL,Rockies at Braves
+2023-06-17,COL,ATL,Rockies at Braves
+2023-06-18,COL,ATL,Rockies at Braves
+2023-06-26,MIN,ATL,Twins at Braves
+2023-06-27,MIN,ATL,Twins at Braves
+2023-06-28,MIN,ATL,Twins at Braves
+2023-06-30,MIA,ATL,Marlins at Braves
+2023-07-01,MIA,ATL,Marlins at Braves
+2023-07-02,MIA,ATL,Marlins at Braves
+2023-07-14,CHW,ATL,White Sox at Braves
+2023-07-15,CHW,ATL,White Sox at Braves
+2023-07-16,CHW,ATL,White Sox at Braves
+2023-07-18,ARI,ATL,D-backs at Braves
+2023-07-19,ARI,ATL,D-backs at Braves
+2023-07-20,ARI,ATL,D-backs at Braves
+2023-07-28,MIL,ATL,Brewers at Braves
+2023-07-29,MIL,ATL,Brewers at Braves
+2023-07-30,MIL,ATL,Brewers at Braves
+2023-07-31,LAA,ATL,Angels at Braves
+2023-08-01,LAA,ATL,Angels at Braves
+2023-08-02,LAA,ATL,Angels at Braves
+2023-08-14,NYY,ATL,Yankees at Braves
+2023-08-15,NYY,ATL,Yankees at Braves
+2023-08-16,NYY,ATL,Yankees at Braves
+2023-08-18,SFG,ATL,Giants at Braves
+2023-08-19,SFG,ATL,Giants at Braves
+2023-08-20,SFG,ATL,Giants at Braves
+2023-08-21,NYM,ATL,Mets at Braves
+2023-08-22,NYM,ATL,Mets at Braves
+2023-08-23,NYM,ATL,Mets at Braves
+2023-09-05,STL,ATL,Cardinals at Braves
+2023-09-06,STL,ATL,Cardinals at Braves
+2023-09-07,STL,ATL,Cardinals at Braves
+2023-09-08,PIT,ATL,Pirates at Braves
+2023-09-09,PIT,ATL,Pirates at Braves
+2023-09-10,PIT,ATL,Pirates at Braves
+2023-09-18,PHI,ATL,Phillies at Braves
+2023-09-19,PHI,ATL,Phillies at Braves
+2023-09-20,PHI,ATL,Phillies at Braves
+2023-09-26,CHC,ATL,Cubs at Braves
+2023-09-27,CHC,ATL,Cubs at Braves
+2023-09-28,CHC,ATL,Cubs at Braves
+2023-09-29,WSN,ATL,Nationals at Braves
+2023-09-30,WSN,ATL,Nationals at Braves
+2023-10-01,WSN,ATL,Nationals at Braves
+2023-03-30,NYM,MIA,Mets at Marlins
+2023-03-31,NYM,MIA,Mets at Marlins
+2023-04-01,NYM,MIA,Mets at Marlins
+2023-04-02,NYM,MIA,Mets at Marlins
+2023-04-03,MIN,MIA,Twins at Marlins
+2023-04-04,MIN,MIA,Twins at Marlins
+2023-04-05,MIN,MIA,Twins at Marlins
+2023-04-14,ARI,MIA,D-backs at Marlins
+2023-04-15,ARI,MIA,D-backs at Marlins
+2023-04-16,ARI,MIA,D-backs at Marlins
+2023-04-17,SFG,MIA,Giants at Marlins
+2023-04-18,SFG,MIA,Giants at Marlins
+2023-04-19,SFG,MIA,Giants at Marlins
+2023-04-28,CHC,MIA,Cubs at Marlins
+2023-04-29,CHC,MIA,Cubs at Marlins
+2023-04-30,CHC,MIA,Cubs at Marlins
+2023-05-02,ATL,MIA,Braves at Marlins
+2023-05-03,ATL,MIA,Braves at Marlins
+2023-05-04,ATL,MIA,Braves at Marlins
+2023-05-12,CIN,MIA,Reds at Marlins
+2023-05-13,CIN,MIA,Reds at Marlins
+2023-05-14,CIN,MIA,Reds at Marlins
+2023-05-16,WSN,MIA,Nationals at Marlins
+2023-05-17,WSN,MIA,Nationals at Marlins
+2023-05-18,WSN,MIA,Nationals at Marlins
+2023-05-30,SDP,MIA,Padres at Marlins
+2023-05-31,SDP,MIA,Padres at Marlins
+2023-06-01,SDP,MIA,Padres at Marlins
+2023-06-02,OAK,MIA,Athletics at Marlins
+2023-06-03,OAK,MIA,Athletics at Marlins
+2023-06-04,OAK,MIA,Athletics at Marlins
+2023-06-05,KCR,MIA,Royals at Marlins
+2023-06-06,KCR,MIA,Royals at Marlins
+2023-06-07,KCR,MIA,Royals at Marlins
+2023-06-19,TOR,MIA,Blue Jays at Marlins
+2023-06-20,TOR,MIA,Blue Jays at Marlins
+2023-06-21,TOR,MIA,Blue Jays at Marlins
+2023-06-22,PIT,MIA,Pirates at Marlins
+2023-06-23,PIT,MIA,Pirates at Marlins
+2023-06-24,PIT,MIA,Pirates at Marlins
+2023-06-25,PIT,MIA,Pirates at Marlins
+2023-07-03,STL,MIA,Cardinals at Marlins
+2023-07-04,STL,MIA,Cardinals at Marlins
+2023-07-05,STL,MIA,Cardinals at Marlins
+2023-07-06,STL,MIA,Cardinals at Marlins
+2023-07-07,PHI,MIA,Phillies at Marlins
+2023-07-08,PHI,MIA,Phillies at Marlins
+2023-07-09,PHI,MIA,Phillies at Marlins
+2023-07-21,COL,MIA,Rockies at Marlins
+2023-07-22,COL,MIA,Rockies at Marlins
+2023-07-23,COL,MIA,Rockies at Marlins
+2023-07-28,DET,MIA,Tigers at Marlins
+2023-07-29,DET,MIA,Tigers at Marlins
+2023-07-30,DET,MIA,Tigers at Marlins
+2023-07-31,PHI,MIA,Phillies at Marlins
+2023-08-01,PHI,MIA,Phillies at Marlins
+2023-08-02,PHI,MIA,Phillies at Marlins
+2023-08-03,PHI,MIA,Phillies at Marlins
+2023-08-11,NYY,MIA,Yankees at Marlins
+2023-08-12,NYY,MIA,Yankees at Marlins
+2023-08-13,NYY,MIA,Yankees at Marlins
+2023-08-14,HOU,MIA,Astros at Marlins
+2023-08-15,HOU,MIA,Astros at Marlins
+2023-08-16,HOU,MIA,Astros at Marlins
+2023-08-25,WSN,MIA,Nationals at Marlins
+2023-08-26,WSN,MIA,Nationals at Marlins
+2023-08-27,WSN,MIA,Nationals at Marlins
+2023-08-29,TBR,MIA,Rays at Marlins
+2023-08-30,TBR,MIA,Rays at Marlins
+2023-09-05,LAD,MIA,Dodgers at Marlins
+2023-09-06,LAD,MIA,Dodgers at Marlins
+2023-09-07,LAD,MIA,Dodgers at Marlins
+2023-09-15,ATL,MIA,Braves at Marlins
+2023-09-16,ATL,MIA,Braves at Marlins
+2023-09-17,ATL,MIA,Braves at Marlins
+2023-09-18,NYM,MIA,Mets at Marlins
+2023-09-19,NYM,MIA,Mets at Marlins
+2023-09-20,NYM,MIA,Mets at Marlins
+2023-09-22,MIL,MIA,Brewers at Marlins
+2023-09-23,MIL,MIA,Brewers at Marlins
+2023-09-24,MIL,MIA,Brewers at Marlins
+2023-04-06,MIA,NYM,Marlins at Mets
+2023-04-08,MIA,NYM,Marlins at Mets
+2023-04-09,MIA,NYM,Marlins at Mets
+2023-04-10,SDP,NYM,Padres at Mets
+2023-04-11,SDP,NYM,Padres at Mets
+2023-04-12,SDP,NYM,Padres at Mets
+2023-04-25,WSN,NYM,Nationals at Mets
+2023-04-26,WSN,NYM,Nationals at Mets
+2023-04-27,WSN,NYM,Nationals at Mets
+2023-04-28,ATL,NYM,Braves at Mets
+2023-04-29,ATL,NYM,Braves at Mets
+2023-04-30,ATL,NYM,Braves at Mets
+2023-05-01,ATL,NYM,Braves at Mets
+2023-05-05,COL,NYM,Rockies at Mets
+2023-05-06,COL,NYM,Rockies at Mets
+2023-05-07,COL,NYM,Rockies at Mets
+2023-05-16,TBR,NYM,Rays at Mets
+2023-05-17,TBR,NYM,Rays at Mets
+2023-05-18,TBR,NYM,Rays at Mets
+2023-05-19,CLE,NYM,Guardians at Mets
+2023-05-20,CLE,NYM,Guardians at Mets
+2023-05-21,CLE,NYM,Guardians at Mets
+2023-05-30,PHI,NYM,Phillies at Mets
+2023-05-31,PHI,NYM,Phillies at Mets
+2023-06-01,PHI,NYM,Phillies at Mets
+2023-06-02,TOR,NYM,Blue Jays at Mets
+2023-06-03,TOR,NYM,Blue Jays at Mets
+2023-06-04,TOR,NYM,Blue Jays at Mets
+2023-06-13,NYY,NYM,Yankees at Mets
+2023-06-14,NYY,NYM,Yankees at Mets
+2023-06-16,STL,NYM,Cardinals at Mets
+2023-06-17,STL,NYM,Cardinals at Mets
+2023-06-18,STL,NYM,Cardinals at Mets
+2023-06-26,MIL,NYM,Brewers at Mets
+2023-06-27,MIL,NYM,Brewers at Mets
+2023-06-28,MIL,NYM,Brewers at Mets
+2023-06-29,MIL,NYM,Brewers at Mets
+2023-06-30,SFG,NYM,Giants at Mets
+2023-07-01,SFG,NYM,Giants at Mets
+2023-07-02,SFG,NYM,Giants at Mets
+2023-07-14,LAD,NYM,Dodgers at Mets
+2023-07-15,LAD,NYM,Dodgers at Mets
+2023-07-16,LAD,NYM,Dodgers at Mets
+2023-07-18,CHW,NYM,White Sox at Mets
+2023-07-19,CHW,NYM,White Sox at Mets
+2023-07-20,CHW,NYM,White Sox at Mets
+2023-07-27,WSN,NYM,Nationals at Mets
+2023-07-28,WSN,NYM,Nationals at Mets
+2023-07-29,WSN,NYM,Nationals at Mets
+2023-07-30,WSN,NYM,Nationals at Mets
+2023-08-07,CHC,NYM,Cubs at Mets
+2023-08-08,CHC,NYM,Cubs at Mets
+2023-08-09,CHC,NYM,Cubs at Mets
+2023-08-11,ATL,NYM,Braves at Mets
+2023-08-12,ATL,NYM,Braves at Mets
+2023-08-13,ATL,NYM,Braves at Mets
+2023-08-14,PIT,NYM,Pirates at Mets
+2023-08-15,PIT,NYM,Pirates at Mets
+2023-08-16,PIT,NYM,Pirates at Mets
+2023-08-25,LAA,NYM,Angels at Mets
+2023-08-26,LAA,NYM,Angels at Mets
+2023-08-27,LAA,NYM,Angels at Mets
+2023-08-28,TEX,NYM,Rangers at Mets
+2023-08-29,TEX,NYM,Rangers at Mets
+2023-08-30,TEX,NYM,Rangers at Mets
+2023-09-01,SEA,NYM,Mariners at Mets
+2023-09-02,SEA,NYM,Mariners at Mets
+2023-09-03,SEA,NYM,Mariners at Mets
+2023-09-11,ARI,NYM,D-backs at Mets
+2023-09-12,ARI,NYM,D-backs at Mets
+2023-09-13,ARI,NYM,D-backs at Mets
+2023-09-14,ARI,NYM,D-backs at Mets
+2023-09-15,CIN,NYM,Reds at Mets
+2023-09-16,CIN,NYM,Reds at Mets
+2023-09-17,CIN,NYM,Reds at Mets
+2023-09-26,MIA,NYM,Marlins at Mets
+2023-09-27,MIA,NYM,Marlins at Mets
+2023-09-28,MIA,NYM,Marlins at Mets
+2023-09-29,PHI,NYM,Phillies at Mets
+2023-09-30,PHI,NYM,Phillies at Mets
+2023-10-01,PHI,NYM,Phillies at Mets
+2023-03-30,ATL,WSN,Braves at Nationals
+2023-04-01,ATL,WSN,Braves at Nationals
+2023-04-02,ATL,WSN,Braves at Nationals
+2023-04-03,TBR,WSN,Rays at Nationals
+2023-04-04,TBR,WSN,Rays at Nationals
+2023-04-05,TBR,WSN,Rays at Nationals
+2023-04-14,CLE,WSN,Guardians at Nationals
+2023-04-15,CLE,WSN,Guardians at Nationals
+2023-04-16,CLE,WSN,Guardians at Nationals
+2023-04-18,BAL,WSN,Orioles at Nationals
+2023-04-19,BAL,WSN,Orioles at Nationals
+2023-04-28,PIT,WSN,Pirates at Nationals
+2023-04-29,PIT,WSN,Pirates at Nationals
+2023-04-30,PIT,WSN,Pirates at Nationals
+2023-05-01,CHC,WSN,Cubs at Nationals
+2023-05-02,CHC,WSN,Cubs at Nationals
+2023-05-03,CHC,WSN,Cubs at Nationals
+2023-05-04,CHC,WSN,Cubs at Nationals
+2023-05-12,NYM,WSN,Mets at Nationals
+2023-05-13,NYM,WSN,Mets at Nationals
+2023-05-14,NYM,WSN,Mets at Nationals
+2023-05-15,NYM,WSN,Mets at Nationals
+2023-05-19,DET,WSN,Tigers at Nationals
+2023-05-20,DET,WSN,Tigers at Nationals
+2023-05-21,DET,WSN,Tigers at Nationals
+2023-05-23,SDP,WSN,Padres at Nationals
+2023-05-24,SDP,WSN,Padres at Nationals
+2023-05-25,SDP,WSN,Padres at Nationals
+2023-06-02,PHI,WSN,Phillies at Nationals
+2023-06-03,PHI,WSN,Phillies at Nationals
+2023-06-04,PHI,WSN,Phillies at Nationals
+2023-06-06,ARI,WSN,D-backs at Nationals
+2023-06-07,ARI,WSN,D-backs at Nationals
+2023-06-08,ARI,WSN,D-backs at Nationals
+2023-06-16,MIA,WSN,Marlins at Nationals
+2023-06-17,MIA,WSN,Marlins at Nationals
+2023-06-18,MIA,WSN,Marlins at Nationals
+2023-06-19,STL,WSN,Cardinals at Nationals
+2023-06-20,STL,WSN,Cardinals at Nationals
+2023-06-21,STL,WSN,Cardinals at Nationals
+2023-07-03,CIN,WSN,Reds at Nationals
+2023-07-04,CIN,WSN,Reds at Nationals
+2023-07-05,CIN,WSN,Reds at Nationals
+2023-07-06,CIN,WSN,Reds at Nationals
+2023-07-07,TEX,WSN,Rangers at Nationals
+2023-07-08,TEX,WSN,Rangers at Nationals
+2023-07-09,TEX,WSN,Rangers at Nationals
+2023-07-21,SFG,WSN,Giants at Nationals
+2023-07-22,SFG,WSN,Giants at Nationals
+2023-07-23,SFG,WSN,Giants at Nationals
+2023-07-24,COL,WSN,Rockies at Nationals
+2023-07-25,COL,WSN,Rockies at Nationals
+2023-07-26,COL,WSN,Rockies at Nationals
+2023-07-31,MIL,WSN,Brewers at Nationals
+2023-08-01,MIL,WSN,Brewers at Nationals
+2023-08-02,MIL,WSN,Brewers at Nationals
+2023-08-11,OAK,WSN,Athletics at Nationals
+2023-08-12,OAK,WSN,Athletics at Nationals
+2023-08-13,OAK,WSN,Athletics at Nationals
+2023-08-15,BOS,WSN,Red Sox at Nationals
+2023-08-16,BOS,WSN,Red Sox at Nationals
+2023-08-17,BOS,WSN,Red Sox at Nationals
+2023-08-18,PHI,WSN,Phillies at Nationals
+2023-08-19,PHI,WSN,Phillies at Nationals
+2023-08-20,PHI,WSN,Phillies at Nationals
+2023-08-31,MIA,WSN,Marlins at Nationals
+2023-09-01,MIA,WSN,Marlins at Nationals
+2023-09-02,MIA,WSN,Marlins at Nationals
+2023-09-03,MIA,WSN,Marlins at Nationals
+2023-09-05,NYM,WSN,Mets at Nationals
+2023-09-06,NYM,WSN,Mets at Nationals
+2023-09-08,LAD,WSN,Dodgers at Nationals
+2023-09-09,LAD,WSN,Dodgers at Nationals
+2023-09-10,LAD,WSN,Dodgers at Nationals
+2023-09-18,CHW,WSN,White Sox at Nationals
+2023-09-19,CHW,WSN,White Sox at Nationals
+2023-09-20,CHW,WSN,White Sox at Nationals
+2023-09-21,ATL,WSN,Braves at Nationals
+2023-09-22,ATL,WSN,Braves at Nationals
+2023-09-23,ATL,WSN,Braves at Nationals
+2023-09-24,ATL,WSN,Braves at Nationals
+2023-04-06,CIN,PHI,Reds at Phillies
+2023-04-08,CIN,PHI,Reds at Phillies
+2023-04-09,CIN,PHI,Reds at Phillies
+2023-04-10,MIA,PHI,Marlins at Phillies
+2023-04-11,MIA,PHI,Marlins at Phillies
+2023-04-12,MIA,PHI,Marlins at Phillies
+2023-04-20,COL,PHI,Rockies at Phillies
+2023-04-21,COL,PHI,Rockies at Phillies
+2023-04-22,COL,PHI,Rockies at Phillies
+2023-04-23,COL,PHI,Rockies at Phillies
+2023-04-25,SEA,PHI,Mariners at Phillies
+2023-04-26,SEA,PHI,Mariners at Phillies
+2023-04-27,SEA,PHI,Mariners at Phillies
+2023-05-05,BOS,PHI,Red Sox at Phillies
+2023-05-06,BOS,PHI,Red Sox at Phillies
+2023-05-07,BOS,PHI,Red Sox at Phillies
+2023-05-09,TOR,PHI,Blue Jays at Phillies
+2023-05-10,TOR,PHI,Blue Jays at Phillies
+2023-05-19,CHC,PHI,Cubs at Phillies
+2023-05-20,CHC,PHI,Cubs at Phillies
+2023-05-21,CHC,PHI,Cubs at Phillies
+2023-05-22,ARI,PHI,D-backs at Phillies
+2023-05-23,ARI,PHI,D-backs at Phillies
+2023-05-24,ARI,PHI,D-backs at Phillies
+2023-06-05,DET,PHI,Tigers at Phillies
+2023-06-06,DET,PHI,Tigers at Phillies
+2023-06-07,DET,PHI,Tigers at Phillies
+2023-06-09,LAD,PHI,Dodgers at Phillies
+2023-06-10,LAD,PHI,Dodgers at Phillies
+2023-06-11,LAD,PHI,Dodgers at Phillies
+2023-06-20,ATL,PHI,Braves at Phillies
+2023-06-21,ATL,PHI,Braves at Phillies
+2023-06-22,ATL,PHI,Braves at Phillies
+2023-06-23,NYM,PHI,Mets at Phillies
+2023-06-24,NYM,PHI,Mets at Phillies
+2023-06-25,NYM,PHI,Mets at Phillies
+2023-06-30,WSN,PHI,Nationals at Phillies
+2023-07-01,WSN,PHI,Nationals at Phillies
+2023-07-02,WSN,PHI,Nationals at Phillies
+2023-07-14,SDP,PHI,Padres at Phillies
+2023-07-15,SDP,PHI,Padres at Phillies
+2023-07-15,SDP,PHI,Padres at Phillies
+2023-07-16,SDP,PHI,Padres at Phillies
+2023-07-18,MIL,PHI,Brewers at Phillies
+2023-07-19,MIL,PHI,Brewers at Phillies
+2023-07-20,MIL,PHI,Brewers at Phillies
+2023-07-24,BAL,PHI,Orioles at Phillies
+2023-07-25,BAL,PHI,Orioles at Phillies
+2023-07-26,BAL,PHI,Orioles at Phillies
+2023-08-04,KCR,PHI,Royals at Phillies
+2023-08-05,KCR,PHI,Royals at Phillies
+2023-08-06,KCR,PHI,Royals at Phillies
+2023-08-07,WSN,PHI,Nationals at Phillies
+2023-08-08,WSN,PHI,Nationals at Phillies
+2023-08-09,WSN,PHI,Nationals at Phillies
+2023-08-10,WSN,PHI,Nationals at Phillies
+2023-08-11,MIN,PHI,Twins at Phillies
+2023-08-12,MIN,PHI,Twins at Phillies
+2023-08-13,MIN,PHI,Twins at Phillies
+2023-08-21,SFG,PHI,Giants at Phillies
+2023-08-22,SFG,PHI,Giants at Phillies
+2023-08-23,SFG,PHI,Giants at Phillies
+2023-08-25,STL,PHI,Cardinals at Phillies
+2023-08-26,STL,PHI,Cardinals at Phillies
+2023-08-27,STL,PHI,Cardinals at Phillies
+2023-08-28,LAA,PHI,Angels at Phillies
+2023-08-29,LAA,PHI,Angels at Phillies
+2023-08-30,LAA,PHI,Angels at Phillies
+2023-09-08,MIA,PHI,Marlins at Phillies
+2023-09-09,MIA,PHI,Marlins at Phillies
+2023-09-10,MIA,PHI,Marlins at Phillies
+2023-09-12,ATL,PHI,Braves at Phillies
+2023-09-13,ATL,PHI,Braves at Phillies
+2023-09-14,ATL,PHI,Braves at Phillies
+2023-09-21,NYM,PHI,Mets at Phillies
+2023-09-22,NYM,PHI,Mets at Phillies
+2023-09-23,NYM,PHI,Mets at Phillies
+2023-09-24,NYM,PHI,Mets at Phillies
+2023-09-26,PIT,PHI,Pirates at Phillies
+2023-09-27,PIT,PHI,Pirates at Phillies
+2023-09-28,PIT,PHI,Pirates at Phillies
+2023-04-03,NYM,MIL,Mets at Brewers
+2023-04-04,NYM,MIL,Mets at Brewers
+2023-04-05,NYM,MIL,Mets at Brewers
+2023-04-07,STL,MIL,Cardinals at Brewers
+2023-04-08,STL,MIL,Cardinals at Brewers
+2023-04-09,STL,MIL,Cardinals at Brewers
+2023-04-21,BOS,MIL,Red Sox at Brewers
+2023-04-22,BOS,MIL,Red Sox at Brewers
+2023-04-23,BOS,MIL,Red Sox at Brewers
+2023-04-24,DET,MIL,Tigers at Brewers
+2023-04-25,DET,MIL,Tigers at Brewers
+2023-04-26,DET,MIL,Tigers at Brewers
+2023-04-28,LAA,MIL,Angels at Brewers
+2023-04-29,LAA,MIL,Angels at Brewers
+2023-04-30,LAA,MIL,Angels at Brewers
+2023-05-08,LAD,MIL,Dodgers at Brewers
+2023-05-09,LAD,MIL,Dodgers at Brewers
+2023-05-10,LAD,MIL,Dodgers at Brewers
+2023-05-12,KCR,MIL,Royals at Brewers
+2023-05-13,KCR,MIL,Royals at Brewers
+2023-05-14,KCR,MIL,Royals at Brewers
+2023-05-22,HOU,MIL,Astros at Brewers
+2023-05-23,HOU,MIL,Astros at Brewers
+2023-05-24,HOU,MIL,Astros at Brewers
+2023-05-25,SFG,MIL,Giants at Brewers
+2023-05-26,SFG,MIL,Giants at Brewers
+2023-05-27,SFG,MIL,Giants at Brewers
+2023-05-28,SFG,MIL,Giants at Brewers
+2023-06-06,BAL,MIL,Orioles at Brewers
+2023-06-07,BAL,MIL,Orioles at Brewers
+2023-06-08,BAL,MIL,Orioles at Brewers
+2023-06-09,OAK,MIL,Athletics at Brewers
+2023-06-10,OAK,MIL,Athletics at Brewers
+2023-06-11,OAK,MIL,Athletics at Brewers
+2023-06-16,PIT,MIL,Pirates at Brewers
+2023-06-17,PIT,MIL,Pirates at Brewers
+2023-06-18,PIT,MIL,Pirates at Brewers
+2023-06-19,ARI,MIL,D-backs at Brewers
+2023-06-20,ARI,MIL,D-backs at Brewers
+2023-06-21,ARI,MIL,D-backs at Brewers
+2023-07-03,CHC,MIL,Cubs at Brewers
+2023-07-04,CHC,MIL,Cubs at Brewers
+2023-07-05,CHC,MIL,Cubs at Brewers
+2023-07-06,CHC,MIL,Cubs at Brewers
+2023-07-07,CIN,MIL,Reds at Brewers
+2023-07-08,CIN,MIL,Reds at Brewers
+2023-07-09,CIN,MIL,Reds at Brewers
+2023-07-21,ATL,MIL,Braves at Brewers
+2023-07-22,ATL,MIL,Braves at Brewers
+2023-07-23,ATL,MIL,Braves at Brewers
+2023-07-24,CIN,MIL,Reds at Brewers
+2023-07-25,CIN,MIL,Reds at Brewers
+2023-07-26,CIN,MIL,Reds at Brewers
+2023-08-03,PIT,MIL,Pirates at Brewers
+2023-08-04,PIT,MIL,Pirates at Brewers
+2023-08-05,PIT,MIL,Pirates at Brewers
+2023-08-06,PIT,MIL,Pirates at Brewers
+2023-08-07,COL,MIL,Rockies at Brewers
+2023-08-08,COL,MIL,Rockies at Brewers
+2023-08-09,COL,MIL,Rockies at Brewers
+2023-08-22,MIN,MIL,Twins at Brewers
+2023-08-23,MIN,MIL,Twins at Brewers
+2023-08-25,SDP,MIL,Padres at Brewers
+2023-08-26,SDP,MIL,Padres at Brewers
+2023-08-27,SDP,MIL,Padres at Brewers
+2023-09-01,PHI,MIL,Phillies at Brewers
+2023-09-02,PHI,MIL,Phillies at Brewers
+2023-09-03,PHI,MIL,Phillies at Brewers
+2023-09-11,MIA,MIL,Marlins at Brewers
+2023-09-12,MIA,MIL,Marlins at Brewers
+2023-09-13,MIA,MIL,Marlins at Brewers
+2023-09-14,MIA,MIL,Marlins at Brewers
+2023-09-15,WSN,MIL,Nationals at Brewers
+2023-09-16,WSN,MIL,Nationals at Brewers
+2023-09-17,WSN,MIL,Nationals at Brewers
+2023-09-26,STL,MIL,Cardinals at Brewers
+2023-09-27,STL,MIL,Cardinals at Brewers
+2023-09-28,STL,MIL,Cardinals at Brewers
+2023-09-29,CHC,MIL,Cubs at Brewers
+2023-09-30,CHC,MIL,Cubs at Brewers
+2023-10-01,CHC,MIL,Cubs at Brewers
+2023-03-30,TOR,STL,Blue Jays at Cardinals
+2023-04-01,TOR,STL,Blue Jays at Cardinals
+2023-04-02,TOR,STL,Blue Jays at Cardinals
+2023-04-03,ATL,STL,Braves at Cardinals
+2023-04-04,ATL,STL,Braves at Cardinals
+2023-04-05,ATL,STL,Braves at Cardinals
+2023-04-13,PIT,STL,Pirates at Cardinals
+2023-04-14,PIT,STL,Pirates at Cardinals
+2023-04-15,PIT,STL,Pirates at Cardinals
+2023-04-16,PIT,STL,Pirates at Cardinals
+2023-04-17,ARI,STL,D-backs at Cardinals
+2023-04-18,ARI,STL,D-backs at Cardinals
+2023-04-19,ARI,STL,D-backs at Cardinals
+2023-05-02,LAA,STL,Angels at Cardinals
+2023-05-03,LAA,STL,Angels at Cardinals
+2023-05-04,LAA,STL,Angels at Cardinals
+2023-05-05,DET,STL,Tigers at Cardinals
+2023-05-06,DET,STL,Tigers at Cardinals
+2023-05-07,DET,STL,Tigers at Cardinals
+2023-05-15,MIL,STL,Brewers at Cardinals
+2023-05-16,MIL,STL,Brewers at Cardinals
+2023-05-17,MIL,STL,Brewers at Cardinals
+2023-05-18,LAD,STL,Dodgers at Cardinals
+2023-05-19,LAD,STL,Dodgers at Cardinals
+2023-05-20,LAD,STL,Dodgers at Cardinals
+2023-05-21,LAD,STL,Dodgers at Cardinals
+2023-05-29,KCR,STL,Royals at Cardinals
+2023-05-30,KCR,STL,Royals at Cardinals
+2023-06-09,CIN,STL,Reds at Cardinals
+2023-06-10,CIN,STL,Reds at Cardinals
+2023-06-11,CIN,STL,Reds at Cardinals
+2023-06-12,SFG,STL,Giants at Cardinals
+2023-06-13,SFG,STL,Giants at Cardinals
+2023-06-14,SFG,STL,Giants at Cardinals
+2023-06-24,CHC,STL,Cubs at Cardinals
+2023-06-25,CHC,STL,Cubs at Cardinals
+2023-06-27,HOU,STL,Astros at Cardinals
+2023-06-28,HOU,STL,Astros at Cardinals
+2023-06-29,HOU,STL,Astros at Cardinals
+2023-06-30,NYY,STL,Yankees at Cardinals
+2023-07-01,NYY,STL,Yankees at Cardinals
+2023-07-02,NYY,STL,Yankees at Cardinals
+2023-07-14,WSN,STL,Nationals at Cardinals
+2023-07-15,WSN,STL,Nationals at Cardinals
+2023-07-16,WSN,STL,Nationals at Cardinals
+2023-07-17,MIA,STL,Marlins at Cardinals
+2023-07-18,MIA,STL,Marlins at Cardinals
+2023-07-19,MIA,STL,Marlins at Cardinals
+2023-07-27,CHC,STL,Cubs at Cardinals
+2023-07-28,CHC,STL,Cubs at Cardinals
+2023-07-29,CHC,STL,Cubs at Cardinals
+2023-07-30,CHC,STL,Cubs at Cardinals
+2023-08-01,MIN,STL,Twins at Cardinals
+2023-08-02,MIN,STL,Twins at Cardinals
+2023-08-03,MIN,STL,Twins at Cardinals
+2023-08-04,COL,STL,Rockies at Cardinals
+2023-08-05,COL,STL,Rockies at Cardinals
+2023-08-06,COL,STL,Rockies at Cardinals
+2023-08-14,OAK,STL,Athletics at Cardinals
+2023-08-15,OAK,STL,Athletics at Cardinals
+2023-08-16,OAK,STL,Athletics at Cardinals
+2023-08-17,NYM,STL,Mets at Cardinals
+2023-08-18,NYM,STL,Mets at Cardinals
+2023-08-19,NYM,STL,Mets at Cardinals
+2023-08-20,NYM,STL,Mets at Cardinals
+2023-08-28,SDP,STL,Padres at Cardinals
+2023-08-29,SDP,STL,Padres at Cardinals
+2023-08-30,SDP,STL,Padres at Cardinals
+2023-09-01,PIT,STL,Pirates at Cardinals
+2023-09-02,PIT,STL,Pirates at Cardinals
+2023-09-03,PIT,STL,Pirates at Cardinals
+2023-09-15,PHI,STL,Phillies at Cardinals
+2023-09-16,PHI,STL,Phillies at Cardinals
+2023-09-17,PHI,STL,Phillies at Cardinals
+2023-09-18,MIL,STL,Brewers at Cardinals
+2023-09-19,MIL,STL,Brewers at Cardinals
+2023-09-20,MIL,STL,Brewers at Cardinals
+2023-09-21,MIL,STL,Brewers at Cardinals
+2023-09-29,CIN,STL,Reds at Cardinals
+2023-09-30,CIN,STL,Reds at Cardinals
+2023-10-01,CIN,STL,Reds at Cardinals
+2023-03-30,MIL,CHC,Brewers at Cubs
+2023-04-01,MIL,CHC,Brewers at Cubs
+2023-04-02,MIL,CHC,Brewers at Cubs
+2023-04-07,TEX,CHC,Rangers at Cubs
+2023-04-08,TEX,CHC,Rangers at Cubs
+2023-04-09,TEX,CHC,Rangers at Cubs
+2023-04-10,SEA,CHC,Mariners at Cubs
+2023-04-11,SEA,CHC,Mariners at Cubs
+2023-04-12,SEA,CHC,Mariners at Cubs
+2023-04-20,LAD,CHC,Dodgers at Cubs
+2023-04-21,LAD,CHC,Dodgers at Cubs
+2023-04-22,LAD,CHC,Dodgers at Cubs
+2023-04-23,LAD,CHC,Dodgers at Cubs
+2023-04-25,SDP,CHC,Padres at Cubs
+2023-04-26,SDP,CHC,Padres at Cubs
+2023-04-27,SDP,CHC,Padres at Cubs
+2023-05-05,MIA,CHC,Marlins at Cubs
+2023-05-06,MIA,CHC,Marlins at Cubs
+2023-05-07,MIA,CHC,Marlins at Cubs
+2023-05-08,STL,CHC,Cardinals at Cubs
+2023-05-09,STL,CHC,Cardinals at Cubs
+2023-05-10,STL,CHC,Cardinals at Cubs
+2023-05-23,NYM,CHC,Mets at Cubs
+2023-05-24,NYM,CHC,Mets at Cubs
+2023-05-25,NYM,CHC,Mets at Cubs
+2023-05-26,CIN,CHC,Reds at Cubs
+2023-05-27,CIN,CHC,Reds at Cubs
+2023-05-28,CIN,CHC,Reds at Cubs
+2023-05-29,TBR,CHC,Rays at Cubs
+2023-05-30,TBR,CHC,Rays at Cubs
+2023-05-31,TBR,CHC,Rays at Cubs
+2023-06-13,PIT,CHC,Pirates at Cubs
+2023-06-14,PIT,CHC,Pirates at Cubs
+2023-06-15,PIT,CHC,Pirates at Cubs
+2023-06-16,BAL,CHC,Orioles at Cubs
+2023-06-17,BAL,CHC,Orioles at Cubs
+2023-06-18,BAL,CHC,Orioles at Cubs
+2023-06-27,PHI,CHC,Phillies at Cubs
+2023-06-28,PHI,CHC,Phillies at Cubs
+2023-06-29,PHI,CHC,Phillies at Cubs
+2023-06-30,CLE,CHC,Guardians at Cubs
+2023-07-01,CLE,CHC,Guardians at Cubs
+2023-07-02,CLE,CHC,Guardians at Cubs
+2023-07-14,BOS,CHC,Red Sox at Cubs
+2023-07-15,BOS,CHC,Red Sox at Cubs
+2023-07-16,BOS,CHC,Red Sox at Cubs
+2023-07-17,WSN,CHC,Nationals at Cubs
+2023-07-18,WSN,CHC,Nationals at Cubs
+2023-07-19,WSN,CHC,Nationals at Cubs
+2023-07-20,STL,CHC,Cardinals at Cubs
+2023-07-21,STL,CHC,Cardinals at Cubs
+2023-07-22,STL,CHC,Cardinals at Cubs
+2023-07-23,STL,CHC,Cardinals at Cubs
+2023-07-31,CIN,CHC,Reds at Cubs
+2023-08-01,CIN,CHC,Reds at Cubs
+2023-08-02,CIN,CHC,Reds at Cubs
+2023-08-03,CIN,CHC,Reds at Cubs
+2023-08-04,ATL,CHC,Braves at Cubs
+2023-08-05,ATL,CHC,Braves at Cubs
+2023-08-06,ATL,CHC,Braves at Cubs
+2023-08-15,CHW,CHC,White Sox at Cubs
+2023-08-16,CHW,CHC,White Sox at Cubs
+2023-08-18,KCR,CHC,Royals at Cubs
+2023-08-19,KCR,CHC,Royals at Cubs
+2023-08-20,KCR,CHC,Royals at Cubs
+2023-08-28,MIL,CHC,Brewers at Cubs
+2023-08-29,MIL,CHC,Brewers at Cubs
+2023-08-30,MIL,CHC,Brewers at Cubs
+2023-09-04,SFG,CHC,Giants at Cubs
+2023-09-05,SFG,CHC,Giants at Cubs
+2023-09-06,SFG,CHC,Giants at Cubs
+2023-09-07,ARI,CHC,D-backs at Cubs
+2023-09-08,ARI,CHC,D-backs at Cubs
+2023-09-09,ARI,CHC,D-backs at Cubs
+2023-09-10,ARI,CHC,D-backs at Cubs
+2023-09-19,PIT,CHC,Pirates at Cubs
+2023-09-20,PIT,CHC,Pirates at Cubs
+2023-09-21,PIT,CHC,Pirates at Cubs
+2023-09-22,COL,CHC,Rockies at Cubs
+2023-09-23,COL,CHC,Rockies at Cubs
+2023-09-24,COL,CHC,Rockies at Cubs
+2023-04-07,CHW,PIT,White Sox at Pirates
+2023-04-08,CHW,PIT,White Sox at Pirates
+2023-04-09,CHW,PIT,White Sox at Pirates
+2023-04-10,HOU,PIT,Astros at Pirates
+2023-04-11,HOU,PIT,Astros at Pirates
+2023-04-12,HOU,PIT,Astros at Pirates
+2023-04-20,CIN,PIT,Reds at Pirates
+2023-04-21,CIN,PIT,Reds at Pirates
+2023-04-22,CIN,PIT,Reds at Pirates
+2023-04-23,CIN,PIT,Reds at Pirates
+2023-04-25,LAD,PIT,Dodgers at Pirates
+2023-04-26,LAD,PIT,Dodgers at Pirates
+2023-04-27,LAD,PIT,Dodgers at Pirates
+2023-05-05,TOR,PIT,Blue Jays at Pirates
+2023-05-06,TOR,PIT,Blue Jays at Pirates
+2023-05-07,TOR,PIT,Blue Jays at Pirates
+2023-05-08,COL,PIT,Rockies at Pirates
+2023-05-09,COL,PIT,Rockies at Pirates
+2023-05-10,COL,PIT,Rockies at Pirates
+2023-05-19,ARI,PIT,D-backs at Pirates
+2023-05-20,ARI,PIT,D-backs at Pirates
+2023-05-21,ARI,PIT,D-backs at Pirates
+2023-05-22,TEX,PIT,Rangers at Pirates
+2023-05-23,TEX,PIT,Rangers at Pirates
+2023-05-24,TEX,PIT,Rangers at Pirates
+2023-06-02,STL,PIT,Cardinals at Pirates
+2023-06-03,STL,PIT,Cardinals at Pirates
+2023-06-04,STL,PIT,Cardinals at Pirates
+2023-06-05,OAK,PIT,Athletics at Pirates
+2023-06-06,OAK,PIT,Athletics at Pirates
+2023-06-07,OAK,PIT,Athletics at Pirates
+2023-06-09,NYM,PIT,Mets at Pirates
+2023-06-10,NYM,PIT,Mets at Pirates
+2023-06-11,NYM,PIT,Mets at Pirates
+2023-06-19,CHC,PIT,Cubs at Pirates
+2023-06-20,CHC,PIT,Cubs at Pirates
+2023-06-21,CHC,PIT,Cubs at Pirates
+2023-06-27,SDP,PIT,Padres at Pirates
+2023-06-28,SDP,PIT,Padres at Pirates
+2023-06-29,SDP,PIT,Padres at Pirates
+2023-06-30,MIL,PIT,Brewers at Pirates
+2023-07-01,MIL,PIT,Brewers at Pirates
+2023-07-02,MIL,PIT,Brewers at Pirates
+2023-07-14,SFG,PIT,Giants at Pirates
+2023-07-15,SFG,PIT,Giants at Pirates
+2023-07-16,SFG,PIT,Giants at Pirates
+2023-07-17,CLE,PIT,Guardians at Pirates
+2023-07-18,CLE,PIT,Guardians at Pirates
+2023-07-19,CLE,PIT,Guardians at Pirates
+2023-07-28,PHI,PIT,Phillies at Pirates
+2023-07-29,PHI,PIT,Phillies at Pirates
+2023-07-30,PHI,PIT,Phillies at Pirates
+2023-08-01,DET,PIT,Tigers at Pirates
+2023-08-02,DET,PIT,Tigers at Pirates
+2023-08-07,ATL,PIT,Braves at Pirates
+2023-08-08,ATL,PIT,Braves at Pirates
+2023-08-09,ATL,PIT,Braves at Pirates
+2023-08-10,ATL,PIT,Braves at Pirates
+2023-08-11,CIN,PIT,Reds at Pirates
+2023-08-12,CIN,PIT,Reds at Pirates
+2023-08-13,CIN,PIT,Reds at Pirates
+2023-08-21,STL,PIT,Cardinals at Pirates
+2023-08-22,STL,PIT,Cardinals at Pirates
+2023-08-23,STL,PIT,Cardinals at Pirates
+2023-08-24,CHC,PIT,Cubs at Pirates
+2023-08-25,CHC,PIT,Cubs at Pirates
+2023-08-26,CHC,PIT,Cubs at Pirates
+2023-08-27,CHC,PIT,Cubs at Pirates
+2023-09-04,MIL,PIT,Brewers at Pirates
+2023-09-05,MIL,PIT,Brewers at Pirates
+2023-09-06,MIL,PIT,Brewers at Pirates
+2023-09-11,WSN,PIT,Nationals at Pirates
+2023-09-12,WSN,PIT,Nationals at Pirates
+2023-09-13,WSN,PIT,Nationals at Pirates
+2023-09-14,WSN,PIT,Nationals at Pirates
+2023-09-15,NYY,PIT,Yankees at Pirates
+2023-09-16,NYY,PIT,Yankees at Pirates
+2023-09-17,NYY,PIT,Yankees at Pirates
+2023-09-29,MIA,PIT,Marlins at Pirates
+2023-09-30,MIA,PIT,Marlins at Pirates
+2023-10-01,MIA,PIT,Marlins at Pirates
+2023-03-30,PIT,CIN,Pirates at Reds
+2023-04-01,PIT,CIN,Pirates at Reds
+2023-04-02,PIT,CIN,Pirates at Reds
+2023-04-03,CHC,CIN,Cubs at Reds
+2023-04-04,CHC,CIN,Cubs at Reds
+2023-04-05,CHC,CIN,Cubs at Reds
+2023-04-13,PHI,CIN,Phillies at Reds
+2023-04-14,PHI,CIN,Phillies at Reds
+2023-04-15,PHI,CIN,Phillies at Reds
+2023-04-16,PHI,CIN,Phillies at Reds
+2023-04-17,TBR,CIN,Rays at Reds
+2023-04-18,TBR,CIN,Rays at Reds
+2023-04-19,TBR,CIN,Rays at Reds
+2023-04-24,TEX,CIN,Rangers at Reds
+2023-04-25,TEX,CIN,Rangers at Reds
+2023-04-26,TEX,CIN,Rangers at Reds
+2023-05-05,CHW,CIN,White Sox at Reds
+2023-05-06,CHW,CIN,White Sox at Reds
+2023-05-07,CHW,CIN,White Sox at Reds
+2023-05-09,NYM,CIN,Mets at Reds
+2023-05-10,NYM,CIN,Mets at Reds
+2023-05-11,NYM,CIN,Mets at Reds
+2023-05-19,NYY,CIN,Yankees at Reds
+2023-05-20,NYY,CIN,Yankees at Reds
+2023-05-21,NYY,CIN,Yankees at Reds
+2023-05-22,STL,CIN,Cardinals at Reds
+2023-05-23,STL,CIN,Cardinals at Reds
+2023-05-24,STL,CIN,Cardinals at Reds
+2023-05-25,STL,CIN,Cardinals at Reds
+2023-06-02,MIL,CIN,Brewers at Reds
+2023-06-03,MIL,CIN,Brewers at Reds
+2023-06-04,MIL,CIN,Brewers at Reds
+2023-06-05,MIL,CIN,Brewers at Reds
+2023-06-06,LAD,CIN,Dodgers at Reds
+2023-06-07,LAD,CIN,Dodgers at Reds
+2023-06-08,LAD,CIN,Dodgers at Reds
+2023-06-19,COL,CIN,Rockies at Reds
+2023-06-20,COL,CIN,Rockies at Reds
+2023-06-21,COL,CIN,Rockies at Reds
+2023-06-23,ATL,CIN,Braves at Reds
+2023-06-24,ATL,CIN,Braves at Reds
+2023-06-25,ATL,CIN,Braves at Reds
+2023-06-30,SDP,CIN,Padres at Reds
+2023-07-01,SDP,CIN,Padres at Reds
+2023-07-02,SDP,CIN,Padres at Reds
+2023-07-14,MIL,CIN,Brewers at Reds
+2023-07-15,MIL,CIN,Brewers at Reds
+2023-07-16,MIL,CIN,Brewers at Reds
+2023-07-17,SFG,CIN,Giants at Reds
+2023-07-18,SFG,CIN,Giants at Reds
+2023-07-19,SFG,CIN,Giants at Reds
+2023-07-20,SFG,CIN,Giants at Reds
+2023-07-21,ARI,CIN,D-backs at Reds
+2023-07-22,ARI,CIN,D-backs at Reds
+2023-07-23,ARI,CIN,D-backs at Reds
+2023-08-04,WSN,CIN,Nationals at Reds
+2023-08-05,WSN,CIN,Nationals at Reds
+2023-08-06,WSN,CIN,Nationals at Reds
+2023-08-07,MIA,CIN,Marlins at Reds
+2023-08-08,MIA,CIN,Marlins at Reds
+2023-08-09,MIA,CIN,Marlins at Reds
+2023-08-15,CLE,CIN,Guardians at Reds
+2023-08-16,CLE,CIN,Guardians at Reds
+2023-08-18,TOR,CIN,Blue Jays at Reds
+2023-08-19,TOR,CIN,Blue Jays at Reds
+2023-08-20,TOR,CIN,Blue Jays at Reds
+2023-09-01,CHC,CIN,Cubs at Reds
+2023-09-02,CHC,CIN,Cubs at Reds
+2023-09-03,CHC,CIN,Cubs at Reds
+2023-09-04,SEA,CIN,Mariners at Reds
+2023-09-05,SEA,CIN,Mariners at Reds
+2023-09-06,SEA,CIN,Mariners at Reds
+2023-09-08,STL,CIN,Cardinals at Reds
+2023-09-09,STL,CIN,Cardinals at Reds
+2023-09-10,STL,CIN,Cardinals at Reds
+2023-09-18,MIN,CIN,Twins at Reds
+2023-09-19,MIN,CIN,Twins at Reds
+2023-09-20,MIN,CIN,Twins at Reds
+2023-09-22,PIT,CIN,Pirates at Reds
+2023-09-23,PIT,CIN,Pirates at Reds
+2023-09-24,PIT,CIN,Pirates at Reds
+2023-04-06,LAD,ARI,Dodgers at D-backs
+2023-04-07,LAD,ARI,Dodgers at D-backs
+2023-04-08,LAD,ARI,Dodgers at D-backs
+2023-04-09,LAD,ARI,Dodgers at D-backs
+2023-04-10,MIL,ARI,Brewers at D-backs
+2023-04-11,MIL,ARI,Brewers at D-backs
+2023-04-12,MIL,ARI,Brewers at D-backs
+2023-04-20,SDP,ARI,Padres at D-backs
+2023-04-21,SDP,ARI,Padres at D-backs
+2023-04-22,SDP,ARI,Padres at D-backs
+2023-04-23,SDP,ARI,Padres at D-backs
+2023-04-24,KCR,ARI,Royals at D-backs
+2023-04-25,KCR,ARI,Royals at D-backs
+2023-04-26,KCR,ARI,Royals at D-backs
+2023-05-05,WSN,ARI,Nationals at D-backs
+2023-05-06,WSN,ARI,Nationals at D-backs
+2023-05-07,WSN,ARI,Nationals at D-backs
+2023-05-08,MIA,ARI,Marlins at D-backs
+2023-05-09,MIA,ARI,Marlins at D-backs
+2023-05-10,MIA,ARI,Marlins at D-backs
+2023-05-11,SFG,ARI,Giants at D-backs
+2023-05-12,SFG,ARI,Giants at D-backs
+2023-05-13,SFG,ARI,Giants at D-backs
+2023-05-14,SFG,ARI,Giants at D-backs
+2023-05-26,BOS,ARI,Red Sox at D-backs
+2023-05-27,BOS,ARI,Red Sox at D-backs
+2023-05-28,BOS,ARI,Red Sox at D-backs
+2023-05-29,COL,ARI,Rockies at D-backs
+2023-05-30,COL,ARI,Rockies at D-backs
+2023-05-31,COL,ARI,Rockies at D-backs
+2023-06-01,COL,ARI,Rockies at D-backs
+2023-06-02,ATL,ARI,Braves at D-backs
+2023-06-03,ATL,ARI,Braves at D-backs
+2023-06-04,ATL,ARI,Braves at D-backs
+2023-06-12,PHI,ARI,Phillies at D-backs
+2023-06-13,PHI,ARI,Phillies at D-backs
+2023-06-14,PHI,ARI,Phillies at D-backs
+2023-06-15,PHI,ARI,Phillies at D-backs
+2023-06-16,CLE,ARI,Guardians at D-backs
+2023-06-17,CLE,ARI,Guardians at D-backs
+2023-06-18,CLE,ARI,Guardians at D-backs
+2023-06-27,TBR,ARI,Rays at D-backs
+2023-06-28,TBR,ARI,Rays at D-backs
+2023-06-29,TBR,ARI,Rays at D-backs
+2023-07-04,NYM,ARI,Mets at D-backs
+2023-07-05,NYM,ARI,Mets at D-backs
+2023-07-06,NYM,ARI,Mets at D-backs
+2023-07-07,PIT,ARI,Pirates at D-backs
+2023-07-08,PIT,ARI,Pirates at D-backs
+2023-07-09,PIT,ARI,Pirates at D-backs
+2023-07-24,STL,ARI,Cardinals at D-backs
+2023-07-25,STL,ARI,Cardinals at D-backs
+2023-07-26,STL,ARI,Cardinals at D-backs
+2023-07-28,SEA,ARI,Mariners at D-backs
+2023-07-29,SEA,ARI,Mariners at D-backs
+2023-07-30,SEA,ARI,Mariners at D-backs
+2023-08-08,LAD,ARI,Dodgers at D-backs
+2023-08-09,LAD,ARI,Dodgers at D-backs
+2023-08-11,SDP,ARI,Padres at D-backs
+2023-08-12,SDP,ARI,Padres at D-backs
+2023-08-13,SDP,ARI,Padres at D-backs
+2023-08-21,TEX,ARI,Rangers at D-backs
+2023-08-22,TEX,ARI,Rangers at D-backs
+2023-08-24,CIN,ARI,Reds at D-backs
+2023-08-25,CIN,ARI,Reds at D-backs
+2023-08-26,CIN,ARI,Reds at D-backs
+2023-08-27,CIN,ARI,Reds at D-backs
+2023-09-01,BAL,ARI,Orioles at D-backs
+2023-09-02,BAL,ARI,Orioles at D-backs
+2023-09-03,BAL,ARI,Orioles at D-backs
+2023-09-04,COL,ARI,Rockies at D-backs
+2023-09-05,COL,ARI,Rockies at D-backs
+2023-09-06,COL,ARI,Rockies at D-backs
+2023-09-15,CHC,ARI,Cubs at D-backs
+2023-09-16,CHC,ARI,Cubs at D-backs
+2023-09-17,CHC,ARI,Cubs at D-backs
+2023-09-19,SFG,ARI,Giants at D-backs
+2023-09-20,SFG,ARI,Giants at D-backs
+2023-09-29,HOU,ARI,Astros at D-backs
+2023-09-30,HOU,ARI,Astros at D-backs
+2023-10-01,HOU,ARI,Astros at D-backs
+2023-03-30,ARI,LAD,D-backs at Dodgers
+2023-03-31,ARI,LAD,D-backs at Dodgers
+2023-04-01,ARI,LAD,D-backs at Dodgers
+2023-04-02,ARI,LAD,D-backs at Dodgers
+2023-04-03,COL,LAD,Rockies at Dodgers
+2023-04-04,COL,LAD,Rockies at Dodgers
+2023-04-14,CHC,LAD,Cubs at Dodgers
+2023-04-15,CHC,LAD,Cubs at Dodgers
+2023-04-16,CHC,LAD,Cubs at Dodgers
+2023-04-17,NYM,LAD,Mets at Dodgers
+2023-04-18,NYM,LAD,Mets at Dodgers
+2023-04-19,NYM,LAD,Mets at Dodgers
+2023-04-28,STL,LAD,Cardinals at Dodgers
+2023-04-29,STL,LAD,Cardinals at Dodgers
+2023-04-30,STL,LAD,Cardinals at Dodgers
+2023-05-01,PHI,LAD,Phillies at Dodgers
+2023-05-02,PHI,LAD,Phillies at Dodgers
+2023-05-03,PHI,LAD,Phillies at Dodgers
+2023-05-12,SDP,LAD,Padres at Dodgers
+2023-05-13,SDP,LAD,Padres at Dodgers
+2023-05-14,SDP,LAD,Padres at Dodgers
+2023-05-15,MIN,LAD,Twins at Dodgers
+2023-05-16,MIN,LAD,Twins at Dodgers
+2023-05-17,MIN,LAD,Twins at Dodgers
+2023-05-29,WSN,LAD,Nationals at Dodgers
+2023-05-30,WSN,LAD,Nationals at Dodgers
+2023-05-31,WSN,LAD,Nationals at Dodgers
+2023-06-02,NYY,LAD,Yankees at Dodgers
+2023-06-03,NYY,LAD,Yankees at Dodgers
+2023-06-04,NYY,LAD,Yankees at Dodgers
+2023-06-13,CHW,LAD,White Sox at Dodgers
+2023-06-14,CHW,LAD,White Sox at Dodgers
+2023-06-15,CHW,LAD,White Sox at Dodgers
+2023-06-16,SFG,LAD,Giants at Dodgers
+2023-06-17,SFG,LAD,Giants at Dodgers
+2023-06-18,SFG,LAD,Giants at Dodgers
+2023-06-23,HOU,LAD,Astros at Dodgers
+2023-06-24,HOU,LAD,Astros at Dodgers
+2023-06-25,HOU,LAD,Astros at Dodgers
+2023-07-03,PIT,LAD,Pirates at Dodgers
+2023-07-04,PIT,LAD,Pirates at Dodgers
+2023-07-05,PIT,LAD,Pirates at Dodgers
+2023-07-06,PIT,LAD,Pirates at Dodgers
+2023-07-07,LAA,LAD,Angels at Dodgers
+2023-07-08,LAA,LAD,Angels at Dodgers
+2023-07-24,TOR,LAD,Blue Jays at Dodgers
+2023-07-25,TOR,LAD,Blue Jays at Dodgers
+2023-07-26,TOR,LAD,Blue Jays at Dodgers
+2023-07-28,CIN,LAD,Reds at Dodgers
+2023-07-29,CIN,LAD,Reds at Dodgers
+2023-07-30,CIN,LAD,Reds at Dodgers
+2023-08-01,OAK,LAD,Athletics at Dodgers
+2023-08-02,OAK,LAD,Athletics at Dodgers
+2023-08-03,OAK,LAD,Athletics at Dodgers
+2023-08-10,COL,LAD,Rockies at Dodgers
+2023-08-11,COL,LAD,Rockies at Dodgers
+2023-08-12,COL,LAD,Rockies at Dodgers
+2023-08-13,COL,LAD,Rockies at Dodgers
+2023-08-15,MIL,LAD,Brewers at Dodgers
+2023-08-16,MIL,LAD,Brewers at Dodgers
+2023-08-17,MIL,LAD,Brewers at Dodgers
+2023-08-18,MIA,LAD,Marlins at Dodgers
+2023-08-19,MIA,LAD,Marlins at Dodgers
+2023-08-20,MIA,LAD,Marlins at Dodgers
+2023-08-28,ARI,LAD,D-backs at Dodgers
+2023-08-29,ARI,LAD,D-backs at Dodgers
+2023-08-30,ARI,LAD,D-backs at Dodgers
+2023-08-31,ATL,LAD,Braves at Dodgers
+2023-09-01,ATL,LAD,Braves at Dodgers
+2023-09-02,ATL,LAD,Braves at Dodgers
+2023-09-03,ATL,LAD,Braves at Dodgers
+2023-09-11,SDP,LAD,Padres at Dodgers
+2023-09-12,SDP,LAD,Padres at Dodgers
+2023-09-13,SDP,LAD,Padres at Dodgers
+2023-09-18,DET,LAD,Tigers at Dodgers
+2023-09-19,DET,LAD,Tigers at Dodgers
+2023-09-20,DET,LAD,Tigers at Dodgers
+2023-09-21,SFG,LAD,Giants at Dodgers
+2023-09-22,SFG,LAD,Giants at Dodgers
+2023-09-23,SFG,LAD,Giants at Dodgers
+2023-09-24,SFG,LAD,Giants at Dodgers
+2023-04-07,KCR,SFG,Royals at Giants
+2023-04-08,KCR,SFG,Royals at Giants
+2023-04-09,KCR,SFG,Royals at Giants
+2023-04-10,LAD,SFG,Dodgers at Giants
+2023-04-11,LAD,SFG,Dodgers at Giants
+2023-04-12,LAD,SFG,Dodgers at Giants
+2023-04-20,NYM,SFG,Mets at Giants
+2023-04-21,NYM,SFG,Mets at Giants
+2023-04-22,NYM,SFG,Mets at Giants
+2023-04-23,NYM,SFG,Mets at Giants
+2023-04-24,STL,SFG,Cardinals at Giants
+2023-04-25,STL,SFG,Cardinals at Giants
+2023-04-26,STL,SFG,Cardinals at Giants
+2023-04-27,STL,SFG,Cardinals at Giants
+2023-05-05,MIL,SFG,Brewers at Giants
+2023-05-06,MIL,SFG,Brewers at Giants
+2023-05-07,MIL,SFG,Brewers at Giants
+2023-05-08,WSN,SFG,Nationals at Giants
+2023-05-09,WSN,SFG,Nationals at Giants
+2023-05-10,WSN,SFG,Nationals at Giants
+2023-05-15,PHI,SFG,Phillies at Giants
+2023-05-16,PHI,SFG,Phillies at Giants
+2023-05-17,PHI,SFG,Phillies at Giants
+2023-05-19,MIA,SFG,Marlins at Giants
+2023-05-20,MIA,SFG,Marlins at Giants
+2023-05-21,MIA,SFG,Marlins at Giants
+2023-05-29,PIT,SFG,Pirates at Giants
+2023-05-30,PIT,SFG,Pirates at Giants
+2023-05-31,PIT,SFG,Pirates at Giants
+2023-06-02,BAL,SFG,Orioles at Giants
+2023-06-03,BAL,SFG,Orioles at Giants
+2023-06-04,BAL,SFG,Orioles at Giants
+2023-06-09,CHC,SFG,Cubs at Giants
+2023-06-10,CHC,SFG,Cubs at Giants
+2023-06-11,CHC,SFG,Cubs at Giants
+2023-06-19,SDP,SFG,Padres at Giants
+2023-06-20,SDP,SFG,Padres at Giants
+2023-06-21,SDP,SFG,Padres at Giants
+2023-06-22,SDP,SFG,Padres at Giants
+2023-06-23,ARI,SFG,D-backs at Giants
+2023-06-24,ARI,SFG,D-backs at Giants
+2023-06-25,ARI,SFG,D-backs at Giants
+2023-07-03,SEA,SFG,Mariners at Giants
+2023-07-04,SEA,SFG,Mariners at Giants
+2023-07-05,SEA,SFG,Mariners at Giants
+2023-07-07,COL,SFG,Rockies at Giants
+2023-07-08,COL,SFG,Rockies at Giants
+2023-07-09,COL,SFG,Rockies at Giants
+2023-07-25,OAK,SFG,Athletics at Giants
+2023-07-26,OAK,SFG,Athletics at Giants
+2023-07-28,BOS,SFG,Red Sox at Giants
+2023-07-29,BOS,SFG,Red Sox at Giants
+2023-07-30,BOS,SFG,Red Sox at Giants
+2023-07-31,ARI,SFG,D-backs at Giants
+2023-08-01,ARI,SFG,D-backs at Giants
+2023-08-02,ARI,SFG,D-backs at Giants
+2023-08-03,ARI,SFG,D-backs at Giants
+2023-08-11,TEX,SFG,Rangers at Giants
+2023-08-12,TEX,SFG,Rangers at Giants
+2023-08-13,TEX,SFG,Rangers at Giants
+2023-08-14,TBR,SFG,Rays at Giants
+2023-08-15,TBR,SFG,Rays at Giants
+2023-08-16,TBR,SFG,Rays at Giants
+2023-08-25,ATL,SFG,Braves at Giants
+2023-08-26,ATL,SFG,Braves at Giants
+2023-08-27,ATL,SFG,Braves at Giants
+2023-08-28,CIN,SFG,Reds at Giants
+2023-08-29,CIN,SFG,Reds at Giants
+2023-08-30,CIN,SFG,Reds at Giants
+2023-09-08,COL,SFG,Rockies at Giants
+2023-09-09,COL,SFG,Rockies at Giants
+2023-09-10,COL,SFG,Rockies at Giants
+2023-09-11,CLE,SFG,Guardians at Giants
+2023-09-12,CLE,SFG,Guardians at Giants
+2023-09-13,CLE,SFG,Guardians at Giants
+2023-09-25,SDP,SFG,Padres at Giants
+2023-09-26,SDP,SFG,Padres at Giants
+2023-09-27,SDP,SFG,Padres at Giants
+2023-09-29,LAD,SFG,Dodgers at Giants
+2023-09-30,LAD,SFG,Dodgers at Giants
+2023-10-01,LAD,SFG,Dodgers at Giants
+2023-03-30,COL,SDP,Rockies at Padres
+2023-03-31,COL,SDP,Rockies at Padres
+2023-04-01,COL,SDP,Rockies at Padres
+2023-04-02,COL,SDP,Rockies at Padres
+2023-04-03,ARI,SDP,D-backs at Padres
+2023-04-04,ARI,SDP,D-backs at Padres
+2023-04-13,MIL,SDP,Brewers at Padres
+2023-04-14,MIL,SDP,Brewers at Padres
+2023-04-15,MIL,SDP,Brewers at Padres
+2023-04-16,MIL,SDP,Brewers at Padres
+2023-04-17,ATL,SDP,Braves at Padres
+2023-04-18,ATL,SDP,Braves at Padres
+2023-04-19,ATL,SDP,Braves at Padres
+2023-04-29,SFG,SDP,Giants at Padres
+2023-04-30,SFG,SDP,Giants at Padres
+2023-05-01,CIN,SDP,Reds at Padres
+2023-05-02,CIN,SDP,Reds at Padres
+2023-05-03,CIN,SDP,Reds at Padres
+2023-05-05,LAD,SDP,Dodgers at Padres
+2023-05-06,LAD,SDP,Dodgers at Padres
+2023-05-07,LAD,SDP,Dodgers at Padres
+2023-05-15,KCR,SDP,Royals at Padres
+2023-05-16,KCR,SDP,Royals at Padres
+2023-05-17,KCR,SDP,Royals at Padres
+2023-05-19,BOS,SDP,Red Sox at Padres
+2023-05-20,BOS,SDP,Red Sox at Padres
+2023-05-21,BOS,SDP,Red Sox at Padres
+2023-06-02,CHC,SDP,Cubs at Padres
+2023-06-03,CHC,SDP,Cubs at Padres
+2023-06-04,CHC,SDP,Cubs at Padres
+2023-06-05,CHC,SDP,Cubs at Padres
+2023-06-06,SEA,SDP,Mariners at Padres
+2023-06-07,SEA,SDP,Mariners at Padres
+2023-06-13,CLE,SDP,Guardians at Padres
+2023-06-14,CLE,SDP,Guardians at Padres
+2023-06-15,CLE,SDP,Guardians at Padres
+2023-06-16,TBR,SDP,Rays at Padres
+2023-06-17,TBR,SDP,Rays at Padres
+2023-06-18,TBR,SDP,Rays at Padres
+2023-06-23,WSN,SDP,Nationals at Padres
+2023-06-24,WSN,SDP,Nationals at Padres
+2023-06-25,WSN,SDP,Nationals at Padres
+2023-07-03,LAA,SDP,Angels at Padres
+2023-07-04,LAA,SDP,Angels at Padres
+2023-07-05,LAA,SDP,Angels at Padres
+2023-07-07,NYM,SDP,Mets at Padres
+2023-07-08,NYM,SDP,Mets at Padres
+2023-07-09,NYM,SDP,Mets at Padres
+2023-07-24,PIT,SDP,Pirates at Padres
+2023-07-25,PIT,SDP,Pirates at Padres
+2023-07-26,PIT,SDP,Pirates at Padres
+2023-07-28,TEX,SDP,Rangers at Padres
+2023-07-29,TEX,SDP,Rangers at Padres
+2023-07-30,TEX,SDP,Rangers at Padres
+2023-08-04,LAD,SDP,Dodgers at Padres
+2023-08-05,LAD,SDP,Dodgers at Padres
+2023-08-06,LAD,SDP,Dodgers at Padres
+2023-08-07,LAD,SDP,Dodgers at Padres
+2023-08-14,BAL,SDP,Orioles at Padres
+2023-08-15,BAL,SDP,Orioles at Padres
+2023-08-16,BAL,SDP,Orioles at Padres
+2023-08-17,ARI,SDP,D-backs at Padres
+2023-08-18,ARI,SDP,D-backs at Padres
+2023-08-19,ARI,SDP,D-backs at Padres
+2023-08-20,ARI,SDP,D-backs at Padres
+2023-08-21,MIA,SDP,Marlins at Padres
+2023-08-22,MIA,SDP,Marlins at Padres
+2023-08-23,MIA,SDP,Marlins at Padres
+2023-08-31,SFG,SDP,Giants at Padres
+2023-09-01,SFG,SDP,Giants at Padres
+2023-09-02,SFG,SDP,Giants at Padres
+2023-09-03,SFG,SDP,Giants at Padres
+2023-09-04,PHI,SDP,Phillies at Padres
+2023-09-05,PHI,SDP,Phillies at Padres
+2023-09-06,PHI,SDP,Phillies at Padres
+2023-09-18,COL,SDP,Rockies at Padres
+2023-09-19,COL,SDP,Rockies at Padres
+2023-09-20,COL,SDP,Rockies at Padres
+2023-09-22,STL,SDP,Cardinals at Padres
+2023-09-23,STL,SDP,Cardinals at Padres
+2023-09-24,STL,SDP,Cardinals at Padres
+2023-04-06,WSN,COL,Nationals at Rockies
+2023-04-07,WSN,COL,Nationals at Rockies
+2023-04-08,WSN,COL,Nationals at Rockies
+2023-04-09,WSN,COL,Nationals at Rockies
+2023-04-10,STL,COL,Cardinals at Rockies
+2023-04-11,STL,COL,Cardinals at Rockies
+2023-04-12,STL,COL,Cardinals at Rockies
+2023-04-17,PIT,COL,Pirates at Rockies
+2023-04-18,PIT,COL,Pirates at Rockies
+2023-04-19,PIT,COL,Pirates at Rockies
+2023-04-28,ARI,COL,D-backs at Rockies
+2023-04-29,ARI,COL,D-backs at Rockies
+2023-04-30,ARI,COL,D-backs at Rockies
+2023-05-02,MIL,COL,Brewers at Rockies
+2023-05-03,MIL,COL,Brewers at Rockies
+2023-05-04,MIL,COL,Brewers at Rockies
+2023-05-12,PHI,COL,Phillies at Rockies
+2023-05-13,PHI,COL,Phillies at Rockies
+2023-05-14,PHI,COL,Phillies at Rockies
+2023-05-15,CIN,COL,Reds at Rockies
+2023-05-16,CIN,COL,Reds at Rockies
+2023-05-17,CIN,COL,Reds at Rockies
+2023-05-22,MIA,COL,Marlins at Rockies
+2023-05-23,MIA,COL,Marlins at Rockies
+2023-05-24,MIA,COL,Marlins at Rockies
+2023-05-25,MIA,COL,Marlins at Rockies
+2023-05-26,NYM,COL,Mets at Rockies
+2023-05-27,NYM,COL,Mets at Rockies
+2023-05-28,NYM,COL,Mets at Rockies
+2023-06-06,SFG,COL,Giants at Rockies
+2023-06-07,SFG,COL,Giants at Rockies
+2023-06-08,SFG,COL,Giants at Rockies
+2023-06-09,SDP,COL,Padres at Rockies
+2023-06-10,SDP,COL,Padres at Rockies
+2023-06-11,SDP,COL,Padres at Rockies
+2023-06-23,LAA,COL,Angels at Rockies
+2023-06-24,LAA,COL,Angels at Rockies
+2023-06-25,LAA,COL,Angels at Rockies
+2023-06-27,LAD,COL,Dodgers at Rockies
+2023-06-28,LAD,COL,Dodgers at Rockies
+2023-06-29,LAD,COL,Dodgers at Rockies
+2023-06-30,DET,COL,Tigers at Rockies
+2023-07-01,DET,COL,Tigers at Rockies
+2023-07-02,DET,COL,Tigers at Rockies
+2023-07-14,NYY,COL,Yankees at Rockies
+2023-07-15,NYY,COL,Yankees at Rockies
+2023-07-16,NYY,COL,Yankees at Rockies
+2023-07-18,HOU,COL,Astros at Rockies
+2023-07-19,HOU,COL,Astros at Rockies
+2023-07-28,OAK,COL,Athletics at Rockies
+2023-07-29,OAK,COL,Athletics at Rockies
+2023-07-30,OAK,COL,Athletics at Rockies
+2023-07-31,SDP,COL,Padres at Rockies
+2023-08-01,SDP,COL,Padres at Rockies
+2023-08-02,SDP,COL,Padres at Rockies
+2023-08-14,ARI,COL,D-backs at Rockies
+2023-08-15,ARI,COL,D-backs at Rockies
+2023-08-16,ARI,COL,D-backs at Rockies
+2023-08-18,CHW,COL,White Sox at Rockies
+2023-08-19,CHW,COL,White Sox at Rockies
+2023-08-20,CHW,COL,White Sox at Rockies
+2023-08-28,ATL,COL,Braves at Rockies
+2023-08-29,ATL,COL,Braves at Rockies
+2023-08-30,ATL,COL,Braves at Rockies
+2023-09-01,TOR,COL,Blue Jays at Rockies
+2023-09-02,TOR,COL,Blue Jays at Rockies
+2023-09-03,TOR,COL,Blue Jays at Rockies
+2023-09-11,CHC,COL,Cubs at Rockies
+2023-09-12,CHC,COL,Cubs at Rockies
+2023-09-13,CHC,COL,Cubs at Rockies
+2023-09-14,SFG,COL,Giants at Rockies
+2023-09-15,SFG,COL,Giants at Rockies
+2023-09-16,SFG,COL,Giants at Rockies
+2023-09-17,SFG,COL,Giants at Rockies
+2023-09-26,LAD,COL,Dodgers at Rockies
+2023-09-26,LAD,COL,Dodgers at Rockies
+2023-09-27,LAD,COL,Dodgers at Rockies
+2023-09-28,LAD,COL,Dodgers at Rockies
+2023-09-29,MIN,COL,Twins at Rockies
+2023-09-30,MIN,COL,Twins at Rockies
+2023-10-01,MIN,COL,Twins at Rockies

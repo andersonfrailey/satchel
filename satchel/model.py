@@ -7,23 +7,23 @@ import numpy as np
 import difflib
 import warnings
 from . import constants
-from .utils import probability_calculations
-from .schedules.cache.clear_cache import clear_cache
+from .utils import probability_calculations, fetch_fg_projection_data
+from .schedules.cache.clear_cache import clear_cache as clear_schedule_cache
 from .modelresults import SatchelResults
 from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR, FINAL_DAY
 from collections import Counter
-from pathlib import Path
+from pathlib import Path, PosixPath
 from typing import Union
 from tqdm import tqdm
 from datetime import datetime
-from pybaseball import standings, batting_stats, pitching_stats
+from pybaseball import standings
 from io import StringIO
 from typing import Union
 
 
 CUR_PATH = Path(__file__).resolve().parent
 DATA_PATH = Path(CUR_PATH, "data")
-SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2022.csv")
+SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2023.csv")
 # projections for pitchers and batters
 PITCHER_PROJ = Path(DATA_PATH, "pitcherprojections.csv")
 BATTER_PROJ = Path(DATA_PATH, "batterprojections.csv")
@@ -43,10 +43,11 @@ class Satchel:
         steamer_b_wt: float = 0.5,
         zips_b_wt: float = 0.5,
         schedule: Union[Path, str] = SCHEDUEL_PATH,
-        pitcher_proj: Union[Path, str] = PITCHER_PROJ,
-        batter_proj: Union[Path, str] = BATTER_PROJ,
+        pitcher_proj: Union[PosixPath, str, pd.DataFrame] = "fetch",
+        batter_proj: Union[PosixPath, str, pd.DataFrame] = "fetch",
         use_current_results: bool = True,
         war_method: str = "current_pace",
+        fg_projections: str = "fangraphsdc",
         cache: bool = True,
     ):
         """
@@ -95,6 +96,9 @@ class Satchel:
             season and their relative production rate. The latter is calculated
             by multiplying their projection by the fraction of the season already
             played and dividing their WAR to date by that number
+        fg_projections: str, optional
+            Which FanGraphs projection to use. Must be in
+            `fangraphsdc`, `zips`, `zipsdc`, `steamer`, `atc`, `thebat`, `thebatx`
         cache: bool, optional
             If true, the new scheudle generated will be cached
         """
@@ -107,6 +111,8 @@ class Satchel:
         if not war_method in ["current_pace", "only_projections"]:
             raise ValueError("`war_method must be `current_pace` or `only_projections`")
         self.war_method = war_method
+
+        self.fg_projections = fg_projections
 
         # if it's before opening day, create the schedule from file. If after,
         # pull the team's current record, then fetch the rest from MLB.com
@@ -125,13 +131,14 @@ class Satchel:
         final_day = datetime.strptime(FINAL_DAY, "%m/%d/%Y")
 
         if today > opening_day and use_current_results and today < final_day:
+            # for running the model after opening day
             # fetch the remaining schedule if it isn't cached
             fmt = "%d%m%Y"
             schedule = Path(
                 CUR_PATH, "schedules", "cache", f"schedule{today.strftime(fmt)}.csv"
             )
             if not schedule.exists():
-                clear_cache()  # remove the schedules from previous days
+                clear_schedule_cache()  # remove the schedules from previous days
                 _return_schedule = False
                 if not cache:
                     schedule = None
@@ -152,24 +159,11 @@ class Satchel:
             self.current_standings["W"] = self.current_standings["W"].astype(int)
             self.current_standings["L"] = self.current_standings["L"].astype(int)
             self.midseason = True
-            pitcher_proj = Path(DATA_PATH, "pitcherprojections_ros.csv")
-            batter_proj = Path(DATA_PATH, "batterprojections_ros.csv")
         else:
             use_current_results = False
             self.midseason = False
 
-        # self.midseason = use_current_results
-        # self.current_standings = None
-        # if self.midseason:
-        #     self.current_standings = pd.concat(standings(YEAR))
-        #     self.current_standings["index"] = self.current_standings["Tm"].map(
-        #         constants.NAME_TO_ABBR
-        #     )
-        #     self.current_standings["W"] = self.current_standings["W"].astype(int)
-        #     self.current_standings["L"] = self.current_standings["L"].astype(int)
-
-        self.schedule = pd.read_csv(schedule)
-        self.schedule["START DATE"] = pd.to_datetime(self.schedule["START DATE"])
+        self.schedule = pd.read_csv(schedule, parse_dates=["START DATE"])
 
         self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
@@ -180,22 +174,10 @@ class Satchel:
         self.steamer_b_wt = steamer_b_wt
         self.zips_b_wt = zips_b_wt
 
-        # if use_current_results:
-        #     # update talent to include what the players
-        #     # batter_stats = batting_stats(YEAR, qual=0)
-        #     # pitcher_stats = pitching_stats(YEAR, qual=0)
-        #     # batter_stats["playerid"] = batter_stats["IDfg"].astype(str)
-        #     # pitcher_stats["playerid"] = pitcher_stats["IDfg"].astype(str)
-        #     # stats_cols = ["playerid", "WAR"]
-        #     # self._prep_talent_data(
-        #     #     batter_stats[stats_cols], pitcher_stats[stats_cols], war_method
-        #     # )
-        #     # del batter_stats, pitcher_stats
-        #     pitcher_proj = Path(DATA_PATH, "pitcherprojections_ros.csv")
-        #     batter_proj = Path(DATA_PATH, "batterprojections_ros.csv")
+        # read projection data for calculating talent
+        self._set_data(source=pitcher_proj, attr="pitch_proj")
+        self._set_data(source=batter_proj, attr="batter_proj")
 
-        self.pitch_proj = pd.read_csv(pitcher_proj)
-        self.batter_proj = pd.read_csv(batter_proj)
         self.pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
         self.pitch_proj.set_index("playerid", inplace=True)
 
@@ -294,6 +276,8 @@ class Satchel:
             noise,
             full_seasons,
             self.seed,
+            self.fg_projections,
+            datetime.strftime(datetime.today(), "%m-%d-%Y"),
         )
 
     def simseason(
@@ -524,6 +508,34 @@ class Satchel:
         return team1_prob, 1 - team1_prob
 
     ####### Private methods #######
+
+    def _set_data(self, source, attr):
+        """
+        Private method for reading and accounting for projection data
+
+        Parameters
+        ----------
+        source : str
+            Either a string indicating the projection data should be fetched,
+            a string or path leading to a CSV file that can be read, or a DataFrame
+            with the data already in it
+        attr : str
+            Which projections attribute to set. Either `pitch_proj` or `batter_proj`
+        """
+        if source == "fetch":
+            setattr(
+                self,
+                attr,
+                fetch_fg_projection_data(
+                    attr[:3], self.fg_projections, datetime.today()
+                ),
+            )
+        elif isinstance(source, pd.DataFrame):
+            setattr(self, attr, source)
+        elif isinstance(source, str) or isinstance(source, PosixPath):
+            setattr(self, attr, pd.read_csv(source))
+        else:
+            raise ValueError("Projections must be from a string, path, or dataframe.")
 
     def _calculate_talent(self, transactions=None, pitcher_wt=1, batter_wt=1):
         """Private method used to calculate each team's talent level by taking
