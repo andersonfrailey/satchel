@@ -26,7 +26,7 @@ def main():
 
     # run Satchel
     print("Running Satchel")
-    mod = Satchel(seed=856)
+    mod = Satchel(seed=856, cache=False)
     res = mod.simulate(20000)
     satchel_res = res.season_summary
     satchel_res["date"] = datetime.today()
