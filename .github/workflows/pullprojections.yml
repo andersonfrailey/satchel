@@ -8,16 +8,16 @@ jobs:
   pull_projections:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up miniconda
-        uses: conda-incubator/setup-miniconda@v2.0.1
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v4
         with:
-          active-environment: satchel-dev
-          environment-file: ../environment.yml
-          python-version: 3.8
-          auto-active-base: false
+          update-pop: "false"
+          update-setuptools: "false"
+          update-wheel: "false"
+          path: "requirements.txt"
       - name: Run python script
         working-directory: ./
-        shell: bash
+        shell: bash -l {0}
         run: |
           python pullprojections.py
       - name: Commit new changes
