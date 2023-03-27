@@ -250,12 +250,15 @@ class SatchelResults:
             if isinstance(val, pd.DataFrame):
                 otherval = getattr(__o, attr).reset_index(drop=True)
                 if not val.reset_index(drop=True).equals(otherval):
+                    print(attr)
                     return False
             elif attr == "full_seasons":
                 for s1, s2 in zip(val, getattr(__o, "full_seasons")):
                     if not s1.reset_index(drop=True).equals(s2.reset_index(drop=True)):
+                        print(attr)
                         return False
             else:
                 if not val == getattr(__o, attr):
+                    print(attr)
                     return False
         return True

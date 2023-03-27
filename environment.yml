@@ -1,0 +1,10 @@
+name: satchel-dev
+dependencies:
+  - tqdm
+  - matplotlib
+  - pandas
+  - numpy
+  - pytest
+  - pip
+  - pip:
+      - pybaseball
