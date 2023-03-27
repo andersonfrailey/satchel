@@ -1,0 +1,30 @@
+name: Pull Projections
+
+on:
+  schedule:
+    - cron: '00 9 * * *'
+    
+jobs:
+  pull_projections:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up miniconda
+        uses: conda-incubator/setup-miniconda@v2.0.1
+        with:
+          active-environment: satchel-dev
+          environment-file: environment.yml
+          python-version: 3.8
+          auto-active-base: false
+      - name: Run python script
+        working-directory: ./
+        shell: bash
+        run: |
+          python pullprojections.py
+      - name: Commit new changes
+        working-directory: ./
+        shell: bash
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -a -m "Update projections document"
+          git push
