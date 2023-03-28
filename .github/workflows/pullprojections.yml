@@ -1,8 +1,6 @@
 name: Pull Projections
 
-on:
-  schedule:
-    - cron: '00 9 * * *'
+on: workflow_dispatch
     
 jobs:
   pull_projections:
@@ -14,7 +12,6 @@ jobs:
           update-pop: "false"
           update-setuptools: "false"
           update-wheel: "false"
-          path: "requirements.txt"
       - name: Run python script
         working-directory: ./
         shell: bash -l {0}
