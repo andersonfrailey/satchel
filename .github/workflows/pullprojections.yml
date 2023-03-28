@@ -1,17 +1,24 @@
 name: Pull Projections
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '00 9 * * *'
     
 jobs:
   pull_projections:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
       - name: Install Python dependencies
         uses: py-actions/py-dependency-install@v4
         with:
           update-pop: "false"
           update-setuptools: "false"
           update-wheel: "false"
+          path: requirements.txt
       - name: Run python script
         working-directory: ./
         shell: bash -l {0}
