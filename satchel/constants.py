@@ -149,3 +149,5 @@ FG_PROJECTIONS = [
     "thebat",
     "thebatx",
 ]
+
+ALLDIVS = ["AL West", "AL Central", "AL East", "NL West", "NL Central", "NL EAST"]
