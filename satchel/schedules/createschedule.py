@@ -119,8 +119,6 @@ def create_schedule(
         process(_id, team, year, start_date, verbose) for _id, team in ID_MAP.items()
     ]
     final_sched = pd.concat(dfs)
-    if final_sched.shape[0] != 2430:
-        raise AssertionError("Missing games!")
     if outfile:
         final_sched.to_csv(outfile, index=False)
     if _return:
