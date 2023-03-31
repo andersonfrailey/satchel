@@ -24,6 +24,15 @@ def main():
     print("Saving FanGraphs results")
     append_results("fangraphs.csv", fg_proj)
 
+    # run Satchel
+    print("Running Satchel")
+    mod = Satchel(seed=856, cache=False)
+    res = mod.simulate(20000)
+    satchel_res = res.season_summary
+    satchel_res["date"] = datetime.today()
+    print("Saving Satchel results")
+    append_results("satchel.csv", satchel_res)
+
     # 538 projections
     print("fetching 538 projections")
     five38 = pd.read_html("https://projects.fivethirtyeight.com/2023-mlb-predictions/")[
