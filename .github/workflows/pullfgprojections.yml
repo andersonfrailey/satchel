@@ -1,0 +1,34 @@
+name: Pull FanGraphs Projections
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 10 * * *"
+
+jobs:
+  pull_projections:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v4
+        with:
+          update-pip: "false"
+          update-setuptools: "false"
+          update-wheel: "false"
+          path: requirements.txt
+      - name: Run python script
+        working-directory: ./
+        shell: bash -l {0}
+        run: |
+          python fetchfgtables.py
+      - name: Commit new changes
+        working-directory: ./
+        shell: bash
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -a -m "Update projections document"
+          git push
