@@ -108,7 +108,7 @@ def create_schedule(
         sched["START DATE"] = pd.to_datetime(sched["START DATE"])
         sched["SUBJECT"] = sched["SUBJECT"].str.replace(" - Time TBD", "")
         sched[["away_team", "home_team"]] = sched["SUBJECT"].str.split(
-            " at ", 1, expand=True
+            " at ", n=1, expand=True
         )
         sched["away"] = sched["away_team"].map(NAME_MAP)
         sched["home"] = sched["home_team"].map(NAME_MAP)
