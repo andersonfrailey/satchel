@@ -16,7 +16,7 @@ def main():
     print("Fetching FanGraphs projections")
     proj = pd.read_html(
         "https://www.fangraphs.com/depthcharts.aspx?position=Standings"
-    )[7]
+    )[-7]
     fg_proj = pd.concat(
         [proj["Unnamed: 0_level_0"], proj["2023 Projected Full Season"]], axis=1
     )
