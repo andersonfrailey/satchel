@@ -21,6 +21,9 @@ def main():
         if projection == "steamer":
             append_results(Path(OUTPATH, f"{projection}_pit1.csv"), pit)
             append_results(Path(OUTPATH, f"{projection}_bat1.csv"), bat)
+        elif projection == "zips":
+            append_results(Path(OUTPATH, f"{projection}_pit1.csv"), pit)
+            append_results(Path(OUTPATH, f"{projection}_bat1.csv"), bat)
         else:
             append_results(Path(OUTPATH, f"{projection}_pit.csv"), pit)
             append_results(Path(OUTPATH, f"{projection}_bat.csv"), bat)
