@@ -2,7 +2,7 @@ name: satchel-dev
 dependencies:
   - tqdm
   - matplotlib
-  - pandas
+  - pandas>=2.2.1
   - numpy
   - pytest
   - pip

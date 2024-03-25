@@ -4,15 +4,16 @@ Combine all of the indivdual team schedules into a final file
 NOTE: only put the CSV versions of each team's home schedule in their year
 folder
 """
+
 import time
 import pandas as pd
 from pathlib import Path
 
 CUR_PATH = Path(__file__).resolve().parent
 # update year and opening day when updating the file
-YEAR = 2023
-OPENING_DAY = "0330"
-FINAL_DAY = "10/01/2023"
+YEAR = 2024
+OPENING_DAY = "0328"
+FINAL_DAY = "09/29/2024"
 SCHEDULE = Path(CUR_PATH, str(YEAR))
 
 BASE_URL = (
@@ -104,8 +105,8 @@ def create_schedule(
         sched = pd.read_csv(
             BASE_URL.format(year=year, start_date=start_date, team=_id),
             usecols=["START DATE", "SUBJECT"],
+            parse_dates=["START DATE"],
         )
-        sched["START DATE"] = pd.to_datetime(sched["START DATE"])
         sched["SUBJECT"] = sched["SUBJECT"].str.replace(" - Time TBD", "")
         sched[["away_team", "home_team"]] = sched["SUBJECT"].str.split(
             " at ", n=1, expand=True
