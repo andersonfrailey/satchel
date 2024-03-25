@@ -2,6 +2,7 @@
 This moduel contains the heart of satchel. All of the season will be simulated
 from this main class
 """
+
 import pandas as pd
 import numpy as np
 import difflib
@@ -23,7 +24,7 @@ from typing import Union
 
 CUR_PATH = Path(__file__).resolve().parent
 DATA_PATH = Path(CUR_PATH, "data")
-SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2023.csv")
+SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2024.csv")
 # projections for pitchers and batters
 PITCHER_PROJ = Path(DATA_PATH, "pitcherprojections.csv")
 BATTER_PROJ = Path(DATA_PATH, "batterprojections.csv")
@@ -175,8 +176,8 @@ class Satchel:
         self.zips_b_wt = zips_b_wt
 
         # read projection data for calculating talent
-        self._set_data(source=pitcher_proj, attr="pitch_proj")
-        self._set_data(source=batter_proj, attr="batter_proj")
+        self._set_data(source=pitcher_proj, attr="pitch_proj", stats="pit")
+        self._set_data(source=batter_proj, attr="batter_proj", stats="bat")
 
         self.pitch_proj.rename(columns={"WAR": "WAR_P"}, inplace=True)
         self.pitch_proj.set_index("playerid", inplace=True)
@@ -333,7 +334,9 @@ class Satchel:
         data["winner"] = winner
         data["loser"] = loser
         wins = winner.value_counts().reset_index()
+        wins.rename(columns={"wins": "index", "count": "wins"}, inplace=True)
         losses = loser.value_counts().reset_index()
+        losses.rename(columns={"losses": "index", "count": "losses"}, inplace=True)
         # ensure that teams will always be in the same order
         results = pd.merge(wins, losses, on="index")
         # merge on season-to-date results
@@ -419,14 +422,24 @@ class Satchel:
 
         div_winners = (
             results.groupby(["league", "division"])
-            .apply(pd.DataFrame.nlargest, n=n_divwinners, columns="wins")
+            .apply(
+                pd.DataFrame.nlargest,
+                n=n_divwinners,
+                columns="wins",
+                include_groups=False,
+            )
             .sort_values("wins", ascending=False)
         )
         # take out division winners and pull the top remaining teams 4 wild card
         wc = results[~results["Team"].isin(div_winners["Team"])]
         wc_winners = (
             wc.groupby("league")
-            .apply(pd.DataFrame.nlargest, n=n_wildcard, columns="wins")
+            .apply(
+                pd.DataFrame.nlargest,
+                n=n_wildcard,
+                columns="wins",
+                include_groups=False,
+            )
             .sort_values("wins", ascending=False)
         )
         # determine which playoff format will be used
@@ -509,7 +522,7 @@ class Satchel:
 
     ####### Private methods #######
 
-    def _set_data(self, source, attr):
+    def _set_data(self, source, attr, stats):
         """
         Private method for reading and accounting for projection data
 
@@ -527,7 +540,9 @@ class Satchel:
                 self,
                 attr,
                 fetch_fg_projection_data(
-                    attr[:3], self.fg_projections, datetime.today()
+                    stats=stats,
+                    fg_projection=self.fg_projections,
+                    date=datetime.today(),
                 ),
             )
         elif isinstance(source, pd.DataFrame):
