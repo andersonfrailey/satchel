@@ -13,42 +13,28 @@ OUTPATH = Path(CURPATH, "2024projections")
 
 
 def main():
-    # pull FanGraphs data
-    print("Fetching FanGraphs projections")
-    try:
-        proj = pd.read_html(
-            "https://www.fangraphs.com/depthcharts.aspx?position=Standings"
-        )[-7]
-        fg_proj = pd.concat(
-            [proj["Unnamed: 0_level_0"], proj["2023 Projected Full Season"]], axis=1
-        )
-        fg_proj["date"] = datetime.today()
-        print("Saving FanGraphs results")
-        append_results("fangraphs.csv", fg_proj)
-    except Exception as e:
-        print("Error fetching FanGraphs projections")
-
-    # 538 projections
-    print("fetching 538 projections")
-    try:
-        five38 = pd.read_html(
-            "https://projects.fivethirtyeight.com/2023-mlb-predictions/", header=2
-        )[0]
-        five38.columns = five38.columns.to_flat_index()
-        five38["date"] = datetime.today()
-        print("Saving 538 projections")
-        append_results("fivethirtyeight.csv", five38)
-    except Exception as e:
-        print("Error fetching 538 projections")
 
     # run Satchel
     print("Running Satchel")
     mod = Satchel(seed=856, cache=False)
     res = mod.simulate(20000)
     satchel_res = res.season_summary
+    season_to_date = res.season_to_date()
     satchel_res["date"] = datetime.today()
+    out = season_to_date.merge(
+        satchel_res[
+            [
+                "Team",
+                "Make Wild Card (%)",
+                "Win Division (%)",
+                "Win League (%)",
+                "Win WS (%)",
+            ]
+        ],
+        on="Team",
+    )
     print("Saving Satchel results")
-    append_results("satchel.csv", satchel_res)
+    append_results("satchel.csv", out)
 
 
 def append_results(outfile, results):
