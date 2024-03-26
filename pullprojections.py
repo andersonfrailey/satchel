@@ -33,6 +33,7 @@ def main():
         ],
         on="Team",
     )
+    out["date"] = datetime.today()
     print("Saving Satchel results")
     append_results("satchel.csv", out)
 
