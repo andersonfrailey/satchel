@@ -189,7 +189,7 @@ class Satchel:
 
     def simulate(
         self,
-        n: int = 10000,
+        n: int = 20000,
         noise: bool = True,
         playoff_func="twelve",
         quiet: bool = False,
