@@ -72,5 +72,6 @@ def fetch_fg_projection_data(stats: str, fg_projection: str, date):
     if req.status_code != 200:
         raise ConnectionError("Connection to FanGraphs failed")
     data = pd.DataFrame(json.loads(req.content))
-    data.rename(columns={"playerids": "playerid"}, inplace=True)
+    if "playerid" not in data.columns:
+        data.rename(columns={"playerids": "playerid"}, inplace=True)
     return data

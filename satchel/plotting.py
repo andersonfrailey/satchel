@@ -25,7 +25,7 @@ def results_dataprep(data, team):
         df[["wins", "count"]][df["season_result"] == "Win World Series"].rename(
             {"count": "ws"}, axis=1
         ),
-        df[["wins", "count"]][df["season_result"] == "Missed Playoff"].rename(
+        df[["wins", "count"]][df["season_result"] == "Missed Playoffs"].rename(
             {"count": "mp"}, axis=1
         ),
         df[["wins", "count"]][df["season_result"] == "Win League"].rename(
@@ -282,9 +282,8 @@ def results_scatter(data, mean_wins, offset=0.05, y=0):
         "Win World Series",
     ]
     new_order = [_res for _res in res_order if _res in data["season_result"].unique()]
-    data["res_cat"].cat.reorder_categories(
+    data["res_cat"] = data["res_cat"].cat.reorder_categories(
         new_order,
-        inplace=True,
     )
     data.sort_values("res_cat", inplace=True)
 

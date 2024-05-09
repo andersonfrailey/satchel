@@ -48,13 +48,13 @@ class SatchelComparison:
             self.res1.results_df["wins"][self.res1.results_df["Team"] == team]
             .value_counts(normalize=True)
             .reset_index()
-            .sort_values("index")
+            .sort_values("wins")
         )
         wins2 = (
             self.res2.results_df["wins"][self.res2.results_df["Team"] == team]
             .value_counts(normalize=True)
             .reset_index()
-            .sort_values("index")
+            .sort_values("wins")
         )
         # get changes in important variables
         wspct = self.season_summary["Win WS (%)"].loc[team]
@@ -78,12 +78,12 @@ class SatchelComparison:
 
         # create figure
         fig, ax = plt.subplots(2)
-        ax[0].plot(wins1["index"], wins1["wins"], color="blue", label=sim1_label)
-        mean_wins1 = (wins1["index"] * wins1["wins"]).sum()
-        ax[0].vlines(mean_wins1, 0, wins1["wins"].max(), color="blue", alpha=0.5)
-        ax[0].plot(wins2["index"], wins2["wins"], color="red", label=sim2_label)
-        mean_wins2 = (wins2["index"] * wins2["wins"]).sum()
-        ax[0].vlines(mean_wins2, 0, wins2["wins"].max(), color="red", alpha=0.5)
+        ax[0].plot(wins1["wins"], wins1["proportion"], color="blue", label=sim1_label)
+        mean_wins1 = (wins1["wins"] * wins1["proportion"]).sum()
+        ax[0].vlines(mean_wins1, 0, wins1["proportion"].max(), color="blue", alpha=0.5)
+        ax[0].plot(wins2["wins"], wins2["proportion"], color="red", label=sim2_label)
+        mean_wins2 = (wins2["wins"] * wins2["proportion"]).sum()
+        ax[0].vlines(mean_wins2, 0, wins2["proportion"].max(), color="red", alpha=0.5)
         ax[0].legend(loc="upper left")
         ax[0].set_ylim(ymin=0)
         ax[0].set_xlabel("Wins")
