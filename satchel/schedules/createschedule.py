@@ -109,6 +109,7 @@ def create_schedule(
             ),
             usecols=["START DATE", "SUBJECT"],
             parse_dates=["START DATE"],
+            date_format="%m/%d/%Y",
         )
         sched["SUBJECT"] = sched["SUBJECT"].str.replace(" - Time TBD", "")
         sched[["away_team", "home_team"]] = sched["SUBJECT"].str.split(
