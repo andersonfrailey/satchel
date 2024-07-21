@@ -10,10 +10,10 @@ import pandas as pd
 from pathlib import Path
 
 CUR_PATH = Path(__file__).resolve().parent
-# update year and opening day when updating the file
+# update year, opening day, and final day when updating the file for a new season
 YEAR = 2024
 OPENING_DAY = "0328"
-FINAL_DAY = "09/29/2024"
+FINAL_DAY = "0929"
 SCHEDULE = Path(CUR_PATH, str(YEAR))
 
 BASE_URL = (
@@ -21,7 +21,7 @@ BASE_URL = (
     "GameTicketPromotionPrice.tiksrv?team_id={team}&home_team_id={team}&"
     "display_in=singlegame&ticket_category=Tickets&site_section=Default&"
     "sub_category=Default&leave_empty_games=true&event_type=T&year="
-    "{year}&begin_date={year}{start_date}"
+    "{year}&begin_date={year}{start_date}&end_date={year}{end_date}"
 )
 
 NAME_MAP = {
@@ -95,6 +95,7 @@ ID_MAP = {
 def create_schedule(
     year: int = YEAR,
     start_date: str = OPENING_DAY,
+    end_date: str = FINAL_DAY,
     outfile: str = "",
     _return: bool = True,
     verbose: bool = False,
@@ -103,9 +104,12 @@ def create_schedule(
         if verbose:
             print(team)
         sched = pd.read_csv(
-            BASE_URL.format(year=year, start_date=start_date, team=_id),
+            BASE_URL.format(
+                year=year, start_date=start_date, end_date=end_date, team=_id
+            ),
             usecols=["START DATE", "SUBJECT"],
             parse_dates=["START DATE"],
+            date_format="%m/%d/%Y",
         )
         sched["SUBJECT"] = sched["SUBJECT"].str.replace(" - Time TBD", "")
         sched[["away_team", "home_team"]] = sched["SUBJECT"].str.split(

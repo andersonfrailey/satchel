@@ -129,7 +129,7 @@ class Satchel:
             )
         today = datetime.today()
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
-        final_day = datetime.strptime(FINAL_DAY, "%m/%d/%Y")
+        final_day = datetime.strptime(f"{FINAL_DAY}{YEAR}", "%m%d%Y")
 
         if today > opening_day and use_current_results and today < final_day:
             # for running the model after opening day
