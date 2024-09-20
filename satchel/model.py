@@ -337,19 +337,19 @@ class Satchel:
         wins.rename(columns={"wins": "index", "count": "wins"}, inplace=True)
         losses = loser.value_counts().reset_index()
         losses.rename(columns={"losses": "index", "count": "losses"}, inplace=True)
-        # ensure that teams will always be in the same order
         # outer merge because during simulations late in the season not all teams
         # will appear in both wins and losses if using the current standings.
         # Some will win or lose all of their games, leaving them out of the
-        # other series
+        # other DataFrame
         results = pd.merge(wins, losses, on="index", how="outer").fillna(0)
         # merge on season-to-date results
         if isinstance(current_standings, pd.DataFrame):
-            results = results.merge(current_standings, on="index")
+            results = results.merge(current_standings, on="index", how="outer")
             results["wins"] += results["W"]
             results["losses"] += results["L"]
             results = results.filter(["index", "wins", "losses"], axis="columns")
         assert results.shape[0] == len(self.teams)
+        # use merge sort to ensure that teams will always be in the same order
         results = results.sort_values(
             ["wins", "index"], ascending=False, kind="mergesort"
         )
