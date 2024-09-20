@@ -42,9 +42,7 @@ def test_model(curpath, schedule2021, batter_projections, pitcher_projections):
     # ensure that total projections are always 162 games total
     mod = Satchel(seed=123)
     res = mod.simulate(100)
-    assert all(
-        res.season_summary[["Projected Wins", "Projected Losses"]].sum(axis=1) == 162
-    )
+    assert all(res.season_summary[["Mean Wins", "Mean Losses"]].sum(axis=1) == 162)
 
 
 def test_transaction(
