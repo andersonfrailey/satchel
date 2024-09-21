@@ -3,7 +3,7 @@ name: Pull Projections
 on:
   workflow_dispatch:
   schedule:
-    - cron: '00 9 * * *'
+    - cron: '30 13 * * *'
     
 jobs:
   pull_projections:
