@@ -18,7 +18,7 @@ SCHEDULE = Path(CUR_PATH, str(YEAR))
 
 BASE_URL = (
     "https://www.ticketing-client.com/ticketing-client/csv/"
-    "GameTicketPromotionPrice.tiksrv?team_id={team}&home_team_id={team}&"
+    "GameTicketPromotionPrice.tiksrv?team_id={team}&"
     "display_in=singlegame&ticket_category=Tickets&site_section=Default&"
     "sub_category=Default&leave_empty_games=true&event_type=T&year="
     "{year}&begin_date={year}{start_date}&end_date={year}{end_date}"
@@ -123,7 +123,7 @@ def create_schedule(
     dfs = [
         process(_id, team, year, start_date, verbose) for _id, team in ID_MAP.items()
     ]
-    final_sched = pd.concat(dfs)
+    final_sched = pd.concat(dfs).drop_duplicates(subset=["START DATE", "SUBJECT"])
     if outfile:
         final_sched.to_csv(outfile, index=False)
     if _return:
