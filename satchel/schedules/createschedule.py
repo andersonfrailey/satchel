@@ -13,7 +13,7 @@ CUR_PATH = Path(__file__).resolve().parent
 # update year, opening day, and final day when updating the file for a new season
 YEAR = 2024
 OPENING_DAY = "0328"
-FINAL_DAY = "0929"
+FINAL_DAY = "0930"
 SCHEDULE = Path(CUR_PATH, str(YEAR))
 
 BASE_URL = (
