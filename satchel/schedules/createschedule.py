@@ -107,10 +107,12 @@ def create_schedule(
             BASE_URL.format(
                 year=year, start_date=start_date, end_date=end_date, team=_id
             ),
-            usecols=["START DATE", "SUBJECT"],
+            usecols=["START DATE", "SUBJECT", "START TIME"],
             parse_dates=["START DATE"],
             date_format="%m/%d/%Y",
         )
+        if sched.empty:
+            return sched
         sched["SUBJECT"] = sched["SUBJECT"].str.replace(" - Time TBD", "")
         sched[["away_team", "home_team"]] = sched["SUBJECT"].str.split(
             " at ", n=1, expand=True
@@ -118,12 +120,14 @@ def create_schedule(
         sched["away"] = sched["away_team"].map(NAME_MAP)
         sched["home"] = sched["home_team"].map(NAME_MAP)
         time.sleep(5)
-        return sched[["START DATE", "away", "home", "SUBJECT"]]
+        return sched[["START DATE", "away", "home", "SUBJECT", "START TIME"]]
 
     dfs = [
         process(_id, team, year, start_date, verbose) for _id, team in ID_MAP.items()
     ]
-    final_sched = pd.concat(dfs).drop_duplicates(subset=["START DATE", "SUBJECT", "START TIME"])
+    final_sched = pd.concat(dfs).drop_duplicates(
+        subset=["START DATE", "SUBJECT", "START TIME"]
+    )
     if outfile:
         final_sched.to_csv(outfile, index=False)
     if _return:

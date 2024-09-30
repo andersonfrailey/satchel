@@ -127,11 +127,11 @@ class Satchel:
                     " `use_current_results`=False"
                 )
             )
-        today = datetime.today()
+        today = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
         final_day = datetime.strptime(f"{FINAL_DAY}{YEAR}", "%m%d%Y")
 
-        if today > opening_day and use_current_results and today < final_day:
+        if today >= opening_day and use_current_results and today <= final_day:
             # for running the model after opening day
             # fetch the remaining schedule if it isn't cached
             fmt = "%d%m%Y"
@@ -345,6 +345,9 @@ class Satchel:
         # merge on season-to-date results
         if isinstance(current_standings, pd.DataFrame):
             results = results.merge(current_standings, on="index", how="outer")
+            # near end of season, not everyone will have simulated wins.
+            # fill that in with zero
+            results.fillna(0, inplace=True)
             results["wins"] += results["W"]
             results["losses"] += results["L"]
             results = results.filter(["index", "wins", "losses"], axis="columns")
