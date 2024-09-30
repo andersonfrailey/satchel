@@ -123,7 +123,7 @@ def create_schedule(
     dfs = [
         process(_id, team, year, start_date, verbose) for _id, team in ID_MAP.items()
     ]
-    final_sched = pd.concat(dfs).drop_duplicates(subset=["START DATE", "SUBJECT"])
+    final_sched = pd.concat(dfs).drop_duplicates(subset=["START DATE", "SUBJECT", "START TIME"])
     if outfile:
         final_sched.to_csv(outfile, index=False)
     if _return:
