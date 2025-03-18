@@ -24,7 +24,7 @@ from typing import Union
 
 CUR_PATH = Path(__file__).resolve().parent
 DATA_PATH = Path(CUR_PATH, "data")
-SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2024.csv")
+SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2025.csv")
 # projections for pitchers and batters
 PITCHER_PROJ = Path(DATA_PATH, "pitcherprojections.csv")
 BATTER_PROJ = Path(DATA_PATH, "batterprojections.csv")
@@ -161,7 +161,6 @@ class Satchel:
             self.current_standings["L"] = self.current_standings["L"].astype(int)
             self.midseason = True
         else:
-            use_current_results = False
             self.midseason = False
 
         self.schedule = pd.read_csv(schedule, parse_dates=["START DATE"])
