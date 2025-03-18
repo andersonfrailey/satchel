@@ -12,12 +12,14 @@ from .utils import probability_calculations, fetch_fg_projection_data
 from .schedules.cache.clear_cache import clear_cache as clear_schedule_cache
 from .modelresults import SatchelResults
 from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR, FINAL_DAY
+from .standings import standings
 from collections import Counter
 from pathlib import Path, PosixPath
 from typing import Union
 from tqdm import tqdm
 from datetime import datetime
-from pybaseball import standings
+
+# from pybaseball import standings
 from io import StringIO
 from typing import Union
 
