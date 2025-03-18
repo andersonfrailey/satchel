@@ -4,7 +4,9 @@ from dataclasses import dataclass
 from collections import Counter
 from typing import Union
 from pathlib import PosixPath
-from pybaseball import standings
+
+# from pybaseball import standings
+from .standings import standings
 from .schedules.createschedule import YEAR
 from . import plotting
 from . import constants
