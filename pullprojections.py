@@ -6,6 +6,7 @@ import argparse
 import json
 import pandas as pd
 from pathlib import Path
+import statstables as st
 from satchel.model import Satchel
 from satchel.schedules.createschedule import YEAR
 from satchel.constants import TEAM_ABBRS
@@ -15,6 +16,8 @@ from collections import defaultdict
 
 CURPATH = Path(__file__).parent.resolve()
 OUTPATH = Path(CURPATH, "projections")
+
+st.STParams["ascii_padding"] = 1
 
 
 def main(percentiles: bool = False):
@@ -53,6 +56,20 @@ def main(percentiles: bool = False):
     # out["date"] = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
     print("Saving Satchel results")
     append_results(f"satchel{YEAR}.csv", out)
+    cols = [
+        "Team",
+        "Mean Wins",
+        "Mean Losses",
+        "Win Division (%)",
+        "Make Wild Card (%)",
+        "Win WS (%)",
+    ]
+    print(create_table(res.alwest[cols], "AL West"))
+    print(create_table(res.alcentral[cols], "AL Central"))
+    print(create_table(res.aleast[cols], "AL East"))
+    print(create_table(res.nlwest[cols], "NL West"))
+    print(create_table(res.nlcentral[cols], "NL Central"))
+    print(create_table(res.nleast[cols], "NL East"))
 
 
 def append_results(outfile, results):
@@ -72,6 +89,19 @@ def append_results(outfile, results):
     else:
         all_res = results
     all_res.to_csv(Path(OUTPATH, outfile), index=False)
+
+
+def create_table(div_res, div):
+    mean_formatter = lambda x: f"{x:.0f}"
+    table = st.tables.GenericTable(
+        div_res,
+        column_labels={"Mean Wins": "W", "Mean Losses": "L"},
+        formatters={"Mean Wins": mean_formatter, "Mean Losses": mean_formatter},
+        caption=div,
+        include_index=False,
+    )
+
+    return table
 
 
 if __name__ == "__main__":
