@@ -174,7 +174,8 @@ class SatchelResults:
         pd.DataFrame
             Table with record to date and final projections
         """
-        midseason = pd.concat(standings(YEAR))
+        # midseason = pd.concat(standings(YEAR))
+        midseason = standings(YEAR)
         midseason["Team"] = midseason["Tm"].map(constants.NAME_TO_ABBR)
         midseason["W"] = midseason["W"].astype(int)
         midseason["L"] = midseason["L"].astype(int)

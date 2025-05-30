@@ -21,38 +21,38 @@ st.STParams["ascii_padding"] = 1
 
 
 def main(percentiles: bool = False):
-
     # run Satchel
     print("Running Satchel")
     mod = Satchel(seed=856, cache=False, use_current_results=False)
     res = mod.simulate(20000)
     if percentiles:
         print("Creating percentiles")
-        percentiles = defaultdict(dict)
+        _percentiles = defaultdict(dict)
         for team in TEAM_ABBRS:
             for i in range(1, 163):
-                percentiles[team][i] = res.season_percentile(team=team, wins=i)
+                _percentiles[team][i] = res.season_percentile(team=team, wins=i)
 
         percs = json.dumps(percentiles, indent=4)
         Path(OUTPATH, f"percentiles{YEAR}.json").write_text(percs)
     satchel_res = res.season_summary
     satchel_res["date"] = datetime.today()
-    try:
-        season_to_date = res.season_to_date()
-        out = season_to_date.merge(
-            satchel_res[
-                [
-                    "Team",
-                    "Make Wild Card (%)",
-                    "Win Division (%)",
-                    "Win League (%)",
-                    "Win WS (%)",
-                ]
-            ],
-            on="Team",
-        )
-    except Exception:
-        out = satchel_res
+    # try:
+    season_to_date = res.season_to_date()
+    out = season_to_date.merge(
+        satchel_res[
+            [
+                "Team",
+                "Make Wild Card (%)",
+                "Win Division (%)",
+                "Win League (%)",
+                "Win WS (%)",
+                "date",
+            ]
+        ],
+        on="Team",
+    )
+    # except Exception:
+    #     out = satchel_res
     # out["date"] = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
     print("Saving Satchel results")
     append_results(f"satchel{YEAR}.csv", out)
