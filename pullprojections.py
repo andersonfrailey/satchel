@@ -23,7 +23,7 @@ st.STParams["ascii_padding"] = 1
 def main(percentiles: bool = False):
     # run Satchel
     print("Running Satchel")
-    mod = Satchel(seed=856, cache=False, use_current_results=False)
+    mod = Satchel(seed=856, cache=False, use_current_results=True)
     res = mod.simulate(20000)
     if percentiles:
         print("Creating percentiles")

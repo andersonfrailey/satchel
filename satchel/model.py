@@ -21,7 +21,6 @@ from datetime import datetime
 
 # from pybaseball import standings
 from io import StringIO
-from typing import Union
 
 
 CUR_PATH = Path(__file__).resolve().parent
@@ -38,9 +37,9 @@ class Satchel:
     def __init__(
         self,
         talent_measure: str = "median",
-        transactions: dict = None,
+        transactions: dict | None = None,
         noise: bool = True,
-        seed: int = None,
+        seed: int | None = None,
         steamer_p_wt: float = 0.5,
         zips_p_wt: float = 0.5,
         steamer_b_wt: float = 0.5,
@@ -155,7 +154,7 @@ class Satchel:
                 )
                 if not cache:
                     schedule = StringIO(sched.to_csv(index=False))
-            self.current_standings = pd.concat(standings(YEAR))
+            self.current_standings = standings(YEAR)
             self.current_standings["index"] = self.current_standings["Tm"].map(
                 constants.NAME_TO_ABBR
             )
@@ -263,23 +262,23 @@ class Satchel:
             full_seasons.append(full_season)
 
         return SatchelResults(
-            ws_counter,
-            league_counter,
-            div_counter,
-            wc_counter,
-            playoff_counter,
-            pd.concat(all_results),
-            pd.DataFrame(all_matchups),
-            self.talent,
-            n,
-            self.transactions,
-            self.schedule,
-            self.st_data,
-            noise,
-            full_seasons,
-            self.seed,
-            self.fg_projections,
-            datetime.strftime(datetime.today(), "%m-%d-%Y"),
+            ws_counter=ws_counter,
+            league_counter=league_counter,
+            div_counter=div_counter,
+            wc_counter=wc_counter,
+            playoff_counter=playoff_counter,
+            results_df=pd.concat(all_results),
+            playoff_matchups=pd.DataFrame(all_matchups),
+            base_talent=self.talent,
+            n=n,
+            trades=self.transactions,
+            schedule=self.schedule,
+            merged_schedule=self.st_data,
+            noise=all_noise,
+            full_seasons=full_seasons,
+            seed=self.seed,
+            fg_projections=self.fg_projections,
+            date=datetime.strftime(datetime.today(), "%m-%d-%Y"),
         )
 
     def simseason(
@@ -309,6 +308,7 @@ class Satchel:
             self.talent[["Team", "final_talent"]].set_index("Team").to_dict("index")
         )
         # add random noise to team talent for the season
+        team_noise = {team: 0 for team in self.teams}
         if self.noise:
             _noise = self.random.normal(
                 scale=self.talent["base_talent"].std(), size=len(self.teams)
@@ -486,7 +486,7 @@ class Satchel:
         team2: str,
         probability_method: str = PROBABILITY_METHOD,
         elo_scale: int = ELO_SCALE,
-    ) -> float:
+    ) -> tuple[float, float]:
         """Calculate the probability of two teams winning when they play each other
 
         Parameters
@@ -498,7 +498,7 @@ class Satchel:
 
         Returns
         -------
-        float
+        tuple[float, float]
             Tuple with each team's win probability: (team1, team2)
 
         Raises
@@ -589,6 +589,8 @@ class Satchel:
             league_base = np.median(talent["total"])
         elif self.talent_measure == "mean":
             league_base = np.mean(talent["total"])
+        else:
+            raise ValueError("leage_base must be `mean` or `median`")
         # baseline talent before any transactions
         talent["base_talent"] = talent["total"] / league_base - 1
 

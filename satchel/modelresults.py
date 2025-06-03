@@ -25,10 +25,10 @@ class SatchelResults:
     playoff_matchups: pd.DataFrame
     base_talent: pd.DataFrame
     n: int
-    trades: dict
+    trades: dict | None
     schedule: pd.DataFrame
     merged_schedule: pd.DataFrame
-    noise: dict  # the noise added to each team's talent in every season
+    noise: list  # the noise added to each team's talent in every season
     full_seasons: list  # full season results for each simulation
     seed: Union[int, None]  # seed used for the simulation
     fg_projections: str  # Which FanGraphs projections were used

@@ -139,7 +139,7 @@ def create_schedule(
     year: int = YEAR,
     start_date: str = OPENING_DAY,
     end_date: str = FINAL_DAY,
-    outfile: str = "",
+    outfile: Path | str | None = "",
     _return: bool = True,
     verbose: bool = False,
 ):
