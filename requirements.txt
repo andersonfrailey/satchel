@@ -3,3 +3,5 @@ matplotlib
 pandas>=2.2.1
 numpy
 pybaseball
+pytz
+statstables

@@ -4,7 +4,9 @@ from dataclasses import dataclass
 from collections import Counter
 from typing import Union
 from pathlib import PosixPath
-from pybaseball import standings
+
+# from pybaseball import standings
+from .standings import standings
 from .schedules.createschedule import YEAR
 from . import plotting
 from . import constants
@@ -23,10 +25,10 @@ class SatchelResults:
     playoff_matchups: pd.DataFrame
     base_talent: pd.DataFrame
     n: int
-    trades: dict
+    trades: dict | None
     schedule: pd.DataFrame
     merged_schedule: pd.DataFrame
-    noise: dict  # the noise added to each team's talent in every season
+    noise: list  # the noise added to each team's talent in every season
     full_seasons: list  # full season results for each simulation
     seed: Union[int, None]  # seed used for the simulation
     fg_projections: str  # Which FanGraphs projections were used
@@ -172,7 +174,8 @@ class SatchelResults:
         pd.DataFrame
             Table with record to date and final projections
         """
-        midseason = pd.concat(standings(YEAR))
+        # midseason = pd.concat(standings(YEAR))
+        midseason = standings(YEAR)
         midseason["Team"] = midseason["Tm"].map(constants.NAME_TO_ABBR)
         midseason["W"] = midseason["W"].astype(int)
         midseason["L"] = midseason["L"].astype(int)

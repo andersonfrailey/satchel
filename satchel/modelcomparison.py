@@ -80,10 +80,23 @@ class SatchelComparison:
         fig, ax = plt.subplots(2)
         ax[0].plot(wins1["wins"], wins1["proportion"], color="blue", label=sim1_label)
         mean_wins1 = (wins1["wins"] * wins1["proportion"]).sum()
-        ax[0].vlines(mean_wins1, 0, wins1["proportion"].max(), color="blue", alpha=0.5)
+        # vertical line at the mean win value
+        ax[0].vlines(
+            mean_wins1,
+            0,
+            wins1[wins1["wins"] == mean_wins1.round(0)]["proportion"],
+            color="blue",
+            alpha=0.5,
+        )
         ax[0].plot(wins2["wins"], wins2["proportion"], color="red", label=sim2_label)
         mean_wins2 = (wins2["wins"] * wins2["proportion"]).sum()
-        ax[0].vlines(mean_wins2, 0, wins2["proportion"].max(), color="red", alpha=0.5)
+        ax[0].vlines(
+            mean_wins2,
+            0,
+            wins2[wins2["wins"] == mean_wins2.round(0)]["proportion"],
+            color="red",
+            alpha=0.5,
+        )
         ax[0].legend(loc="upper left")
         ax[0].set_ylim(ymin=0)
         ax[0].set_xlabel("Wins")
