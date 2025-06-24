@@ -87,23 +87,35 @@ class SatchelResults:
         summary.fillna(0, inplace=True)
         summary["Division"] = summary["Team"].map(constants.DIVS)
         self.season_summary = summary
-        self.alwest = summary[summary["Division"] == "AL West"].sort_values(
-            "Mean Wins", ascending=False
+        self.alwest = (
+            summary[summary["Division"] == "AL West"]
+            .copy()
+            .sort_values("Mean Wins", ascending=False)
         )
-        self.alcentral = summary[summary["Division"] == "AL Central"].sort_values(
-            "Mean Wins", ascending=False
+        self.alcentral = (
+            summary[summary["Division"] == "AL Central"]
+            .copy()
+            .sort_values("Mean Wins", ascending=False)
         )
-        self.aleast = summary[summary["Division"] == "AL East"].sort_values(
-            "Mean Wins", ascending=False
+        self.aleast = (
+            summary[summary["Division"] == "AL East"]
+            .copy()
+            .sort_values("Mean Wins", ascending=False)
         )
-        self.nlwest = summary[summary["Division"] == "NL West"].sort_values(
-            "Mean Wins", ascending=False
+        self.nlwest = (
+            summary[summary["Division"] == "NL West"]
+            .copy()
+            .sort_values("Mean Wins", ascending=False)
         )
-        self.nlcentral = summary[summary["Division"] == "NL Central"].sort_values(
-            "Mean Wins", ascending=False
+        self.nlcentral = (
+            summary[summary["Division"] == "NL Central"]
+            .copy()
+            .sort_values("Mean Wins", ascending=False)
         )
-        self.nleast = summary[summary["Division"] == "NL East"].sort_values(
-            "Mean Wins", ascending=False
+        self.nleast = (
+            summary[summary["Division"] == "NL East"]
+            .copy()
+            .sort_values("Mean Wins", ascending=False)
         )
 
     def boxplot(self):
@@ -210,6 +222,7 @@ class SatchelResults:
 
         return (
             final[final_cols]
+            .copy()
             .sort_values("Projected Wins", ascending=False)
             .reset_index(drop=True)
         )

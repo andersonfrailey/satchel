@@ -5,3 +5,4 @@ numpy
 pybaseball
 pytz
 statstables
+scipy<1.13
