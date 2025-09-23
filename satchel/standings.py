@@ -13,6 +13,6 @@ def standings(year: int) -> pd.DataFrame:
     tables = pd.read_html(url)
     assert len(tables) == 6
     standings = pd.concat(tables)
-    # remove text indicating playoff/division clinching
-    standings["Tm"] = standings["Tm"].str.lstrip("y-").str.lstrip("x-")
+    # remove text indicating playoff/division/wild card clinching
+    standings["Tm"] = standings["Tm"].str.lstrip("y-").str.lstrip("x-").str.lstrip("w-")
     return standings

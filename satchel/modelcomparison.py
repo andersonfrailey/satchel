@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-from os import stat
 from .modelresults import SatchelResults
 
 
