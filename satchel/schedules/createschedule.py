@@ -6,10 +6,10 @@ folder
 """
 
 import time
-import pandas as pd
-import pytz
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+
+import pandas as pd
 
 CUR_PATH = Path(__file__).resolve().parent
 # update year, opening day, and final day when updating the file for a new season
@@ -17,6 +17,7 @@ YEAR = 2025
 OPENING_DAY = "0327"
 START_DATE = "0318"
 FINAL_DAY = "0928"
+ALL_STAR_BREAK = datetime(year=YEAR, month=7, day=15)
 SCHEDULE = Path(CUR_PATH, str(YEAR))
 
 BASE_URL = (
@@ -140,9 +141,8 @@ def create_schedule(
     start_date: str = OPENING_DAY,
     end_date: str = FINAL_DAY,
     outfile: Path | str | None = "",
-    _return: bool = True,
     verbose: bool = False,
-):
+) -> pd.DataFrame:
     def process(_id, team, year, start_date, verbose=False):
         if verbose:
             print(team)
@@ -179,7 +179,7 @@ def create_schedule(
         # is always local
         sched["tz"] = TZ_MAP[team]  # timezone
         sched["datetime"] = pd.to_datetime(
-            sched["START DATE"].dt.strftime("%Y-%m-%d")
+            sched["START DATE"].dt.strftime("%Y-%m-%d")  # type:ignore
             + " "
             + sched["START TIME"]
             + " "
@@ -190,7 +190,7 @@ def create_schedule(
         time.sleep(5)
         return sched[
             ["START DATE", "away", "home", "SUBJECT", "START TIME", "datetime"]
-        ][keep_flag == True]
+        ][keep_flag]
 
     dfs = [
         process(_id, team, year, start_date, verbose) for _id, team in ID_MAP.items()
@@ -199,8 +199,7 @@ def create_schedule(
     final_sched = pd.concat(dfs).drop_duplicates(subset=["START DATE", "SUBJECT"])
     if outfile:
         final_sched.to_csv(outfile, index=False)
-    if _return:
-        return final_sched
+    return final_sched
 
 
 if __name__ == "__main__":
@@ -208,6 +207,5 @@ if __name__ == "__main__":
         year=YEAR,
         start_date=START_DATE,
         outfile=Path(CUR_PATH, f"schedule{YEAR}.csv"),
-        _return=False,
         verbose=True,
     )

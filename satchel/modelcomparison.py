@@ -1,3 +1,4 @@
+import pandas as pd
 import matplotlib.pyplot as plt
 from .modelresults import SatchelResults
 
@@ -6,6 +7,14 @@ class SatchelComparison:
     """This class can be used to compare the results of multiple Satchel
     simulations.
     """
+
+    season_summary: pd.DataFrame
+    alwest: pd.DataFrame
+    alcentral: pd.DataFrame
+    aleast: pd.DataFrame
+    nlwest: pd.DataFrame
+    nlcentral: pd.DataFrame
+    nleast: pd.DataFrame
 
     def __init__(self, res1: SatchelResults, res2: SatchelResults) -> None:
         """[summary]
