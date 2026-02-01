@@ -1,6 +1,6 @@
 import pickle
 import pandas as pd
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from collections import Counter
 from typing import Union
 from pathlib import PosixPath
@@ -32,7 +32,29 @@ class SatchelResults:
     full_seasons: list  # full season results for each simulation
     seed: Union[int, None]  # seed used for the simulation
     fg_projections: str  # Which FanGraphs projections were used
+    two_way_ties: int
+    three_way_ties: int
+    four_way_ties: int
     date: str  # Date the model was run
+    # fields created when class is initialized
+    season_summary: pd.DataFrame = field(init=False)
+    alwest: pd.DataFrame = field(init=False)
+    alcentral: pd.DataFrame = field(init=False)
+    aleast: pd.DataFrame = field(init=False)
+    nlwest: pd.DataFrame = field(init=False)
+    nlcentral: pd.DataFrame = field(init=False)
+    nleast: pd.DataFrame = field(init=False)
+    nl_wild_card_1: pd.DataFrame = field(init=False)
+    nl_wild_card_2: pd.DataFrame = field(init=False)
+    nlds_1: pd.DataFrame = field(init=False)
+    nlds_2: pd.DataFrame = field(init=False)
+    nlcs: pd.DataFrame = field(init=False)
+    al_wild_card_1: pd.DataFrame = field(init=False)
+    al_wild_card_2: pd.DataFrame = field(init=False)
+    alds_1: pd.DataFrame = field(init=False)
+    alds_2: pd.DataFrame = field(init=False)
+    alcs: pd.DataFrame = field(init=False)
+    world_series: pd.DataFrame = field(init=False)
 
     def __post_init__(self):
         """Set all of the default values calculated from the results"""

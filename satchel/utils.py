@@ -6,6 +6,10 @@ import requests
 import json
 import pandas as pd
 import numpy as np
+
+# from numpy.typing import ArrayLike
+import numpy.typing as npt
+import pandas._typing as pdt
 from pybaseball import playerid_lookup
 from typing import Union
 from functools import lru_cache
@@ -15,7 +19,7 @@ from .constants import FG_PROJECTIONS
 FG_API = "https://www.fangraphs.com/api/projections?stats={stats}&type={proj}"
 
 
-def player_id_lookup(last=None, first=None, fuzzy=False):
+def player_id_lookup(last: str, first: str | None = None, fuzzy: bool = False):
     """Find a player's FanGraphs ID
 
     Parameters
@@ -32,20 +36,20 @@ def player_id_lookup(last=None, first=None, fuzzy=False):
     pd.DataFrame
         DataFrame with the player names and FanGraphs IDs that match the search
     """
-    res = playerid_lookup(last, first, fuzzy)
+    res = playerid_lookup(last, first, fuzzy)  # type:ignore
     return res[["name_last", "name_first", "key_fangraphs"]].copy()
 
 
 def probability_calculations(
-    team1_talent: Union[float, int, np.array],
-    team2_talent: Union[float, int, np.array],
+    team1_talent: Union[float, int, npt.ArrayLike, pdt.ArrayLike],
+    team2_talent: Union[float, int, npt.ArrayLike, pdt.ArrayLike],
     probability_method: str = "bradley_terry",
     elo_scale: int = 400,
 ):
     if probability_method == "bradley_terry":
         return np.exp(team1_talent) / (np.exp(team1_talent) + np.exp(team2_talent))
     elif probability_method == "elo":
-        exp_val = (team1_talent - team2_talent) / elo_scale
+        exp_val = (team1_talent - team2_talent) / elo_scale  # type: ignore
         return 1 / (1 + np.power(10, exp_val))
     else:
         raise ValueError("`probability_method must be `bradley_terry` or `elo`.")

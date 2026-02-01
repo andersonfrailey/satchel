@@ -2,6 +2,7 @@ import pickle
 from pathlib import Path
 
 import pytest
+
 from satchel.model import Satchel
 
 MSG = (

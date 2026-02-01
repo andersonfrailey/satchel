@@ -3,29 +3,33 @@ This moduel contains the heart of satchel. All of the season will be simulated
 from this main class
 """
 
-import pandas as pd
-import numpy as np
 import difflib
 import warnings
-from . import constants
-from .utils import probability_calculations, fetch_fg_projection_data
-from .schedules.cache.clear_cache import clear_cache as clear_schedule_cache
-from .modelresults import SatchelResults
-from .schedules.createschedule import create_schedule, OPENING_DAY, YEAR, FINAL_DAY
-from .standings import standings
 from collections import Counter
-from pathlib import Path, PosixPath
-from typing import Union
-from tqdm import tqdm
 from datetime import datetime
-
-# from pybaseball import standings
 from io import StringIO
+from pathlib import Path, PosixPath
 
+import numpy as np
+import pandas as pd
+from tqdm import tqdm
+
+from . import constants
+from .modelresults import SatchelResults
+from .schedules.cache.clear_cache import clear_cache as clear_schedule_cache
+from .schedules.createschedule import (
+    ALL_STAR_BREAK,
+    FINAL_DAY,
+    OPENING_DAY,
+    YEAR,
+    create_schedule,
+)
+from .standings import standings
+from .utils import fetch_fg_projection_data, probability_calculations
 
 CUR_PATH = Path(__file__).resolve().parent
 DATA_PATH = Path(CUR_PATH, "data")
-SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2025.csv")
+SCHEDUEL_PATH = Path(CUR_PATH, "schedules")
 # projections for pitchers and batters
 PITCHER_PROJ = Path(DATA_PATH, "pitcherprojections.csv")
 BATTER_PROJ = Path(DATA_PATH, "batterprojections.csv")
@@ -34,6 +38,9 @@ ELO_SCALE = 400
 
 
 class Satchel:
+    pitch_proj: pd.DataFrame
+    batter_proj: pd.DataFrame
+
     def __init__(
         self,
         talent_measure: str = "median",
@@ -44,12 +51,13 @@ class Satchel:
         zips_p_wt: float = 0.5,
         steamer_b_wt: float = 0.5,
         zips_b_wt: float = 0.5,
-        schedule: Union[Path, str] = SCHEDUEL_PATH,
-        pitcher_proj: Union[PosixPath, str, pd.DataFrame] = "fetch",
-        batter_proj: Union[PosixPath, str, pd.DataFrame] = "fetch",
+        schedule: Path | str | StringIO | None = SCHEDUEL_PATH,
+        pitcher_proj: PosixPath | str | pd.DataFrame = "fetch",
+        batter_proj: PosixPath | str | pd.DataFrame = "fetch",
         use_current_results: bool = True,
         war_method: str = "current_pace",
         fg_projections: str = "fangraphsdc",
+        year: int = YEAR,
         cache: bool = True,
     ):
         """
@@ -110,24 +118,26 @@ class Satchel:
         self.transactions = transactions
         self.current_standings = None
 
-        if not war_method in ["current_pace", "only_projections"]:
+        if war_method not in ["current_pace", "only_projections"]:
             raise ValueError("`war_method must be `current_pace` or `only_projections`")
         self.war_method = war_method
 
         self.fg_projections = fg_projections
+        self.all_star_break = ALL_STAR_BREAK
 
         # if it's before opening day, create the schedule from file. If after,
         # pull the team's current record, then fetch the rest from MLB.com
         # unless the user specifies that they don't want to
-        if schedule != SCHEDUEL_PATH and use_current_results:
-            warnings.warn(
-                (
-                    "You have provided a path to a schedule but left"
-                    " `use_current_results` = True. As a result, the provided"
-                    " schedule will be ignored. To fix this error, set"
-                    " `use_current_results`=False"
+        if not isinstance(schedule, pd.DataFrame):
+            if schedule != SCHEDUEL_PATH and use_current_results:
+                warnings.warn(
+                    (
+                        "You have provided a path to a schedule but left"
+                        " `use_current_results` = True. As a result, the provided"
+                        " schedule will be ignored. To fix this warning, set"
+                        " `use_current_results`=False"
+                    )
                 )
-            )
         today = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
         final_day = datetime.strptime(f"{FINAL_DAY}{YEAR}", "%m%d%Y")
@@ -141,16 +151,13 @@ class Satchel:
             )
             if not schedule.exists():
                 clear_schedule_cache()  # remove the schedules from previous days
-                _return_schedule = False
                 if not cache:
                     schedule = None
-                    _return_schedule = True
                 print("Creating new schedule...")
                 sched = create_schedule(
                     year=today.year,
                     start_date=today.strftime("%m%d"),
                     outfile=schedule,
-                    _return=_return_schedule,
                 )
                 if not cache:
                     schedule = StringIO(sched.to_csv(index=False))
@@ -163,8 +170,16 @@ class Satchel:
             self.midseason = True
         else:
             self.midseason = False
+            schedule = Path(SCHEDUEL_PATH, f"schedule{year}.csv")
 
-        self.schedule = pd.read_csv(schedule, parse_dates=["START DATE"])
+        self.schedule = pd.read_csv(schedule, parse_dates=["START DATE"])  # type:ignore
+        # name change for Oakland
+        self.schedule["home"] = np.where(
+            self.schedule["home"] == "OAK", "ATH", self.schedule["home"]
+        )
+        self.schedule["away"] = np.where(
+            self.schedule["away"] == "OAK", "ATH", self.schedule["away"]
+        )
 
         self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
@@ -187,10 +202,14 @@ class Satchel:
 
         self.talent, self.st_data = self._calculate_talent(transactions)
 
+        # track number of ties by type
+        self.two_way_ties = 0
+        self.three_way_ties = 0
+        self.four_way_ties = 0
+
     def simulate(
         self,
         n: int = 20000,
-        noise: bool = True,
         playoff_func="twelve",
         quiet: bool = False,
         probability_method: str = PROBABILITY_METHOD,
@@ -202,8 +221,6 @@ class Satchel:
         ----------
         n : int, optional
             Number of iterations to run the model for, by default 10000
-        noise : bool, optional
-            Whether or not to add noise to team talent levels, by default True
         quiet : bool, optional
             If true, suppresses TQDM progress bar when running simulations
         probability_method: str, optional
@@ -249,12 +266,12 @@ class Satchel:
                 elo_scale=elo_scale,
             )
             ws_counter.update([playoffs["ws"]])
-            div_counter.update(div_winners["Team"])
+            div_counter.update(div_winners)
             league_counter.update([playoffs["nl"]["cs"]])
             league_counter.update([playoffs["al"]["cs"]])
-            wc_counter.update(wc_winners["Team"])
-            playoff_counter.update(wc_winners["Team"])
-            playoff_counter.update(div_winners["Team"])
+            wc_counter.update(wc_winners)
+            playoff_counter.update(wc_winners)
+            playoff_counter.update(div_winners)
             results["sim"] = i
             all_results.append(results)
             all_matchups.append(matchups)
@@ -278,6 +295,9 @@ class Satchel:
             full_seasons=full_seasons,
             seed=self.seed,
             fg_projections=self.fg_projections,
+            two_way_ties=self.two_way_ties,
+            three_way_ties=self.three_way_ties,
+            four_way_ties=self.four_way_ties,
             date=datetime.strftime(datetime.today(), "%m-%d-%Y"),
         )
 
@@ -288,7 +308,7 @@ class Satchel:
         current_standings=None,
         probability_method=PROBABILITY_METHOD,
         elo_scale=ELO_SCALE,
-    ) -> tuple:
+    ) -> tuple[pd.DataFrame, dict, list[str], list[str], dict, dict, pd.DataFrame]:
         """Run full simulation of a single season
 
         Parameters
@@ -338,6 +358,8 @@ class Satchel:
         wins.rename(columns={"wins": "index", "count": "wins"}, inplace=True)
         losses = loser.value_counts().reset_index()
         losses.rename(columns={"losses": "index", "count": "losses"}, inplace=True)
+        # count up head-to-head losses. resulting dict has key: value pair: (winner, loser): h2h wins
+        h2h = data.groupby(["winner", "loser"]).size().to_dict()
         # outer merge because during simulations late in the season not all teams
         # will appear in both wins and losses if using the current standings.
         # Some will win or lose all of their games, leaving them out of the
@@ -368,14 +390,12 @@ class Satchel:
             div_winners,
             wc_winners,
             matchups,
-        ) = self.sim_playoff(results, _talent, playoff_func=playoff_func)
+        ) = self.sim_playoff(results, h2h, data, _talent, playoff_func=playoff_func)
         # column for season result. This is the best they do in the season
         results["season_result"] = np.where(
-            results["Team"].isin(div_winners["Team"]),
+            results["Team"].isin(div_winners),
             "Division Champ",
-            np.where(
-                results["Team"].isin(wc_winners["Team"]), "Wild Card", "Missed Playoffs"
-            ),
+            np.where(results["Team"].isin(wc_winners), "Wild Card", "Missed Playoffs"),
         )
         results["season_result"] = np.where(
             results["Team"].isin(cs_winners), "Win League", results["season_result"]
@@ -388,23 +408,22 @@ class Satchel:
         # flags for individual season results. Need this because season_result
         # won't show if they won the wild card, division, etc. if they
         # reach a higher achievement
-        results["wild_card"] = np.where(results["Team"].isin(wc_winners["Team"]), 1, 0)
-        results["won_division"] = np.where(
-            results["Team"].isin(div_winners["Team"]), 1, 0
-        )
+        results["wild_card"] = np.where(results["Team"].isin(wc_winners), 1, 0)
+        results["won_division"] = np.where(results["Team"].isin(div_winners), 1, 0)
         results["won_league"] = np.where(results["Team"].isin(cs_winners), 1, 0)
         results["won_ws"] = np.where(results["Team"] == final_res["ws"], 1, 0)
         return results, final_res, div_winners, wc_winners, matchups, team_noise, data
 
     def sim_playoff(
         self,
-        results,
-        talent,
-        n_divwinners=1,
-        n_wildcard=3,
-        playoff_func="twelve",
-        probability_method=PROBABILITY_METHOD,
-        elo_scale=ELO_SCALE,
+        results: pd.DataFrame,
+        h2h: dict[tuple[str, str], int],
+        data: pd.DataFrame,
+        talent: dict,
+        n_wildcard: int = 3,
+        playoff_func: str = "twelve",
+        probability_method: str = PROBABILITY_METHOD,
+        elo_scale: int = ELO_SCALE,
     ):
         """Run the playoff simulation.
 
@@ -412,12 +431,14 @@ class Satchel:
         ----------
         results : pd.DataFrame
             DataFrame with the results of the regular season
-        talent : pd.DataFrame
+        h2h : dict
+            Head-to-head record dict with (winner, loser): wins format
+        data : pd.DataFrame
+            DataFrame with season game results for tiebreaker calculations
+        talent : dict
             DataFrame with the team talent for the season
-        n_divwinners : int, optional
-            number of division winners, by default 1
         n_wildcard : int, optional
-            Number of wild card winners, by default 2
+            Number of wild card winners, by default 3
         playoff_func: str, optional
             String to indicate which play off function is used. Right now must
             be either 'twelve' for a 12 team playoff, or 'ten' for 10 team.
@@ -428,39 +449,27 @@ class Satchel:
             Tuple with league results, leage champions, division and wild card
             winners, and all of the post season matchups
         """
+        # Select playoff teams for each league using tiebreaker rules
+        al_div_winners, al_wc_winners = self._select_playoff_teams(
+            results, h2h, data, "AL", n_wild_cards=n_wildcard
+        )
+        nl_div_winners, nl_wc_winners = self._select_playoff_teams(
+            results, h2h, data, "NL", n_wild_cards=n_wildcard
+        )
 
-        div_winners = (
-            results.groupby(["league", "division"])
-            .apply(
-                pd.DataFrame.nlargest,
-                n=n_divwinners,
-                columns="wins",
-                include_groups=False,
-            )
-            .sort_values("wins", ascending=False)
-        )
-        # take out division winners and pull the top remaining teams 4 wild card
-        wc = results[~results["Team"].isin(div_winners["Team"])]
-        wc_winners = (
-            wc.groupby("league")
-            .apply(
-                pd.DataFrame.nlargest,
-                n=n_wildcard,
-                columns="wins",
-                include_groups=False,
-            )
-            .sort_values("wins", ascending=False)
-        )
+        # Combine into lists for return value compatibility
+        div_winners = al_div_winners + nl_div_winners
+        wc_winners = al_wc_winners + nl_wc_winners
+
         # determine which playoff format will be used
         _playoff_func = self._twelve_team_playoff
         if playoff_func == "ten":
             _playoff_func = self._ten_team_playoff
-        # simulate all the rounds
-        nlres, matchups = _playoff_func(
-            wc_winners.loc["NL"], div_winners.loc["NL"], talent, "NL", {}
-        )
+
+        # simulate all the rounds (now passing seeded lists instead of DataFrames)
+        nlres, matchups = _playoff_func(nl_wc_winners, nl_div_winners, talent, "NL", {})
         alres, matchups = _playoff_func(
-            wc_winners.loc["AL"], div_winners.loc["AL"], talent, "AL", matchups
+            al_wc_winners, al_div_winners, talent, "AL", matchups
         )
         # world series winner
         matchups["World Series"] = "-".join(sorted([nlres["cs"], alres["cs"]]))
@@ -486,7 +495,7 @@ class Satchel:
         team2: str,
         probability_method: str = PROBABILITY_METHOD,
         elo_scale: int = ELO_SCALE,
-    ) -> tuple[float, float]:
+    ) -> tuple[float, float] | tuple[np.ndarray, np.ndarray]:
         """Calculate the probability of two teams winning when they play each other
 
         Parameters
@@ -517,9 +526,6 @@ class Satchel:
             raise ValueError(msg)
         team1_talent = self.talent["base_talent"][self.talent["Team"] == team1].values
         team2_talent = self.talent["base_talent"][self.talent["Team"] == team2].values
-        # team1_prob = np.exp(team1_talent) / (
-        #     np.exp(team1_talent) + np.exp(team2_talent)
-        # )
         team1_prob = probability_calculations(
             team1_talent=team1_talent,
             team2_talent=team2_talent,
@@ -544,24 +550,26 @@ class Satchel:
         attr : str
             Which projections attribute to set. Either `pitch_proj` or `batter_proj`
         """
-        if source == "fetch":
-            setattr(
-                self,
-                attr,
-                fetch_fg_projection_data(
-                    stats=stats,
-                    fg_projection=self.fg_projections,
-                    date=datetime.today(),
-                ),
+        if isinstance(source, pd.DataFrame):
+            data = source
+        elif source == "fetch":
+            data = fetch_fg_projection_data(
+                stats=stats,
+                fg_projection=self.fg_projections,
+                date=datetime.today(),
             )
-        elif isinstance(source, pd.DataFrame):
-            setattr(self, attr, source)
         elif isinstance(source, str) or isinstance(source, PosixPath):
-            setattr(self, attr, pd.read_csv(source))
+            data = pd.read_csv(source)
         else:
             raise ValueError("Projections must be from a string, path, or dataframe.")
 
-    def _calculate_talent(self, transactions=None, pitcher_wt=1, batter_wt=1):
+        # account for Oakland move
+        data["Team"] = np.where(data["Team"] == "OAK", "ATH", data["Team"])
+        setattr(self, attr, data)
+
+    def _calculate_talent(
+        self, transactions=None, pitcher_wt=1, batter_wt=1
+    ) -> tuple[pd.DataFrame, pd.DataFrame]:
         """Private method used to calculate each team's talent level by taking
         the depth chart projections from FanGraphs
 
@@ -728,8 +736,8 @@ class Satchel:
     # playoff round functions
     def _ten_team_playoff(
         self,
-        wc_winners,
-        div_winners,
+        wc_winners: list[str],
+        div_winners: list[str],
         talent,
         league,
         matchups,
@@ -737,35 +745,40 @@ class Satchel:
         elo_scale=ELO_SCALE,
     ):
         """
-        Simulate a ten team post season
+        Simulate a ten team post season.
+
+        Parameters
+        ----------
+        wc_winners : list[str]
+            List of wild card teams, seeded (1st seed first)
+        div_winners : list[str]
+            List of division winners, seeded (1st seed first)
         """
         # sort and join the teams so that all match ups count the same
-        wc = "-".join(sorted([wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]]))
+        wc = "-".join(sorted([wc_winners[0], wc_winners[1]]))
         matchups[f"{league} Wild Card"] = wc
         wc_winner = self._sim_round(
-            [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]],
+            [wc_winners[0], wc_winners[1]],
             talent,
             1,
             probability_method=probability_method,
             elo_scale=elo_scale,
         )
         matchups[f"{league} WC Champ"] = wc_winner
-        ds1 = "-".join(sorted([wc_winner, div_winners["Team"].iloc[0]]))
+        ds1 = "-".join(sorted([wc_winner, div_winners[0]]))
         matchups[f"{league}DS 1"] = ds1
         div_rd1 = self._sim_round(
-            [wc_winner, div_winners["Team"].iloc[0]],
+            [wc_winner, div_winners[0]],
             talent,
             5,
             probability_method=probability_method,
             elo_scale=elo_scale,
         )
         matchups[f"{league}DS 1 Champ"] = div_rd1
-        ds2 = "-".join(
-            sorted([div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]])
-        )
+        ds2 = "-".join(sorted([div_winners[1], div_winners[2]]))
         matchups[f"{league}DS 2"] = ds2
         div_rd2 = self._sim_round(
-            [div_winners["Team"].iloc[1], div_winners["Team"].iloc[2]],
+            [div_winners[1], div_winners[2]],
             talent,
             5,
             probability_method=probability_method,
@@ -788,14 +801,14 @@ class Satchel:
 
     def _twelve_team_playoff(
         self,
-        wc_winners,
-        div_winners,
+        wc_winners: list[str],
+        div_winners: list[str],
         talent,
-        league,
-        matchups,
-        probability_method=PROBABILITY_METHOD,
-        elo_scale=ELO_SCALE,
-    ):
+        league: str,
+        matchups: dict,
+        probability_method: str = PROBABILITY_METHOD,
+        elo_scale: int = ELO_SCALE,
+    ) -> tuple[dict[str, str], dict[str, str]]:
         """
         12 team playoff with the following bracket in each league:
         Round 1:
@@ -807,57 +820,61 @@ class Satchel:
             - Second seed plays the winner of match up (2)
         Round 3:
             - The winners of the above round play each other
+
+        Parameters
+        ----------
+        wc_winners : list[str]
+            List of wild card teams, seeded (1st seed first)
+        div_winners : list[str]
+            List of division winners, seeded (1st seed first)
         """
-        # Round 1
-        # top two wild card seeds
-        wc1 = "-".join(sorted([wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]]))
+        # Wild Card Round
+        # Bottom WC team vs bottom division winner (6 and 4 seed)
+        wc1 = "-".join(sorted([wc_winners[2], div_winners[2]]))
         matchups[f"{league} Wild Card 1"] = wc1
         wc1_winner = self._sim_round(
-            [wc_winners["Team"].iloc[0], wc_winners["Team"].iloc[1]],
+            [wc_winners[2], div_winners[2]],
             talent,
             3,
             probability_method=probability_method,
             elo_scale=elo_scale,
         )
         matchups[f"{league} WC 1 Champ"] = wc1_winner
-        # bottom wild card seed and bottom division winner
-        wc2 = "-".join(
-            sorted([wc_winners["Team"].iloc[2], div_winners["Team"].iloc[2]])
-        )
+        # top two WC teams (5 and 4 seed)
+        wc2 = "-".join(sorted([wc_winners[0], wc_winners[1]]))
         matchups[f"{league} Wild Card 2"] = wc2
         wc2_winner = self._sim_round(
-            [wc_winners["Team"].iloc[2], div_winners["Team"].iloc[2]],
+            [wc_winners[0], wc_winners[1]],
             talent,
             3,
             probability_method=probability_method,
             elo_scale=elo_scale,
         )
-        matchups[f"WC 2 Champ"] = wc2_winner
-        # Round 2
-        # top seeded division winner vs. WC 1 winner
-        div1 = "-".join(sorted([wc1_winner, div_winners["Team"].iloc[0]]))
+        matchups[f"{league }WC 2 Champ"] = wc2_winner
+        # Division Series Round
+        # Second seeded division winner vs. WC 1 winner
+        div1 = "-".join(sorted([wc1_winner, div_winners[1]]))
         matchups[f"{league}DS 1"] = div1
         div1_winner = self._sim_round(
-            [wc1_winner, div_winners["Team"].iloc[0]],
+            [wc1_winner, div_winners[1]],
             talent,
             7,
             probability_method=probability_method,
             elo_scale=elo_scale,
         )
         matchups[f"{league}DS 1 Champ"] = div1_winner
-        # second seed division winner vs. WC 2 winner
-        div2 = "-".join(sorted([wc2_winner, div_winners["Team"].iloc[1]]))
+        # Top seed division winner vs. WC 2 winner
+        div2 = "-".join(sorted([wc2_winner, div_winners[0]]))
         matchups[f"{league}DS 2"] = div2
         div2_winner = self._sim_round(
-            [wc2_winner, div_winners["Team"].iloc[1]],
+            [wc2_winner, div_winners[0]],
             talent,
             7,
             probability_method=probability_method,
             elo_scale=elo_scale,
         )
         matchups[f"{league}DS 2 Champ"] = div2_winner
-        # Round 3
-        # league championship
+        # Championship Series
         matchups[f"{league}CS"] = "-".join(sorted([div1_winner, div2_winner]))
         cs = self._sim_round(
             [div1_winner, div2_winner],
@@ -878,6 +895,839 @@ class Satchel:
             },
             matchups,
         )
+
+    def _get_intradiv_record(self, team: str, data: pd.DataFrame) -> dict:
+        """
+        Compute intradivision record for a single team.
+
+        Parameters
+        ----------
+        team : str
+            Team abbreviation
+        data : pd.DataFrame
+            DataFrame with season game results (must have 'winner' and 'loser' columns)
+
+        Returns
+        -------
+        dict
+            Dictionary with 'wins', 'losses', and 'pct' keys
+        """
+        team_div = constants.DIVS[team]
+        div_teams = [
+            t for t, d in constants.DIVS.items() if d == team_div and t != team
+        ]
+
+        # Games where team played against division opponents
+        team_in_game = (data["winner"] == team) | (data["loser"] == team)
+        opponent_in_div = data["winner"].isin(div_teams) | data["loser"].isin(div_teams)
+        div_games = data[team_in_game & opponent_in_div]
+
+        wins = (div_games["winner"] == team).sum()
+        losses = (div_games["loser"] == team).sum()
+        pct = wins / (wins + losses) if (wins + losses) > 0 else 0.0
+
+        return {"wins": wins, "losses": losses, "pct": pct}
+
+    def _get_intraleague_record(self, team: str, data: pd.DataFrame) -> dict:
+        """
+        Compute intraleague record for a single team.
+
+        Parameters
+        ----------
+        team : str
+            Team abbreviation
+        data : pd.DataFrame
+            DataFrame with season game results (must have 'winner' and 'loser' columns)
+
+        Returns
+        -------
+        dict
+            Dictionary with 'wins', 'losses', and 'pct' keys
+        """
+        team_league = constants.LEAGUE[team]
+        league_teams = [
+            t for t, lg in constants.LEAGUE.items() if lg == team_league and t != team
+        ]
+
+        # Games where team played against league opponents
+        team_in_game = (data["winner"] == team) | (data["loser"] == team)
+        opponent_in_league = data["winner"].isin(league_teams) | data["loser"].isin(
+            league_teams
+        )
+        league_games = data[team_in_game & opponent_in_league]
+
+        wins = (league_games["winner"] == team).sum()
+        losses = (league_games["loser"] == team).sum()
+        pct = wins / (wins + losses) if (wins + losses) > 0 else 0.0
+
+        return {"wins": wins, "losses": losses, "pct": pct}
+
+    def _get_last_half_intraleague_record(self, team: str, data: pd.DataFrame) -> dict:
+        """
+        Compute last half (post All-Star break) intraleague record for a single team.
+
+        Parameters
+        ----------
+        team : str
+            Team abbreviation
+        data : pd.DataFrame
+            DataFrame with season game results (must have 'winner', 'loser', and 'START DATE' columns)
+
+        Returns
+        -------
+        dict
+            Dictionary with 'wins', 'losses', and 'pct' keys
+        """
+        team_league = constants.LEAGUE[team]
+        league_teams = [
+            t for t, lg in constants.LEAGUE.items() if lg == team_league and t != team
+        ]
+
+        # Filter to games after All-Star break
+        second_half = data[data["START DATE"] >= self.all_star_break]
+
+        # Games where team played against league opponents in second half
+        team_in_game = (second_half["winner"] == team) | (second_half["loser"] == team)
+        opponent_in_league = second_half["winner"].isin(league_teams) | second_half[
+            "loser"
+        ].isin(league_teams)
+        league_games = second_half[team_in_game & opponent_in_league]
+
+        wins = (league_games["winner"] == team).sum()
+        losses = (league_games["loser"] == team).sum()
+        pct = wins / (wins + losses) if (wins + losses) > 0 else 0.0
+
+        return {"wins": wins, "losses": losses, "pct": pct}
+
+    def _get_intraleague_games_chronological(
+        self, team: str, data: pd.DataFrame, exclude_teams: list[str] | None = None
+    ) -> list[tuple]:
+        """
+        Get chronologically ordered list of intraleague games for a team.
+        Used for the 'plus one' tiebreaker.
+
+        Parameters
+        ----------
+        team : str
+            Team abbreviation
+        data : pd.DataFrame
+            DataFrame with season game results
+        exclude_teams : list[str], optional
+            Teams to exclude from the list (games between tied clubs are skipped)
+
+        Returns
+        -------
+        list[tuple]
+            List of (date, opponent, won: bool) tuples, ordered chronologically
+        """
+        if exclude_teams is None:
+            exclude_teams = []
+
+        team_league = constants.LEAGUE[team]
+        league_teams = [
+            t
+            for t, lg in constants.LEAGUE.items()
+            if lg == team_league and t != team and t not in exclude_teams
+        ]
+
+        # Games where team played against league opponents (excluding tied teams)
+        team_in_game = (data["winner"] == team) | (data["loser"] == team)
+        opponent_in_league = data["winner"].isin(league_teams) | data["loser"].isin(
+            league_teams
+        )
+        league_games = data[team_in_game & opponent_in_league].copy()
+
+        # Sort by date
+        league_games = league_games.sort_values("START DATE")
+
+        # Build list of (date, opponent, won)
+        games = []
+        for _, row in league_games.iterrows():
+            if row["winner"] == team:
+                opponent = row["loser"]
+                won = True
+            else:
+                opponent = row["winner"]
+                won = False
+            games.append((row["START DATE"], opponent, won))
+
+        return games
+
+    def _two_team_tiebreaker(
+        self, teams: list[str], h2h: dict, data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Break a tie between two teams using MLB tiebreaker rules.
+
+        Order of tiebreakers:
+        1. Head-to-head record
+        2. Intradivision record
+        3. Intraleague record
+        4. Last half of intraleague games
+        5. Last half plus one (iterate backwards through intraleague games)
+
+        Parameters
+        ----------
+        teams : list[str]
+            List of two tied team abbreviations
+        h2h : dict
+            Head-to-head record dict with (winner, loser): wins format
+        data : pd.DataFrame
+            DataFrame with season game results
+
+        Returns
+        -------
+        list[str]
+            Teams sorted from best to worst (winner first)
+        """
+        team1, team2 = teams[0], teams[1]
+
+        # 1. Head-to-head
+        t1_h2h_wins = h2h.get((team1, team2), 0)
+        t2_h2h_wins = h2h.get((team2, team1), 0)
+        if t1_h2h_wins > t2_h2h_wins:
+            return [team1, team2]
+        if t2_h2h_wins > t1_h2h_wins:
+            return [team2, team1]
+
+        # 2. Intradivision record
+        t1_intradiv = self._get_intradiv_record(team1, data)
+        t2_intradiv = self._get_intradiv_record(team2, data)
+        if t1_intradiv["pct"] > t2_intradiv["pct"]:
+            return [team1, team2]
+        if t2_intradiv["pct"] > t1_intradiv["pct"]:
+            return [team2, team1]
+
+        # 3. Intraleague record
+        t1_intraleague = self._get_intraleague_record(team1, data)
+        t2_intraleague = self._get_intraleague_record(team2, data)
+        if t1_intraleague["pct"] > t2_intraleague["pct"]:
+            return [team1, team2]
+        if t2_intraleague["pct"] > t1_intraleague["pct"]:
+            return [team2, team1]
+
+        # 4. Last half of intraleague games
+        t1_last_half = self._get_last_half_intraleague_record(team1, data)
+        t2_last_half = self._get_last_half_intraleague_record(team2, data)
+        if t1_last_half["pct"] > t2_last_half["pct"]:
+            return [team1, team2]
+        if t2_last_half["pct"] > t1_last_half["pct"]:
+            return [team2, team1]
+
+        # 5. Last half plus one - iterate backwards through intraleague games
+        return self._plus_one_tiebreaker([team1, team2], data)
+
+    def _three_team_tiebreaker(
+        self, teams: list[str], h2h: dict, data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Break a tie between three teams using MLB tiebreaker rules.
+
+        If all three have identical h2h records against each other:
+            a. Intradivision winning percentage
+            b. Intraleague winning percentage
+            c. Last half intraleague winning percentage
+            d. Plus one tiebreaker
+
+        If h2h records are NOT identical:
+            a. If one team beat both others, that team wins
+            b. Otherwise, rank by combined h2h winning percentage, then
+               use two-team tiebreaker rules if needed
+
+        Parameters
+        ----------
+        teams : list[str]
+            List of three tied team abbreviations
+        h2h : dict
+            Head-to-head record dict
+        data : pd.DataFrame
+            DataFrame with season game results
+
+        Returns
+        -------
+        list[str]
+            Teams sorted from best to worst
+        """
+        team1, team2, team3 = teams[0], teams[1], teams[2]
+
+        # Calculate h2h records among the three teams
+        # For each team, count wins and losses against the other two
+        h2h_records = {}
+        for team in teams:
+            others = [t for t in teams if t != team]
+            wins = sum(h2h.get((team, other), 0) for other in others)
+            losses = sum(h2h.get((other, team), 0) for other in others)
+            total = wins + losses
+            pct = wins / total if total > 0 else 0.0
+            h2h_records[team] = {"wins": wins, "losses": losses, "pct": pct}
+
+        # Check if all three have identical h2h records
+        pcts = [h2h_records[t]["pct"] for t in teams]
+        all_identical = len(set(pcts)) == 1
+
+        if all_identical:
+            # Path A: Use intradiv -> intraleague -> last half -> plus one
+            return self._three_team_tiebreaker_identical_h2h(teams, data)
+        else:
+            # Path B: Check if one team beat both others
+            for team in teams:
+                others = [t for t in teams if t != team]
+                beat_both = all(
+                    h2h.get((team, other), 0) > h2h.get((other, team), 0)
+                    for other in others
+                )
+                if beat_both:
+                    # This team wins, now rank the other two
+                    remaining = [t for t in teams if t != team]
+                    remaining_sorted = self._two_team_tiebreaker(remaining, h2h, data)
+                    return [team] + remaining_sorted
+
+            # No team beat both others - rank by combined h2h winning percentage
+            # against each other
+            sorted_by_h2h = sorted(
+                teams, key=lambda t: h2h_records[t]["pct"], reverse=True
+            )
+
+            # Check for ties in h2h pct
+            if (
+                h2h_records[sorted_by_h2h[0]]["pct"]
+                > h2h_records[sorted_by_h2h[1]]["pct"]
+            ):
+                # First place is clear
+                winner = sorted_by_h2h[0]
+                remaining = [t for t in teams if t != winner]
+                # Check if remaining two are tied
+                if h2h_records[remaining[0]]["pct"] == h2h_records[remaining[1]]["pct"]:
+                    remaining_sorted = self._two_team_tiebreaker(remaining, h2h, data)
+                else:
+                    remaining_sorted = sorted(
+                        remaining, key=lambda t: h2h_records[t]["pct"], reverse=True
+                    )
+                return [winner] + remaining_sorted
+            else:
+                # Top two (or all three) are tied on h2h pct
+                # If all three are tied, use identical h2h rules
+                if (
+                    h2h_records[sorted_by_h2h[1]]["pct"]
+                    == h2h_records[sorted_by_h2h[2]]["pct"]
+                ):
+                    return self._three_team_tiebreaker_identical_h2h(teams, data)
+                else:
+                    # Top two are tied, third is clear
+                    top_two = sorted_by_h2h[:2]
+                    third = sorted_by_h2h[2]
+                    top_two_sorted = self._two_team_tiebreaker(top_two, h2h, data)
+                    return top_two_sorted + [third]
+
+    def _three_team_tiebreaker_identical_h2h(
+        self, teams: list[str], data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Break a three-team tie when all teams have identical h2h records.
+
+        Order:
+        a. Intradivision winning percentage
+        b. Intraleague winning percentage
+        c. Last half intraleague winning percentage
+        d. Plus one tiebreaker
+
+        Parameters
+        ----------
+        teams : list[str]
+            List of three tied team abbreviations
+        data : pd.DataFrame
+            DataFrame with season game results
+
+        Returns
+        -------
+        list[str]
+            Teams sorted from best to worst
+        """
+        # a. Intradivision
+        intradiv = {t: self._get_intradiv_record(t, data)["pct"] for t in teams}
+        sorted_teams = sorted(teams, key=lambda t: intradiv[t], reverse=True)
+        if (
+            intradiv[sorted_teams[0]]
+            > intradiv[sorted_teams[1]]
+            > intradiv[sorted_teams[2]]
+        ):
+            return sorted_teams
+        # Check for partial ties
+        if intradiv[sorted_teams[0]] > intradiv[sorted_teams[1]]:
+            # First is clear, check remaining two
+            remaining = sorted_teams[1:]
+            if intradiv[remaining[0]] == intradiv[remaining[1]]:
+                # Need to continue tiebreaker for remaining two
+                remaining_sorted = self._two_team_tiebreaker_from_intraleague(
+                    remaining, data
+                )
+                return [sorted_teams[0]] + remaining_sorted
+            return sorted_teams
+        if (
+            intradiv[sorted_teams[0]]
+            == intradiv[sorted_teams[1]]
+            > intradiv[sorted_teams[2]]
+        ):
+            # Top two tied, third is clear
+            top_two_sorted = self._two_team_tiebreaker_from_intraleague(
+                sorted_teams[:2], data
+            )
+            return top_two_sorted + [sorted_teams[2]]
+
+        # All three still tied on intradiv, move to intraleague
+        # b. Intraleague
+        intraleague = {t: self._get_intraleague_record(t, data)["pct"] for t in teams}
+        sorted_teams = sorted(teams, key=lambda t: intraleague[t], reverse=True)
+        if (
+            intraleague[sorted_teams[0]]
+            > intraleague[sorted_teams[1]]
+            > intraleague[sorted_teams[2]]
+        ):
+            return sorted_teams
+        if intraleague[sorted_teams[0]] > intraleague[sorted_teams[1]]:
+            remaining = sorted_teams[1:]
+            if intraleague[remaining[0]] == intraleague[remaining[1]]:
+                remaining_sorted = self._two_team_tiebreaker_from_last_half(
+                    remaining, data
+                )
+                return [sorted_teams[0]] + remaining_sorted
+            return sorted_teams
+        if (
+            intraleague[sorted_teams[0]]
+            == intraleague[sorted_teams[1]]
+            > intraleague[sorted_teams[2]]
+        ):
+            top_two_sorted = self._two_team_tiebreaker_from_last_half(
+                sorted_teams[:2], data
+            )
+            return top_two_sorted + [sorted_teams[2]]
+
+        # c. Last half intraleague
+        last_half = {
+            t: self._get_last_half_intraleague_record(t, data)["pct"] for t in teams
+        }
+        sorted_teams = sorted(teams, key=lambda t: last_half[t], reverse=True)
+        if (
+            last_half[sorted_teams[0]]
+            > last_half[sorted_teams[1]]
+            > last_half[sorted_teams[2]]
+        ):
+            return sorted_teams
+        if last_half[sorted_teams[0]] > last_half[sorted_teams[1]]:
+            remaining = sorted_teams[1:]
+            if last_half[remaining[0]] == last_half[remaining[1]]:
+                remaining_sorted = self._plus_one_tiebreaker(remaining, data)
+                return [sorted_teams[0]] + remaining_sorted
+            return sorted_teams
+        if (
+            last_half[sorted_teams[0]]
+            == last_half[sorted_teams[1]]
+            > last_half[sorted_teams[2]]
+        ):
+            top_two_sorted = self._plus_one_tiebreaker(sorted_teams[:2], data)
+            return top_two_sorted + [sorted_teams[2]]
+
+        # d. Plus one tiebreaker for all three
+        return self._plus_one_tiebreaker(teams, data)
+
+    def _two_team_tiebreaker_from_intraleague(
+        self, teams: list[str], data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Two-team tiebreaker starting from intraleague record (skipping h2h and intradiv).
+        Used when those have already been checked in a multi-team tiebreaker.
+        """
+        team1, team2 = teams[0], teams[1]
+
+        # Intraleague record
+        t1_intraleague = self._get_intraleague_record(team1, data)
+        t2_intraleague = self._get_intraleague_record(team2, data)
+        if t1_intraleague["pct"] > t2_intraleague["pct"]:
+            return [team1, team2]
+        if t2_intraleague["pct"] > t1_intraleague["pct"]:
+            return [team2, team1]
+
+        return self._two_team_tiebreaker_from_last_half(teams, data)
+
+    def _two_team_tiebreaker_from_last_half(
+        self, teams: list[str], data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Two-team tiebreaker starting from last half intraleague (skipping earlier steps).
+        """
+        team1, team2 = teams[0], teams[1]
+
+        # Last half of intraleague games
+        t1_last_half = self._get_last_half_intraleague_record(team1, data)
+        t2_last_half = self._get_last_half_intraleague_record(team2, data)
+        if t1_last_half["pct"] > t2_last_half["pct"]:
+            return [team1, team2]
+        if t2_last_half["pct"] > t1_last_half["pct"]:
+            return [team2, team1]
+
+        # Plus one tiebreaker
+        return self._plus_one_tiebreaker([team1, team2], data)
+
+    def _four_plus_team_tiebreaker(
+        self, teams: list[str], h2h: dict, data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Break a tie between four or more teams using MLB tiebreaker rules.
+
+        Order:
+        1. Team with better record against each of the other tied teams
+        2. Highest winning percentage in games among tied teams
+        3. Highest intradivision winning percentage
+        4. Highest intraleague winning percentage
+        5. Highest last half intraleague winning percentage
+        6. Plus one tiebreaker
+
+        Parameters
+        ----------
+        teams : list[str]
+            List of four or more tied team abbreviations
+        h2h : dict
+            Head-to-head record dict
+        data : pd.DataFrame
+            DataFrame with season game results
+
+        Returns
+        -------
+        list[str]
+            Teams sorted from best to worst
+        """
+        # 1. Check if any team beat all others
+        for team in teams:
+            others = [t for t in teams if t != team]
+            beat_all = all(
+                h2h.get((team, other), 0) > h2h.get((other, team), 0)
+                for other in others
+            )
+            if beat_all:
+                # This team wins, recursively handle the rest
+                remaining = [t for t in teams if t != team]
+                remaining_sorted = self._break_tie(remaining, h2h, data)
+                return [team] + remaining_sorted
+
+        # 2. Highest winning percentage among tied teams
+        h2h_pcts = {}
+        for team in teams:
+            others = [t for t in teams if t != team]
+            wins = sum(h2h.get((team, other), 0) for other in others)
+            losses = sum(h2h.get((other, team), 0) for other in others)
+            total = wins + losses
+            h2h_pcts[team] = wins / total if total > 0 else 0.0
+
+        sorted_by_h2h = sorted(teams, key=lambda t: h2h_pcts[t], reverse=True)
+
+        # Check if there's a clear winner
+        if h2h_pcts[sorted_by_h2h[0]] > h2h_pcts[sorted_by_h2h[1]]:
+            winner = sorted_by_h2h[0]
+            remaining = [t for t in teams if t != winner]
+            remaining_sorted = self._break_tie(remaining, h2h, data)
+            return [winner] + remaining_sorted
+
+        # Find teams tied for top h2h pct and handle them separately
+        top_pct = h2h_pcts[sorted_by_h2h[0]]
+        tied_for_top = [t for t in teams if h2h_pcts[t] == top_pct]
+
+        if len(tied_for_top) == len(teams):
+            # All teams still tied, move to intradiv
+            return self._four_plus_tiebreaker_from_intradiv(teams, h2h, data)
+        else:
+            # Some teams separated, handle top group then rest
+            top_sorted = self._break_tie(tied_for_top, h2h, data)
+            remaining = [t for t in teams if t not in tied_for_top]
+            remaining_sorted = self._break_tie(remaining, h2h, data)
+            return top_sorted + remaining_sorted
+
+    def _four_plus_tiebreaker_from_intradiv(
+        self, teams: list[str], h2h: dict, data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Continue four+ team tiebreaker from intradivision record.
+        """
+        # 3. Intradivision
+        intradiv = {t: self._get_intradiv_record(t, data)["pct"] for t in teams}
+        sorted_teams = sorted(teams, key=lambda t: intradiv[t], reverse=True)
+
+        if intradiv[sorted_teams[0]] > intradiv[sorted_teams[1]]:
+            winner = sorted_teams[0]
+            remaining = [t for t in teams if t != winner]
+            remaining_sorted = self._break_tie(remaining, h2h, data)
+            return [winner] + remaining_sorted
+
+        # Find tied group
+        top_pct = intradiv[sorted_teams[0]]
+        tied_for_top = [t for t in teams if intradiv[t] == top_pct]
+
+        if len(tied_for_top) == len(teams):
+            return self._four_plus_tiebreaker_from_intraleague(teams, h2h, data)
+        else:
+            top_sorted = self._break_tie(tied_for_top, h2h, data)
+            remaining = [t for t in teams if t not in tied_for_top]
+            remaining_sorted = self._break_tie(remaining, h2h, data)
+            return top_sorted + remaining_sorted
+
+    def _four_plus_tiebreaker_from_intraleague(
+        self, teams: list[str], h2h: dict, data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Continue four+ team tiebreaker from intraleague record.
+        """
+        # 4. Intraleague
+        intraleague = {t: self._get_intraleague_record(t, data)["pct"] for t in teams}
+        sorted_teams = sorted(teams, key=lambda t: intraleague[t], reverse=True)
+
+        if intraleague[sorted_teams[0]] > intraleague[sorted_teams[1]]:
+            winner = sorted_teams[0]
+            remaining = [t for t in teams if t != winner]
+            remaining_sorted = self._break_tie(remaining, h2h, data)
+            return [winner] + remaining_sorted
+
+        top_pct = intraleague[sorted_teams[0]]
+        tied_for_top = [t for t in teams if intraleague[t] == top_pct]
+
+        if len(tied_for_top) == len(teams):
+            return self._four_plus_tiebreaker_from_last_half(teams, h2h, data)
+        else:
+            top_sorted = self._break_tie(tied_for_top, h2h, data)
+            remaining = [t for t in teams if t not in tied_for_top]
+            remaining_sorted = self._break_tie(remaining, h2h, data)
+            return top_sorted + remaining_sorted
+
+    def _four_plus_tiebreaker_from_last_half(
+        self, teams: list[str], h2h: dict, data: pd.DataFrame
+    ) -> list[str]:
+        """
+        Continue four+ team tiebreaker from last half intraleague.
+        """
+        # 5. Last half intraleague
+        last_half = {
+            t: self._get_last_half_intraleague_record(t, data)["pct"] for t in teams
+        }
+        sorted_teams = sorted(teams, key=lambda t: last_half[t], reverse=True)
+
+        if last_half[sorted_teams[0]] > last_half[sorted_teams[1]]:
+            winner = sorted_teams[0]
+            remaining = [t for t in teams if t != winner]
+            remaining_sorted = self._break_tie(remaining, h2h, data)
+            return [winner] + remaining_sorted
+
+        top_pct = last_half[sorted_teams[0]]
+        tied_for_top = [t for t in teams if last_half[t] == top_pct]
+
+        if len(tied_for_top) == len(teams):
+            # 6. Plus one for all
+            return self._plus_one_tiebreaker(teams, data)
+        else:
+            top_sorted = self._plus_one_tiebreaker(tied_for_top, data)
+            remaining = [t for t in teams if t not in tied_for_top]
+            remaining_sorted = self._break_tie(remaining, h2h, data)
+            return top_sorted + remaining_sorted
+
+    def _plus_one_tiebreaker(self, teams: list[str], data: pd.DataFrame) -> list[str]:
+        """
+        Plus one tiebreaker: iterate backwards through each team's intraleague games.
+
+        For each team, look at their last first-half intraleague game (excluding games
+        against other tied teams), then second-to-last, etc. until the tie is broken.
+
+        Parameters
+        ----------
+        teams : list[str]
+            List of tied team abbreviations
+        data : pd.DataFrame
+            DataFrame with season game results
+
+        Returns
+        -------
+        list[str]
+            Teams sorted from best to worst
+        """
+        # Get first half games only (before All-Star break)
+        first_half_data = data[data["START DATE"] < self.all_star_break]
+
+        # Get chronological intraleague games for each team, excluding games vs tied teams
+        team_games = {
+            team: self._get_intraleague_games_chronological(
+                team, first_half_data, exclude_teams=teams
+            )
+            for team in teams
+        }
+
+        # Find the maximum number of games any team has
+        max_games = max(len(games) for games in team_games.values())
+
+        # Iterate backwards through games
+        for i in range(1, max_games + 1):
+            # For each team, get result of their i-th game from the end
+            results = {}
+            for team in teams:
+                games = team_games[team]
+                if len(games) >= i:
+                    # Get i-th game from the end
+                    _, _, won = games[-i]
+                    results[team] = 1 if won else 0
+                else:
+                    # Team doesn't have this many games, treat as loss
+                    results[team] = 0
+
+            # Check if this breaks the tie
+            sorted_teams = sorted(teams, key=lambda t: results[t], reverse=True)
+            if results[sorted_teams[0]] > results[sorted_teams[1]]:
+                # At least first place is determined
+                winner = sorted_teams[0]
+                remaining = [t for t in teams if t != winner]
+                if len(remaining) == 1:
+                    return [winner] + remaining
+                # Continue tiebreaker for remaining teams
+                remaining_sorted = self._plus_one_tiebreaker(remaining, data)
+                return [winner] + remaining_sorted
+
+        # If we've exhausted all games and still tied, use random selection
+        return list(self.random.permutation(teams))
+
+    def _break_tie(self, teams: list[str], h2h: dict, data: pd.DataFrame) -> list[str]:
+        """
+        Route to appropriate tiebreaker based on number of teams.
+
+        Parameters
+        ----------
+        teams : list[str]
+            List of tied team abbreviations
+        h2h : dict
+            Head-to-head record dict
+        data : pd.DataFrame
+            DataFrame with season game results
+
+        Returns
+        -------
+        list[str]
+            Teams sorted from best to worst
+        """
+        if len(teams) == 1:
+            return teams
+        elif len(teams) == 2:
+            return self._two_team_tiebreaker(teams, h2h, data)
+        elif len(teams) == 3:
+            return self._three_team_tiebreaker(teams, h2h, data)
+        else:
+            return self._four_plus_team_tiebreaker(teams, h2h, data)
+
+    def _select_playoff_teams(
+        self,
+        results: pd.DataFrame,
+        h2h: dict,
+        data: pd.DataFrame,
+        league: str,
+        n_division_winners: int = 1,
+        n_wild_cards: int = 3,
+    ) -> tuple[list[str], list[str]]:
+        """
+        Select and seed playoff teams for a single league using MLB tiebreaker rules.
+
+        Parameters
+        ----------
+        results : pd.DataFrame
+            Season results with 'Team', 'wins', 'division', 'league' columns
+        h2h : dict
+            Head-to-head record dict
+        data : pd.DataFrame
+            DataFrame with season game results
+        league : str
+            'AL' or 'NL'
+        n_division_winners : int
+            Number of division winners (always 1 per division = 3 total)
+        n_wild_cards : int
+            Number of wild card teams per league
+
+        Returns
+        -------
+        tuple[list[str], list[str]]
+            (division_winners_seeded, wild_card_winners_seeded)
+            Both lists are ordered by seed (1st seed first)
+        """
+        league_results = results[results["league"] == league].copy()
+        divisions = league_results["division"].unique()
+
+        # Step 1: Find division winners
+        division_winners = []
+        for div in divisions:
+            div_teams = league_results[league_results["division"] == div]
+            max_wins = div_teams["wins"].max()
+            tied_for_first = div_teams[div_teams["wins"] == max_wins]["Team"].tolist()
+
+            if len(tied_for_first) == 1:
+                division_winners.append(tied_for_first[0])
+            else:
+                # Tiebreaker needed
+                if len(tied_for_first) == 2:
+                    self.two_way_ties += 1
+                elif len(tied_for_first) == 3:
+                    self.three_way_ties += 1
+                elif len(tied_for_first) == 4:
+                    self.four_way_ties += 1
+                sorted_teams = self._break_tie(tied_for_first, h2h, data)
+                division_winners.append(sorted_teams[0])
+
+        # Step 2: Seed division winners by record (with tiebreakers if needed)
+        div_winner_records = {
+            team: league_results[league_results["Team"] == team]["wins"].values[0]
+            for team in division_winners
+        }
+
+        # Group by wins and apply tiebreakers within groups
+        wins_to_teams = {}
+        for team, wins in div_winner_records.items():
+            if wins not in wins_to_teams:
+                wins_to_teams[wins] = []
+            wins_to_teams[wins].append(team)
+
+        seeded_div_winners = []
+        for wins in sorted(wins_to_teams.keys(), reverse=True):
+            teams_at_wins = wins_to_teams[wins]
+            if len(teams_at_wins) == 1:
+                seeded_div_winners.extend(teams_at_wins)
+            else:
+                sorted_teams = self._break_tie(teams_at_wins, h2h, data)
+                seeded_div_winners.extend(sorted_teams)
+
+        # Step 3: Find wild card teams
+        non_div_winners = league_results[~league_results["Team"].isin(division_winners)]
+        non_div_winners = non_div_winners.sort_values("wins", ascending=False)
+
+        # Group by wins to handle ties
+        wild_card_winners = []
+        remaining_spots = n_wild_cards
+
+        # Get unique win totals in descending order
+        win_totals = non_div_winners["wins"].unique()
+
+        for wins in sorted(win_totals, reverse=True):
+            if remaining_spots <= 0:
+                break
+
+            teams_at_wins = non_div_winners[non_div_winners["wins"] == wins][
+                "Team"
+            ].tolist()
+
+            if len(teams_at_wins) <= remaining_spots:
+                # All teams at this win total make the playoffs
+                if len(teams_at_wins) == 1:
+                    wild_card_winners.extend(teams_at_wins)
+                else:
+                    # Still need to seed them via tiebreakers
+                    sorted_teams = self._break_tie(teams_at_wins, h2h, data)
+                    wild_card_winners.extend(sorted_teams)
+                remaining_spots -= len(teams_at_wins)
+            else:
+                # More teams than spots - need tiebreaker to determine who makes it
+                sorted_teams = self._break_tie(teams_at_wins, h2h, data)
+                wild_card_winners.extend(sorted_teams[:remaining_spots])
+                remaining_spots = 0
+
+        return seeded_div_winners, wild_card_winners
 
     # def _prep_talent_data(self, batter_stats, pitcher_stats, war_method):
     #     def process(data, stats, remaining, method):
