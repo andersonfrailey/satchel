@@ -1,3 +1,5 @@
+import pandas as pd
+import numpy as np
 from pathlib import Path
 
 import pytest
@@ -5,7 +7,7 @@ import pytest
 
 @pytest.fixture(scope="session")
 def transaction():
-    return {"10954": {"team": "HOU", "date": "2025-04-01"}}
+    return {"10954": {"team": "HOU", "date": "2021-04-01"}}
 
 
 @pytest.fixture(scope="session")
@@ -14,8 +16,8 @@ def curpath():
 
 
 @pytest.fixture(scope="session")
-def schedule2025(curpath):
-    return Path(curpath, "..", "schedules", "schedule2025.csv")
+def schedule2021(curpath):
+    return Path(curpath, "..", "schedules", "schedule2021.csv")
 
 
 @pytest.fixture(scope="session")

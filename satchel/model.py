@@ -29,7 +29,7 @@ from .utils import fetch_fg_projection_data, probability_calculations
 
 CUR_PATH = Path(__file__).resolve().parent
 DATA_PATH = Path(CUR_PATH, "data")
-SCHEDUEL_PATH = Path(CUR_PATH, "schedules", "schedule2025.csv")
+SCHEDUEL_PATH = Path(CUR_PATH, "schedules")
 # projections for pitchers and batters
 PITCHER_PROJ = Path(DATA_PATH, "pitcherprojections.csv")
 BATTER_PROJ = Path(DATA_PATH, "batterprojections.csv")
@@ -57,6 +57,7 @@ class Satchel:
         use_current_results: bool = True,
         war_method: str = "current_pace",
         fg_projections: str = "fangraphsdc",
+        year: int = YEAR,
         cache: bool = True,
     ):
         """
@@ -127,15 +128,16 @@ class Satchel:
         # if it's before opening day, create the schedule from file. If after,
         # pull the team's current record, then fetch the rest from MLB.com
         # unless the user specifies that they don't want to
-        if schedule != SCHEDUEL_PATH and use_current_results:
-            warnings.warn(
-                (
-                    "You have provided a path to a schedule but left"
-                    " `use_current_results` = True. As a result, the provided"
-                    " schedule will be ignored. To fix this warning, set"
-                    " `use_current_results`=False"
+        if not isinstance(schedule, pd.DataFrame):
+            if schedule != SCHEDUEL_PATH and use_current_results:
+                warnings.warn(
+                    (
+                        "You have provided a path to a schedule but left"
+                        " `use_current_results` = True. As a result, the provided"
+                        " schedule will be ignored. To fix this warning, set"
+                        " `use_current_results`=False"
+                    )
                 )
-            )
         today = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
         final_day = datetime.strptime(f"{FINAL_DAY}{YEAR}", "%m%d%Y")
@@ -168,8 +170,16 @@ class Satchel:
             self.midseason = True
         else:
             self.midseason = False
+            schedule = Path(SCHEDUEL_PATH, f"schedule{year}.csv")
 
         self.schedule = pd.read_csv(schedule, parse_dates=["START DATE"])  # type:ignore
+        # name change for Oakland
+        self.schedule["home"] = np.where(
+            self.schedule["home"] == "OAK", "ATH", self.schedule["home"]
+        )
+        self.schedule["away"] = np.where(
+            self.schedule["away"] == "OAK", "ATH", self.schedule["away"]
+        )
 
         self.teams = constants.DIVS.keys()
         self.random = np.random.default_rng(seed)
@@ -540,22 +550,22 @@ class Satchel:
         attr : str
             Which projections attribute to set. Either `pitch_proj` or `batter_proj`
         """
-        if source == "fetch":
-            setattr(
-                self,
-                attr,
-                fetch_fg_projection_data(
-                    stats=stats,
-                    fg_projection=self.fg_projections,
-                    date=datetime.today(),
-                ),
+        if isinstance(source, pd.DataFrame):
+            data = source
+        elif source == "fetch":
+            data = fetch_fg_projection_data(
+                stats=stats,
+                fg_projection=self.fg_projections,
+                date=datetime.today(),
             )
-        elif isinstance(source, pd.DataFrame):
-            setattr(self, attr, source)
         elif isinstance(source, str) or isinstance(source, PosixPath):
-            setattr(self, attr, pd.read_csv(source))
+            data = pd.read_csv(source)
         else:
             raise ValueError("Projections must be from a string, path, or dataframe.")
+
+        # account for Oakland move
+        data["Team"] = np.where(data["Team"] == "OAK", "ATH", data["Team"])
+        setattr(self, attr, data)
 
     def _calculate_talent(
         self, transactions=None, pitcher_wt=1, batter_wt=1

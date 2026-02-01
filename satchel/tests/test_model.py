@@ -11,10 +11,10 @@ MSG = (
 )
 
 
-def test_model(curpath, schedule2025, batter_projections, pitcher_projections):
+def test_model(curpath, schedule2021, batter_projections, pitcher_projections):
     mod = Satchel(
         seed=123,
-        schedule=schedule2025,
+        schedule=schedule2021,
         use_current_results=False,
         batter_proj=batter_projections,
         pitcher_proj=pitcher_projections,
@@ -27,7 +27,7 @@ def test_model(curpath, schedule2025, batter_projections, pitcher_projections):
 
     mod = Satchel(
         seed=123,
-        schedule=schedule2025,
+        schedule=schedule2021,
         use_current_results=False,
         batter_proj=batter_projections,
         pitcher_proj=pitcher_projections,
@@ -47,12 +47,12 @@ def test_model(curpath, schedule2025, batter_projections, pitcher_projections):
 
 
 def test_transaction(
-    transaction, curpath, schedule2025, batter_projections, pitcher_projections
+    transaction, curpath, schedule2021, batter_projections, pitcher_projections
 ):
     mod = Satchel(
         seed=123,
         transactions=transaction,
-        schedule=schedule2025,
+        schedule=schedule2021,
         use_current_results=False,
         batter_proj=batter_projections,
         pitcher_proj=pitcher_projections,
@@ -63,7 +63,7 @@ def test_transaction(
     assert mod.talent["final_talent"].isna().sum() == 0
 
 
-def test_warning(schedule2025):
+def test_warning(schedule2021):
     with pytest.warns(UserWarning):
-        mod = Satchel(schedule=schedule2025, cache=False)
+        mod = Satchel(schedule=schedule2021, cache=False)
         assert mod.talent["final_talent"].isna().sum() == 0
