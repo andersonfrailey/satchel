@@ -153,7 +153,7 @@ def results_grid(results):
     teams = [
         ["ARI", "CHC", "ATL", "HOU", "CHW", "BAL"],
         ["COL", "CIN", "MIA", "LAA", "CLE", "BOS"],
-        ["LAD", "MIL", "NYM", "OAK", "DET", "NYY"],
+        ["LAD", "MIL", "NYM", "ATH", "DET", "NYY"],
         ["SDP", "PIT", "PHI", "SEA", "KCR", "TBR"],
         ["SFG", "STL", "WSN", "TEX", "MIN", "TOR"],
     ]
@@ -217,7 +217,7 @@ def results_grid(results):
                 axs[i, j].set_ylabel("Frequency")
             else:
                 axs[i, j].set_yticklabels([])
-    handles, labels = axs[i, j].get_legend_handles_labels()
+    handles, labels = axs[i, j].get_legend_handles_labels()  # type: ignore
     fig.legend(handles, labels, loc="upper center", ncol=5, bbox_to_anchor=(0.5, 1.07))
     fig.tight_layout(pad=0)
 
