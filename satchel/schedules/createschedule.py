@@ -13,11 +13,11 @@ import pandas as pd
 
 CUR_PATH = Path(__file__).resolve().parent
 # update year, opening day, and final day when updating the file for a new season
-YEAR = 2025
-OPENING_DAY = "0327"
-START_DATE = "0318"
-FINAL_DAY = "0928"
-ALL_STAR_BREAK = datetime(year=YEAR, month=7, day=15)
+YEAR = 2026
+OPENING_DAY = "0325"
+START_DATE = "0325"
+FINAL_DAY = "0927"
+ALL_STAR_BREAK = datetime(year=YEAR, month=7, day=14)
 SCHEDULE = Path(CUR_PATH, str(YEAR))
 
 BASE_URL = (
