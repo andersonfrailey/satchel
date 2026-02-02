@@ -18,6 +18,7 @@ def test_model(curpath, schedule2021, batter_projections, pitcher_projections):
         use_current_results=False,
         batter_proj=batter_projections,
         pitcher_proj=pitcher_projections,
+        year=2021,
     )
     res = mod.simulate(100)
     expectedres = pickle.load(Path(curpath, "basesim.p").open("rb"))
@@ -56,6 +57,7 @@ def test_transaction(
         use_current_results=False,
         batter_proj=batter_projections,
         pitcher_proj=pitcher_projections,
+        year=2021,
     )
     res = mod.simulate(100)
     expectedres = pickle.load(Path(curpath, "transactionsim.p").open("rb"))

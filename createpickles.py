@@ -1,6 +1,7 @@
 """
 Create the initial pickle files for testing
 """
+
 import pickle
 from satchel.model import Satchel
 from pathlib import Path
@@ -15,6 +16,7 @@ s1 = Satchel(
     batter_proj=batter_projections,
     pitcher_proj=pitcher_projections,
     use_current_results=False,
+    year=2021,
     cache=False,
 )
 r1 = s1.simulate(100)
@@ -26,6 +28,7 @@ s2 = Satchel(
     batter_proj=batter_projections,
     pitcher_proj=pitcher_projections,
     use_current_results=False,
+    year=2021,
     cache=False,
 )
 r2 = s2.simulate(100)
