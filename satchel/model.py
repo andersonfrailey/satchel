@@ -203,6 +203,7 @@ class Satchel:
         self.batter_proj.set_index("playerid", inplace=True)
 
         self.talent, self.st_data = self._calculate_talent(transactions)
+        self.st_data.sort_values("START DATE", inplace=True, ignore_index=True)
 
         # track number of ties by type
         self.two_way_ties = 0
@@ -251,6 +252,7 @@ class Satchel:
         all_matchups = []
         all_noise = []  # the talent noise for a given team in a season
         full_seasons = []  # hold all of the results for each season
+        all_wins_to_date = []
         for i in tqdm(range(n), disable=quiet):
             (
                 results,
@@ -260,8 +262,9 @@ class Satchel:
                 matchups,
                 noise,
                 full_season,
+                wins_to_date,
             ) = self.simseason(
-                self.st_data,
+                self.st_data.copy(),
                 playoff_func=playoff_func,
                 current_standings=self.current_standings,
                 probability_method=probability_method,
@@ -279,6 +282,7 @@ class Satchel:
             all_matchups.append(matchups)
             all_noise.append(noise)
             full_seasons.append(full_season)
+            all_wins_to_date.append(wins_to_date)
 
         return SatchelResults(
             ws_counter=ws_counter,
@@ -301,6 +305,7 @@ class Satchel:
             three_way_ties=self.three_way_ties,
             four_way_ties=self.four_way_ties,
             date=datetime.strftime(datetime.today(), "%m-%d-%Y"),
+            wins_to_date=all_wins_to_date,
         )
 
     def simseason(
@@ -310,7 +315,9 @@ class Satchel:
         current_standings=None,
         probability_method=PROBABILITY_METHOD,
         elo_scale=ELO_SCALE,
-    ) -> tuple[pd.DataFrame, dict, list[str], list[str], dict, dict, pd.DataFrame]:
+    ) -> tuple[
+        pd.DataFrame, dict, list[str], list[str], dict, dict, pd.DataFrame, pd.DataFrame
+    ]:
         """Run full simulation of a single season
 
         Parameters
@@ -347,7 +354,9 @@ class Satchel:
             probability_method=probability_method,
             elo_scale=elo_scale,
         )
+        data["home_win_prob"] = home_win_prob
         probs = self.random.random(len(data))
+        data["probability_draw"] = probs
         winner = pd.Series(
             np.where(home_win_prob >= probs, data["home"], data["away"]), name="wins"
         )
@@ -356,10 +365,36 @@ class Satchel:
         )
         data["winner"] = winner
         data["loser"] = loser
+        # get cumulative wins to date for each team
+        # data["wins_to_date"] = (
+        #     data.groupby("START DATE")["winner"]
+        #     .value_counts()
+        #     .reset_index()
+        #     .groupby(["winner"])["count"]
+        #     .cumsum()
+        # )
+        data["one"] = 1
+        data["wins_to_date"] = data.groupby("winner")["one"].cumsum()
+        data.drop(columns=["one"], inplace=True)
         wins = winner.value_counts().reset_index()
         wins.rename(columns={"wins": "index", "count": "wins"}, inplace=True)
         losses = loser.value_counts().reset_index()
         losses.rename(columns={"losses": "index", "count": "losses"}, inplace=True)
+        # find wins to date for each team
+        home = data[["START DATE", "home"]].copy().rename(columns={"home": "team"})
+        away = data[["START DATE", "away"]].copy().rename(columns={"away": "team"})
+        wins_to_date = pd.concat([home, away])
+        wins_to_date = wins_to_date.merge(
+            data[["START DATE", "winner", "wins_to_date"]],
+            left_on=["START DATE", "team"],
+            right_on=["START DATE", "winner"],
+            how="left",
+        )
+        wins_to_date.sort_values("START DATE", inplace=True, ignore_index=True)
+        wins_to_date["wins_to_date"] = (
+            wins_to_date.groupby("team")["wins_to_date"].ffill().fillna(0)
+        )
+        wins_to_date.drop(columns="winner", inplace=True)
         # count up head-to-head losses. resulting dict has key: value pair: (winner, loser): h2h wins
         h2h = data.groupby(["winner", "loser"]).size().to_dict()
         # outer merge because during simulations late in the season not all teams
@@ -414,7 +449,16 @@ class Satchel:
         results["won_division"] = np.where(results["Team"].isin(div_winners), 1, 0)
         results["won_league"] = np.where(results["Team"].isin(cs_winners), 1, 0)
         results["won_ws"] = np.where(results["Team"] == final_res["ws"], 1, 0)
-        return results, final_res, div_winners, wc_winners, matchups, team_noise, data
+        return (
+            results,
+            final_res,
+            div_winners,
+            wc_winners,
+            matchups,
+            team_noise,
+            data,
+            wins_to_date,
+        )
 
     def sim_playoff(
         self,

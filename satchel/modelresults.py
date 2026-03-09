@@ -36,6 +36,7 @@ class SatchelResults:
     three_way_ties: int
     four_way_ties: int
     date: str  # Date the model was run
+    wins_to_date: list[pd.DataFrame]  # wins team has up to a certain  day
     # fields created when class is initialized
     season_summary: pd.DataFrame = field(init=False)
     alwest: pd.DataFrame = field(init=False)
