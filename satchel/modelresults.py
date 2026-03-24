@@ -1,8 +1,9 @@
 import pickle
 import pandas as pd
+import scipy.stats as stats
 from dataclasses import dataclass, field
 from collections import Counter
-from typing import Union
+from typing import Union, Optional
 from pathlib import PosixPath
 
 # from pybaseball import standings
@@ -36,7 +37,7 @@ class SatchelResults:
     three_way_ties: int
     four_way_ties: int
     date: str  # Date the model was run
-    wins_to_date: list[pd.DataFrame]  # wins team has up to a certain  day
+    season_wins_to_date: list[pd.DataFrame]  # wins team has up to a certain  day
     # fields created when class is initialized
     season_summary: pd.DataFrame = field(init=False)
     alwest: pd.DataFrame = field(init=False)
@@ -81,7 +82,7 @@ class SatchelResults:
         summary = pd.concat([mean_wins, mean_loss, max_wins, min_wins, stdev], axis=1)
         summary.reset_index(inplace=True)
 
-        # calculate play off odds
+        # calculate playoff odds
         wc_winner = {
             team: round(_n / self.n * 100, 2)
             for team, _n in dict(self.wc_counter).items()
@@ -249,6 +250,45 @@ class SatchelResults:
             .sort_values("Projected Wins", ascending=False)
             .reset_index(drop=True)
         )
+
+    def wins_to_date(self, team: Optional[str] = None) -> pd.DataFrame:
+        """
+        Return a dataframe containing team's cumulative wins to a point in the season
+
+        Parameters
+        ----------
+        team : Optional[str]
+            Name of the team to get cumulative wins for. If None, returns cumulative
+            wins for all teams
+
+        Returns
+        -------
+        pd.DataFrame
+            DataFrame containing the cumulative wins for the specified team, or
+            all teams if no team was passed to the `team` parameter
+        """
+
+        def _calculate_cumulative_wins(w2d: list[pd.DataFrame]):
+            wins_to_date_df = pd.concat(w2d)
+            wins_to_date_df["one"] = 1
+            gdf = wins_to_date_df.groupby(["START DATE", "team", "game"])
+            mean_wins_to_date = gdf["wins_to_date"].mean().reset_index()
+            se_wins_to_date = gdf["wins_to_date"].sem().reset_index()
+            se_wins_to_date.rename(columns={"wins_to_date": "se"}, inplace=True)
+            wins_to_date = pd.merge(
+                mean_wins_to_date, se_wins_to_date, on=["START DATE", "game", "team"]
+            )
+            for ci in [90, 95, 99]:
+                zscore = stats.norm.ppf(1 - ((1 - (ci / 100)) / 2))
+                me = zscore * wins_to_date["se"]
+                wins_to_date[f"upper_ci_{ci}"] = wins_to_date["wins_to_date"] + me
+                wins_to_date[f"lower_ci_{ci}"] = wins_to_date["wins_to_date"] - me
+            return wins_to_date
+
+        wins_to_date = _calculate_cumulative_wins(self.season_wins_to_date)
+        if team:
+            return wins_to_date[wins_to_date["team"] == team].copy()
+        return wins_to_date
 
     def save(self, outfile: Union[str, PosixPath]):
         """

@@ -8,7 +8,7 @@ import pandas as pd
 from pathlib import Path
 import statstables as st
 from satchel.model import Satchel
-from satchel.schedules.createschedule import YEAR
+from satchel.schedules.createschedule import YEAR, OPENING_DAY
 from satchel.constants import TEAM_ABBRS
 from datetime import datetime
 from collections import defaultdict
@@ -34,25 +34,28 @@ def main(percentiles: bool = False):
 
         percs = json.dumps(percentiles, indent=4)
         Path(OUTPATH, f"percentiles{YEAR}.json").write_text(percs)
+        # also save wins to date
+        w2d = res.wins_to_date()
+        w2d.to_csv(Path(OUTPATH, f"wins_to_date_{YEAR}.csv"), index=False)
     satchel_res = res.season_summary
     satchel_res["date"] = datetime.today()
-    # try:
-    season_to_date = res.season_to_date()
-    out = season_to_date.merge(
-        satchel_res[
-            [
-                "Team",
-                "Make Wild Card (%)",
-                "Win Division (%)",
-                "Win League (%)",
-                "Win WS (%)",
-                "date",
-            ]
-        ],
-        on="Team",
-    )
-    # except Exception:
-    #     out = satchel_res
+    try:
+        season_to_date = res.season_to_date()
+        out = season_to_date.merge(
+            satchel_res[
+                [
+                    "Team",
+                    "Make Wild Card (%)",
+                    "Win Division (%)",
+                    "Win League (%)",
+                    "Win WS (%)",
+                    "date",
+                ]
+            ],
+            on="Team",
+        )
+    except Exception:
+        out = satchel_res
     # out["date"] = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
     print("Saving Satchel results")
     append_results(f"satchel{YEAR}.csv", out)

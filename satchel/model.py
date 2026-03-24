@@ -305,7 +305,7 @@ class Satchel:
             three_way_ties=self.three_way_ties,
             four_way_ties=self.four_way_ties,
             date=datetime.strftime(datetime.today(), "%m-%d-%Y"),
-            wins_to_date=all_wins_to_date,
+            season_wins_to_date=all_wins_to_date,
         )
 
     def simseason(
@@ -366,13 +366,6 @@ class Satchel:
         data["winner"] = winner
         data["loser"] = loser
         # get cumulative wins to date for each team
-        # data["wins_to_date"] = (
-        #     data.groupby("START DATE")["winner"]
-        #     .value_counts()
-        #     .reset_index()
-        #     .groupby(["winner"])["count"]
-        #     .cumsum()
-        # )
         data["one"] = 1
         data["wins_to_date"] = data.groupby("winner")["one"].cumsum()
         data.drop(columns=["one"], inplace=True)
@@ -395,6 +388,10 @@ class Satchel:
             wins_to_date.groupby("team")["wins_to_date"].ffill().fillna(0)
         )
         wins_to_date.drop(columns="winner", inplace=True)
+        # get game number
+        wins_to_date["one"] = 1
+        wins_to_date["game"] = wins_to_date.groupby("team")["one"].cumsum()
+        wins_to_date.drop(columns=["one"], inplace=True)
         # count up head-to-head losses. resulting dict has key: value pair: (winner, loser): h2h wins
         h2h = data.groupby(["winner", "loser"]).size().to_dict()
         # outer merge because during simulations late in the season not all teams
