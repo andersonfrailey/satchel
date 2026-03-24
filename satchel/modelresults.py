@@ -331,9 +331,18 @@ class SatchelResults:
                 if not val.reset_index(drop=True).equals(otherval):
                     print(attr)
                     return False
-            elif attr == "full_seasons":
+            elif attr in ["full_seasons"]:
                 for s1, s2 in zip(val, getattr(__o, "full_seasons")):
                     if not s1.reset_index(drop=True).equals(s2.reset_index(drop=True)):
+                        print(attr)
+                        return False
+            elif attr == "season_wins_to_date":
+                for s1, s2 in zip(val, getattr(__o, "season_wins_to_date")):
+                    _s1 = s1.reset_index(drop=True)
+                    _s2 = s2.reset_index(drop=True)
+                    _s1.sort_values(["START DATE", "team"], inplace=True)
+                    _s2.sort_values(["START DATE", "team"], inplace=True)
+                    if not _s1.equals(_s2):
                         print(attr)
                         return False
             else:
