@@ -98,6 +98,7 @@ _Attributes_
 * `results_df`: A DataFrame containing the full results of each simulation
 * `schedule`: A DataFrame with the schedule used in the simulations.
 * `season_summary`: A DataFrame summarizing the results.
+* `season_wins_to_date`: A list containing DataFrames tracking each team's cumulative wins throughout the season.
 * `seed`: The random seed used in the simulation.
 * `trades`: A dictionary with all the trades used in the simulations.
 * `wc_counter`: Counts the number of times each team won a wild card spot in the simulations.
