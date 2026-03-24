@@ -32,7 +32,7 @@ def main(percentiles: bool = False):
             for i in range(1, 163):
                 _percentiles[team][i] = res.season_percentile(team=team, wins=i)
 
-        percs = json.dumps(percentiles, indent=4)
+        percs = json.dumps(_percentiles, indent=4)
         Path(OUTPATH, f"percentiles{YEAR}.json").write_text(percs)
         # also save wins to date
         w2d = res.wins_to_date()
