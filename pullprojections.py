@@ -21,9 +21,13 @@ st.STParams["ascii_padding"] = 1
 
 
 def main(percentiles: bool = False):
+    today = datetime.today()
+    use_current_results = True
+    if today <= datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y"):
+        use_current_results = False
     # run Satchel
     print("Running Satchel")
-    mod = Satchel(seed=856, cache=False, use_current_results=True)
+    mod = Satchel(seed=856, cache=False, use_current_results=use_current_results)
     res = mod.simulate(20000)
     if percentiles:
         print("Creating percentiles")

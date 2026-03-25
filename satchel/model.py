@@ -42,6 +42,7 @@ ELO_SCALE = 400
 class Satchel:
     pitch_proj: pd.DataFrame
     batter_proj: pd.DataFrame
+    current_standings: None | pd.DataFrame
 
     def __init__(
         self,
@@ -143,7 +144,7 @@ class Satchel:
         today = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
         opening_day = datetime.strptime(f"{OPENING_DAY}{YEAR}", "%m%d%Y")
         final_day = datetime.strptime(f"{FINAL_DAY}{YEAR}", "%m%d%Y")
-
+        self.current_standings = None
         if today >= opening_day and use_current_results and today <= final_day:
             # for running the model after opening day
             # fetch the remaining schedule if it isn't cached
@@ -306,6 +307,7 @@ class Satchel:
             four_way_ties=self.four_way_ties,
             date=datetime.strftime(datetime.today(), "%m-%d-%Y"),
             season_wins_to_date=all_wins_to_date,
+            current_standings=self.current_standings,
         )
 
     def simseason(

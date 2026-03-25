@@ -37,6 +37,7 @@ class SatchelResults:
     three_way_ties: int
     four_way_ties: int
     date: str  # Date the model was run
+    current_standings: Optional[pd.DataFrame]
     season_wins_to_date: list[pd.DataFrame]  # wins team has up to a certain  day
     # fields created when class is initialized
     season_summary: pd.DataFrame = field(init=False)
@@ -210,39 +211,56 @@ class SatchelResults:
         pd.DataFrame
             Table with record to date and final projections
         """
-        # midseason = pd.concat(standings(YEAR))
-        midseason = standings(YEAR)
-        midseason["Team"] = midseason["Tm"].map(constants.NAME_TO_ABBR)
-        midseason["W"] = midseason["W"].astype(int)
-        midseason["L"] = midseason["L"].astype(int)
-        final = pd.merge(
-            midseason,
-            self.season_summary[
+        if isinstance(self.current_standings, pd.DataFrame):
+            midseason = self.current_standings
+            midseason["Team"] = midseason["Tm"].map(constants.NAME_TO_ABBR)
+            midseason["W"] = midseason["W"].astype(int)
+            midseason["L"] = midseason["L"].astype(int)
+            final = pd.merge(
+                midseason,
+                self.season_summary[
+                    ["Team", "Mean Wins", "Mean Losses", "Make Playoffs (%)"]
+                ],
+                on=["Team"],
+            )
+            final.rename(
+                columns={
+                    "W": "Wins to Date",
+                    "L": "Losses to Date",
+                    "Mean Wins": "Projected Wins",
+                    "Mean Losses": "Projected Losses",
+                },
+                inplace=True,
+            )
+            final["Wins RoS"] = final["Projected Wins"] - final["Wins to Date"]
+            final["Losses RoS"] = final["Projected Losses"] - final["Losses to Date"]
+            final_cols = [
+                "Team",
+                "Wins to Date",
+                "Losses to Date",
+                "Wins RoS",
+                "Losses RoS",
+                "Projected Wins",
+                "Projected Losses",
+                "Make Playoffs (%)",
+            ]
+        else:
+            final = self.season_summary[
                 ["Team", "Mean Wins", "Mean Losses", "Make Playoffs (%)"]
-            ],
-            on=["Team"],
-        )
-        final.rename(
-            columns={
-                "W": "Wins to Date",
-                "L": "Losses to Date",
-                "Mean Wins": "Projected Wins",
-                "Mean Losses": "Projected Losses",
-            },
-            inplace=True,
-        )
-        final["Wins RoS"] = final["Projected Wins"] - final["Wins to Date"]
-        final["Losses RoS"] = final["Projected Losses"] - final["Losses to Date"]
-        final_cols = [
-            "Team",
-            "Wins to Date",
-            "Losses to Date",
-            "Wins RoS",
-            "Losses RoS",
-            "Projected Wins",
-            "Projected Losses",
-            "Make Playoffs (%)",
-        ]
+            ].copy()
+            final.rename(
+                columns={
+                    "Mean Wins": "Projected Wins",
+                    "Mean Losses": "Projected Losses",
+                },
+                inplace=True,
+            )
+            final_cols = [
+                "Team",
+                "Projected Wins",
+                "Projected Losses",
+                "Make Playoffs (%)",
+            ]
 
         return (
             final[final_cols]
