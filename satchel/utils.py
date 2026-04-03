@@ -74,7 +74,9 @@ def fetch_fg_projection_data(stats: str, fg_projection: str, date):
         raise ValueError(f"`fg_projections` must be in {FG_PROJECTIONS}")
     req = requests.get(FG_API.format(stats=stats, proj=fg_projection))
     if req.status_code != 200:
-        raise ConnectionError("Connection to FanGraphs failed")
+        raise ConnectionError(
+            f"Connection to FanGraphs failed. Code {req.status_code} ({req.reason})"
+        )
     data = pd.DataFrame(json.loads(req.content))
     if "playerid" not in data.columns:
         data.rename(columns={"playerids": "playerid"}, inplace=True)
